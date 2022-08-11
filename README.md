@@ -14,13 +14,13 @@
 
 #### Olá pessoal!
 
-#### Este repositório foi iniciado durante o **Tailwind From Scratch**, um curso online projetado por **Brad Traversy** e disponível na **[Udemy](https://wwww.udemy.com/course/tailwind-from-scratch/)**.
+#### Este repositório foi iniciado durante o **Tailwind From Scratch**, um curso online criado por **Brad Traversy** e disponível na **[Udemy](https://wwww.udemy.com/course/tailwind-from-scratch/)**.
 
-#### Além dos projetos desenvolvidos ao longo do curso, projetos pessoais serão adicionados constantemente a medida que me familiarizo com o **Tailwind CSS**.
+#### Além dos projetos desenvolvidos no curso, projetos pessoais serão adicionados constantemente à medida que me familiarizo com o **Tailwind CSS**.
 
-#### Algumas mudanças foram feitas no código, mas a maioria do conteúdo principal se mantém intacto.
+#### Algumas mudanças foram feitas no código, mas a maioria do conteúdo principal se mantém intacta.
 
-#### **Aproveite**!
+#### **Aproveitem**!
 
 #### **Personal Projects**
 - [ ] 1.1 - Jazzy Bar
