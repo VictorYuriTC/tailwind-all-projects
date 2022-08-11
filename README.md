@@ -9,18 +9,18 @@
 #### **Enjoy it**!
 
 #### **Personal Projects**
-##### - [ ] 1.1 - Jazzy Bar
+#####- [ ] 1.1 - Jazzy Bar
 
 #### **Tailwind From Scratch - Mini Projects**
-##### - [x] 2.1 - Email subscribe
-##### - [ ] 2.2 - Pricing Grids
-##### - [ ] 2.3 - Product Modal
-##### - [ ] 2.4 - Image Gallery
-##### - [ ] 2.5 - Login Modal
+#####- [x] 2.1 - Email subscribe
+#####- [ ] 2.2 - Pricing Grids
+#####- [ ] 2.3 - Product Modal
+#####- [ ] 2.4 - Image Gallery
+#####- [ ] 2.5 - Login Modal
 #### **Tailwind From Scratch - Main Project**
-##### - [ ] 3.1 - Clipboard Website
-##### - [ ] 3.2 - Loopstudios Website
-##### - [ ] 3.3 - Shortly Website
-##### - [ ] 3.4 - Testimonial Grid Project
-##### - [ ] 3.5 - Fylo Website With Color Picker
-##### - [ ] 3.6 - Bookmark Manager Website
+#####- [ ] 3.1 - Clipboard Website
+#####- [ ] 3.2 - Loopstudios Website
+#####- [ ] 3.3 - Shortly Website
+#####- [ ] 3.4 - Testimonial Grid Project
+#####- [ ] 3.5 - Fylo Website With Color Picker
+#####- [ ] 3.6 - Bookmark Manager Website
