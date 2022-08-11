@@ -5,32 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="/images/coffee-icon-svgrepo-com.svg">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          scale: {
-            '101': '1.01',
-            '102': '1.02',
-          },
-          colors: {
-          'coffee': '#411d13',
-          'cappuccino': '#c3a995',
-          'espresso': '#ede0d4'
-          },
-          animation: {
-            wiggle: 'wiggle 1s ease-in-out infinite',
-          },
-          keyframes: {
-            wiggle: {
-              '0%, 100%': { transform: 'rotate(-12deg)'},
-                '50%': { transform: 'rotate(12deg)'},
-            }
-          }
-        }
-      }
-    }
+
   </script>
   <title>Bring a Coffee!</title>
 </head>
@@ -89,7 +66,7 @@
   <main class="bg-espresso flex items-center justify-center min-h-screen">
     <div class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 p-10">
       <!-- Photo 1 -->
-      <div class="group flex space-between bg-white border border-white rounded-2xl border-[20px] hover:cursor-pointer  mx-auto hover:scale-102 duration-300">
+      <div class="group flex space-between bg-white border-white rounded-2xl border-[20px] hover:cursor-pointer  mx-auto hover:scale-102 duration-300">
         <img class="rounded-lg border border-white object-cover h-full" src="images/pexels-alexander-ant-7004739.jpg" alt="">
         <div class="flex justify-between absolute bottom-0 left-0 right-0 px-4 p-2 text-white duration-500 rounded-lg rounded-t-none bg-black opacity-0 group-hover:opacity-100 bg-opacity-50">
           <span class="text-sm max-h-fit font-bold">COFFEE, COFFEE, COFEE, COFEE, COFFE
@@ -102,7 +79,7 @@
         </div>
       </div>
       <!-- Photo 2 -->
-      <div class="group bg-white border border-white rounded-2xl border-[20px] hover:cursor-pointer  mx-auto hover:scale-102 duration-300">
+      <div class="group bg-white border-white rounded-2xl border-[20px] hover:cursor-pointer  mx-auto hover:scale-102 duration-300">
         <img class="rounded-lg border border-white object-cover h-full" src="images/pexels-cottonbro-3205736.jpg" alt="">
         <div class="flex justify-between absolute bottom-0 left-0 right-0 px-4 p-2 text-white duration-500 rounded-lg rounded-t-none bg-black opacity-0 group-hover:opacity-100 bg-opacity-40">
           <span class="text-sm font-bold">Coffee is the new water!</span>
@@ -115,7 +92,7 @@
         </div>
       </div>
       <!-- Photo 3 -->
-      <div class="group bg-white border border-white rounded-2xl border-[20px] hover:cursor-pointer  mx-auto hover:scale-102 duration-300">
+      <div class="group bg-white border-white rounded-2xl border-[20px] hover:cursor-pointer  mx-auto hover:scale-102 duration-300">
         <img class="rounded-lg border border-white object-cover h-full" src="images/pexels-karolina-grabowska-4046710.jpg" alt="">
         <div class="flex justify-between absolute bottom-0 left-0 right-0 px-4 p-2 text-white duration-500 rounded-lg rounded-t-none bg-black opacity-0 group-hover:opacity-100 bg-opacity-40">
           <span class="text-normal font-bold">Alcohol is good, but have you ever tried coffee?</span>
@@ -127,7 +104,7 @@
         </div>
       </div>
       <!-- Photo 4 -->
-      <div class="group bg-white border border-white rounded-2xl border-[20px] hover:cursor-pointer  mx-auto hover:scale-102 duration-300">
+      <div class="group bg-white border-white rounded-2xl border-[20px] hover:cursor-pointer  mx-auto hover:scale-102 duration-300">
         <img class="rounded-lg border border-white object-cover h-full" src="images/pexels-alleksana-4156998.jpg" alt="">
         <div class="flex justify-between absolute bottom-0 left-0 right-0 px-4 p-2 text-white duration-500 rounded-lg rounded-t-none bg-black opacity-0 group-hover:opacity-100 bg-opacity-40">
           <span class="text-sm font-bold">Once, I thought about stop drinking coffee. Then, I remembered I had to work.</span>
@@ -139,7 +116,7 @@
         </div>
       </div>
       <!-- Photo 5 -->
-      <div class="group bg-white border border-white rounded-2xl border-[20px] hover:cursor-pointer  mx-auto hover:scale-102 duration-300">
+      <div class="group bg-white border-white rounded-2xl border-[20px] hover:cursor-pointer  mx-auto hover:scale-102 duration-300">
         <img class="rounded-lg border border-white object-cover h-full" src="images/pexels-mathilde-langevin-13095139.jpg" alt="">
         <div class="flex justify-between absolute bottom-0 left-0 right-0 px-4 p-2 text-white duration-500 rounded-lg rounded-t-none bg-black opacity-0 group-hover:opacity-100 bg-opacity-40 fill-white"">
           <span class="text-sm font-bold">Excuse, could I have a coffee, please? And a espresso, please.</span>
@@ -151,7 +128,7 @@
         </div>
       </div>
       <!-- Photo 6 -->
-      <div class="group bg-white border border-white rounded-2xl border-[20px] hover:cursor-pointer  mx-auto hover:scale-102 duration-300">
+      <div class="group bg-white border-white rounded-2xl border-[20px] hover:cursor-pointer  mx-auto hover:scale-102 duration-300">
         <img class="rounded-lg border border-white object-cover h-full" src="images/pexels-hilal-bilir-12861655.jpg" alt="">
         <div class="flex justify-between absolute bottom-0 left-0 right-0 px-4 p-2 text-white duration-500 rounded-lg rounded-t-none bg-black opacity-0 group-hover:opacity-100 bg-opacity-40">
           <span class="text-sm font-bold">I don't drink coffee, coffee drinks me!</span>
@@ -163,7 +140,7 @@
         </div>
       </div>
       <!-- Photo 7 -->
-      <div class="group bg-white border border-white rounded-2xl border-[20px] hover:cursor-pointer  mx-auto hover:scale-102 duration-300">
+      <div class="group bg-white border-white rounded-2xl border-[20px] hover:cursor-pointer  mx-auto hover:scale-102 duration-300">
         <img class="rounded-lg border border-white object-cover h-full" src="images/pexels-tyler-nix-2396220.jpg" alt="">
         <div class="flex justify-between absolute bottom-0 left-0 right-0 px-4 p-2 text-white duration-500 rounded-lg rounded-t-none bg-black opacity-0 group-hover:opacity-100 bg-opacity-40">
           <span class="text-sm font-bold">Did you know coffee is my favorite thing ever? Yeah, like, not my favorite drink, my favorite thing!</span>
@@ -175,7 +152,7 @@
         </div>
       </div>
       <!-- Photo 8 -->
-      <div class="group bg-white border border-white rounded-2xl border-[20px] hover:cursor-pointer  mx-auto hover:scale-102 duration-300">
+      <div class="group bg-white border-white rounded-2xl border-[20px] hover:cursor-pointer  mx-auto hover:scale-102 duration-300">
         <img class="rounded-lg border border-white object-cover h-full" src="images/pexels-chevanon-photography-302896.jpg" alt="">
         <div class="flex justify-between absolute bottom-0 left-0 right-0 px-4 p-2 text-white duration-500 rounded-lg rounded-t-none bg-black opacity-0 group-hover:opacity-100 bg-opacity-40">
           <span class="text-sm font-bold">I love having a cold, I'm always coughing.</span>
