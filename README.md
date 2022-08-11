@@ -24,12 +24,13 @@
 
 #### **Personal Projects**
 - [ ] 1.1 - Jazzy Bar
+- [ ] 1.2 - Bring a Coffee **(ongoing)**
 
 #### **Tailwind From Scratch - Mini Projects**
-- [x] 2.1 - Email subscribe
+- [X] 2.1 - Email subscribe
 - [X] 2.2 - Pricing Grids
 - [X] 2.3 - Product Modal
-- [ ] 2.4 - Image Gallery
+- [X] 2.4 - Image Gallery
 - [ ] 2.5 - Login Modal
 #### **Tailwind From Scratch - Main Project**
 - [ ] 3.1 - Clipboard Website
