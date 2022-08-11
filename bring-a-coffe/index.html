@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/images/coffee-icon-svgrepo-com.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          scale: {
+            '101': '1.01',
+            '102': '1.02',
+          },
+          colors: {
+          'coffee': '#411d13',
+          'cappuccino': '#c3a995',
+          'espresso': '#ede0d4'
+          },
+          animation: {
+            wiggle: 'wiggle 1s ease-in-out infinite',
+          },
+          keyframes: {
+            wiggle: {
+              '0%, 100%': { transform: 'rotate(-12deg)'},
+                '50%': { transform: 'rotate(12deg)'},
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <title>Bring a Coffee!</title>
+</head>
+<body>
+  <header class="flex flex-col md:flex-row justify-between">
+    <section class="flex flex-col md:flex-row">
+      <div class="flex flex-col md:flex-row">
+        <div class="group flex-col items-center justify-center flex space-x-5 p-4 mt-4 md:flex-row">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8 inline-block fill-red-100 duration-500 hover:fill-red-600 hover:cursor-pointer"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            id="squarepants-bob-mug"
+        >
+          <path 
+            fill-rule="evenodd"
+            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+            clip-rule="evenodd"
+          />
+        </svg>
+          <div class="">
+            <a href="#" class="font-bold">
+              Bring a Coffee!
+            </a>
+            <div class="mx-2 border border-b-2 border-black opacity-0 group-hover:opacity-100 hover:bg-black duration-500"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="flex flex-col justify-center items-center md:flex-row" >
+      <span class="hover:scale-101 transition-all duration-300 cursor-pointer text-2xl font-bold flex items-center justify-center mt-4" >
+        The place for those who live for coffee!
+      </span>
+    </section>
+    <section class="flex flex-col md:flex-row mt-4 justify-center items-center text-center">
+      <div class="flex flex-col md:flex-row">
+        <div class="group p-4">
+          <a href="#" class="">Home</a>
+          <div class="mx-2 border border-b-2 border-black opacity-0 group-hover:opacity-100 hover:bg-black duration-500"></div>
+        </div>
+        <div class="group p-4">
+          <a href="#" class="">Week's Gallery</a>
+          <div class="mx-2 border border-b-2 border-black opacity-0 group-hover:opacity-100 hover:bg-black duration-500"></div>
+        </div>
+        <div class="group p-4">
+          <a href="#" class="">About</a>
+          <div class="mx-2 border border-b-2 border-black opacity-0 group-hover:opacity-100 hover:bg-black duration-500"></div>
+        </div>
+        <div class="group p-4 hover:scale-110 transition duration-300">
+          <a href="#" class="border border-black rounded p-3">Login</a>
+        </div>
+      </div>
+    </section>
+  </header>
+  <main class="bg-espresso flex items-center justify-center min-h-screen">
+    <div class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 p-10">
+      <!-- Photo 1 -->
+      <div class="group flex space-between bg-white border border-white rounded-2xl border-[20px] hover:cursor-pointer  mx-auto hover:scale-102 duration-300">
+        <img class="rounded-lg border border-white object-cover h-full" src="images/pexels-alexander-ant-7004739.jpg" alt="">
+        <div class="flex justify-between absolute bottom-0 left-0 right-0 px-4 p-2 text-white duration-500 rounded-lg rounded-t-none bg-black opacity-0 group-hover:opacity-100 bg-opacity-50">
+          <span class="text-sm max-h-fit font-bold">COFFEE, COFFEE, COFEE, COFEE, COFFE
+            COFFEE, COFFEE, COFFEE, lovely COFFEE!  Wonderful COFFEE!</span>
+          <img
+            src="images/coffee-cup-svgrepo-com.svg"
+            alt=""
+            class="w-8"
+          >
+        </div>
+      </div>
+      <!-- Photo 2 -->
+      <div class="group bg-white border border-white rounded-2xl border-[20px] hover:cursor-pointer  mx-auto hover:scale-102 duration-300">
+        <img class="rounded-lg border border-white object-cover h-full" src="images/pexels-cottonbro-3205736.jpg" alt="">
+        <div class="flex justify-between absolute bottom-0 left-0 right-0 px-4 p-2 text-white duration-500 rounded-lg rounded-t-none bg-black opacity-0 group-hover:opacity-100 bg-opacity-40">
+          <span class="text-sm font-bold">Bom mesmo é tomar café!</span>
+          <img
+            src="images/coffee-cup-svgrepo-com.svg"
+            alt=""
+            class="w-8"
+          >
+        </div>
+      </div>
+      <!-- Photo 3 -->
+      <div class="group bg-white border border-white rounded-2xl border-[20px] hover:cursor-pointer  mx-auto hover:scale-102 duration-300">
+        <img class="rounded-lg border border-white object-cover h-full" src="images/pexels-karolina-grabowska-4046710.jpg" alt="">
+        <div class="flex justify-between absolute bottom-0 left-0 right-0 px-4 p-2 text-white duration-500 rounded-lg rounded-t-none bg-black opacity-0 group-hover:opacity-100 bg-opacity-40">
+          <span class="text-sm font-bold">Bom mesmo é tomar café!</span>
+          <img
+            src="images/coffee-cup-svgrepo-com.svg"
+            alt=""
+            class="w-8"
+          >
+        </div>
+      </div>
+      <!-- Photo 4 -->
+      <div class="group bg-white border border-white rounded-2xl border-[20px] hover:cursor-pointer  mx-auto hover:scale-102 duration-300">
+        <img class="rounded-lg border border-white object-cover h-full" src="images/pexels-alleksana-4156998.jpg" alt="">
+        <div class="flex justify-between absolute bottom-0 left-0 right-0 px-4 p-2 text-white duration-500 rounded-lg rounded-t-none bg-black opacity-0 group-hover:opacity-100 bg-opacity-40">
+          <span class="text-sm font-bold">Bom mesmo é tomar café!</span>
+          <img
+            src="images/coffee-cup-svgrepo-com.svg"
+            alt=""
+            class="w-8"
+          >
+        </div>
+      </div>
+      <!-- Photo 5 -->
+      <div class="group bg-white border border-white rounded-2xl border-[20px] hover:cursor-pointer  mx-auto hover:scale-102 duration-300">
+        <img class="rounded-lg border border-white object-cover h-full" src="images/pexels-mathilde-langevin-13095139.jpg" alt="">
+        <div class="flex justify-between absolute bottom-0 left-0 right-0 px-4 p-2 text-white duration-500 rounded-lg rounded-t-none bg-black opacity-0 group-hover:opacity-100 bg-opacity-40">
+          <span class="text-sm font-bold">Bom mesmo é tomar café!</span>
+          <img
+            src="images/coffee-cup-svgrepo-com.svg"
+            alt=""
+            class="w-8"
+          >
+        </div>
+      </div>
+      <!-- Photo 6 -->
+      <div class="group bg-white border border-white rounded-2xl border-[20px] hover:cursor-pointer  mx-auto hover:scale-102 duration-300">
+        <img class="rounded-lg border border-white object-cover h-full" src="images/pexels-hilal-bilir-12861655.jpg" alt="">
+        <div class="flex justify-between absolute bottom-0 left-0 right-0 px-4 p-2 text-white duration-500 rounded-lg rounded-t-none bg-black opacity-0 group-hover:opacity-100 bg-opacity-40">
+          <span class="text-sm font-bold">Bom mesmo é tomar café!</span>
+          <img
+            src="images/coffee-cup-svgrepo-com.svg"
+            alt=""
+            class="w-8"
+          >
+        </div>
+      </div>
+      <!-- Photo 7 -->
+      <div class="group bg-white border border-white rounded-2xl border-[20px] hover:cursor-pointer  mx-auto hover:scale-102 duration-300">
+        <img class="rounded-lg border border-white object-cover h-full" src="images/pexels-tyler-nix-2396220.jpg" alt="">
+        <div class="flex justify-between absolute bottom-0 left-0 right-0 px-4 p-2 text-white duration-500 rounded-lg rounded-t-none bg-black opacity-0 group-hover:opacity-100 bg-opacity-40">
+          <span class="text-sm font-bold">Bom mesmo é tomar café!</span>
+          <img
+            src="images/coffee-cup-svgrepo-com.svg"
+            alt=""
+            class="w-8"
+          >
+        </div>
+      </div>
+      <!-- Photo 8 -->
+      <div class="group bg-white border border-white rounded-2xl border-[20px] hover:cursor-pointer  mx-auto hover:scale-102 duration-300">
+        <img class="rounded-lg border border-white object-cover h-full" src="images/pexels-chevanon-photography-302896.jpg" alt="">
+        <div class="flex justify-between absolute bottom-0 left-0 right-0 px-4 p-2 text-white duration-500 rounded-lg rounded-t-none bg-black opacity-0 group-hover:opacity-100 bg-opacity-40">
+          <span class="text-sm font-bold">Bom mesmo é tomar café!</span>
+          <img
+            src="images/coffee-cup-svgrepo-com.svg"
+            alt=""
+            class="w-8"
+          >
+        </div>
+      </div>
+    </div>
+  </main>
+  <script>
+    document.getElementById('squarepants-bob-mug').addEventListener('click', ({ target }) => {
+      if (!target.classList.contains('fill-coffee')) {
+        target.classList.remove('fill-red-100');
+        target.classList.add('fill-coffee', 'animate-pulse', 'duration-1000');
+        return;
+      }
+      if (!target.classList.contains('animate-bounce')) {
+        target.classList.remove('animate-pulse');
+        target.classList.add('animate-bounce');
+        return;
+      };
+      if(!target.classList.contains('animate-wiggle')) {
+        target.classList.remove('animate-bounce');
+        target.classList.add('animate-wiggle');
+        return;
+      }
+    })
+  </script>
+</body>
+</html>
