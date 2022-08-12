@@ -31,8 +31,8 @@
 - [X] 2.2 - Pricing Grids
 - [X] 2.3 - Product Modal
 - [X] 2.4 - Image Gallery
-- [ ] 2.5 - Login Modal
-#### **Tailwind From Scratch - Main Project**
+- [X] 2.5 - Login Modal
+#### **Tailwind From Scratch - Main Projects**
 - [ ] 3.1 - Clipboard Website
 - [ ] 3.2 - Loopstudios Website
 - [ ] 3.3 - Shortly Website
