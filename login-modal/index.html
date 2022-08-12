@@ -17,6 +17,21 @@
           translate: {
             '0.25': '0.0625rem',
           },
+          transitionDuration: {
+            '10s': '10000ms'
+          },
+          scale: {
+            '100.5': '1.005',
+          },
+          animation: {
+            wiggle: 'wiggle 10s ease-in-out infinite',
+          },
+        },
+        keyframes: {
+          wiggle: {
+            '0%, 100%': { transform: 'rotate(0.05deg)' },
+            '50%': { transform: 'rotate(0.05deg)' },
+          }
         }
       }
     }
@@ -38,7 +53,7 @@
           type="text"
           placeholder="Enter your email address"
           class="w-full p-6 border border-gray-300
-          rounded-md placeholder:font-sans placeholder:font-light">
+          rounded-md placeholder:font-sans placeholder:font-light focus:outline-none">
           <!-- Middle Content -->
 
       <div class="flex flex-col items-center justify-between
@@ -95,11 +110,13 @@
       </div>
 
       <!-- Right Side -->
-      <img
-      class="w-[430px] hidden md:block"
+      <div class="hover:scale-100.5 duration-1000">
+        <img
+        class="w-[430px] hidden md:block"
         src="./images/image.jpg"
         alt=""
       >
+      </div>
 
       <!-- Close Button -->
       <div class="group absolute -top-5 right-4 flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full md:bg-white md:top-4 hover:-translate-y-0.25 transition 200">
