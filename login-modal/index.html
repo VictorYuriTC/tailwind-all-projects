@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Login Modal</title>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          sans: ['Mulish', 'sans-serif'],
+          mono: ['Rokkitt', 'monospace'],
+        },
+        extend: {
+          translate: {
+            '0.25': '0.0625rem',
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Global Container -->
+  <div class="flex bg-rose-50 items-center justify-center min-h-screen">
+    <!-- Card Container -->
+    <div class="relative flex flex-col m-6 space-y-10 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0 md:m-10">
+      <!-- Left Side -->
+      <div class="p-6 md:p-20">
+        <!-- Top Content -->
+        <h2 class="font-mono mb-5 text-4xl font-bold">Login</h2>
+        <p class="max-w-sm mb-12 font-sans font-light text-gray-600">Login to your account to upload or download pictures, videos or music.
+        </p>
+        <input
+          type="text"
+          placeholder="Enter your email address"
+          class="w-full p-6 border border-gray-300
+          rounded-md placeholder:font-sans placeholder:font-light">
+          <!-- Middle Content -->
+
+      <div class="flex flex-col items-center justify-between
+      mt-6 space-y-6 md:flex-row md:space-y-0"
+      >
+        <div class="font-thin text-cyan-700">Forgot password</div>
+        <button class="w-full md:w-auto flex justify-center items-center p-6 space-x-4 font-sans font-bold text-white rounded-md shadow-lg px-9 bg-cyan-700 shadow-cyan-100 hover:bg-opacity-90 shadow-sm hover:shadow-lg border transition duration-200 hover:-translate-y-0.25"
+        >
+          <span>
+            Next
+          </span>
+        </button>
+      </div>
+
+      <!-- Border -->
+      
+      <div class="mt-12 border-b border-red-500"></div>
+      <!-- Bottom Content -->
+      <p class="py-6 text-sm font-thin text-center text-gray-400">or login with</p>
+
+      <!-- Bottom Buttons Container -->
+      <div class="flex flex-col space-x-0 space-y-6 md:flex-row md:space-y-0 md:space-x-4">
+        <button class="flex items-center justify-center py-2 space-x-3 border border-gray-300 rounded shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:-translate-y-0.25 transition duration-200 md:w-1/2">
+          <img class="w-9" src="images/facebook.png" alt="">
+          <span class="font-thin">
+            Facebook
+          </span>
+        </button>
+        <button class="flex items-center justify-center py-2 space-x-3 border border-gray-300 rounded shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:-translate-y-0.25 transition duration-200 md:w-1/2">
+          <img class="w-9" src="images/google.png" alt="">
+          <span class="font-thin">
+            Google
+          </span>
+        </button>
+      </div>
+
+      <!-- Right Side -->
+      <img
+      class="w-[430px] hidden md:block"
+        src="./images/image.jpg"
+        alt=""
+      >
+      </div>
+
+      <!-- Close Button -->
+      <div class="group absolute -top-5 right-4 flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full md:bg-white md:top-4 hover:-translate-y-0.25 transition 200">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6 text-black group-hover:text-gray-600 group-hover:cursor-pointer"
+          viewBox="0 0 24 24"
+          stoke-width="1.5"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+        <path
+          stroke="none"
+          d="M0 0h24v24H0z"
+          fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
