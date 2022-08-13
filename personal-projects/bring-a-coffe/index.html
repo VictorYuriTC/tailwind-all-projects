@@ -171,6 +171,10 @@
     </main>
   <script>
     document.getElementById('squarepants-bob-mug').addEventListener('click', ({ target }) => {
+      if (target.classList.contains('animate-bounce')
+        && target.classList.contains('animate-wiggle')) {
+          return;
+        }
       if (!target.classList.contains('fill-coffee')) {
         target.classList.remove('fill-red-100');
         target.classList.add('fill-coffee', 'animate-pulse', 'duration-1000');
@@ -178,7 +182,7 @@
       }
       if (!target.classList.contains('animate-bounce')) {
         target.classList.remove('animate-pulse');
-        target.classList.add('animate-bounce');
+        target.classList.add('animate-bounce', 'translate-y-5');
         return;
       };
       if(!target.classList.contains('animate-wiggle')) {
