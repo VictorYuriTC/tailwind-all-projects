@@ -627,10 +627,6 @@ h2 {
   max-height: fit-content;
 }
 
-.min-h-screen {
-  min-height: 100vh;
-}
-
 .w-8 {
   width: 2rem;
 }
@@ -691,27 +687,51 @@ h2 {
 
 @-webkit-keyframes wiggle {
   0%, 100% {
+    transform: translate(0px, 0.75px);
+  }
+
+  20% {
+    transform: rotate(12deg) translate(0px, 0px);
+  }
+
+  40% {
     transform: rotate(-12deg);
   }
 
-  50% {
-    transform: rotate(12deg);
+  60% {
+    transform: rotate(6deg);
+  }
+
+  80% {
+    transform: rotate(-6deg);
   }
 }
 
 @keyframes wiggle {
   0%, 100% {
+    transform: translate(0px, 0.75px);
+  }
+
+  20% {
+    transform: rotate(12deg) translate(0px, 0px);
+  }
+
+  40% {
     transform: rotate(-12deg);
   }
 
-  50% {
-    transform: rotate(12deg);
+  60% {
+    transform: rotate(6deg);
+  }
+
+  80% {
+    transform: rotate(-6deg);
   }
 }
 
 .animate-wiggle {
-  -webkit-animation: wiggle 1s ease-in-out infinite;
-          animation: wiggle 1s ease-in-out infinite;
+  -webkit-animation: wiggle 3s ease-in-out infinite;
+          animation: wiggle 3s ease-in-out infinite;
 }
 
 .cursor-pointer {
@@ -736,10 +756,6 @@ h2 {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.gap-3 {
-  gap: 0.75rem;
 }
 
 .gap-4 {
@@ -804,10 +820,6 @@ h2 {
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-opacity-50 {
-  --tw-bg-opacity: 0.5;
 }
 
 .bg-opacity-40 {
@@ -948,6 +960,10 @@ h2 {
 @media (min-width: 768px) {
   .md\:hidden {
     display: none;
+  }
+
+  .md\:w-12 {
+    width: 3rem;
   }
 
   .md\:grid-cols-3 {
