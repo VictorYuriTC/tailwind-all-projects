@@ -1,18 +1,19 @@
 import React from 'react'
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { getCityCoordinatesFromAPI, getCityWeatherFromAPI } from '../services/weatherAPI';
+import CityWeatherCard from './CityWeatherCard';
 
 function Header() {
   const [searchCityInput, setSearchCityInput] = useState('');
   const [searchedCity, setSearchedCity] = useState('');
-  const [cityCoordinates, setCityCoordinates] = useState({});
+  const [cityCoordinates, setCityCoordinates] = useState(null);
+  const [cityWeather, setCityWeather] = useState(null);
   
   useEffect(() => {
     const getCityCoordinates = async () => {
       const foundCities = await getCityCoordinatesFromAPI(searchedCity);
-      const firstCity = foundCities[0];
-      const { lat, lon } = firstCity;
+      const firstCityFound = await foundCities[0];
+      const { lat, lon } = await firstCityFound;
       setCityCoordinates({ lat, lon })
     }
     getCityCoordinates();
@@ -21,8 +22,8 @@ function Header() {
   useEffect(() => {
     const getCityWeather = async () => {
       const { lat, lon } = cityCoordinates;
-      const cityWeather = await getCityWeatherFromAPI(lat, lon);
-      console.log(cityWeather);
+      const foundCityWeather = await getCityWeatherFromAPI(lat, lon);
+      setCityWeather(foundCityWeather);
     }
     getCityWeather();
   }, [cityCoordinates])
@@ -38,6 +39,9 @@ function Header() {
           className="border border-black"
         />
       </label>
+
+      { cityWeather && <CityWeatherCard cityWeather={cityWeather}/>}
+
       <button
         onClick={() => { setSearchedCity(searchCityInput) }}
         className="bg-cyan-300 hover:bg-cyan-600"
