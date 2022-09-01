@@ -24,7 +24,8 @@
 
 #### **Personal Projects**
 - [ ] 1.1 - Jazzy Bar
-- [ ] 1.2 - Bring a Coffee! **(ongoing)**
+- [ ] 1.2 - Bring a Coffee! - Vanilla JS, HTML and CSS
+- [ ] 1.3 - Have a Meet! - React.js and Tailwind
 
 #### **Tailwind From Scratch - Mini Projects**
 - [X] 2.1 - Email Subscribe
