@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'crystal-blue': '#48cae4',
-        'dark-crystal-blue': '#0096c7',
+        'crystal-blue': '#0096c7',
+        'dark-crystal-blue': '#0077b6',
         'light-grey': '#fafaff'
       }
     },

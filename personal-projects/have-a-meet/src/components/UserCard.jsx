@@ -42,11 +42,6 @@ function UserCard(props) {
           textButton={'Contact'}
         />
       </div>
-
-      <section>
-
-      </section>
-
     </div>
   );
 }
