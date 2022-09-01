@@ -10,7 +10,6 @@ function useGetUserFromAPI() {
       const response = await fetch(URL)
       const data = await response.json();
       const foundUser = await data.results[0]
-      console.log(foundUser);
       setFetchedUser(foundUser)
     }
     getUserFromAPI();

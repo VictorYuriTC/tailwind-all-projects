@@ -1,23 +1,31 @@
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { getCityCoordinatesFromAPI } from '../services/getCityCoordinatesFromAPI';
+import { getCityCoordinatesFromAPI, getCityWeatherFromAPI } from '../services/weatherAPI';
 
 function Header() {
   const [searchCityInput, setSearchCityInput] = useState('');
   const [searchedCity, setSearchedCity] = useState('');
+  const [cityCoordinates, setCityCoordinates] = useState({});
   
   useEffect(() => {
-    const getWeather = async () => {
-      const weather = await getCityCoordinatesFromAPI(searchedCity);
-      console.log(weather);
+    const getCityCoordinates = async () => {
+      const foundCities = await getCityCoordinatesFromAPI(searchedCity);
+      const firstCity = foundCities[0];
+      const { lat, lon } = firstCity;
+      setCityCoordinates({ lat, lon })
     }
-    getWeather();
+    getCityCoordinates();
   }, [searchedCity])
 
-
   useEffect(() => {
-  }, [searchCityInput, searchedCity])
+    const getCityWeather = async () => {
+      const { lat, lon } = cityCoordinates;
+      const cityWeather = await getCityWeatherFromAPI(lat, lon);
+      console.log(cityWeather);
+    }
+    getCityWeather();
+  }, [cityCoordinates])
 
   return (
     <header className='header'>
