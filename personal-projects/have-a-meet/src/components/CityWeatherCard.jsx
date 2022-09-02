@@ -45,7 +45,7 @@ function CityWeatherCard({ cityWeather }) {
           <span>
             { HOME_SVG }
           </span>
-          <span>
+          <span class="flex flex-row items-center">
             { cityWeather.name}
           </span>
         </div>
@@ -53,7 +53,7 @@ function CityWeatherCard({ cityWeather }) {
           <span>
             { tempSVG }
           </span>
-          <span>
+          <span class="flex flex-row items-center">
             { FARENHEIT }ºF/{ CELSIUS }ºC
           </span>
         </div>
@@ -61,7 +61,7 @@ function CityWeatherCard({ cityWeather }) {
           <span>
             { weatherSVG.svg }
           </span>
-          <span>
+          <span className="flex flex-row items-center">
             { FEELS_LIKE_FARENHEIT }ºF/{ FEELS_LIKE_CELSIUS }ºC
           </span>
         </div>

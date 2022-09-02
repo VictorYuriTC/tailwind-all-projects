@@ -49,7 +49,7 @@ function Header() {
           id="search-city-text"
           name="search-city-text"
           className="bg-dark-snow text-center border border-dark-snow rounded p-1
-          font-normal md:text-start md:pl-3"
+          font-normal md:text-start md:pl-3 md:focus:scale-105 md:focus:font-medium"
           placeholder="Search by city"
         />
       </label>
