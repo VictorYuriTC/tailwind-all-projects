@@ -35,7 +35,8 @@ function SearchedUsersList () {
           ? renderUsers
           : <h1 className="self-center text-2xl text-center font-bold">
               No user found
-            </h1> }
+            </h1>
+        }
       </section>
     </>
   );

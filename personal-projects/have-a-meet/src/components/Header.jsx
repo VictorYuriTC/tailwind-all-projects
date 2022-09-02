@@ -66,8 +66,7 @@ function Header() {
           onKeyDown={ onEnterKeyDownSetSearchedCity }
           id="search-city-text"
           name="search-city-text"
-          className="bg-dark-snow text-center border border-dark-snow rounded p-1
-          font-normal md:text-start md:pl-3 md:group-focus:scale-105 md:focus:font-medium"
+          className="bg-dark-snow text-center border border-gray rounded p-1 font-normal md:text-start md:pl-3 md:group-focus:scale-105 md:focus:font-medium focus:outline-2"
           placeholder="Search by city"
         />
       </label>
