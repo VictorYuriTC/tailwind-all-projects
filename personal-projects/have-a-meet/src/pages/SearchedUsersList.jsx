@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import UserCard from '../components/UserCard';
 import SearchedUsersContext from '../context/SearchedUsersContext';
 import Header from '../components/Header';
+import { normalizeString } from '../helpers/functions';
 
 function SearchedUsersList () {
   const [renderUsers, setRenderUsers] = useState([]);
@@ -12,17 +13,18 @@ function SearchedUsersList () {
     users: { allRegisteredUsers }
   } = contextValue;
 
+  const { city } = useParams();
+
   useEffect(() => {
-    const cityNormalized = searchedCity
-      .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    const searchCityNormalized = normalizeString(city);
 
     const filteredUsers = allRegisteredUsers
-      .filter((user) => cityNormalized.includes((user.location.city).toLowerCase()) )
+      .filter((user) => searchCityNormalized.includes(normalizeString(user.location.city)))
 
     const mappedUsers = filteredUsers
       .map((user) => ( <UserCard user={ user }/> ))
     setRenderUsers(mappedUsers);
-  }, [])
+  }, [searchedCity])
 
   return (
     <>

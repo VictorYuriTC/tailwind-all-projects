@@ -17,11 +17,13 @@ function Header() {
   const navigate = useNavigate();
 
   const onEnterKeyDownSetSearchedCity = ({ key, target}) => {
-    navigate(`/search/${searchedCity}`)
     const city = target.value
     const cityNormalized = city.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
     console.log(cityNormalized)
-    if (key === 'Enter') { setSearchedCity(cityNormalized) }
+    if (key === 'Enter') {
+      navigate(`/search/${cityNormalized}`)
+      setSearchedCity(cityNormalized)
+    }
   }
 
   useEffect(() => {
