@@ -6,7 +6,8 @@ module.exports = {
       colors: {
         'crystal-blue': '#0096c7',
         'dark-crystal-blue': '#0077b6',
-        'light-grey': '#fafaff'
+        'light-grey': '#fafaff',
+        'dark-snow': '#edf2fb'
       }
     },
   },
