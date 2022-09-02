@@ -41,15 +41,17 @@ function Header() {
     md:flex-row md:justify-between md:p-1">
       <label
         htmlFor="search-city-text"
-        className="flex flex-row items-center justify-center gap-2 md:justify-start"
+        className="group flex flex-row items-center justify-center gap-2 md:justify-start"
       >
-        { SEARCH_SVG }
+        <span className="">
+          { SEARCH_SVG }
+        </span>
         <input
           onKeyDown={ onEnterKeyDownSetSearchedCity }
           id="search-city-text"
           name="search-city-text"
           className="bg-dark-snow text-center border border-dark-snow rounded p-1
-          font-normal md:text-start md:pl-3 md:focus:scale-105 md:focus:font-medium"
+          font-normal md:text-start md:pl-3 md:group-focus:scale-105 md:focus:font-medium"
           placeholder="Search by city"
         />
       </label>
