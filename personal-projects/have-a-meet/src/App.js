@@ -3,10 +3,10 @@ import UserCard from "./components/UserCard";
 
 function App() {
   return (
-    <>
+    <div className="">
     <Header />
     <UserCard />
-    </>
+    </div>
   );
 }
 

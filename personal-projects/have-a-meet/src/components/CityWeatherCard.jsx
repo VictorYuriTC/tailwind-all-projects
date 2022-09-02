@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { CHILLING_THERMOMETER, CLOUDY_TEMP_SVG, COLD_THERMOMETER, FREEZING_THERMOMETER, SIZZLING_THERMOMETER, SOFT_THERMOMETER, SUNNY_TEMP_SVG, WARM_THERMOMETER, WINDY_TEMP_SVG } from '../assets/images/svgs/svgs'
+import { HOME_SVG } from '../assets/images/svgs/miscellaneous/svgs.jsx'
+import { CHILLING_THERMOMETER, CLOUDY_TEMP_SVG, CLOUD_SUN_TEMP_SVG, COLD_THERMOMETER, FREEZING_THERMOMETER, RAINY_TEMP_SVG, SIZZLING_THERMOMETER, SNOW_TEMP_SVG, SOFT_THERMOMETER, SUNNY_TEMP_SVG, WARM_THERMOMETER, WINDY_TEMP_SVG } from '../assets/images/svgs/weather/svgs.jsx'
 
 function CityWeatherCard({ cityWeather }) {
-  const [tempSVG, setTempSVG] = useState(SUNNY_TEMP_SVG)
+  const [tempSVG, setTempSVG] = useState(SOFT_THERMOMETER)
+  const [weatherSVG, setWeatherSVG] = useState({
+    description: 'scattered clouds',
+    svg: CLOUDY_TEMP_SVG
+  })
+
   const KELVIN = cityWeather.main.temp
   const CELSIUS = (KELVIN - 272).toFixed(1)
   const FARENHEIT = (1.8 *(KELVIN - 273) + 32).toFixed(1)
@@ -12,31 +18,51 @@ function CityWeatherCard({ cityWeather }) {
   const FEELS_LIKE_FARENHEIT = (1.8 *(FEELS_LIKE_KELVIN - 273) + 32).toFixed(1)
 
   useEffect(() => {
-    if (CELSIUS >= 33) setTempSVG(SIZZLING_THERMOMETER)
-    if (CELSIUS < 33 && CELSIUS >= 26) setTempSVG(WARM_THERMOMETER)
-    if (CELSIUS < 26 && CELSIUS >= 19) setTempSVG(SOFT_THERMOMETER)
-    if (CELSIUS < 19 && CELSIUS >= 12) setTempSVG(CHILLING_THERMOMETER)
-    if (CELSIUS < 12 && CELSIUS >= 5) setTempSVG(COLD_THERMOMETER)
-    if (CELSIUS < 5) setTempSVG(FREEZING_THERMOMETER)
+    if (CELSIUS >= 38) setTempSVG(SIZZLING_THERMOMETER)
+    if (CELSIUS < 38 && CELSIUS >= 32) setTempSVG(WARM_THERMOMETER)
+    if (CELSIUS < 32 && CELSIUS >= 24) setTempSVG(SOFT_THERMOMETER)
+    if (CELSIUS < 24 && CELSIUS >= 16) setTempSVG(CHILLING_THERMOMETER)
+    if (CELSIUS < 12 && CELSIUS >= 0) setTempSVG(COLD_THERMOMETER)
+    if (CELSIUS < 0) setTempSVG(FREEZING_THERMOMETER)
   }, [CELSIUS])
+
+  useEffect(() => {
+    const { weather } = cityWeather;
+    const { description } = weather[0]
+    if (description === 'clear sky') { setWeatherSVG({ description, svg: SUNNY_TEMP_SVG }) }
+    if (description === 'few clouds') { setWeatherSVG({ description, svg: CLOUD_SUN_TEMP_SVG }) }
+    if (description === 'scattered clouds') { setWeatherSVG({ description, svg: CLOUDY_TEMP_SVG }) }
+    if (description === 'rain') { setWeatherSVG({ description, svg: RAINY_TEMP_SVG }) }
+    if (description === 'snow') {setWeatherSVG({ description, svg: SNOW_TEMP_SVG }) }
+    console.log(cityWeather);
+  }, [cityWeather])
 
   return (
     <section
-        className="flex flex-col items-center justify-center md:flex-row justify-around md:p-2 gap-3">
-        <div>
+        className="flex flex-row items-center justify-center max-w-fit md:p-2 gap-3
+          text-lg md:text-base">
+        <div className="flex flex-row items-center justify-center gap-1">
           <span>
-            {cityWeather.name}
+            { HOME_SVG }
+          </span>
+          <span>
+            { cityWeather.name}
           </span>
         </div>
         <div className="flex flex-row items-center justify-center gap-1">
-            { tempSVG }
           <span>
-            {FARENHEIT}ºF/{CELSIUS}ºC
+            { tempSVG }
+          </span>
+          <span>
+            { FARENHEIT }ºF/{ CELSIUS }ºC
           </span>
         </div>
-        <div>
+        <div className="flex flex-row items-center justify-center gap-1">
           <span>
-            Feels like: {FEELS_LIKE_FARENHEIT}ºF/{FEELS_LIKE_CELSIUS}ºC
+            { weatherSVG.svg }
+          </span>
+          <span>
+            { FEELS_LIKE_FARENHEIT }ºF/{ FEELS_LIKE_CELSIUS }ºC
           </span>
         </div>
     </section>
