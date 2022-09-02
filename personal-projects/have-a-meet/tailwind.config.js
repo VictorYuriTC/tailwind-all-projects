@@ -9,6 +9,9 @@ module.exports = {
         'light-grey': '#fafaff',
         'dark-snow': '#edf2fb'
       },
+      screens: {
+        'xsm': { 'max':'400px' }
+      }
     },
   },
   plugins: [],

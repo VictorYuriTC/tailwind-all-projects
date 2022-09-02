@@ -53,8 +53,8 @@ function Header() {
   }, [cityCoordinates])
  
   return (
-    <header className="header flex flex-col ml-2 mr-2 p-4 items-center justify-center
-    md:flex-row md:justify-between md:p-1">
+    <header className="flex flex-col header items-center justify-center ml-2 mr-2 p-4
+      md:flex md:flex-row md:justify-between md:p-1">
       <label
         htmlFor="search-city-text"
         className="group flex flex-row items-center justify-center gap-2 md:justify-start"
