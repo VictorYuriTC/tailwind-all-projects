@@ -8,7 +8,7 @@ module.exports = {
         'dark-crystal-blue': '#0077b6',
         'light-grey': '#fafaff',
         'dark-snow': '#edf2fb'
-      }
+      },
     },
   },
   plugins: [],

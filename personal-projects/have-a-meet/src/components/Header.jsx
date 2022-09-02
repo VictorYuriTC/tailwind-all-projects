@@ -72,8 +72,8 @@ function Header() {
         />
       </label>
 
-      <div>
-        { cityWeather && <CityWeatherCard cityWeather={cityWeather} />}
+      <div className="flex flex-row items-center justify-center">
+        { cityWeather && <CityWeatherCard cityWeather={ cityWeather } />}
       </div>
     </header>
   );

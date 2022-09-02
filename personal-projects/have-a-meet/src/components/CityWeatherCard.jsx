@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { HOME_SVG } from '../assets/images/svgs/miscellaneous/svgs.jsx'
+import { HOME_SVG, LOADING_SPINNER } from '../assets/images/svgs/miscellaneous/svgs.jsx'
 import { CHILLING_THERMOMETER, CLOUDY_TEMP_SVG, CLOUD_SUN_TEMP_SVG, COLD_THERMOMETER, FREEZING_THERMOMETER, RAINY_TEMP_SVG, SIZZLING_THERMOMETER, SNOW_TEMP_SVG, SOFT_THERMOMETER, SUNNY_TEMP_SVG, WARM_THERMOMETER, WINDY_TEMP_SVG } from '../assets/images/svgs/weather/svgs.jsx'
 
 function CityWeatherCard({ cityWeather }) {
@@ -51,6 +51,8 @@ function CityWeatherCard({ cityWeather }) {
         <div className="flex flex-row items-center justify-center gap-1">
           <span>
             { tempSVG }
+          </span>
+          <span>
           </span>
           <span className="flex flex-row items-center">
             { FARENHEIT }ºF/{ CELSIUS }ºC
