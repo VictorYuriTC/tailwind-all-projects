@@ -36,7 +36,8 @@ function MainPage() {
     <>
       <Header />
       <main>
-        <section className="flex flex-col items-center justify-center">
+        <section className="xsm:flex xsm:flex-col items-center justify-center
+          sm:grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
           { renderUsers.length > 0
             ? renderUsers
             : <LoadingSpinner

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { HOME_SVG, LOADING_SPINNER } from '../assets/images/svgs/miscellaneous/svgs.jsx'
+import { HOME_SVG } from '../assets/images/svgs/miscellaneous/svgs.jsx'
 import { CHILLING_THERMOMETER, CLOUDY_TEMP_SVG, CLOUD_SUN_TEMP_SVG, COLD_THERMOMETER, FREEZING_THERMOMETER, RAINY_TEMP_SVG, SIZZLING_THERMOMETER, SNOW_TEMP_SVG, SOFT_THERMOMETER, SUNNY_TEMP_SVG, WARM_THERMOMETER, WINDY_TEMP_SVG } from '../assets/images/svgs/weather/svgs.jsx'
 
 function CityWeatherCard({ cityWeather }) {
@@ -26,6 +26,7 @@ function CityWeatherCard({ cityWeather }) {
       if (CELSIUS < 12 && CELSIUS >= 0) setTempSVG(COLD_THERMOMETER)
       if (CELSIUS < 0) setTempSVG(FREEZING_THERMOMETER)
     }
+    renderingThermometerSVG();
   }, [CELSIUS])
 
   useEffect(() => {
@@ -38,12 +39,12 @@ function CityWeatherCard({ cityWeather }) {
       if (description === 'rain') { setWeatherSVG({ description, svg: RAINY_TEMP_SVG }) }
       if (description === 'snow') {setWeatherSVG({ description, svg: SNOW_TEMP_SVG }) }
     }
+    renderingWeatherSVG();
   }, [cityWeather])
 
   return (
     <section
-        className="flex flex-row items-center justify-center max-w-fit md:p-2 gap-3
-          text-lg md:text-base">
+        className="xsm:grid xsm:gap-0 xsn:auto-cols-max xsm:grid-cols-1 flex flex-row items-center p-1 justify-center md:p-2 gap-3 text-lg md:text-base">
 
         <div className="flex flex-row items-center justify-center gap-1">
           <span>
