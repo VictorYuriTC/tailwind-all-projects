@@ -2,19 +2,16 @@ import React from 'react'
 import { useState } from 'react';
 import useGetUserFromAPI from '../hooks/useGetUserFromAPI';
 import UserCardButton from './UserCardButton';
-import Header from './Header';
 
-function UserCard(props) {
+function UserCard({ user }) {
   const ABOUT_SECTION = 'About Section'
   const CONTACT_SECTION = 'Contact Section'
   const [selectedSection, setSelectedSection] = useState('');
-  const user = useGetUserFromAPI();
 
   const { name, picture } = user;
 
   return (
     <>
-      <Header />
       <div
         className="user
           flex flex-col items-center justify-center

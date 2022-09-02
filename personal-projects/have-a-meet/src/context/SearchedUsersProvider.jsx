@@ -3,11 +3,16 @@ import SearchedUsersContext from './SearchedUsersContext';
 
 function SearchedUsersProvider({ children }) {
   const [searchedCity, setSearchedCity] = useState('');
+  const [allRegisteredUsers, setAllRegisteredUsers] = useState([]);
 
   const contextValue = {
     search: {
       searchedCity,
       setSearchedCity
+    },
+    users: {
+      allRegisteredUsers,
+      setAllRegisteredUsers
     }
   }
 

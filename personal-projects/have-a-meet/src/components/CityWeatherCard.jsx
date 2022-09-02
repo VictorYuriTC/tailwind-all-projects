@@ -34,7 +34,6 @@ function CityWeatherCard({ cityWeather }) {
     if (description === 'scattered clouds') { setWeatherSVG({ description, svg: CLOUDY_TEMP_SVG }) }
     if (description === 'rain') { setWeatherSVG({ description, svg: RAINY_TEMP_SVG }) }
     if (description === 'snow') {setWeatherSVG({ description, svg: SNOW_TEMP_SVG }) }
-    console.log(cityWeather);
   }, [cityWeather])
 
   return (
@@ -45,7 +44,7 @@ function CityWeatherCard({ cityWeather }) {
           <span>
             { HOME_SVG }
           </span>
-          <span class="flex flex-row items-center">
+          <span className="flex flex-row items-center">
             { cityWeather.name}
           </span>
         </div>
@@ -53,7 +52,7 @@ function CityWeatherCard({ cityWeather }) {
           <span>
             { tempSVG }
           </span>
-          <span class="flex flex-row items-center">
+          <span className="flex flex-row items-center">
             { FARENHEIT }ºF/{ CELSIUS }ºC
           </span>
         </div>

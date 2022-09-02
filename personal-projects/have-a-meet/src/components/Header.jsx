@@ -1,27 +1,45 @@
 import React, { useContext } from 'react'
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { SEARCH_SVG } from '../assets/images/svgs/miscellaneous/svgs';
 import SearchedUsersContext from '../context/SearchedUsersContext';
-import useGetAllUsersFromAPI from '../hooks/useGetAllUsersFromAPI';
 import { getCityCoordinatesFromAPI, getCityWeatherFromAPI } from '../services/weatherAPI';
 import CityWeatherCard from './CityWeatherCard';
 
 function Header() {
+  const [cityInfo, setCityInfo] = useState(null);
   const [cityCoordinates, setCityCoordinates] = useState(null);
   const [cityWeather, setCityWeather] = useState(null);
   const contextValue = useContext(SearchedUsersContext);
   const { search } = contextValue
   const { searchedCity, setSearchedCity } = search
+
+  const navigate = useNavigate();
+
+  const onEnterKeyDownSetSearchedCity = ({ key, target}) => {
+    navigate(`/search/${searchedCity}`)
+    const city = target.value
+    const cityNormalized = city.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    console.log(cityNormalized)
+    if (key === 'Enter') { setSearchedCity(cityNormalized) }
+  }
+
+  useEffect(() => {
+    const getCityInfo = async () => {
+      const foundCities = await getCityCoordinatesFromAPI(searchedCity);
+      const firstCityFound = await foundCities[0];
+      setCityInfo(firstCityFound);
+    }
+    getCityInfo();
+  }, [searchedCity])
   
   useEffect(() => {
     const getCityCoordinates = async () => {
-      const foundCities = await getCityCoordinatesFromAPI(searchedCity);
-      const firstCityFound = await foundCities[0];
-      const { lat, lon } = await firstCityFound;
+      const { lat, lon } = cityInfo;
       setCityCoordinates({ lat, lon })
     }
     getCityCoordinates();
-  }, [searchedCity])
+  }, [cityInfo])
 
   useEffect(() => {
     const getCityWeather = async () => {
@@ -31,10 +49,6 @@ function Header() {
     }
     getCityWeather();
   }, [cityCoordinates])
-
-  const onEnterKeyDownSetSearchedCity = ({ key, target}) => {
-    if (key === 'Enter') { setSearchedCity(target.value)}
-  }
  
   return (
     <header className="header flex flex-col ml-2 mr-2 p-4 items-center justify-center
