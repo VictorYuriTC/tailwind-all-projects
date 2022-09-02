@@ -1,4 +1,4 @@
-import weatherToken from '../../tokens';
+import { weatherToken } from '../tokens';
 
 export const getCityCoordinatesFromAPI = async (cityName) => {
   const URL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${weatherToken}`
