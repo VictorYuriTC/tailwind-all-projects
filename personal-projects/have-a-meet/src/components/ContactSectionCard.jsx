@@ -2,8 +2,9 @@ import React from 'react'
 
 function ContactSectionCard(props) {
   return (
-    <div className=''>
-    </div>
+    <section className=''>
+      Contact:
+    </section>
   );
 }
 export default ContactSectionCard;

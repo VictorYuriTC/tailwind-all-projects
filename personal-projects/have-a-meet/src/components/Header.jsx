@@ -29,6 +29,7 @@ function Header() {
   useEffect(() => {
     const getCityInfo = async () => {
       const foundCities = await getCityCoordinatesFromAPI(searchedCity);
+      console.log(foundCities)
       const firstCityFound = await foundCities[0];
       setCityInfo(firstCityFound);
     }
@@ -54,7 +55,7 @@ function Header() {
  
   return (
     <header className="flex flex-col header items-center justify-center ml-4 mr-4 p-4
-      md:flex md:flex-row md:justify-between md:ml-2 md:mr-2 md:p-1">
+      md:flex md:flex-row md:justify-between md:ml-2 md:mr-2 md:p-1 bg-red-500">
       <label
         htmlFor="search-city-text"
         className="group flex flex-row items-center justify-center gap-2 md:justify-start"

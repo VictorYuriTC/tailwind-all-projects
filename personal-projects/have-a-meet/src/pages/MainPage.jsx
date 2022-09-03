@@ -44,7 +44,7 @@ function MainPage() {
             h="h-24"
             w="w-24"
             fillColor="fill-blue-600"
-            otherClasses="absolute top-1/3 left-2/5"
+            otherClasses="absolute top-1/3 left-1/2"
           />
           }
         </section>
