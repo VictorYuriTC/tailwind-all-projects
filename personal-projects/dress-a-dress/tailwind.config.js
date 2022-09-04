@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       translate: {
-        'distant': '12.25rem'
+        'distant': '16.5rem'
       },
       transitionDuration: {
         '10000': '10000ms'

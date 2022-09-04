@@ -18,7 +18,7 @@ function MaingPage(props) {
   }, [])
 
   return (
-    <div className=''>
+    <div className='grid grid-cols-4'>
        { renderClothes  }
     </div>
   );
