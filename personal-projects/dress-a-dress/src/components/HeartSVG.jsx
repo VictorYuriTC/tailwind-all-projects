@@ -34,7 +34,7 @@ function HeartSVG({ className, articleCode }) {
   }
 
   const onMouseEnterChangeFillColor = () => {
-    setFillColor('#faaaa5')
+    setFillColor('#ffa0af')
   }
 
   const onMouseLeaveChangeFillColor = () => {

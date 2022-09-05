@@ -1,7 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import fashionData from "../services/fashionData"
-import ClothCard from '../components/ClothCard';
-import { setInitialLocalStorage } from '../localStorage/localStorage';
+import React from 'react'
 import Header from '../components/Header';
 import ClothesList from '../components/ClothesList';
 
