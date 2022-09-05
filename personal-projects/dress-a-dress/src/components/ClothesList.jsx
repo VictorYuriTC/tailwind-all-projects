@@ -93,8 +93,10 @@ function ClothesList() {
       setAmountOfClothesMessage(`${amountOfRenderedClothes} items`);
     }
 
-    if (amountOfRenderedClothes === '0'
-      || searchedProductInput === '') setAmountOfClothesMessage('No items found');
+    if (Number(amountOfRenderedClothes) < 1
+      || (searchedProductInput.value === '' && searchedProductInput.pressedKey === 'Enter')) {
+        setAmountOfClothesMessage('No items found');
+      }
     
     if (amountOfRenderedClothes === '1') setAmountOfClothesMessage('1 item');
     

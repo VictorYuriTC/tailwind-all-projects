@@ -30,7 +30,7 @@ function Header(props) {
   const onEnterKeyDownSearchProducts = ({ key, target: { value }}) => {
     const pressedKey = key;
     if (pressedKey === 'Enter') {
-      setSearchedProductInput({ pressedKey, value });
+      setSearchedProductInput({ pressedKey, value: value.toLowerCase() });
       navigate('/')
     };
   }
