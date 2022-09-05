@@ -28,7 +28,7 @@ function Header() {
 
   return (
     <div className="">
-      <header className="flex flex-col items-center justify-end md:flex-row p-3 self-end">
+      <header className="flex flex-col p-0 items-center justify-end md:flex-row md:p-3 self-end">
         <div className="flex flex-row gap-3">
 {/*           <div className="flex flex-row items-center">
             <HomeSVG />
@@ -76,8 +76,8 @@ function Header() {
         </span>
       </div>
 
-      <header className="flex flex-row items-center justify-end">
-        <div className="flex flex-row md:mr-28">
+      <header className="flex items-center justify-center 3xsm:hidden 2xsm:hidden xsm:hidden sm:flex-col md:flex-row">
+        <div className="grid grid-cols-5 sm:flex sm:flex-row sm:items-center justify-end">
           <UnderlinedHeaderLink text="Women" to="/women" className=""/>
           <UnderlinedHeaderLink text="Divided" to="/divided" className=""/>
           <UnderlinedHeaderLink text="Men" to="/men" className=""/>
@@ -89,12 +89,12 @@ function Header() {
           <UnderlinedHeaderLink text="Sustainability" to="/sustainability" className=""/>
         </div>
 
-        <div className="group flex flex-col justify-center p-4">
+        <div className="group flex flex-col p-1 justify-center md:p-4">
           <MagnifyingGlassSVG className="absolute"/>
           <input
             type="text"
             placeholder="Search products"
-            className="font-black text-center w-40 p-1 focus:outline-none indent-4 bg-main-bg"
+            className="font-black text-center w-4 2xsm:w-8 xsm:w-16 sm:w-40 md:w-24 lg:w-40 xl:w-44 2xl:w-52 p-1 focus:outline-none indent-4 bg-main-bg"
             onKeyDown={ onEnterKeyDownSearchProducts }
           />
           <div className="border border-black"></div>

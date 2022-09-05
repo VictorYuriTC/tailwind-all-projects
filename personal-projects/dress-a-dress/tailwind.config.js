@@ -19,7 +19,15 @@ module.exports = {
         'opaque-gray': '#444444'
       },
       screens: {
-        'xsm': '460px'
+        '3xsm': [
+          { 'max': '359px' },
+        ],
+        '2xsm': [
+          { 'min': '360px', 'max': '479px' }
+        ],
+        'xsm': [
+          { 'min': '480px', 'max': '639px' }
+        ]
       }
     },
   },

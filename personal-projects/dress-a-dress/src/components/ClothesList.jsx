@@ -7,7 +7,7 @@ import ClothesContext from '../context/ClothesContext';
 
 function ClothesList() {
   const [renderClothes, setRenderClothes] = useState([]);
-  const [gridCols, setGridCols] = useState('grid-cols-4');
+  const [gridCols, setGridCols] = useState('md:grid-cols-4');
   const [searchWarning, setSearchWarning] = useState('');
   const [amountOfClothesMessage, setAmountOfClothesMessage] = useState('');
   const contextValue = useContext(ClothesContext);
@@ -52,8 +52,8 @@ function ClothesList() {
     setSearchWarning('');
   }, [searchedProductInput])
 
-  const onClickSetGridThreeGridCols = () => setGridCols('grid-cols-3');
-  const onClickSetGridFourGridCols = () => setGridCols('grid-cols-4');
+  const onClickSetGridThreeGridCols = () => setGridCols('md:grid-cols-3');
+  const onClickSetGridFourGridCols = () => setGridCols('md:grid-cols-4');
   const onClickSetModelPhotos = () => setSelectedPhoto('model');
   const onClickSetProductPhotos = () => setSelectedPhoto('product');
 
@@ -94,8 +94,8 @@ function ClothesList() {
   }, [renderClothes])
 
   return (
-    <div className="flex flex-col w-full ml-4 mr-4">
-      <div className="flex flex-row justify-end items-center gap-10 mb-7 w-full">
+    <div className="flex ml-1 mr-1 flex-col w-full md:ml-4 md:mr-4">
+      <div className="hidden sm:flex sm:flex-row sm:justify-end sm:items-center sm:gap-10 sm:mb-7 md:w-full">
         <h1 className="font-medium text-sm text-[#444444]">{ searchWarning }</h1>
         
         <div>
@@ -159,7 +159,7 @@ function ClothesList() {
         </button>
       </div>
 
-      <div className={`grid ${ gridCols }`}>
+      <div className={`grid xsm:grid-cols-2 sm:grid-cols-2 ${ gridCols }`}>
         { renderClothes }
       </div>
     </div>

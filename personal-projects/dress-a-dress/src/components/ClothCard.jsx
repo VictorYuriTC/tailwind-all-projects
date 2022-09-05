@@ -25,14 +25,14 @@ function ClothCard({ cloth }) {
   const onMouseLeaveChangeImageSrc = () => setImageSrc(cloth.image[0].src)
 
   return (
-    <div className="cloth-card flex flex-col p-1">
+    <div className="p-0 m-0 md:cloth-card md:flex md:flex-col md:p-1">
       <div className="group flex flex-col justify-end">
         <img
           src={ imageSrc }
           alt={ cloth.image[0].alt }
           onMouseEnter={ onMouseEnterChangeImageSrc }
           onMouseLeave={ onMouseLeaveChangeImageSrc }
-          className="group-hover:cursor-pointer focus:opacity-20 transition"
+          className="group-hover:cursor-pointer focus:opacity-20 transition sm:w-full"
         />
         <AddToFavoriteHeartSVG
           className="absolute self-end m-[-5px] transition duration-200 group-hover:cursor-pointer"
