@@ -17,7 +17,7 @@ function WishlistPage(props) {
       const favorites = getItemFromLocalStorage(FAVORITE_CLOTHES);
       const selectedFavorites = fashionData
         .filter(cloth => favorites.includes(cloth.articleCode))
-        .map(favoriteCloth => <FavoriteClothCard cloth={ favoriteCloth }/>)
+        .map(favoriteCloth => <FavoriteClothCard key={ favoriteCloth.articleCode } cloth={ favoriteCloth }/>)
       setRenderFavorites(selectedFavorites)
       
       if (favorites.length > 1) setAmountOfFavoriteItems(`${favorites.length} items`)
