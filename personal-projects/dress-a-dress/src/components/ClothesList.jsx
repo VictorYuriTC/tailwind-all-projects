@@ -32,20 +32,27 @@ function ClothesList(props) {
   useEffect(() => {
     if (searchedProductInput.value === ''
       && searchedProductInput.pressedKey === 'Enter') {
+      setAmountOfRenderedClothes(0)
       setSearchWarning('You must provide at least one character to search a product by its name.');
       return;
     }
 
     if (searchedProductInput.pressedKey === 'Enter') {
       const fetchedClothes = fashionData
-      .filter(cloth => cloth.title.toLowerCase().includes(searchedProductInput.value)
-      || cloth.category.toLowerCase().includes(searchedProductInput.value))
+      .filter(cloth => cloth.title.toLowerCase().includes(searchedProductInput.value))
 
       .map(filteredCloth => (
         <ClothCard
           key={ filteredCloth.articleCode}
           cloth={ filteredCloth }
         />))
+      if (fetchedClothes.length === 0) {
+        setRenderClothes([]);
+        setAmountOfRenderedClothes(fetchedClothes.length.toString());
+        console.log(fetchedClothes.length)
+        setSearchWarning('Sorry, there are no items with that description.');
+        return;
+      }
       setRenderClothes(fetchedClothes);
       setAmountOfRenderedClothes(fetchedClothes.length);
       setSearchWarning('');
@@ -83,13 +90,16 @@ function ClothesList(props) {
   }
 
   useEffect(() => {
-    setAmountOfClothesMessage(`${amountOfRenderedClothes} items`);
+    if (Number(amountOfRenderedClothes) > 0) {
+      setAmountOfClothesMessage(`${amountOfRenderedClothes} items`);
+    }
 
-    if (amountOfRenderedClothes === '0') setAmountOfClothesMessage('No items');
+    if (amountOfRenderedClothes === '0'
+      || searchedProductInput === '') setAmountOfClothesMessage('No items found');
     
     if (amountOfRenderedClothes === '1') setAmountOfClothesMessage('1 item');
     
-  }, [amountOfRenderedClothes])
+  }, [amountOfRenderedClothes, searchedProductInput])
 
   return (
       <div className="flex flex-col w-full ml-4 mr-4">
