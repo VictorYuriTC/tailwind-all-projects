@@ -29,6 +29,7 @@ function Header() {
   useEffect(() => {
     const getCityInfo = async () => {
       const foundCities = await getCityCoordinatesFromAPI(searchedCity);
+      console.log(foundCities)
       const firstCityFound = await foundCities[0];
       setCityInfo(firstCityFound);
     }
@@ -53,8 +54,8 @@ function Header() {
   }, [cityCoordinates])
  
   return (
-    <header className="header flex flex-col ml-2 mr-2 p-4 items-center justify-center
-    md:flex-row md:justify-between md:p-1">
+    <header className="flex flex-col header items-center justify-center ml-4 mr-4 p-4
+      md:flex md:flex-row md:justify-between md:ml-2 md:mr-2 md:p-1 bg-red-500">
       <label
         htmlFor="search-city-text"
         className="group flex flex-row items-center justify-center gap-2 md:justify-start"
@@ -66,14 +67,13 @@ function Header() {
           onKeyDown={ onEnterKeyDownSetSearchedCity }
           id="search-city-text"
           name="search-city-text"
-          className="bg-dark-snow text-center border border-dark-snow rounded p-1
-          font-normal md:text-start md:pl-3 md:group-focus:scale-105 md:focus:font-medium"
+          className="bg-dark-snow text-center border border-gray rounded p-1 font-normal md:text-start md:pl-3 md:group-focus:scale-105 md:focus:font-medium focus:outline-2"
           placeholder="Search by city"
         />
       </label>
 
-      <div>
-        { cityWeather && <CityWeatherCard cityWeather={cityWeather} />}
+      <div className="flex flex-row items-center justify-center">
+        { cityWeather && <CityWeatherCard cityWeather={ cityWeather } />}
       </div>
     </header>
   );

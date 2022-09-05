@@ -7,7 +7,11 @@ module.exports = {
         'crystal-blue': '#0096c7',
         'dark-crystal-blue': '#0077b6',
         'light-grey': '#fafaff',
-        'dark-snow': '#edf2fb'
+        'dark-snow': '#fefefe',
+        'blurred-white': '#fcfcff',
+      },
+      screens: {
+        'xsm': { 'max':'415px' }
       }
     },
   },

@@ -29,8 +29,14 @@ function SearchedUsersList () {
   return (
     <>
       <Header />
-      <section>
-        { renderUsers }
+      <section className="grid xsm:grid-cols-1 grid-cols-2 items-center justify-center
+        md:grid-cols-3 lg:grid-cols-4">
+        { renderUsers.length > 0
+          ? renderUsers
+          : <h1 className="self-center text-2xl text-center font-bold">
+              No user found
+            </h1>
+        }
       </section>
     </>
   );

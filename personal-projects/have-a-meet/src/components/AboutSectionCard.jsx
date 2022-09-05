@@ -1,12 +1,12 @@
 import React from 'react'
-import useGetUserFromAPI from '../hooks/useGetUserFromAPI';
 
-function AboutSectionCard(props) {
-  const user = useGetUserFromAPI();
-  console.log(user);
+function AboutSectionCard({ user }) {
   return (
-    <div className=''>
-    </div>
+    <section className=''>
+      <span className="text-red-500 text-2xl">
+        
+      </span>
+    </section>
   );
 }
 export default AboutSectionCard;
