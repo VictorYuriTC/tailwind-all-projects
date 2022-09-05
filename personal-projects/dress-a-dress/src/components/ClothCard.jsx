@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import HeartSVG from '../assets/images/svgs/miscellaneous/svgs';
+import HeartSVG from '../components/HeartSVG';
 import SwatchCard from './SwatchCard';
 
 function ClothCard({ cloth }) {
@@ -22,7 +22,7 @@ function ClothCard({ cloth }) {
 
 
   return (
-    <div className="cloth-card flex flex-col items-center justify-center border-2 p-3">
+    <div className="cloth-card flex flex-col items-center justify-center p-1">
       <div className="group">
         <img
           src={ imageSrc }
@@ -31,19 +31,27 @@ function ClothCard({ cloth }) {
           onMouseLeave={ onMouseLeaveChangeImageSrc }
           className="group-hover:cursor-pointer focus:opacity-20 transition"
         />
-        <span className="">
-          <HeartSVG className="transition duration-200 group-hover:cursor-pointer -translate-y-7 translate-x-distant fill-white hover:fill-red-300"/>
-        </span>
-      </div>
-      <span className="self-start text-start text-sm">{ title }</span>
-      <span className="self-start text-start text-sm">{ price }</span>
-      <span className="self-start flex flex-row gap-1" >{ swatches.map(swatch => (
-        <SwatchCard
-          swatch={ swatch }
-          key={ `${cloth.articleCode}-${swatch.colorCode}` }
+        <HeartSVG
+          className="transition duration-200 group-hover:cursor-pointer -translate-y-7 translate-x-distant fill-white hover:fill-red-300"
+          articleCode={ cloth.articleCode }
         />
-      )) }</span>
+      </div>
+
+      <span className="self-start text-start text-sm">{ title }</span>
+
+      <span className="self-start text-start text-sm">{ price }</span>
+
+      <span className="self-start flex flex-row gap-1" >
+        { swatches.map(swatch => (
+          <SwatchCard
+            swatch={ swatch }
+            key={ `${cloth.articleCode}-${swatch.colorCode}` }
+          />))
+        }
+      </span>
+
       <span className="self-start text-start text-xs">{ sellingAttribute }</span>
+
     </div>
   );
 }

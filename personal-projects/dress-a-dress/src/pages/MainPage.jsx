@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import fashionData from "../services/fashionData"
 import ClothCard from '../components/ClothCard';
+import { setInitialLocalStorage } from '../localStorage/localStorage';
 
 function MaingPage(props) {
   const [renderClothes, setRenderClothes] = useState([]);
