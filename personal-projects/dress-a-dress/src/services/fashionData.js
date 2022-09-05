@@ -1811,52 +1811,6 @@ const fashionData = [
       "damStyleWith": ""
     },
     {
-      "articleCode": "1107251001",
-      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1107251001'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTEwNzI1MV9ncm91cF8wMDFfZW5fdXM7MTEwNzI1MTAwMV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTs4Njs','1107251001');",
-      "link": "/en_us/productpage.1107251001.html",
-      "title": "Pocket-detail Sports Leggings",
-      "category": "ladies_sport",
-      "image": [
-        {
-          "src": "//lp2.hm.com/hmgoepprod?set=source[/53/af/53af4ddb88fc333a49a05d480a545cae08ad5e01.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
-          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/53/af/53af4ddb88fc333a49a05d480a545cae08ad5e01.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
-          "alt": "Pocket-detail Sports Leggings Model",
-          "dataAltText": "Pocket-detail Sports Leggings"
-        }
-      ],
-      "legalText": "",
-      "promotionalMarkerText": "",
-      "showPromotionalClubMarker": false,
-      "showPriceMarker": false,
-      "favouritesTracking": "Favourites|1107251001|Pocket-detail Sports Leggings|LADIES_NEWARRIVALS : CLOTHING_CLOTHING : VIEWALL_VIEW_ALL",
-      "favouritesSavedText": "SAVED AS FAVORITE",
-      "favouritesNotSavedText": "SAVE AS FAVORITE",
-      "marketingMarkerText": "",
-      "marketingMarkerType": "",
-      "marketingMarkerCss": "",
-      "price": "$ 29.99",
-      "redPrice": "",
-      "yellowPrice": "",
-      "bluePrice": "",
-      "clubPriceText": "",
-      "sellingAttribute": "New Arrival",
-      "swatchesTotal": "1",
-      "swatches": [
-        {
-          "colorCode": "#272628",
-          "articleLink": "/en_us/productpage.1107251001.html",
-          "colorName": "Black"
-        }
-      ],
-      "preAccessStartDate": "",
-      "preAccessEndDate": "",
-      "preAccessGroups": [],
-      "outOfStockText": "",
-      "comingSoon": "",
-      "brandName": "H&M",
-      "damStyleWith": ""
-    },
-    {
       "articleCode": "1112676001",
       "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1112676001'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTExMjY3Nl9ncm91cF8wMDFfZW5fdXM7MTExMjY3NjAwMV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTs4Nzs','1112676001');",
       "link": "/en_us/productpage.1112676001.html",
