@@ -33,7 +33,7 @@ function CartPage(props) {
   }, [])
 
   return (
-    <div className="bg-main-bg">
+    <div className="bg-main-bg min-h-screen">
       <Header />
       <h1 className="text-4xl text-center mt-10">Shopping bag</h1>
       <div className="">{ tipPhrase }</div>
