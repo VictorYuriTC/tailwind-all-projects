@@ -38,13 +38,17 @@ function ClothesList(props) {
   }
 
   return (
-      <div className="ml-4 mr-4">
+      <div className="flex flex-col w-full ml-4 mr-4">
         <div className="flex flex-row justify-end gap-10 mb-7 w-full">
           <div>
             <button
               onClick={ onClickSetModelPhotos }
-              style={ { color: selectedPhoto === 'model' ? 'red' : 'black' }}>
-              Model
+              className="font-medium text-sm"
+              style={ { color: selectedPhoto === 'model' ? 'red' : '#555555' }}
+            >
+              <span>
+                Model
+              </span>
             </button>
             <div
               className="opacity-0 mt-1 border border-red-500"
@@ -55,7 +59,8 @@ function ClothesList(props) {
           <div>
             <button
               onClick={ onClickSetProductPhotos }
-              style={ { color: selectedPhoto === 'product' ? 'red' : 'black' }}
+              className="font-medium text-sm"
+              style={ { color: selectedPhoto === 'product' ? 'red' : '#555555' }}
             >
               Product
             </button>
