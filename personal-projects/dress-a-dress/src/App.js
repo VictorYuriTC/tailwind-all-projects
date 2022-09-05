@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { setInitialLocalStorage } from "./localStorage/localStorage";
-import MaingPage from "./pages/MainPage";
+import MainPage from "./pages/MainPage";
 
 function App() {
   useEffect(() => {
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div>
-     <MaingPage />
+     <MainPage />
     </div>
   );
 }

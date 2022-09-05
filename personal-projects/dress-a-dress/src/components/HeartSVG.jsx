@@ -33,6 +33,21 @@ function HeartSVG({ className, articleCode }) {
     console.log(favoriteClothes);
   }
 
+  const onMouseEnterChangeFillColor = () => {
+    setFillColor('#faaaa5')
+  }
+
+  const onMouseLeaveChangeFillColor = () => {
+    const favoriteClothes = getItemFromLocalStorage(FAVORITE_CLOTHES);
+
+    if (favoriteClothes.includes(articleCode)) {
+      setFillColor('red')
+      return;
+    }
+
+    setFillColor('white')
+  }
+
   return  (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -42,8 +57,10 @@ function HeartSVG({ className, articleCode }) {
         stroke="currentColor"
         className={`${className} w-6 h-6`}
         onClick={ onClickSetFavoriteItem }
+        onMouseEnter={ onMouseEnterChangeFillColor }
+        onMouseLeave={ onMouseLeaveChangeFillColor }
         articleCode={ articleCode }
-        style={ { fill: `${fillColor}`}}
+        style={ { fill: `${fillColor}`, }}
         >
       <path
         strokeLinecap="round"

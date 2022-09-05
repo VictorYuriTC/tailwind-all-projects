@@ -32,7 +32,7 @@ function ClothCard({ cloth }) {
           className="group-hover:cursor-pointer focus:opacity-20 transition"
         />
         <HeartSVG
-          className="transition duration-200 group-hover:cursor-pointer -translate-y-7 translate-x-distant fill-white hover:fill-red-300"
+          className="transition duration-200 group-hover:cursor-pointer -translate-y-7 translate-x-distant hover:fill-red-300"
           articleCode={ cloth.articleCode }
         />
       </div>

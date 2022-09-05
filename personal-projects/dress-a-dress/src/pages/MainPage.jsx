@@ -2,26 +2,16 @@ import React, { useEffect, useState } from 'react'
 import fashionData from "../services/fashionData"
 import ClothCard from '../components/ClothCard';
 import { setInitialLocalStorage } from '../localStorage/localStorage';
+import Header from '../components/Header';
+import ClothesList from '../components/ClothesList';
 
-function MaingPage(props) {
-  const [renderClothes, setRenderClothes] = useState([]);
-
-  useEffect(() => {
-    const fetchedClothes = fashionData;
-    const clothes = fetchedClothes.map((cloth) => (
-      <ClothCard
-        key={ cloth.articleCode }
-        cloth={ cloth }
-      />
-      ))
-    setRenderClothes(clothes)
-    console.log(fetchedClothes)
-  }, [])
+function MainPage(props) {
 
   return (
-    <div className='grid grid-cols-4'>
-       { renderClothes  }
+    <div className="">
+      <Header />
+      <ClothesList />
     </div>
   );
 }
-export default MaingPage;
+export default MainPage;
