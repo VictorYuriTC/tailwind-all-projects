@@ -37,7 +37,7 @@ function CartPage(props) {
       <Header />
       <h1 className="text-4xl text-center mt-10 font-bold">Shopping bag</h1>
       <div className="flex items-center justify-center">{ tipPhrase }</div>
-      <div className="flex flex-col p-3 gap-9">
+      <div className="grid p-3 gap-9">
         { renderCartClothes }
       </div>
     </div>

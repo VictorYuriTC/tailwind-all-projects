@@ -55,7 +55,7 @@ function WishlistPage(props) {
       <div className="text-center mt-12">{ tipPhrase }</div>
 
       <h4 className="text-[#6b6b6b] text-end mr-6">{ amountOfFavoriteItems }</h4>
-      <div className="grid grid-cols-4">
+      <div className="grid grid-cols-4 w-fit h-fit">
         { renderFavorites }
       </div>
     </div>
