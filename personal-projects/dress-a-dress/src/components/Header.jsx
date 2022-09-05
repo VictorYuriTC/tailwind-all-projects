@@ -7,6 +7,7 @@ import BagSVG from './svgs/BagSVG';
 import AddToFavoriteHeartSVG from './svgs/AddToFavoriteHeartSVG';
 import HeartSVG from './svgs/HeartSVG';
 import UserSVG from './svgs/UserSVG';
+import HomeSVG from './svgs/HomeSVG';
 
 function Header(props) {
   const [amountOfCartItems, setAmountOfCarItems] = useState(0);
@@ -25,13 +26,22 @@ function Header(props) {
       <span>{ BAG_SVG }</span>
       <div>
         <HeaderLink
-          text={ 'Main' }
+          text={ 'Dress a Dress!' }
           to="/"
           className="text-center font-black"
         />
       </div>
 
       <div className="flex flex-row gap-3">
+        <div className="flex flex-row items-center">
+          <HomeSVG />
+          <HeaderLink
+            text={ 'Home'}
+            to="/"
+            className="text-base"
+          />
+        </div>
+
         <div className="flex flex-row items-center">
           <UserSVG />
           <HeaderLink
