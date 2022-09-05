@@ -27,8 +27,6 @@ function CartPage(props) {
         )
       }
     }
-
-
     getCartClothes();
   }, [])
 

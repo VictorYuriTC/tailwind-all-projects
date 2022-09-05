@@ -6,7 +6,6 @@ function SwatchCard({ swatch }) {
       style={ { backgroundColor: `${swatch.colorCode}`} }
       className="w-3 h-3 rounded-full"
       >
-  
     </div>
   );
 }

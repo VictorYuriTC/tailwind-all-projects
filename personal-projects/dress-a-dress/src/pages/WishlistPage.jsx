@@ -44,7 +44,6 @@ function WishlistPage(props) {
         )
       }
     }
-
     getFavorites();
   }, [])
   

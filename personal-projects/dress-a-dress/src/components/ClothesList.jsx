@@ -5,18 +5,18 @@ import BlockSVG from './svgs/BlockSVG';
 import SquaresSVG from './svgs/SquaresSVG';
 import ClothesContext from '../context/ClothesContext';
 
-function ClothesList(props) {
+function ClothesList() {
   const [renderClothes, setRenderClothes] = useState([]);
   const [gridCols, setGridCols] = useState('grid-cols-4');
-  const [selectedPhoto, setSelectedPhoto] = useState('model');
   const [amountOfRenderedClothes, setAmountOfRenderedClothes] = useState(20);
   const [searchWarning, setSearchWarning] = useState('');
   const [amountOfClothesMessage, setAmountOfClothesMessage] = useState('');
   const contextValue = useContext(ClothesContext);
 
-  const { search: {
-    searchedProductInput,
-  }} = contextValue;
+  const {
+    search: { searchedProductInput },
+    photo: { selectedPhoto, setSelectedPhoto }
+  } = contextValue;
 
   useEffect(() => {
     const fetchedClothes = fashionData.slice(0, amountOfRenderedClothes);

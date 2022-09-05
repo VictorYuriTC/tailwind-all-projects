@@ -1,9 +1,19 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import ClothesContext from '../context/ClothesContext';
 import AddToFavoriteHeartSVG from './svgs/AddToFavoriteHeartSVG';
 import SwatchCard from './SwatchCard';
 
 function ClothCard({ cloth }) {
   const [imageSrc, setImageSrc] = useState(cloth.image[0].src)
+  
+  const contextValue = useContext(ClothesContext);
+
+  const { photo: { selectedPhoto } } = contextValue;
+
+  useEffect(() => {
+    if (selectedPhoto === 'model') setImageSrc(cloth.image[0].src)
+    if (selectedPhoto === 'product') setImageSrc(cloth.image[0].dataAltImage)
+  }, [selectedPhoto])
 
   const {
     marketingMarkerText,
@@ -20,7 +30,6 @@ function ClothCard({ cloth }) {
   const onMouseLeaveChangeImageSrc = () => {
     setImageSrc(cloth.image[0].src)
   }
-
 
   return (
     <div className="cloth-card grid p-1 w-fit">

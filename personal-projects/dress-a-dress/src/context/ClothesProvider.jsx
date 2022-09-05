@@ -3,12 +3,17 @@ import ClothesContext from './ClothesContext';
 
 function ClothesProvider({ children }) {
   const [searchedProductInput, setSearchedProductInput] = useState('');
+  const [selectedPhoto, setSelectedPhoto] = useState('model');
 
   const contextValue = {
     search: {
       searchedProductInput,
       setSearchedProductInput,
-    }
+    },
+    photo: {
+      selectedPhoto,
+      setSelectedPhoto,
+    },
   }
 
   return (
