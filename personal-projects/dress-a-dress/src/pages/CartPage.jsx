@@ -5,6 +5,7 @@ function CartPage(props) {
   return (
     <div className=''>
       <Header />
+      <h1 className="text-4xl text-center mt-10">Shopping bag</h1>
     </div>
   );
 }
