@@ -22,16 +22,15 @@ function Header() {
       const cartItems = getItemFromLocalStorage(CART_CLOTHES);
       setAmountOfCarItems(cartItems.length)
     }
-
     getAmountOfCarItems();
   }, [])
 
   const onEnterKeyDownSearchProducts = ({ key, target: { value }}) => {
     const pressedKey = key;
-    if (pressedKey === 'Enter') {
-      setSearchedProductInput({ pressedKey, value: value.toLowerCase() });
-      navigate('/')
-    };
+    if (pressedKey !== 'Enter') return;
+
+    setSearchedProductInput({ pressedKey, value: value.toLowerCase() });
+    navigate('/')
   }
 
   return (
@@ -85,7 +84,7 @@ function Header() {
       </div>
 
       <header className="flex flex-row items-center justify-end">
-        <div className="flex flex-row mr-28">
+        <div className="flex flex-row md:mr-28">
           <UnderlinedHeaderLink text="Women" to="/women" className=""/>
           <UnderlinedHeaderLink text="Divided" to="/divided" className=""/>
           <UnderlinedHeaderLink text="Men" to="/men" className=""/>

@@ -25,7 +25,7 @@ function ClothCard({ cloth }) {
   const onMouseLeaveChangeImageSrc = () => setImageSrc(cloth.image[0].src)
 
   return (
-    <div className="cloth-card grid p-1 w-fit">
+    <div className="cloth-card grid p-1">
       <div className="group">
         <img
           src={ imageSrc }
@@ -41,10 +41,10 @@ function ClothCard({ cloth }) {
       </div>
   
       <div className="flex flex-col">
-        <span className="grow self-start text-start font-medium text-sm text-[#5f5f5f]">{ marketingMarkerText }</span>
-        <span className="self-start text-start text-sm">{ title }</span>
-        <span className="self-start text-start text-sm">{ price }</span>
-        <span className="self-start flex flex-row gap-1" >
+        <span className="grow text-start font-medium text-sm text-[#5f5f5f]">{ marketingMarkerText }</span>
+        <span className="text-start text-sm">{ title }</span>
+        <span className="text-start text-sm">{ price }</span>
+        <span className="flex flex-row gap-1" >
           { swatches.map(swatch => (
             <SwatchCard
               swatch={ swatch }
@@ -52,7 +52,7 @@ function ClothCard({ cloth }) {
             />))
           }
         </span>
-        <span className="self-start text-start text-xs">{ sellingAttribute }</span>
+        <span className="text-start text-xs">{ sellingAttribute }</span>
       </div>
     </div>
   );

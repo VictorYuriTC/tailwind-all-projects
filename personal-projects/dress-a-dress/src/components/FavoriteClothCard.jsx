@@ -18,12 +18,10 @@ function FavoriteClothCard({ cloth }) {
   const onCLickAddToCart = () => {
     const cartClothes = getItemFromLocalStorage(CART_CLOTHES);
     const favoriteClothes = getItemFromLocalStorage(FAVORITE_CLOTHES);
-
     setItemInLocalStorage(CART_CLOTHES, [...cartClothes, articleCode]);
-
+  
     const favoriteClothesAfterDeletion = favoriteClothes
       .filter(favoriteCode => favoriteCode !== articleCode)
-    
     setItemInLocalStorage(FAVORITE_CLOTHES, favoriteClothesAfterDeletion);
   }
 
