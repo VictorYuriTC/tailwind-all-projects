@@ -10,6 +10,9 @@ module.exports = {
       },
       transitionDuration: {
         '10000': '10000ms'
+      },
+      fontFamily: {
+        'Poppins': 'Poppins'
       }
     },
   },

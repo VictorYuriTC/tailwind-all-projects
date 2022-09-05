@@ -7,6 +7,7 @@ import FavoriteClothCard from '../components/FavoriteClothCard';
 
 function WishlistPage(props) {
   const [renderFavorites, setRenderFavorites] = useState();
+  const [amountOfFavoriteItems, setAmountOfFavoriteItems] = useState();
 
   useEffect(() => {
     const getFavorites = () => {
@@ -15,9 +16,10 @@ function WishlistPage(props) {
         .filter(cloth => favorites.includes(cloth.articleCode))
         .map(favoriteCloth => <FavoriteClothCard cloth={ favoriteCloth }/>)
       setRenderFavorites(selectedFavorites)
-      console.log(favorites)
-      console.log(fashionData)
-      console.log(selectedFavorites)
+      
+      if (favorites.length === 0) setAmountOfFavoriteItems('')
+      if (favorites.length === 1) setAmountOfFavoriteItems(`${favorites.length} item`)
+      if (favorites.length > 1) setAmountOfFavoriteItems(`${favorites.length} items`)
     }
 
     getFavorites();
@@ -26,6 +28,8 @@ function WishlistPage(props) {
   return (
     <div className="">
       <Header />
+      <h1 className="text-4xl text-center font-Poppins">Favorites</h1>
+      <h4 className="text-[#6b6b6b] text-end mr-6">{ amountOfFavoriteItems }</h4>
       <div className="grid grid-cols-4">
         { renderFavorites }
       </div>

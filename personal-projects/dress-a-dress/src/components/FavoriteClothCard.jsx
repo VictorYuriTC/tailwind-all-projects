@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { BAG_SVG } from '../assets/images/svgs/miscellaneous/svgs';
 import HeartSVG from '../components/HeartSVG';
 import SwatchCard from './SwatchCard';
 
@@ -40,6 +41,18 @@ function FavoriteClothCard({ cloth }) {
       </span>
 
       <span className="self-start text-start text-xs">{ sellingAttribute }</span>
+
+      <button
+        className="flex flex-row items-center justify-center
+        bg-[#232323] w-full h-full p-4 gap-2 hover:bg-[#555555]"
+      >
+        <span>
+          { BAG_SVG }
+        </span>
+        <span className="text-white font-medium">
+          Add to cart
+        </span>
+      </button>
 
     </div>
   );
