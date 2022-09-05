@@ -54,21 +54,10 @@ function ClothesList() {
     }
   }, [searchedProductInput])
 
-  const onClickSetGridThreeGridCols = () => {
-    setGridCols('grid-cols-3');
-  }
-
-  const onClickSetGridFourGridCols = () => {
-    setGridCols('grid-cols-4');
-  }
-
-  const onClickSetModelPhotos = () => {
-    setSelectedPhoto('model');
-  }
-
-  const onClickSetProductPhotos = () => {
-    setSelectedPhoto('product');
-  }
+  const onClickSetGridThreeGridCols = () => setGridCols('grid-cols-3');
+  const onClickSetGridFourGridCols = () => setGridCols('grid-cols-4');
+  const onClickSetModelPhotos = () => setSelectedPhoto('model');
+  const onClickSetProductPhotos = () => setSelectedPhoto('product');
 
   const onEnterKeyDownSetAmountOfItems = ({ key, target: { value }}) => {
     if (key === 'Enter'
@@ -101,10 +90,8 @@ function ClothesList() {
   }
 
   useEffect(() => {
-    if (renderClothes.length > 0) {
-      setAmountOfClothesMessage(`${renderClothes.length} items`);
-    }
-
+    if (renderClothes.length > 0) setAmountOfClothesMessage(`${renderClothes.length} items`);
+    
     if (renderClothes.length < 1
       || (searchedProductInput.value === '' && searchedProductInput.pressedKey === 'Enter')) {
         setAmountOfClothesMessage('No items found');
@@ -122,11 +109,13 @@ function ClothesList() {
             type="number"
             placeholder="Set amount of items"
             onKeyDown={ onEnterKeyDownSetAmountOfItems }
-            className="text-black font-medium border focus:outline-orange-500 p-1 text-center min-w-max"
+            className="text-black font-base border focus:outline-orange-500 p-1 w-44"
           />
-            <h1 className="font-medium text-sm text-[#444444] text-center">
-              { amountOfClothesMessage }
-            </h1>
+
+          <h1 className="font-medium text-sm text-[#444444] text-center">
+            { amountOfClothesMessage }
+          </h1>
+
           <div>
             <button
               onClick={ onClickSetModelPhotos }
@@ -156,13 +145,14 @@ function ClothesList() {
               style={ { opacity: selectedPhoto === 'product' ? '1' : '0' }}
             />
           </div>
-          <button onClick={ onClickSetGridThreeGridCols }
-          >
+
+          <button onClick={ onClickSetGridThreeGridCols }>
             <BlockSVG
               className=""
               style={ { stroke: gridCols === 'grid-cols-3' ? 'red' : 'black' }}
             />
           </button>
+
           <button onClick={ onClickSetGridFourGridCols }>
             <SquaresSVG
               className=""
@@ -170,7 +160,6 @@ function ClothesList() {
             />
           </button>
         </div>
-
 
         <div className={`grid ${ gridCols }`}>
           { renderClothes }

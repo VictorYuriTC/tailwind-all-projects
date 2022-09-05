@@ -49,7 +49,6 @@ function CartClothCard({ cloth, size, color, className }) {
     setItemInLocalStorage(CART_CLOTHES, cartClothesAfterDeletion)
   }
 
-
   return (
     <div className="flex flex-row mt-10 bg-main-bg ml-36">
       <img
@@ -90,6 +89,7 @@ function CartClothCard({ cloth, size, color, className }) {
               className="stroke-1 hover:cursor-pointer"
             />
           </div>
+
           <select
             name="amount-pieces-select"
             id="amount-pieces-select"

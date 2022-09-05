@@ -9,4 +9,5 @@ function SwatchCard({ swatch }) {
     </div>
   );
 }
+
 export default SwatchCard;

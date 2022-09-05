@@ -13,4 +13,5 @@ function HeaderLink({ text, className, to }) {
     </div>
   );
 }
+
 export default HeaderLink;

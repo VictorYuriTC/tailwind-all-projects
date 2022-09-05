@@ -27,13 +27,13 @@ function App() {
       <Route path="/wishlist" element={ <WishlistPage /> } />
       <Route path="/cart" element={ <CartPage /> } />
       <Route path="/women" element={ <WomenPage /> } />
-      <Route path="/divided" element={ <DividedPage />} />
-      <Route path="/men" element={ <MenPage />} />
-      <Route path="/baby" element={ <BabyPage />} />
-      <Route path="/kids" element={ <KidsPage />} />
+      <Route path="/divided" element={ <DividedPage /> } />
+      <Route path="/men" element={ <MenPage /> } />
+      <Route path="/baby" element={ <BabyPage /> } />
+      <Route path="/kids" element={ <KidsPage /> } />
       <Route path="/sport" element={ <SportPage /> } />
       <Route path="/sale" element={ <SalePage /> } />
-      <Route path="/sustainability" element={ <SustainabilityPage />} />
+      <Route path="/sustainability" element={ <SustainabilityPage /> } />
      </Routes>
     </div>
   );

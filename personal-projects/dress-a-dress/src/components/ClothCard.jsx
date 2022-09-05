@@ -5,9 +5,7 @@ import SwatchCard from './SwatchCard';
 
 function ClothCard({ cloth }) {
   const [imageSrc, setImageSrc] = useState(cloth.image[0].src)
-  
   const contextValue = useContext(ClothesContext);
-
   const { photo: { selectedPhoto } } = contextValue;
 
   useEffect(() => {
@@ -23,13 +21,8 @@ function ClothCard({ cloth }) {
     swatches
   } = cloth;
 
-  const onMouseEnterChangeImageSrc = () => {
-    setImageSrc(cloth.image[0].dataAltImage)
-  }
-
-  const onMouseLeaveChangeImageSrc = () => {
-    setImageSrc(cloth.image[0].src)
-  }
+  const onMouseEnterChangeImageSrc = () => setImageSrc(cloth.image[0].dataAltImage)
+  const onMouseLeaveChangeImageSrc = () => setImageSrc(cloth.image[0].src)
 
   return (
     <div className="cloth-card grid p-1 w-fit">
@@ -61,8 +54,8 @@ function ClothCard({ cloth }) {
         </span>
         <span className="self-start text-start text-xs">{ sellingAttribute }</span>
       </div>
-
     </div>
   );
 }
+
 export default ClothCard;
