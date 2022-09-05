@@ -33,7 +33,7 @@ function ClothCard({ cloth }) {
           className="group-hover:cursor-pointer focus:opacity-20 transition w-fit"
         />
         <AddToFavoriteHeartSVG
-          className="absolute self-end items-end transition duration-200 group-hover:cursor-pointer hover:fill-red-300 -translate-y-6 translate-x-distant"
+          className="absolute self-end items-end transition duration-200 group-hover:cursor-pointer -translate-y-6 translate-x-distant"
           articleCode={ cloth.articleCode }
         />
       </div>

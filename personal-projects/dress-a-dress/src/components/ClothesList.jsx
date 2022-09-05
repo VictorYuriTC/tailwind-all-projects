@@ -6,7 +6,7 @@ function ClothesList(props) {
   const [renderClothes, setRenderClothes] = useState([]);
 
   useEffect(() => {
-    const fetchedClothes = fashionData;
+    const fetchedClothes = fashionData.slice(36,60);
     const clothes = fetchedClothes.map((cloth) => (
       <ClothCard
         key={ cloth.articleCode }
