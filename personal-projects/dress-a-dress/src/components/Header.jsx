@@ -5,25 +5,18 @@ import HeaderLink from './HeaderLink';
 import BagSVG from './svgs/BagSVG';
 import HeartSVG from './svgs/HeartSVG';
 import UserSVG from './svgs/UserSVG';
-import HomeSVG from './svgs/HomeSVG';
+/* import HomeSVG from './svgs/HomeSVG'; */
 import UnderlinedHeaderLink from './UnderlinedHeaderLink';
 import MagnifyingGlassSVG from './svgs/MagnifyingClassSVG';
 import ClothesContext from '../context/ClothesContext';
 import { useNavigate } from 'react-router-dom';
 
 function Header() {
-  const [amountOfCartItems, setAmountOfCarItems] = useState(0);
+  const [amountOfCartItems, setAmountOfCarItems] = useState(getItemFromLocalStorage(CART_CLOTHES)
+    .length);
   const contextValue = useContext(ClothesContext);
   const { search: { setSearchedProductInput }} = contextValue;
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const getAmountOfCarItems = () => {
-      const cartItems = getItemFromLocalStorage(CART_CLOTHES);
-      setAmountOfCarItems(cartItems.length)
-    }
-    getAmountOfCarItems();
-  }, [])
 
   const onEnterKeyDownSearchProducts = ({ key, target: { value }}) => {
     const pressedKey = key;
@@ -37,14 +30,14 @@ function Header() {
     <div className="">
       <header className="flex flex-col items-center flex-nowrap justify-end md:flex-row p-3 self-end">
         <div className="flex flex-row gap-3">
-          <div className="flex flex-row items-center">
+{/*           <div className="flex flex-row items-center">
             <HomeSVG />
             <HeaderLink
               text={ 'Home'}
               to="/"
               className="text-base"
             />
-          </div>
+          </div> */}
 
           <div className="flex flex-row items-center">
             <UserSVG />
@@ -101,7 +94,7 @@ function Header() {
           <input
             type="text"
             placeholder="Search products"
-            className="text-center w-40 p-1 focus:outline-none indent-4"
+            className="font-black text-center w-40 p-1 focus:outline-none indent-4 bg-main-bg"
             onKeyDown={ onEnterKeyDownSearchProducts }
           />
           <div className="border border-black"></div>

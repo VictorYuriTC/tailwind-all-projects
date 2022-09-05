@@ -26,7 +26,7 @@ function ClothCard({ cloth }) {
 
   return (
     <div className="cloth-card grid p-1">
-      <div className="group">
+      <div className="group flex justify-end">
         <img
           src={ imageSrc }
           alt={ cloth.image[0].alt }
@@ -35,7 +35,7 @@ function ClothCard({ cloth }) {
           className="group-hover:cursor-pointer focus:opacity-20 transition w-fit"
         />
         <AddToFavoriteHeartSVG
-          className="absolute self-end items-end transition duration-200 group-hover:cursor-pointer -translate-y-6 translate-x-distant"
+          className="absolute self-end m-[-5px] transition duration-200 group-hover:cursor-pointer"
           articleCode={ cloth.articleCode }
         />
       </div>
@@ -44,14 +44,14 @@ function ClothCard({ cloth }) {
         <span className="grow text-start font-medium text-sm text-[#5f5f5f]">{ marketingMarkerText }</span>
         <span className="text-start text-sm">{ title }</span>
         <span className="text-start text-sm">{ price }</span>
-        <span className="flex flex-row gap-1" >
+        <div className="flex flex-row gap-1" >
           { swatches.map(swatch => (
             <SwatchCard
               swatch={ swatch }
               key={ `${cloth.articleCode}-${swatch.colorCode}` }
             />))
           }
-        </span>
+        </div>
         <span className="text-start text-xs">{ sellingAttribute }</span>
       </div>
     </div>

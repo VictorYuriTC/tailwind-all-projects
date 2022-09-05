@@ -97,12 +97,18 @@ function ClothesList() {
     <div className="flex flex-col w-full ml-4 mr-4">
       <div className="flex flex-row justify-end items-center gap-10 mb-7 w-full">
         <h1 className="font-medium text-sm text-[#444444]">{ searchWarning }</h1>
+        
+        <div>
         <input
           type="number"
           placeholder="Set amount of items"
           onKeyDown={ onEnterKeyDownSetAmountOfItems }
-          className="text-black font-base border focus:outline-orange-500 p-1 w-44"
+          className="font-black font-base focus:outline-none bg-main-bg w-44 ml-2"
         />
+        <div className="border border-black mt-1">
+
+        </div>
+        </div>
 
         <h1 className="font-medium text-sm text-[#444444] text-center">
           { amountOfClothesMessage }
