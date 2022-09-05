@@ -79,22 +79,22 @@ function Header(props) {
       </header>
 
       <div className="flex flex-row items-center justify-center">
-        <span className="text-2xl font-bold">
-          Dress a Dress!
+        <span className="text-2xl font-extrabold text-[#d93333]">
+          H&M
         </span>
       </div>
 
       <header className="flex flex-row items-center justify-end">
         <div className="flex flex-row mr-14">
-        <UnderlinedHeaderLink text="Women" />
-        <UnderlinedHeaderLink text="Divided" />
-        <UnderlinedHeaderLink text="Men" />
-        <UnderlinedHeaderLink text="Baby" />
-        <UnderlinedHeaderLink text="Kids" />
-        <UnderlinedHeaderLink text="H&M HOME" />
-        <UnderlinedHeaderLink text="Sport" />
-        <UnderlinedHeaderLink text="Sale" />
-        <UnderlinedHeaderLink text="Sustainability" />
+        <UnderlinedHeaderLink text="Women" to="/ladies" className=""/>
+        <UnderlinedHeaderLink text="Divided" to="/divided" className=""/>
+        <UnderlinedHeaderLink text="Men" to="/men" className=""/>
+        <UnderlinedHeaderLink text="Baby" to="/baby" className=""/>
+        <UnderlinedHeaderLink text="Kids" to="/kids" className=""/>
+        <UnderlinedHeaderLink text="H&M HOME" to="/" className=""/>
+        <UnderlinedHeaderLink text="Sport" to="/sport" className=""/>
+        <UnderlinedHeaderLink text="Sale" to="/sale" className=""/>
+        <UnderlinedHeaderLink text="Sustainability" to="/sustainability-at-hm" className=""/>
         </div>
 
         <div className="group flex flex-col justify-center">
