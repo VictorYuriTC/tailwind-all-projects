@@ -89,7 +89,7 @@ function Header(props) {
 
       <header className="flex flex-row items-center justify-end">
         <div className="flex flex-row mr-14">
-        <UnderlinedHeaderLink text="Women" to="/ladies" className=""/>
+        <UnderlinedHeaderLink text="Women" to="/women" className=""/>
         <UnderlinedHeaderLink text="Divided" to="/divided" className=""/>
         <UnderlinedHeaderLink text="Men" to="/men" className=""/>
         <UnderlinedHeaderLink text="Baby" to="/baby" className=""/>
@@ -97,7 +97,7 @@ function Header(props) {
         <UnderlinedHeaderLink text="H&M HOME" to="/" className=""/>
         <UnderlinedHeaderLink text="Sport" to="/sport" className=""/>
         <UnderlinedHeaderLink text="Sale" to="/sale" className=""/>
-        <UnderlinedHeaderLink text="Sustainability" to="/sustainability-at-hm" className=""/>
+        <UnderlinedHeaderLink text="Sustainability" to="/sustainability" className=""/>
         </div>
 
         <div className="group flex flex-col justify-center">
