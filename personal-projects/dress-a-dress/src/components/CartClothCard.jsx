@@ -95,6 +95,7 @@ function CartClothCard({ cloth, size, color, className }) {
             id="amount-pieces-select"
             value={ selectAmountOfPieces }
             onChange={({ target: { value }}) => setSelectAmountOfPieces(value)}
+            className="w-20 bg-white border accent-red-500 focus:outline-none p-1"
             >
             <CartPieceOption
               value="1"
@@ -107,8 +108,6 @@ function CartClothCard({ cloth, size, color, className }) {
           </select>
         </div>
       </div>
-
-
     </div>
   );
 }

@@ -12,15 +12,13 @@ function AsideBar() {
       .filter((category, index) => allCategories.indexOf(category) === index)
     const sortedNormalizedCategories = allCategoriesWithoutRepetition
       .map(filteredCategory => filteredCategory
-        .replaceAll('_', ' ').replaceAll('ladies', '').toUpperCase())
-      .sort()
+        .replaceAll('_', ' ').replaceAll('ladies ', '').toUpperCase())
     const categoriesAvailable = sortedNormalizedCategories
       .map(mappedCategory => (
         <Link
           className="hover:text-red-600 hover:underline text-sm font-base"
           key={mappedCategory}
           to={`/category/${mappedCategory
-          .replace(' ', '')
           .replaceAll(' ', '-')
           .toLowerCase()}`
         }>
