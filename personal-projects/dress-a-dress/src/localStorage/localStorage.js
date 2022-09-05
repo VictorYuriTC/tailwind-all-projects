@@ -1,4 +1,4 @@
-import { FAVORITE_CLOTHES } from "../constants/constants"
+import { CART_CLOTHES, FAVORITE_CLOTHES } from "../constants/constants"
 
 export const setItemInLocalStorage = (itemKey, itemValue) => {
   const value = JSON.stringify(itemValue)
@@ -17,8 +17,13 @@ export const removeItemFromLocalStorage = (itemKey) => {
 
 export const setInitialLocalStorage = () => {
   const favoriteClothes = getItemFromLocalStorage(FAVORITE_CLOTHES)
+  const cartClothes = getItemFromLocalStorage(CART_CLOTHES)
 
   if(!favoriteClothes) {
     setItemInLocalStorage(FAVORITE_CLOTHES, [])
+  }
+
+  if(!cartClothes) {
+    setItemInLocalStorage(CART_CLOTHES, [])
   }
 }

@@ -1,29 +1,39 @@
 import React, { useState } from 'react'
 import { BAG_SVG } from '../assets/images/svgs/miscellaneous/svgs';
-import HeartSVG from './svgs/HeartSVG';
+import { CART_CLOTHES } from '../constants/constants';
+import { getItemFromLocalStorage, setItemInLocalStorage } from '../localStorage/localStorage';
 import TrashSVG from './svgs/TrashSVG';
 import SwatchCard from './SwatchCard';
 
 function FavoriteClothCard({ cloth }) {
-  const [imageSrc, setImageSrc] = useState(cloth.image[0].src)
-
   const {
+    articleCode,
     price,
     title,
     sellingAttribute,
     swatches
   } = cloth;
 
+  const onCLickAddToCart = () => {
+    const cartClothes = getItemFromLocalStorage(CART_CLOTHES);
+
+    if (cartClothes.includes(articleCode)) {
+      return;
+    }
+
+    setItemInLocalStorage(CART_CLOTHES, [...cartClothes, articleCode])
+  }
+
   return (
     <div className="cloth-card flex flex-col items-center justify-center p-1">
       <div className="group">
         <img
-          src={ imageSrc }
+          src={ cloth.image[0].src }
           alt={ cloth.image[0].alt }
           className="group-hover:cursor-pointer focus:opacity-20 transition"
         />
         <TrashSVG
-          className="transition duration-200 group-hover:cursor-pointer -translate-y-7 translate-x-distant hover:fill-gray-300"
+          className="transition duration-200 group-hover:cursor-pointer -translate-y-7 translate-x-distant hover:opacity-60"
           articleCode={ cloth.articleCode }
         />
       </div>
@@ -44,6 +54,7 @@ function FavoriteClothCard({ cloth }) {
       <span className="self-start text-start text-xs">{ sellingAttribute }</span>
 
       <button
+        onClick={ onCLickAddToCart }
         className="flex flex-row items-center justify-center
         bg-[#232323] w-full h-full p-4 gap-2 hover:bg-[#555555]"
       >
