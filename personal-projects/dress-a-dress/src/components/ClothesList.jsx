@@ -8,7 +8,6 @@ import ClothesContext from '../context/ClothesContext';
 function ClothesList() {
   const [renderClothes, setRenderClothes] = useState([]);
   const [gridCols, setGridCols] = useState('grid-cols-4');
-  const [amountOfRenderedClothes, setAmountOfRenderedClothes] = useState(20);
   const [searchWarning, setSearchWarning] = useState('');
   const [amountOfClothesMessage, setAmountOfClothesMessage] = useState('');
   const contextValue = useContext(ClothesContext);
@@ -19,7 +18,7 @@ function ClothesList() {
   } = contextValue;
 
   useEffect(() => {
-    const fetchedClothes = fashionData.slice(0, amountOfRenderedClothes);
+    const fetchedClothes = fashionData.slice(0, 20);
     const clothes = fetchedClothes.map((cloth) => (
       <ClothCard
         key={ cloth.articleCode }
@@ -27,7 +26,7 @@ function ClothesList() {
       />
       ))
     setRenderClothes(clothes)
-  }, [amountOfRenderedClothes]);
+  }, []);
 
   useEffect(() => {
     if (searchedProductInput.value === ''
@@ -74,20 +73,29 @@ function ClothesList() {
   const onEnterKeyDownSetAmountOfItems = ({ key, target: { value }}) => {
     if (key === 'Enter'
       && value > 100) {
-        setAmountOfRenderedClothes(100)
-        setRenderClothes(fashionData
+        const fetchedClothes = fashionData
           .slice(200, 300)
           .map((cloth) => (
             <ClothCard
               key={ cloth.articleCode }
               cloth={ cloth }
-            />
-            )));
+            />))
+        setRenderClothes(fetchedClothes);
         setAmountOfClothesMessage(`${fashionData.length} items`);
         setSearchWarning('We could not bring you this amount of items, but we did found the following ones.');
         return;
       }
+
     if (key === 'Enter') {
+      const fetchedClothes = fashionData
+        .slice(0, value)
+      const clothes = fetchedClothes
+        .map((cloth) => (
+          <ClothCard
+            key={ cloth.articleCode }
+            cloth={ cloth }
+          />))
+      setRenderClothes(clothes)
       setSearchWarning('');
     }
   }

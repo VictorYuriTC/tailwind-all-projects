@@ -59,7 +59,6 @@ function AddToFavoriteHeartSVG({ className, articleCode }) {
         onClick={ onClickSetFavoriteItem }
         onMouseEnter={ onMouseEnterChangeFillColor }
         onMouseLeave={ onMouseLeaveChangeFillColor }
-        articleCode={ articleCode }
         style={ { fill: `${fillColor}`, }}
         >
       <path

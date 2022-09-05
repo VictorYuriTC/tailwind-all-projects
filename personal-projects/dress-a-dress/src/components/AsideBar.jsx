@@ -16,7 +16,7 @@ function AsideBar() {
     const categoriesAvailable = sortedNormalizedCategories
       .map(mappedCategory => (
         <Link
-          className="hover:text-red-600 hover:underline text-sm font-base"
+          className="hover:text-red-600 hover:underline text-xs font-base"
           key={mappedCategory}
           to={`/category/${mappedCategory
           .replaceAll(' ', '-')
@@ -28,7 +28,7 @@ function AsideBar() {
     setCategories(categoriesAvailable)
   }, [])
   return (
-    <div className="flex flex-col ml-4">
+    <div className="flex flex-col ml-4 gap-2">
       { categories }
     </div>
   );
