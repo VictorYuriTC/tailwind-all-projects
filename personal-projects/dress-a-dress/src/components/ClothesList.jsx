@@ -1,16 +1,22 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import ClothCard from './ClothCard';
 import fashionData from '../services/fashionData';
 import BlockSVG from './svgs/BlockSVG';
 import SquaresSVG from './svgs/SquaresSVG';
+import ClothesContext from '../context/ClothesContext';
 
 function ClothesList(props) {
   const [renderClothes, setRenderClothes] = useState([]);
   const [gridCols, setGridCols] = useState('grid-cols-4');
   const [selectedPhoto, setSelectedPhoto] = useState('model');
   const [amountOfRenderedClothes, setAmountOfRenderedClothes] = useState(20);
-  const [limitWarning, setLimitWarning] = useState('');
+  const [searchWarning, setSearchWarning] = useState('');
   const [amountOfClothesMessage, setAmountOfClothesMessage] = useState('');
+  const contextValue = useContext(ClothesContext);
+
+  const { search: {
+    searchedProductInput,
+  }} = contextValue;
 
   useEffect(() => {
     const fetchedClothes = fashionData.slice(0, amountOfRenderedClothes);
@@ -22,6 +28,29 @@ function ClothesList(props) {
       ))
     setRenderClothes(clothes)
   }, [amountOfRenderedClothes]);
+
+  useEffect(() => {
+    if (searchedProductInput.value === ''
+      && searchedProductInput.pressedKey === 'Enter') {
+      setSearchWarning('You must provide at least one character to search a product by its name.');
+      return;
+    }
+
+    if (searchedProductInput.pressedKey === 'Enter') {
+      const fetchedClothes = fashionData
+      .filter(cloth => cloth.title.toLowerCase().includes(searchedProductInput.value)
+      || cloth.category.toLowerCase().includes(searchedProductInput.value))
+
+      .map(filteredCloth => (
+        <ClothCard
+          key={ filteredCloth.articleCode}
+          cloth={ filteredCloth }
+        />))
+      setRenderClothes(fetchedClothes);
+      setAmountOfRenderedClothes(fetchedClothes.length);
+      setSearchWarning('');
+    }
+  }, [searchedProductInput])
 
   const onClickSetGridThreeGridCols = () => {
     setGridCols('grid-cols-3');
@@ -44,12 +73,12 @@ function ClothesList(props) {
       && value > fashionData.length) {
         setAmountOfRenderedClothes(fashionData.length);
         setAmountOfClothesMessage(`${fashionData.length} items`);
-        setLimitWarning('We don\'t have as many items in stock, but we found those ones.');
+        setSearchWarning('We don\'t have as many items in stock, but we found those ones.');
         return;
       }
     if (key === 'Enter') {
       setAmountOfRenderedClothes(value);
-      setLimitWarning('');
+      setSearchWarning('');
     }
   }
 
@@ -65,7 +94,7 @@ function ClothesList(props) {
   return (
       <div className="flex flex-col w-full ml-4 mr-4">
         <div className="flex flex-row justify-end items-center gap-10 mb-7 w-full">
-          <h1 className="font-medium text-sm text-[#444444]">{ limitWarning }</h1>
+          <h1 className="font-medium text-sm text-[#444444]">{ searchWarning }</h1>
           <input
             type="number"
             placeholder="Set amount of items"

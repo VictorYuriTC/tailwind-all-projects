@@ -14,10 +14,7 @@ function Header(props) {
   const [amountOfCartItems, setAmountOfCarItems] = useState(0);
   const contextValue = useContext(ClothesContext);
 
-  const { search: {
-    searchedProductInput,
-    setSearchedProductInput,
-  }} = contextValue;
+  const { search: { setSearchedProductInput }} = contextValue;
 
   useEffect(() => {
     const getAmountOfCarItems = () => {
@@ -29,8 +26,9 @@ function Header(props) {
   }, [])
 
   const onEnterKeyDownSearchProducts = ({ key, target: { value }}) => {
-    if (key === 'Enter') {
-      setSearchedProductInput(value);
+    const pressedKey = key;
+    if (pressedKey === 'Enter') {
+      setSearchedProductInput({ pressedKey, value });
     }
   }
 
