@@ -9,10 +9,12 @@ import HomeSVG from './svgs/HomeSVG';
 import UnderlinedHeaderLink from './UnderlinedHeaderLink';
 import MagnifyingGlassSVG from './svgs/MagnifyingClassSVG';
 import ClothesContext from '../context/ClothesContext';
+import { useNavigate } from 'react-router-dom';
 
 function Header(props) {
   const [amountOfCartItems, setAmountOfCarItems] = useState(0);
   const contextValue = useContext(ClothesContext);
+  const navigate = useNavigate();
 
   const { search: { setSearchedProductInput }} = contextValue;
 
@@ -29,7 +31,8 @@ function Header(props) {
     const pressedKey = key;
     if (pressedKey === 'Enter') {
       setSearchedProductInput({ pressedKey, value });
-    }
+      navigate('/')
+    };
   }
 
   return (

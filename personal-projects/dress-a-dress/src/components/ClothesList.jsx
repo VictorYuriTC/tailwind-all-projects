@@ -47,9 +47,8 @@ function ClothesList(props) {
           cloth={ filteredCloth }
         />))
       if (fetchedClothes.length === 0) {
-        setRenderClothes([]);
         setAmountOfRenderedClothes(fetchedClothes.length.toString());
-        console.log(fetchedClothes.length)
+        setRenderClothes([]);
         setSearchWarning('Sorry, there are no items with that description.');
         return;
       }

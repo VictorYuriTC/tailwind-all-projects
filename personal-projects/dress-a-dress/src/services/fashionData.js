@@ -1862,103 +1862,6 @@ const fashionData = [
       "damStyleWith": ""
     },
     {
-      "articleCode": "1103214002",
-      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1103214002'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTEwMzIxNF9ncm91cF8wMDJfZW5fdXM7MTEwMzIxNDAwMl9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTs4Nzs','1103214002');",
-      "link": "/en_us/productpage.1103214002.html",
-      "title": "H&M+ True To You Denim Skirt",
-      "category": "Ladies_skirts_highwaisted",
-      "image": [
-        {
-          "src": "//lp2.hm.com/hmgoepprod?set=source[/f6/fc/f6fcb1ff8e0d799adb9e4d6b46cb8039840d2f7e.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
-          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/11/c6/11c625d5b5e2e42f38c4c00d89337dc0178fbb28.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
-          "alt": "H&M+ True To You Denim Skirt Model",
-          "dataAltText": "H&M+ True To You Denim Skirt"
-        }
-      ],
-      "legalText": "",
-      "promotionalMarkerText": "",
-      "showPromotionalClubMarker": false,
-      "showPriceMarker": false,
-      "favouritesTracking": "Favourites|1103214002|H&M+ True To You Denim Skirt|LADIES_NEWARRIVALS : CLOTHING_CLOTHING : VIEWALL_VIEW_ALL",
-      "favouritesSavedText": "SAVED AS FAVORITE",
-      "favouritesNotSavedText": "SAVE AS FAVORITE",
-      "marketingMarkerText": "",
-      "marketingMarkerType": "",
-      "marketingMarkerCss": "",
-      "price": "$ 34.99",
-      "redPrice": "",
-      "yellowPrice": "",
-      "bluePrice": "",
-      "clubPriceText": "",
-      "sellingAttribute": "New Arrival",
-      "swatchesTotal": "2",
-      "swatches": [
-        {
-          "colorCode": "#272628",
-          "articleLink": "/en_us/productpage.1103214002.html",
-          "colorName": "Black"
-        },
-        {
-          "colorCode": "#79829D",
-          "articleLink": "/en_us/productpage.1103214001.html",
-          "colorName": "Denim blue"
-        }
-      ],
-      "preAccessStartDate": "",
-      "preAccessEndDate": "",
-      "preAccessGroups": [],
-      "outOfStockText": "",
-      "comingSoon": "",
-      "brandName": "H&M",
-      "damStyleWith": ""
-    },
-    {
-      "articleCode": "1104946001",
-      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1104946001'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTEwNDk0Nl9ncm91cF8wMDFfZW5fdXM7MTEwNDk0NjAwMV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTs4Nzs','1104946001');",
-      "link": "/en_us/productpage.1104946001.html",
-      "title": "Mesh Mini Skirt",
-      "category": "ladies_skirts_shortskirts",
-      "image": [
-        {
-          "src": "//lp2.hm.com/hmgoepprod?set=source[/45/ac/45ac4d1d28b3aac5fc31b511c4a2db66c4058bcb.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
-          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/9a/38/9a389126b54befc78d19e9fc5ae692ae59d0991a.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
-          "alt": "Mesh Mini Skirt Model",
-          "dataAltText": "Mesh Mini Skirt"
-        }
-      ],
-      "legalText": "",
-      "promotionalMarkerText": "",
-      "showPromotionalClubMarker": false,
-      "showPriceMarker": false,
-      "favouritesTracking": "Favourites|1104946001|Mesh Mini Skirt|LADIES_NEWARRIVALS : CLOTHING_CLOTHING : VIEWALL_VIEW_ALL",
-      "favouritesSavedText": "SAVED AS FAVORITE",
-      "favouritesNotSavedText": "SAVE AS FAVORITE",
-      "marketingMarkerText": "",
-      "marketingMarkerType": "",
-      "marketingMarkerCss": "",
-      "price": "$ 17.99",
-      "redPrice": "",
-      "yellowPrice": "",
-      "bluePrice": "",
-      "clubPriceText": "",
-      "sellingAttribute": "New Arrival",
-      "swatchesTotal": "1",
-      "swatches": [
-        {
-          "colorCode": "#374C49",
-          "articleLink": "/en_us/productpage.1104946001.html",
-          "colorName": "Dark green/small flowers"
-        }
-      ],
-      "preAccessStartDate": "",
-      "preAccessEndDate": "",
-      "preAccessGroups": [],
-      "outOfStockText": "",
-      "comingSoon": "",
-      "brandName": "H&M",
-      "damStyleWith": ""
-    },
-    {
       "articleCode": "1031522005",
       "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1031522005'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTAzMTUyMl9ncm91cF8wMDVfZW5fdXM7MTAzMTUyMjAwNV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTs4Nzs','1031522005');",
       "link": "/en_us/productpage.1031522005.html",
@@ -17088,57 +16991,6 @@ const fashionData = [
       "damStyleWith": ""
     },
     {
-      "articleCode": "1089801006",
-      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1089801006'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTA4OTgwMV9ncm91cF8wMDZfZW5fdXM7MTA4OTgwMTAwNl9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTs4MTs','1089801006');",
-      "link": "/en_us/productpage.1089801006.html",
-      "title": "Oversized Sweatshirt",
-      "category": "ladies_tops_longsleeve",
-      "image": [
-        {
-          "src": "//lp2.hm.com/hmgoepprod?set=source[/5b/43/5b43cc83c725fe8f086d353919371b58774212b4.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
-          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/f7/fa/f7faaeb0a7eb32ebed87f31cba949f84d5d7c5c0.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
-          "alt": "Oversized Sweatshirt Model",
-          "dataAltText": "Oversized Sweatshirt"
-        }
-      ],
-      "legalText": "",
-      "promotionalMarkerText": "",
-      "showPromotionalClubMarker": false,
-      "showPriceMarker": false,
-      "favouritesTracking": "Favourites|1089801006|Oversized Sweatshirt|LADIES_NEWARRIVALS : CLOTHING_CLOTHING : VIEWALL_VIEW_ALL",
-      "favouritesSavedText": "SAVED AS FAVORITE",
-      "favouritesNotSavedText": "SAVE AS FAVORITE",
-      "marketingMarkerText": "Conscious choice  ",
-      "marketingMarkerType": "marker-environment",
-      "marketingMarkerCss": "",
-      "price": "$ 20.99",
-      "redPrice": "",
-      "yellowPrice": "",
-      "bluePrice": "",
-      "clubPriceText": "",
-      "sellingAttribute": "New Arrival",
-      "swatchesTotal": "2",
-      "swatches": [
-        {
-          "colorCode": "#47914D",
-          "articleLink": "/en_us/productpage.1089801006.html",
-          "colorName": "Green"
-        },
-        {
-          "colorCode": "#CA3361",
-          "articleLink": "/en_us/productpage.1089801007.html",
-          "colorName": "Bright pink"
-        }
-      ],
-      "preAccessStartDate": "",
-      "preAccessEndDate": "",
-      "preAccessGroups": [],
-      "outOfStockText": "",
-      "comingSoon": "",
-      "brandName": "H&M",
-      "damStyleWith": ""
-    },
-    {
       "articleCode": "1041973017",
       "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1041973017'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTA0MTk3M19ncm91cF8wMTdfZW5fdXM7MTA0MTk3MzAxN19lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTs4MTs','1041973017');",
       "link": "/en_us/productpage.1041973017.html",
@@ -22136,62 +21988,6 @@ const fashionData = [
       "damStyleWith": ""
     },
     {
-      "articleCode": "1087519005",
-      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1087519005'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTA4NzUxOV9ncm91cF8wMDVfZW5fdXM7MTA4NzUxOTAwNV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTs0MDs','1087519005');",
-      "link": "/en_us/productpage.1087519005.html",
-      "title": "Oversized Corduroy Shirt",
-      "category": "ladies_shirtsblouses_shirts",
-      "image": [
-        {
-          "src": "//lp2.hm.com/hmgoepprod?set=source[/d0/1e/d01ecd8b08f09bc2e860b6f718f89a1ff72a1033.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
-          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/ee/8c/ee8c0c7cd9b791d17aaa1b0464ffb345624a21d5.jpg],origin[dam],category[ladies_shirtsblouses_shirts],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
-          "alt": "Oversized Corduroy Shirt Model",
-          "dataAltText": "Oversized Corduroy Shirt"
-        }
-      ],
-      "legalText": "",
-      "promotionalMarkerText": "",
-      "showPromotionalClubMarker": false,
-      "showPriceMarker": false,
-      "favouritesTracking": "Favourites|1087519005|Oversized Corduroy Shirt|LADIES_NEWARRIVALS : CLOTHING_CLOTHING : VIEWALL_VIEW_ALL",
-      "favouritesSavedText": "SAVED AS FAVORITE",
-      "favouritesNotSavedText": "SAVE AS FAVORITE",
-      "marketingMarkerText": "",
-      "marketingMarkerType": "",
-      "marketingMarkerCss": "",
-      "price": "$ 29.99",
-      "redPrice": "",
-      "yellowPrice": "",
-      "bluePrice": "",
-      "clubPriceText": "",
-      "sellingAttribute": "New Arrival",
-      "swatchesTotal": "3",
-      "swatches": [
-        {
-          "colorCode": "#303144",
-          "articleLink": "/en_us/productpage.1087519005.html",
-          "colorName": "Navy blue"
-        },
-        {
-          "colorCode": "#F0F1F0",
-          "articleLink": "/en_us/productpage.1087519003.html",
-          "colorName": "Cream"
-        },
-        {
-          "colorCode": "#4A312C",
-          "articleLink": "/en_us/productpage.1087519004.html",
-          "colorName": "Dark brown"
-        }
-      ],
-      "preAccessStartDate": "",
-      "preAccessEndDate": "",
-      "preAccessGroups": [],
-      "outOfStockText": "",
-      "comingSoon": "",
-      "brandName": "H&M",
-      "damStyleWith": ""
-    },
-    {
       "articleCode": "1020700008",
       "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1020700008'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTAyMDcwMF9ncm91cF8wMDhfZW5fdXM7MTAyMDcwMDAwOF9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTs0MDs','1020700008');",
       "link": "/en_us/productpage.1020700008.html",
@@ -23944,52 +23740,6 @@ const fashionData = [
           "colorCode": "#A3BBE0",
           "articleLink": "/en_us/productpage.1087741002.html",
           "colorName": "Light blue"
-        }
-      ],
-      "preAccessStartDate": "",
-      "preAccessEndDate": "",
-      "preAccessGroups": [],
-      "outOfStockText": "",
-      "comingSoon": "",
-      "brandName": "H&M",
-      "damStyleWith": ""
-    },
-    {
-      "articleCode": "1081847002",
-      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1081847002'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTA4MTg0N19ncm91cF8wMDJfZW5fdXM7MTA4MTg0NzAwMl9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTs0MDs','1081847002');",
-      "link": "/en_us/productpage.1081847002.html",
-      "title": "Linen-blend Anorak Shirt",
-      "category": "ladies_shirtsblouses_linenshirts",
-      "image": [
-        {
-          "src": "//lp2.hm.com/hmgoepprod?set=source[/93/d5/93d594b553ec681f3b0dea6c637d2875daa4fd26.jpg],origin[dam],category[ladies_shirtsblouses_linenshirts],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
-          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/06/9f/069f26c768e35bc2580f692d2461a7235ff94c7e.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
-          "alt": "Linen-blend Anorak Shirt Model",
-          "dataAltText": "Linen-blend Anorak Shirt"
-        }
-      ],
-      "legalText": "",
-      "promotionalMarkerText": "",
-      "showPromotionalClubMarker": false,
-      "showPriceMarker": false,
-      "favouritesTracking": "Favourites|1081847002|Linen-blend Anorak Shirt|LADIES_NEWARRIVALS : CLOTHING_CLOTHING : VIEWALL_VIEW_ALL",
-      "favouritesSavedText": "SAVED AS FAVORITE",
-      "favouritesNotSavedText": "SAVE AS FAVORITE",
-      "marketingMarkerText": "",
-      "marketingMarkerType": "",
-      "marketingMarkerCss": "",
-      "price": "$ 29.99",
-      "redPrice": "",
-      "yellowPrice": "",
-      "bluePrice": "",
-      "clubPriceText": "",
-      "sellingAttribute": "New Arrival",
-      "swatchesTotal": "1",
-      "swatches": [
-        {
-          "colorCode": "#FFFFFF",
-          "articleLink": "/en_us/productpage.1081847002.html",
-          "colorName": "White"
         }
       ],
       "preAccessStartDate": "",
