@@ -13,30 +13,32 @@ function CartClothCard({ cloth, size, color, className }) {
   } = cloth;
 
   const [clothNumericalPrice, setClothNumericalPrice] = useState(price
-    .replace(/[^\w,]/g, '').replace(',', '.'));
+    .replace('.', ',')
+    .replace(/[^\w,]/g, '')
+    .replace(',', '.'));
   const [clothCurrencySymbol, setClothCurrencySymbol] = useState(price
-    .charAt(price.length - 1));
+    .charAt(0));
 
   const [selectAmountOfPieces, setSelectAmountOfPieces] = useState('1');
-  const [total, setTotal] = useState(clothNumericalPrice * 1);
-
-  useEffect(() => {
-    console.log(cloth)
-  }, [])
+  const [total, setTotal] = useState(clothNumericalPrice.replace(',', '.') * 1);
 
   useEffect(() => {
     const getNumericalPriceAndCurrencySymbol = () => {
-      const priceWithoutSymbol = price.replace(/[^\w,]/g, '').replace(',', '.');
-      const currencySymbol = price.charAt(price.length - 1);
+      const priceWithoutSymbol = price
+        .replace('.', ',')
+        .replace(/[^\w,]/g, '')
+        .replace(',', '.');
+      const currencySymbol = price.charAt(0);
       setClothNumericalPrice(priceWithoutSymbol);
       setClothCurrencySymbol(currencySymbol);
+      console.log(priceWithoutSymbol)
     }
 
     getNumericalPriceAndCurrencySymbol();
   }, [])
 
   useEffect(() => {
-    setTotal(`${Number(selectAmountOfPieces) * clothNumericalPrice} ${clothCurrencySymbol}`)
+    setTotal(`${clothCurrencySymbol} ${Number(selectAmountOfPieces) * clothNumericalPrice}`)
   }, [selectAmountOfPieces])
 
   const onClickRemoveFromShoppingBag = () => {
