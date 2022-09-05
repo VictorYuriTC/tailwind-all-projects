@@ -12,7 +12,7 @@ function App() {
   }, [])
 
   return (
-    <div>
+    <div className="">
      <Routes>
       <Route path="/" element={ <MainPage /> } />
       <Route path="/login" element={ <LoginPage /> } />

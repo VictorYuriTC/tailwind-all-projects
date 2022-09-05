@@ -7,6 +7,7 @@ import fashionData from '../services/fashionData';
 
 function CartPage(props) {
   const [renderCartClothes, setRenderCartClothes] = useState([]);
+  const [tipPhrase, setTipPhrase] = useState('');
 
   useEffect(() => {
     const getCartClothes = () => {
@@ -15,7 +16,18 @@ function CartPage(props) {
         .filter(cloth => cartClothes.includes(cloth.articleCode))
         .map(cartCloth => (<CartClothCard key={ cartCloth.articleCode } cloth={ cartCloth }/>))
       setRenderCartClothes(selectedFavorites);
+      
+      if (cartClothes.length === 0) {
+        setTipPhrase(
+          <>
+            <h1 className="text-center text-2xl mt-12">
+              YOUR SHOPPING BAG IS EMPTY!
+            </h1>
+          </>
+        )
+      }
     }
+
 
     getCartClothes();
   }, [])
@@ -24,6 +36,7 @@ function CartPage(props) {
     <div className="bg-main-bg">
       <Header />
       <h1 className="text-4xl text-center mt-10">Shopping bag</h1>
+      <div className="">{ tipPhrase }</div>
       <div className="flex flex-col p-3 gap-9">
         { renderCartClothes }
       </div>
