@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { BAG_SVG } from '../assets/images/svgs/miscellaneous/svgs';
-import { CART_CLOTHES } from '../constants/constants';
-import { getItemFromLocalStorage, setItemInLocalStorage } from '../localStorage/localStorage';
+import { CART_CLOTHES, FAVORITE_CLOTHES } from '../constants/constants';
+import { getItemFromLocalStorage, removeItemFromLocalStorage, setItemInLocalStorage } from '../localStorage/localStorage';
+import BagSVG from './svgs/BagSVG';
 import TrashSVG from './svgs/TrashSVG';
 import SwatchCard from './SwatchCard';
 
@@ -16,12 +17,14 @@ function FavoriteClothCard({ cloth }) {
 
   const onCLickAddToCart = () => {
     const cartClothes = getItemFromLocalStorage(CART_CLOTHES);
+    const favoriteClothes = getItemFromLocalStorage(FAVORITE_CLOTHES);
 
-    if (cartClothes.includes(articleCode)) {
-      return;
-    }
+    setItemInLocalStorage(CART_CLOTHES, [...cartClothes, articleCode]);
 
-    setItemInLocalStorage(CART_CLOTHES, [...cartClothes, articleCode])
+    const favoriteClothesAfterDeletion = favoriteClothes
+      .filter(favoriteCode => favoriteCode !== articleCode)
+    
+    setItemInLocalStorage(FAVORITE_CLOTHES, favoriteClothesAfterDeletion);
   }
 
   return (
@@ -59,7 +62,7 @@ function FavoriteClothCard({ cloth }) {
         bg-[#232323] w-full h-full p-4 gap-2 hover:bg-[#555555]"
       >
         <span>
-          { BAG_SVG }
+          <BagSVG className="stroke-white"/>
         </span>
         <span className="text-white font-medium">
           Add to cart

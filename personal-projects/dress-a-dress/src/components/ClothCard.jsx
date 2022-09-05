@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import HeartSVG from './svgs/HeartSVG';
+import AddToFavoriteHeartSVG from './svgs/AddToFavoriteHeartSVG';
 import SwatchCard from './SwatchCard';
 
 function ClothCard({ cloth }) {
@@ -31,7 +31,7 @@ function ClothCard({ cloth }) {
           onMouseLeave={ onMouseLeaveChangeImageSrc }
           className="group-hover:cursor-pointer focus:opacity-20 transition"
         />
-        <HeartSVG
+        <AddToFavoriteHeartSVG
           className="transition duration-200 group-hover:cursor-pointer -translate-y-7 translate-x-distant hover:fill-red-300"
           articleCode={ cloth.articleCode }
         />

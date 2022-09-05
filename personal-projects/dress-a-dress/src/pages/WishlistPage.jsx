@@ -26,9 +26,9 @@ function WishlistPage(props) {
   }, [])
   
   return (
-    <div className="">
+    <div className="pl-14">
       <Header />
-      <h1 className="text-4xl text-center font-Poppins">Favorites</h1>
+      <h1 className="text-5xl text-center font-Poppins">Favorites</h1>
       <h4 className="text-[#6b6b6b] text-end mr-6">{ amountOfFavoriteItems }</h4>
       <div className="grid grid-cols-4">
         { renderFavorites }

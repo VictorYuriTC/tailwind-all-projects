@@ -3,6 +3,10 @@ import { BAG_SVG } from '../assets/images/svgs/miscellaneous/svgs';
 import { CART_CLOTHES } from '../constants/constants';
 import { getItemFromLocalStorage } from '../localStorage/localStorage';
 import HeaderLink from './HeaderLink';
+import BagSVG from './svgs/BagSVG';
+import AddToFavoriteHeartSVG from './svgs/AddToFavoriteHeartSVG';
+import HeartSVG from './svgs/HeartSVG';
+import UserSVG from './svgs/UserSVG';
 
 function Header(props) {
   const [amountOfCartItems, setAmountOfCarItems] = useState(0);
@@ -18,26 +22,45 @@ function Header(props) {
 
   return (
     <header className="flex flex-col items-center flex-nowrap justify-between md:flex-row p-3">
-      <span>Logo</span>
-      <HeaderLink
-        text={ 'Main' }
-        to="/"
-        className="text-center"/>
-      <div className="flex flex-row gap-4">
+      <span>{ BAG_SVG }</span>
+      <div>
         <HeaderLink
-          text={ 'Sign in' }
-          to="/login"
-          className="text-bases"
-        />   
-        <HeaderLink
-          text={ 'Favorites' }
-          to="/wishlist"
-          className="text-base"/>
-        <HeaderLink
-          text={ `Shopping bag (${amountOfCartItems})` }
-          to="/cart"
-          className="text-base"
+          text={ 'Main' }
+          to="/"
+          className="text-center font-black"
         />
+      </div>
+
+      <div className="flex flex-row gap-3">
+        <div className="flex flex-row items-center">
+          <UserSVG />
+          <HeaderLink
+            text={ 'Sign in' }
+            to="/login"
+            className="text-base"
+          />  
+        </div>
+
+        <div className="flex flex-row items-center">
+          <HeartSVG className=""/>
+          <HeaderLink
+            text={ 'Favorites' }
+            to="/wishlist"
+            className="text-base"
+          />
+        </div>
+
+        <div className="flex flex-row items-center">
+          <BagSVG
+            className="stroke-black"
+          />
+          <HeaderLink
+            text={ `Shopping bag (${amountOfCartItems})` }
+            to="/cart"
+            className="text-base"
+          />
+        </div>
+
       </div>
     </header>
   );
