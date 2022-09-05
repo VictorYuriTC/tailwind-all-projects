@@ -69,7 +69,7 @@ function ClothesList() {
           />))
       setRenderClothes(fetchedClothes);
       setAmountOfClothesMessage(`${fashionData.length} items`);
-      setSearchWarning('We could not bring you this amount of items, but we did found thefollowing ones.');
+      setSearchWarning('We could not bring you this amount of items, but we did found the following ones.');
       return;
     }
     const fetchedClothes = fashionData

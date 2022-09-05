@@ -28,7 +28,7 @@ function Header() {
 
   return (
     <div className="">
-      <header className="flex flex-col items-center flex-nowrap justify-end md:flex-row p-3 self-end">
+      <header className="flex flex-col items-center justify-end md:flex-row p-3 self-end">
         <div className="flex flex-row gap-3">
 {/*           <div className="flex flex-row items-center">
             <HomeSVG />

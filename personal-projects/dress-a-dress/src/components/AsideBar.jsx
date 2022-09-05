@@ -28,7 +28,7 @@ function AsideBar() {
     setCategories(categoriesAvailable)
   }, [])
   return (
-    <div className="flex flex-col ml-4 gap-2">
+    <div className="ml-4 gap-2 flex flex-col">
       { categories }
     </div>
   );

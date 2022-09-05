@@ -18,6 +18,9 @@ module.exports = {
         'main-bg': '#f8f8f8',
         'opaque-gray': '#444444'
       },
+      screens: {
+        'xsm': '460px'
+      }
     },
   },
   plugins: [],

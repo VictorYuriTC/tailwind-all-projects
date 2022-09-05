@@ -25,14 +25,14 @@ function ClothCard({ cloth }) {
   const onMouseLeaveChangeImageSrc = () => setImageSrc(cloth.image[0].src)
 
   return (
-    <div className="cloth-card grid p-1">
-      <div className="group flex justify-end">
+    <div className="cloth-card flex flex-col p-1">
+      <div className="group flex flex-col justify-end">
         <img
           src={ imageSrc }
           alt={ cloth.image[0].alt }
           onMouseEnter={ onMouseEnterChangeImageSrc }
           onMouseLeave={ onMouseLeaveChangeImageSrc }
-          className="group-hover:cursor-pointer focus:opacity-20 transition w-fit"
+          className="group-hover:cursor-pointer focus:opacity-20 transition"
         />
         <AddToFavoriteHeartSVG
           className="absolute self-end m-[-5px] transition duration-200 group-hover:cursor-pointer"
@@ -40,7 +40,7 @@ function ClothCard({ cloth }) {
         />
       </div>
   
-      <div className="flex flex-col">
+      <div className="flex flex-col justify-center">
         <span className="grow text-start font-medium text-sm text-[#5f5f5f]">{ marketingMarkerText }</span>
         <span className="text-start text-sm">{ title }</span>
         <span className="text-start text-sm">{ price }</span>
