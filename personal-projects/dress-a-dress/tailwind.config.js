@@ -16,6 +16,7 @@ module.exports = {
       },
       colors: {
         'main-bg': '#f8f8f8',
+        'opaque-gray': '#444444'
       },
     },
   },

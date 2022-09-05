@@ -8,9 +8,11 @@ function ClothesList(props) {
   const [renderClothes, setRenderClothes] = useState([]);
   const [gridCols, setGridCols] = useState('grid-cols-4');
   const [selectedPhoto, setSelectedPhoto] = useState('model');
+  const [amountOfRenderedClothes, setAmountOfRenderedClothes] = useState(20);
+  const [limitWarning, setLimitWarning] = useState('');
 
   useEffect(() => {
-    const fetchedClothes = fashionData.slice(0,20);
+    const fetchedClothes = fashionData.slice(0, amountOfRenderedClothes);
     const clothes = fetchedClothes.map((cloth) => (
       <ClothCard
         key={ cloth.articleCode }
@@ -19,7 +21,7 @@ function ClothesList(props) {
       ))
     setRenderClothes(clothes)
     console.log(fetchedClothes)
-  }, [])
+  }, [amountOfRenderedClothes])
 
   const onClickSetGridThreeGridCols = () => {
     setGridCols('grid-cols-3');
@@ -37,14 +39,37 @@ function ClothesList(props) {
     setSelectedPhoto('product');
   }
 
+  const onEnterKeyDownSetAmountOfItems = ({ key, target: { value }}) => {
+    if (key === 'Enter'
+      && value > fashionData.length) {
+        setAmountOfRenderedClothes(fashionData.length);
+        setLimitWarning('We don\'t have as many items, but we could find those.')
+        return;
+      }
+    if (key === 'Enter') {
+      setAmountOfRenderedClothes(value);
+      setLimitWarning('');
+    }
+  }
+
   return (
       <div className="flex flex-col w-full ml-4 mr-4">
-        <div className="flex flex-row justify-end gap-10 mb-7 w-full">
+        <div className="flex flex-row justify-end items-center gap-10 mb-7 w-full">
+          <h1 className="font-medium text-sm text-[#444444]">{ limitWarning }</h1>
+          <input
+            type="number"
+            placeholder="Set amount of items"
+            onKeyDown={ onEnterKeyDownSetAmountOfItems }
+            className="text-black font-medium border focus:outline-orange-500 p-1 text-center min-w-max"
+          />
+            <h1 className="font-medium text-sm text-[#444444] text-center">
+              { amountOfRenderedClothes } items
+            </h1>
           <div>
             <button
               onClick={ onClickSetModelPhotos }
               className="font-medium text-sm"
-              style={ { color: selectedPhoto === 'model' ? 'red' : '#555555' }}
+              style={ { color: selectedPhoto === 'model' ? 'red' : '#444444' }}
             >
               <span>
                 Model
@@ -60,7 +85,7 @@ function ClothesList(props) {
             <button
               onClick={ onClickSetProductPhotos }
               className="font-medium text-sm"
-              style={ { color: selectedPhoto === 'product' ? 'red' : '#555555' }}
+              style={ { color: selectedPhoto === 'product' ? 'red' : '#444444' }}
             >
               Product
             </button>
@@ -69,9 +94,7 @@ function ClothesList(props) {
               style={ { opacity: selectedPhoto === 'product' ? '1' : '0' }}
             />
           </div>
-          <button
-            onClick={ onClickSetGridThreeGridCols }
-            
+          <button onClick={ onClickSetGridThreeGridCols }
           >
             <BlockSVG
               className=""
