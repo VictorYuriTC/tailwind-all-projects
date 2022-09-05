@@ -12,7 +12,7 @@ function AsideBar() {
       .filter((category, index) => allCategories.indexOf(category) === index)
     const sortedNormalizedCategories = allCategoriesWithoutRepetition
       .map(filteredCategory => filteredCategory
-        .replaceAll('_', ' ').replaceAll('ladies ', '').toUpperCase())
+        .replaceAll('_', ' ').toUpperCase())
     const categoriesAvailable = sortedNormalizedCategories
       .map(mappedCategory => (
         <Link

@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
-import { BAG_SVG } from '../assets/images/svgs/miscellaneous/svgs';
+import React  from 'react'
 import { CART_CLOTHES, FAVORITE_CLOTHES } from '../constants/constants';
-import { getItemFromLocalStorage, removeItemFromLocalStorage, setItemInLocalStorage } from '../localStorage/localStorage';
+import { getItemFromLocalStorage, setItemInLocalStorage } from '../localStorage/localStorage';
 import BagSVG from './svgs/BagSVG';
 import TrashSVG from './svgs/RemoveFromFavoriteTrashSVG';
 import SwatchCard from './SwatchCard';

@@ -32,7 +32,6 @@ function ClothesList() {
   useEffect(() => {
     if (searchedProductInput.value === ''
       && searchedProductInput.pressedKey === 'Enter') {
-      setAmountOfRenderedClothes(0)
       setSearchWarning('You must provide at least one character to search a product by its name.');
       return;
     }
@@ -47,13 +46,11 @@ function ClothesList() {
           cloth={ filteredCloth }
         />))
       if (fetchedClothes.length === 0) {
-        setAmountOfRenderedClothes(fetchedClothes.length.toString());
         setRenderClothes([]);
         setSearchWarning('Sorry, there are no items with that description.');
         return;
       }
       setRenderClothes(fetchedClothes);
-      setAmountOfRenderedClothes(fetchedClothes.length);
       setSearchWarning('');
     }
   }, [searchedProductInput])
@@ -76,31 +73,38 @@ function ClothesList() {
 
   const onEnterKeyDownSetAmountOfItems = ({ key, target: { value }}) => {
     if (key === 'Enter'
-      && value > fashionData.length) {
-        setAmountOfRenderedClothes(fashionData.length);
+      && value > 100) {
+        setAmountOfRenderedClothes(100)
+        setRenderClothes(fashionData
+          .slice(200, 300)
+          .map((cloth) => (
+            <ClothCard
+              key={ cloth.articleCode }
+              cloth={ cloth }
+            />
+            )));
         setAmountOfClothesMessage(`${fashionData.length} items`);
-        setSearchWarning('We don\'t have as many items in stock, but we found those ones.');
+        setSearchWarning('We could not bring you this amount of items, but we did found the following ones.');
         return;
       }
     if (key === 'Enter') {
-      setAmountOfRenderedClothes(value);
       setSearchWarning('');
     }
   }
 
   useEffect(() => {
-    if (Number(amountOfRenderedClothes) > 0) {
-      setAmountOfClothesMessage(`${amountOfRenderedClothes} items`);
+    if (renderClothes.length > 0) {
+      setAmountOfClothesMessage(`${renderClothes.length} items`);
     }
 
-    if (Number(amountOfRenderedClothes) < 1
+    if (renderClothes.length < 1
       || (searchedProductInput.value === '' && searchedProductInput.pressedKey === 'Enter')) {
         setAmountOfClothesMessage('No items found');
       }
     
-    if (amountOfRenderedClothes === '1') setAmountOfClothesMessage('1 item');
+    if (renderClothes.length === '1') setAmountOfClothesMessage('1 item');
     
-  }, [amountOfRenderedClothes, searchedProductInput])
+  }, [renderClothes])
 
   return (
       <div className="flex flex-col w-full ml-4 mr-4">
