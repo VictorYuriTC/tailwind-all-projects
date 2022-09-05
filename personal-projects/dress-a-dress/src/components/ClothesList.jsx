@@ -45,7 +45,7 @@ function ClothesList(props) {
       && value > fashionData.length) {
         setAmountOfRenderedClothes(fashionData.length);
         setAmountOfClothesMessage(`${fashionData.length} items`);
-        setLimitWarning('We don\'t have as many items in stock, but we could find those.');
+        setLimitWarning('We don\'t have as many items in stock, but we found those ones.');
         return;
       }
     if (key === 'Enter') {

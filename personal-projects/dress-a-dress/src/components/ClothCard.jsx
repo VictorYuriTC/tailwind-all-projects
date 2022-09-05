@@ -38,8 +38,8 @@ function ClothCard({ cloth }) {
         />
       </div>
   
-      <div className="flex flex-col w-fit">
-        <span className="self-start text-start font-medium text-sm text-[#5f5f5f]">{ marketingMarkerText }</span>
+      <div className="flex flex-col">
+        <span className="grow self-start text-start font-medium text-sm text-[#5f5f5f]">{ marketingMarkerText }</span>
         <span className="self-start text-start text-sm">{ title }</span>
         <span className="self-start text-start text-sm">{ price }</span>
         <span className="self-start flex flex-row gap-1" >
