@@ -20,7 +20,7 @@ function CartPage(props) {
       if (cartClothes.length === 0) {
         setTipPhrase(
           <>
-            <h1 className="text-center text-2xl mt-12">
+            <h1 className="text-center text-2xl mt-12 bg-white p-5">
               YOUR SHOPPING BAG IS EMPTY!
             </h1>
           </>
@@ -35,8 +35,8 @@ function CartPage(props) {
   return (
     <div className="bg-main-bg min-h-screen">
       <Header />
-      <h1 className="text-4xl text-center mt-10">Shopping bag</h1>
-      <div className="">{ tipPhrase }</div>
+      <h1 className="text-4xl text-center mt-10 font-bold">Shopping bag</h1>
+      <div className="flex items-center justify-center">{ tipPhrase }</div>
       <div className="flex flex-col p-3 gap-9">
         { renderCartClothes }
       </div>

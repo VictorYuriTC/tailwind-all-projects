@@ -51,7 +51,7 @@ function WishlistPage(props) {
   return (
     <div className="bg-main-bg min-h-screen">
       <Header />
-      <h1 className="text-5xl text-center font-Poppins">Favorites</h1>
+      <h1 className="text-4xl text-center font-bold">Favorites</h1>
       <div className="text-center mt-12">{ tipPhrase }</div>
 
       <h4 className="text-[#6b6b6b] text-end mr-6">{ amountOfFavoriteItems }</h4>
