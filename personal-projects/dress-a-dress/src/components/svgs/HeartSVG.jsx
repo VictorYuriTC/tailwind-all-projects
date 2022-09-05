@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { FAVORITE_CLOTHES } from '../constants/constants';
-import { getItemFromLocalStorage, removeItemFromLocalStorage, setItemInLocalStorage } from '../localStorage/localStorage';
+import { FAVORITE_CLOTHES } from '../../constants/constants';
+import { getItemFromLocalStorage, removeItemFromLocalStorage, setItemInLocalStorage } from '../../localStorage/localStorage';
 
 function HeartSVG({ className, articleCode }) {
   const [fillColor, setFillColor] = useState('white')

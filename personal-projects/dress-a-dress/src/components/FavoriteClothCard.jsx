@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { BAG_SVG } from '../assets/images/svgs/miscellaneous/svgs';
-import HeartSVG from '../components/HeartSVG';
+import HeartSVG from './svgs/HeartSVG';
+import TrashSVG from './svgs/TrashSVG';
 import SwatchCard from './SwatchCard';
 
 function FavoriteClothCard({ cloth }) {
@@ -21,8 +22,8 @@ function FavoriteClothCard({ cloth }) {
           alt={ cloth.image[0].alt }
           className="group-hover:cursor-pointer focus:opacity-20 transition"
         />
-        <HeartSVG
-          className="transition duration-200 group-hover:cursor-pointer -translate-y-7 translate-x-distant hover:fill-red-300"
+        <TrashSVG
+          className="transition duration-200 group-hover:cursor-pointer -translate-y-7 translate-x-distant hover:fill-gray-300"
           articleCode={ cloth.articleCode }
         />
       </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import HeartSVG from '../components/HeartSVG';
+import HeartSVG from './svgs/HeartSVG';
 import SwatchCard from './SwatchCard';
 
 function ClothCard({ cloth }) {
