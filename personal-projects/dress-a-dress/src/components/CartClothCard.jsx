@@ -6,28 +6,18 @@ import { CART_CLOTHES, FAVORITE_CLOTHES } from '../constants/constants';
 import CartPieceOption from './CartPieceOption';
 
 function CartClothCard({ cloth, size, color, className }) {
-  const [selectAmountOfPieces, setSelectAmountOfPieces] = useState(1);
-  const [clothNumericalPrice, setClothNumericalPrice] = useState(0);
-  const [clothCurrencySymbol, setClothCurrencySymbol] = useState('$');
-  const [maxAmountOfPieces, setMaxAmountOfPieces] = useState([]);
-
   const {
     articleCode,
     price,
     title
   } = cloth;
 
-  const onCLickAddToCart = () => {
-    const cartClothes = getItemFromLocalStorage(CART_CLOTHES);
-    const favoriteClothes = getItemFromLocalStorage(FAVORITE_CLOTHES);
+  const [clothNumericalPrice, setClothNumericalPrice] = useState(price
+    .replace(/[^\w,]/g, '').replace(',', '.'));
+  const [clothCurrencySymbol, setClothCurrencySymbol] = useState('$');
 
-    setItemInLocalStorage(CART_CLOTHES, [...cartClothes, articleCode]);
-
-    const favoriteClothesAfterDeletion = favoriteClothes
-      .filter(favoriteCode => favoriteCode !== articleCode)
-    
-    setItemInLocalStorage(FAVORITE_CLOTHES, favoriteClothesAfterDeletion);
-  }
+  const [selectAmountOfPieces, setSelectAmountOfPieces] = useState('1');
+  const [total, setTotal] = useState(clothNumericalPrice * 1);
 
   useEffect(() => {
     console.log(cloth)
@@ -43,6 +33,10 @@ function CartClothCard({ cloth, size, color, className }) {
 
     getNumericalPriceAndCurrencySymbol();
   }, [])
+
+  useEffect(() => {
+    setTotal(`${Number(selectAmountOfPieces) * clothNumericalPrice} ${clothCurrencySymbol}`)
+  }, [selectAmountOfPieces])
 
 
   return (
@@ -72,8 +66,7 @@ function CartClothCard({ cloth, size, color, className }) {
           <h3>Color:</h3>
           <h3>{ color = 'randomColor' }</h3>
           <h3>Total: </h3>
-          <h3>{ Number(selectAmountOfPieces) * clothNumericalPrice }{ clothCurrencySymbol }</h3>
-          <p>{ price }</p>
+          <h3>{ total }</h3>
         </div>
 
         <div className="flex flex-row gap-3">
