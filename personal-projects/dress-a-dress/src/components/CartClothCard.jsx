@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import AddToFavoriteHeartSVG from './svgs/AddToFavoriteHeartSVG';
 import TrashSVG from './svgs/TrashSVG';
-import { setItemInLocalStorage, getItemFromLocalStorage } from '../localStorage/localStorage';
-import { CART_CLOTHES, FAVORITE_CLOTHES } from '../constants/constants';
 import CartPieceOption from './CartPieceOption';
+import { getItemFromLocalStorage, setItemInLocalStorage } from '../localStorage/localStorage';
+import { CART_CLOTHES } from '../constants/constants';
 
 function CartClothCard({ cloth, size, color, className }) {
   const {
@@ -14,7 +14,8 @@ function CartClothCard({ cloth, size, color, className }) {
 
   const [clothNumericalPrice, setClothNumericalPrice] = useState(price
     .replace(/[^\w,]/g, '').replace(',', '.'));
-  const [clothCurrencySymbol, setClothCurrencySymbol] = useState('$');
+  const [clothCurrencySymbol, setClothCurrencySymbol] = useState(price
+    .charAt(price.length - 1));
 
   const [selectAmountOfPieces, setSelectAmountOfPieces] = useState('1');
   const [total, setTotal] = useState(clothNumericalPrice * 1);
@@ -38,9 +39,17 @@ function CartClothCard({ cloth, size, color, className }) {
     setTotal(`${Number(selectAmountOfPieces) * clothNumericalPrice} ${clothCurrencySymbol}`)
   }, [selectAmountOfPieces])
 
+  const onClickRemoveFromShoppingBag = () => {
+    const cartClothes = getItemFromLocalStorage(CART_CLOTHES);
+    console.log(cartClothes);
+    const cartClothesAfterDeletion = cartClothes
+      .filter(cartCloth => cartCloth !== articleCode)
+    setItemInLocalStorage(CART_CLOTHES, cartClothesAfterDeletion)
+  }
+
 
   return (
-    <div className="flex flex-row mt-10">
+    <div className="flex flex-row mt-10 bg-main-bg ml-36">
       <img
         src={cloth.image[0].dataAltImage}
         alt={cloth.image[0].alt}
@@ -50,7 +59,10 @@ function CartClothCard({ cloth, size, color, className }) {
       <div className="flex flex-col p-5">
         <div className="flex flex-row gap-20 justify-between">
           <h1>{ title }</h1>
-          <TrashSVG className=""/>
+          <TrashSVG
+            onClick={ onClickRemoveFromShoppingBag }
+            className="hover:opacity-60 hover:cursor-pointer"
+          />
         </div>
 
         <h3>{ price }</h3>
@@ -70,7 +82,7 @@ function CartClothCard({ cloth, size, color, className }) {
         </div>
 
         <div className="flex flex-row gap-3">
-          <div className="border border-black w-fit pl-5 pr-5 pt-3 pb-3">
+          <div className="border border-black w-fit pl-5 pr-5 pt-3 pb-3 bg-white">
             <AddToFavoriteHeartSVG
               articleCode={ articleCode }
               className="stroke-1 hover:cursor-pointer"
@@ -87,9 +99,9 @@ function CartClothCard({ cloth, size, color, className }) {
               className="accent-white"
             />
             <CartPieceOption
-                value="2"
-                className="accent-white"
-              />
+              value="2"
+              className="accent-white"
+            />
           </select>
         </div>
       </div>

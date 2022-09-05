@@ -13,7 +13,10 @@ module.exports = {
       },
       fontFamily: {
         'Poppins': 'Poppins'
-      }
+      },
+      colors: {
+        'main-bg': '#f8f8f8',
+      },
     },
   },
   plugins: [],

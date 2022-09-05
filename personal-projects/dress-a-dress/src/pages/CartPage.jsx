@@ -21,7 +21,7 @@ function CartPage(props) {
   }, [])
 
   return (
-    <div className="">
+    <div className="bg-main-bg">
       <Header />
       <h1 className="text-4xl text-center mt-10">Shopping bag</h1>
       <div className="flex flex-col p-3 gap-9">

@@ -49,7 +49,7 @@ function WishlistPage(props) {
   }, [])
   
   return (
-    <div className="">
+    <div className="bg-main-bg">
       <Header />
       <h1 className="text-5xl text-center font-Poppins">Favorites</h1>
       <div className="text-center mt-12">{ tipPhrase }</div>

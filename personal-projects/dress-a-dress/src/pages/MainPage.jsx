@@ -5,7 +5,7 @@ import ClothesList from '../components/ClothesList';
 function MainPage(props) {
 
   return (
-    <div className="">
+    <div className="bg-main-bg">
       <Header />
       <ClothesList />
     </div>

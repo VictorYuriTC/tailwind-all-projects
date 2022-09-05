@@ -3,7 +3,7 @@ import { BAG_SVG } from '../assets/images/svgs/miscellaneous/svgs';
 import { CART_CLOTHES, FAVORITE_CLOTHES } from '../constants/constants';
 import { getItemFromLocalStorage, removeItemFromLocalStorage, setItemInLocalStorage } from '../localStorage/localStorage';
 import BagSVG from './svgs/BagSVG';
-import TrashSVG from './svgs/TrashSVG';
+import TrashSVG from './svgs/RemoveFromFavoriteTrashSVG';
 import SwatchCard from './SwatchCard';
 
 function FavoriteClothCard({ cloth }) {

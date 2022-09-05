@@ -3,7 +3,7 @@ import Header from '../components/Header';
 
 function LoginPage(props) {
   return (
-    <div className=''>
+    <div className="bg-main-bg">
       <Header />
     </div>
   );
