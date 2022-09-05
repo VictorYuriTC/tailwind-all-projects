@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 import fashionData from '../services/fashionData';
 
 function AsideBar() {
@@ -9,13 +10,21 @@ function AsideBar() {
       .map(info => info.category)
     const allCategoriesWithoutRepetition = allCategories
       .filter((category, index) => allCategories.indexOf(category) === index)
-      .map(filteredCategory => filteredCategory.replaceAll('_', ' ').toUpperCase())
+    const sortedNormalizedCategories = allCategoriesWithoutRepetition
+      .map(filteredCategory => filteredCategory
+        .replaceAll('_', ' ').replaceAll('ladies', '').toUpperCase())
+      .sort()
+    const categoriesAvailable = sortedNormalizedCategories
       .map(mappedCategory => (
-        <span>
+        <Link key={mappedCategory} to={`/${mappedCategory
+          .replace(' ', '')
+          .replaceAll(' ', '-')
+          .toLowerCase()}`
+        }>
           { mappedCategory }
-        </span>
+        </Link>
       ))
-    setCategories(allCategoriesWithoutRepetition)
+    setCategories(categoriesAvailable)
   }, [])
   return (
     <div className="flex flex-col">
