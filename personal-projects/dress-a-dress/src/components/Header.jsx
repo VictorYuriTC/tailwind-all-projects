@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { CART_CLOTHES } from '../constants/constants';
 import { getItemFromLocalStorage } from '../localStorage/localStorage';
 import HeaderLink from './HeaderLink';
@@ -8,9 +8,16 @@ import UserSVG from './svgs/UserSVG';
 import HomeSVG from './svgs/HomeSVG';
 import UnderlinedHeaderLink from './UnderlinedHeaderLink';
 import MagnifyingGlassSVG from './svgs/MagnifyingClassSVG';
+import ClothesContext from '../context/ClothesContext';
 
 function Header(props) {
   const [amountOfCartItems, setAmountOfCarItems] = useState(0);
+  const contextValue = useContext(ClothesContext);
+
+  const { search: {
+    searchedProductInput,
+    setSearchedProductInput,
+  }} = contextValue;
 
   useEffect(() => {
     const getAmountOfCarItems = () => {
@@ -20,6 +27,12 @@ function Header(props) {
 
     getAmountOfCarItems();
   }, [])
+
+  const onEnterKeyDownSearchProducts = ({ key, target: { value }}) => {
+    if (key === 'Enter') {
+      setSearchedProductInput(value);
+    }
+  }
 
   return (
     <div className="">
@@ -91,7 +104,8 @@ function Header(props) {
           <input
             type="text"
             placeholder="Search products"
-            className="text-center w-42 p-1"
+            className="text-center w-42 p-1 focus:outline-none"
+            onKeyDown={ onEnterKeyDownSearchProducts }
           />
           <div className="border border-black"></div>
         </div>

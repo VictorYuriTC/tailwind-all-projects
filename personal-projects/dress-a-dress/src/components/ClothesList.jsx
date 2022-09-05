@@ -21,7 +21,6 @@ function ClothesList(props) {
       />
       ))
     setRenderClothes(clothes)
-    console.log(fetchedClothes)
   }, [amountOfRenderedClothes]);
 
   const onClickSetGridThreeGridCols = () => {
