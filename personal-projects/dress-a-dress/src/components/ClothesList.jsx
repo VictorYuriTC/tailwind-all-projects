@@ -10,6 +10,7 @@ function ClothesList(props) {
   const [selectedPhoto, setSelectedPhoto] = useState('model');
   const [amountOfRenderedClothes, setAmountOfRenderedClothes] = useState(20);
   const [limitWarning, setLimitWarning] = useState('');
+  const [amountOfClothesMessage, setAmountOfClothesMessage] = useState('');
 
   useEffect(() => {
     const fetchedClothes = fashionData.slice(0, amountOfRenderedClothes);
@@ -21,7 +22,7 @@ function ClothesList(props) {
       ))
     setRenderClothes(clothes)
     console.log(fetchedClothes)
-  }, [amountOfRenderedClothes])
+  }, [amountOfRenderedClothes]);
 
   const onClickSetGridThreeGridCols = () => {
     setGridCols('grid-cols-3');
@@ -43,7 +44,8 @@ function ClothesList(props) {
     if (key === 'Enter'
       && value > fashionData.length) {
         setAmountOfRenderedClothes(fashionData.length);
-        setLimitWarning('We don\'t have as many items, but we could find those.')
+        setAmountOfClothesMessage(`${fashionData.length} items`);
+        setLimitWarning('We don\'t have as many items in stock, but we could find those.');
         return;
       }
     if (key === 'Enter') {
@@ -51,6 +53,15 @@ function ClothesList(props) {
       setLimitWarning('');
     }
   }
+
+  useEffect(() => {
+    setAmountOfClothesMessage(`${amountOfRenderedClothes} items`);
+
+    if (amountOfRenderedClothes === '0') setAmountOfClothesMessage('No items');
+    
+    if (amountOfRenderedClothes === '1') setAmountOfClothesMessage('1 item');
+    
+  }, [amountOfRenderedClothes])
 
   return (
       <div className="flex flex-col w-full ml-4 mr-4">
@@ -63,7 +74,7 @@ function ClothesList(props) {
             className="text-black font-medium border focus:outline-orange-500 p-1 text-center min-w-max"
           />
             <h1 className="font-medium text-sm text-[#444444] text-center">
-              { amountOfRenderedClothes } items
+              { amountOfClothesMessage }
             </h1>
           <div>
             <button
