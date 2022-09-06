@@ -97,17 +97,15 @@ function ClothesList() {
     <div className="flex ml-1 mr-1 flex-col w-full md:ml-4 md:mr-4">
       <div className="hidden sm:flex sm:flex-row sm:justify-end sm:items-center sm:gap-10 sm:mb-7 md:w-full">
         <h1 className="font-medium text-sm text-[#444444]">{ searchWarning }</h1>
-        
-        <div>
-        <input
-          type="number"
-          placeholder="Set amount of items"
-          onKeyDown={ onEnterKeyDownSetAmountOfItems }
-          className="font-black font-base focus:outline-none bg-main-bg w-44 ml-2"
-        />
-        <div className="border border-black mt-1">
-
-        </div>
+  
+        <div className="flex flex-col">
+          <input
+            type="number"
+            placeholder="Set amount of items"
+            onKeyDown={ onEnterKeyDownSetAmountOfItems }
+            className="font-black font-base focus:outline-none bg-main-bg w-44 ml-2"
+          />
+        <div className="border border-black mt-1"/>
         </div>
 
         <h1 className="font-medium text-sm text-[#444444] text-center">
@@ -147,14 +145,14 @@ function ClothesList() {
         <button onClick={ onClickSetGridThreeGridCols }>
           <BlockSVG
             className=""
-            style={ { stroke: gridCols === 'grid-cols-3' ? 'red' : 'black' }}
+            style={ { stroke: gridCols === 'md:grid-cols-3' ? 'red' : 'black' }}
           />
         </button>
 
         <button onClick={ onClickSetGridFourGridCols }>
           <SquaresSVG
             className=""
-            style={ { stroke: gridCols === 'grid-cols-4' ? 'red' : 'black' }}
+            style={ { stroke: gridCols === 'md:grid-cols-4' ? 'red' : 'black' }}
           />
         </button>
       </div>

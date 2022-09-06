@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useMemo, useState } from 'react'
 import { CART_CLOTHES } from '../constants/constants';
 import { getItemFromLocalStorage } from '../localStorage/localStorage';
 import HeaderLink from './HeaderLink';
@@ -12,11 +12,16 @@ import ClothesContext from '../context/ClothesContext';
 import { useNavigate } from 'react-router-dom';
 
 function Header() {
-  const [amountOfCartItems, setAmountOfCarItems] = useState(getItemFromLocalStorage(CART_CLOTHES)
-    .length);
+  const [amountOfCartItems, setAmountOfCarItems] = useState(0);
   const contextValue = useContext(ClothesContext);
   const { search: { setSearchedProductInput }} = contextValue;
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (getItemFromLocalStorage(CART_CLOTHES)) {
+      setAmountOfCarItems(getItemFromLocalStorage(CART_CLOTHES).length)
+    }
+  }, [])
 
   const onEnterKeyDownSearchProducts = ({ key, target: { value }}) => {
     const pressedKey = key;

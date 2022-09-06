@@ -21,8 +21,14 @@ function ClothCard({ cloth }) {
     swatches
   } = cloth;
 
-  const onMouseEnterChangeImageSrc = () => setImageSrc(cloth.image[0].dataAltImage)
-  const onMouseLeaveChangeImageSrc = () => setImageSrc(cloth.image[0].src)
+  const onMouseEnterChangeImageSrc = () => {
+    if (selectedPhoto === 'model') setImageSrc(cloth.image[0].dataAltImage)
+    if (selectedPhoto === 'product') setImageSrc(cloth.image[0].src)
+  }
+  const onMouseLeaveChangeImageSrc = () => {
+    if (selectedPhoto === 'model') setImageSrc(cloth.image[0].src)
+    if (selectedPhoto === 'product') setImageSrc(cloth.image[0].dataAltImage)
+  }
 
   return (
     <div className="p-0 m-0 md:cloth-card md:flex md:flex-col md:p-1">
@@ -40,11 +46,13 @@ function ClothCard({ cloth }) {
         />
       </div>
   
-      <div className="flex flex-col justify-center">
-        <span className="grow text-start font-medium text-sm text-[#5f5f5f]">{ marketingMarkerText }</span>
+      <div className="flex flex-col justify-center items-start">
+        <span className="grow text-start font-medium text-sm text-[#5f5f5f]">
+          { marketingMarkerText }
+        </span>
         <span className="text-start text-sm">{ title }</span>
         <span className="text-start text-sm">{ price }</span>
-        <div className="flex flex-row gap-1" >
+        <div className="flex flex-row gap-1">
           { swatches.map(swatch => (
             <SwatchCard
               swatch={ swatch }
