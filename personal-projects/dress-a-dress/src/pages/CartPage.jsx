@@ -34,7 +34,7 @@ function CartPage(props) {
   }, [])
 
   return (
-    <div className="flex flex-col bg-main-bg min-h-screen gap-10">
+    <div className="flex flex-col bg-main-bg min-h-screen gap-10 pl-8 pr-8 pt-10">
       <div>
         <Header />
       </div>

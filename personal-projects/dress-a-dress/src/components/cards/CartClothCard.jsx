@@ -70,6 +70,7 @@ function CartClothCard({ cloth, size, color, className }) {
             <TrashSVG
               className="group-hover:cursor-pointer"
               articleCode={ cloth.articleCode }
+              onClick={ onClickRemoveFromShoppingBag }
             />
           </div>
         </div>
