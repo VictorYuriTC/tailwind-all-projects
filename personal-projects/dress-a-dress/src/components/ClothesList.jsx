@@ -112,9 +112,9 @@ function ClothesList() {
     : <h1 className="font-medium text-sm text-[#444444]">{ searchWarning }</h1>
 
   return (
-    <div className={`${ photoWidthDisplay } flex flex-col grow`}>
+    <div className={`${ photoWidthDisplay } flex flex-col grow gap-8`}>
       <div className="5xsm:hidden 4xsm:hidden 3xsm:hidden 2xsm:hidden
-        flex flex-row justify-center items-center gap-5 mb-7
+        flex flex-row justify-center items-center gap-5
         sm:gap-10
         md:justify-around md:w-full
         xl:justify-end"

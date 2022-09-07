@@ -33,11 +33,11 @@ function Header() {
 
   return (
     <div className="flex flex-col">
-      <header className="flex flex-row justify-center p-3 gap-3 lg:justify-end">
-        <div className="flex flex-row">
+      <header className="flex flex-row justify-center p-3 lg:justify-end">
+        <div className="flex flex-row gap-3">
           <Link
             to="/login"
-            className="5xsm:hidden 4xsm:hidden flex flex-row items-center mr-3 gap-1"
+            className="5xsm:hidden 4xsm:hidden flex flex-row items-center gap-1"
           >
             <UserSVG />
             <span>
@@ -47,8 +47,8 @@ function Header() {
 
           <Link
             to="/wishlist"
-            className="5xsm:hidden 4xsm:hidden 3xsm:hidden 2xsm:hidden flex flex-row items-center
-            mr-3 gap-1"
+            className="5xsm:hidden 4xsm:hidden 3xsm:hidden 2xsm:hidden flex flex-row
+              items-center gap-1"
             >
             <HeartSVG className=""/>
             <span>
@@ -75,7 +75,7 @@ function Header() {
         </span>
       </div>
 
-      <header className="hidden lg:flex lg:flex-row items-center lg:justify-center lg:gap-5 lg:mb-5 lg:mt-5">
+      <header className="hidden lg:flex lg:flex-row items-center lg:justify-center lg:gap-5 lg:pb-5 lg:pt-5">
         <UnderlinedHeaderLink text="Women" to="/women" classNameDiv=""/>
         <UnderlinedHeaderLink text="Divided" to="/divided" classNameDiv=""/>
         <UnderlinedHeaderLink text="Men" to="/men" classNameDiv=""/>
