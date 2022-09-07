@@ -15,6 +15,10 @@ function AddToFavoriteHeartSVG({ className, articleCode }) {
     setInitialFillColor();
   }, [])
 
+  useEffect(() => {
+    ;
+  }, [])
+
   const onClickSetFavoriteItem = () => {
     const favoriteClothes = getItemFromLocalStorage(FAVORITE_CLOTHES);
 
@@ -32,7 +36,6 @@ function AddToFavoriteHeartSVG({ className, articleCode }) {
 
   const onMouseEnterChangeFillColor = () => setFillColor('#ffa0af')
   
-
   const onMouseLeaveChangeFillColor = () => {
     const favoriteClothes = getItemFromLocalStorage(FAVORITE_CLOTHES);
 

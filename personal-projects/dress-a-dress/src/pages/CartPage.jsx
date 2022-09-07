@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import CartClothCard from '../components/CartClothCard';
 import Header from '../components/Header';
 import { CART_CLOTHES } from '../constants/constants';
+import ClothesContext from '../context/ClothesContext';
 import { getItemFromLocalStorage } from '../localStorage/localStorage';
 import fashionData from '../services/fashionData';
 
 function CartPage(props) {
+  const contextValue = useContext(ClothesContext);
+  const { cart: { amountOfCartItems, setAmountOfCartItems }} = contextValue;
   const [renderCartClothes, setRenderCartClothes] = useState([]);
   const [tipPhrase, setTipPhrase] = useState('');
 

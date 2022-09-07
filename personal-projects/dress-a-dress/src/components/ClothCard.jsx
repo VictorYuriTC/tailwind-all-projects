@@ -18,8 +18,13 @@ function ClothCard({ cloth }) {
     price,
     title,
     sellingAttribute,
-    swatches
+    swatches,
+    swatchesTotal
   } = cloth;
+
+  useEffect(() => {
+    console.log(cloth)
+  }, [])
 
   const onMouseEnterChangeImageSrc = () => {
     if (selectedPhoto === 'model') setImageSrc(cloth.image[0].dataAltImage)
@@ -52,13 +57,17 @@ function ClothCard({ cloth }) {
         </span>
         <span className="font-mediumbold text-sm">{ title }</span>
         <span className="font-mediumbold text-sm">{ price }</span>
-        <div className="font-mediumbold text-sm flex flex-row gap-1 pt-1 pb-1">
-          { swatches.map(swatch => (
-            <SwatchCard
-              swatch={ swatch }
-              key={ `${cloth.articleCode}-${swatch.colorCode}` }
-            />))
+        <div className="font-mediumbold items-center text-sm flex flex-row gap-1">
+          { swatches.map((swatch) => (
+              <SwatchCard
+                swatch={ swatch }
+                key={ `${cloth.articleCode}-${swatch.colorCode}` }
+              />)
+            )
           }
+          <span className="text-2xs">
+            +<span>{ swatchesTotal }</span>
+          </span>
         </div>
         <span className="text-sm">{ sellingAttribute }</span>
       </div>

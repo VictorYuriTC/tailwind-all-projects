@@ -10,9 +10,11 @@ import ClothesContext from '../context/ClothesContext';
 import { Link, useNavigate } from 'react-router-dom';
 
 function Header() {
-  const [amountOfCartItems, setAmountOfCarItems] = useState(0);
   const contextValue = useContext(ClothesContext);
-  const { search: { setSearchedProductInput }} = contextValue;
+  const {
+    search: { setSearchedProductInput },
+    cart: { amountOfCartItems, setAmountOfCarItems }
+  } = contextValue;
   const navigate = useNavigate();
 
   useEffect(() => {
