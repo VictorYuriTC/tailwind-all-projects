@@ -52,24 +52,26 @@ function ClothCard({ cloth }) {
       </div>
   
       <div className="flex flex-col justify-end pt-2 pb-4 gap-[0.4vh]">
-        <span className="font-mediumbold basis-4 grow text-start block font-base text-sm text-[#5f5f5f]">
+        <span className="font-mediumbold basis-4 text-start block font-base text-2xs text-[#5f5f5f]">
           { marketingMarkerText }
         </span>
-        <span className="font-mediumbold text-sm">{ title }</span>
-        <span className="font-mediumbold text-sm">{ price }</span>
-        <div className="font-mediumbold items-center text-sm flex flex-row gap-1">
-          { swatches.map((swatch) => (
-              <SwatchCard
-                swatch={ swatch }
-                key={ `${cloth.articleCode}-${swatch.colorCode}` }
-              />)
-            )
-          }
-          <span className="text-2xs">
-            +<span>{ swatchesTotal }</span>
+        <span className="font-mediumbold text-xs">{ title }</span>
+        <span className="font-mediumbold text-xs">{ price }</span>
+        <div className="flex flex-row basis-[1rem] grow items-center justify-start gap-1 font-mediumbold text-sm">
+          <span className="flex flex-row items-center justify-center gap-1">
+            { swatches.map((swatch) => (
+                <SwatchCard
+                  swatch={ swatch }
+                  key={ `${cloth.articleCode}-${swatch.colorCode}` }
+                />)
+              )
+            }
+          </span>
+          <span className="flex flex-row justify-center items-center text-2xs basis-[1rem] max-h-[1rem]">
+            { swatchesTotal - swatches.length > 0 && `+${ swatchesTotal - swatches.length }` }
           </span>
         </div>
-        <span className="text-sm">{ sellingAttribute }</span>
+        <span className="text-2xs">{ sellingAttribute }</span>
       </div>
     </div>
   );

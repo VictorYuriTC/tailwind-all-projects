@@ -4,6 +4,7 @@ import { getItemFromLocalStorage, setItemInLocalStorage } from '../../localStora
 
 function AddToFavoriteHeartSVG({ className, articleCode }) {
   const [fillColor, setFillColor] = useState('white')
+  const [opacity, setOpacity] = useState(1)
 
   useEffect(() => {
     const setInitialFillColor = () => {
@@ -34,17 +35,21 @@ function AddToFavoriteHeartSVG({ className, articleCode }) {
     setFillColor('red')
   }
 
-  const onMouseEnterChangeFillColor = () => setFillColor('#ffa0af')
+  const onMouseEnterChangeFillColor = () => {
+    setFillColor('red');
+    setOpacity(0.5);
+  }
   
   const onMouseLeaveChangeFillColor = () => {
     const favoriteClothes = getItemFromLocalStorage(FAVORITE_CLOTHES);
+    setOpacity(1);
 
     if (favoriteClothes.includes(articleCode)) {
-      setFillColor('red')
+      setFillColor('red');
       return;
     }
 
-    setFillColor('white')
+    setFillColor('white');
   }
 
   return  (
@@ -58,7 +63,7 @@ function AddToFavoriteHeartSVG({ className, articleCode }) {
         onClick={ onClickSetFavoriteItem }
         onMouseEnter={ onMouseEnterChangeFillColor }
         onMouseLeave={ onMouseLeaveChangeFillColor }
-        style={ { fill: `${fillColor}`, }}
+        style={ { fill: `${ fillColor }`, opacity }}
         >
       <path
         strokeLinecap="round"
