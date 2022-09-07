@@ -1,15 +1,13 @@
-import React, { useContext, useEffect, useMemo, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { CART_CLOTHES } from '../constants/constants';
 import { getItemFromLocalStorage } from '../localStorage/localStorage';
-import HeaderLink from './HeaderLink';
 import BagSVG from './svgs/BagSVG';
 import HeartSVG from './svgs/HeartSVG';
 import UserSVG from './svgs/UserSVG';
-/* import HomeSVG from './svgs/HomeSVG'; */
 import UnderlinedHeaderLink from './UnderlinedHeaderLink';
 import MagnifyingGlassSVG from './svgs/MagnifyingClassSVG';
 import ClothesContext from '../context/ClothesContext';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Header() {
   const [amountOfCartItems, setAmountOfCarItems] = useState(0);
@@ -33,45 +31,39 @@ function Header() {
 
   return (
     <div className="flex flex-col">
-      <header className="flex p-0 items-center justify-center lg:justify-end md:flex-row md:p-3">
-        <div className="flex flex-row gap-3">
-{/*           <div className="flex flex-row items-center">
-            <HomeSVG />
-            <HeaderLink
-              text={ 'Home'}
-              to="/"
-              className="text-base"
-            />
-          </div> */}
-
-          <div className="flex flex-row items-center">
+      <header className="flex flex-row justify-center p-3 gap-3 lg:justify-end">
+        <div className="flex flex-row">
+          <Link
+            to="/login"
+            className="5xsm:hidden 4xsm:hidden flex flex-row items-center mr-3 gap-1"
+          >
             <UserSVG />
-            <HeaderLink
-              text={ 'Sign in' }
-              to="/login"
-              className="text-base"
-            />  
-          </div>
+            <span>
+              Sign in
+            </span>
+          </Link>
 
-          <div className="flex flex-row items-center">
+          <Link
+            to="/wishlist"
+            className="5xsm:hidden 4xsm:hidden 3xsm:hidden 2xsm:hidden flex flex-row items-center
+            mr-3 gap-1"
+            >
             <HeartSVG className=""/>
-            <HeaderLink
-              text={ 'Favorites' }
-              to="/wishlist"
-              className="text-base"
-            />
-          </div>
+            <span>
+              Favorites
+            </span>
+          </Link>
 
-          <div className="flex flex-row items-center">
-            <BagSVG
-              className="stroke-black"
-            />
-            <HeaderLink
-              text={ `Shopping bag (${amountOfCartItems})` }
-              to="/cart"
-              className="text-base"
-            />
-          </div>
+
+          <Link
+            to="/cart"
+            className="5xsm:hidden flex flex-row items-center gap-1"
+          >
+            <BagSVG className="stroke-black"/>
+            <span>
+              Shopping bag <span className="font-semibold">({ amountOfCartItems })</span>
+            </span>
+          </Link>
         </div>
       </header>
 

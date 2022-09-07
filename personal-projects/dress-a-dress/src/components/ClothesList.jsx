@@ -98,7 +98,12 @@ function ClothesList() {
 
   return (
     <div className="flex ml-0 mr-0 flex-col w-full md:ml-4 md:mr-4">
-      <div className="hidden sm:flex sm:flex-row sm:justify-center sm:items-center sm:gap-10 sm:mb-7 md:justify-around md:w-full lg:justify-end">
+      <div className="5xsm:hidden 4xsm:hidden 3xsm:hidden 2xsm:hidden
+        flex flex-row justify-center items-center gap-5 mb-7
+        sm:gap-10
+        md:justify-around md:w-full
+        lg:justify-end"
+      >
         { renderWarning }
         <div className="flex flex-col">
           <input
@@ -158,7 +163,7 @@ function ClothesList() {
           </button>
       </div>
 
-      <div className={`grid grid-cols-2 xsm:grid-cols-3 sm:grid-cols-3 gap-1 ${ gridCols }`}>
+      <div className={`grid m-2 5xsm:grid-cols-1 4xsm:grid-cols-1 3xsm:grid-cols-2 2xsm:grid-cols-2 xsm:grid-cols-3 sm:grid-cols-3 gap-1 ${ gridCols }`}>
         { renderClothes }
       </div>
     </div>

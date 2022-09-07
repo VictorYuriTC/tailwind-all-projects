@@ -19,14 +19,20 @@ module.exports = {
         'opaque-gray': '#444444'
       },
       screens: {
+        '5xsm': [
+          { 'max': '200px'},
+        ],
+        '4xsm': [
+          { 'min': '200px', 'max': '270px' },
+        ],
         '3xsm': [
-          { 'max': '359px' },
+          { 'min': '270px', 'max': '360px' },
         ],
         '2xsm': [
-          { 'min': '360px', 'max': '479px' }
+          { 'min': '360px', 'max': '480px' }
         ],
         'xsm': [
-          { 'min': '480px', 'max': '639px' }
+          { 'min': '480px', 'max': '640px' }
         ]
       }
     },

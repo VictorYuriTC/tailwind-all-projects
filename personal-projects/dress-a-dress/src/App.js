@@ -20,7 +20,6 @@ function App() {
   }, [])
 
   return (
-    <div className="">
      <Routes>
       <Route path="/" element={ <MainPage /> } />
       <Route path="/login" element={ <LoginPage /> } />
@@ -35,7 +34,6 @@ function App() {
       <Route path="/sale" element={ <SalePage /> } />
       <Route path="/sustainability" element={ <SustainabilityPage /> } />
      </Routes>
-    </div>
   );
 }
 

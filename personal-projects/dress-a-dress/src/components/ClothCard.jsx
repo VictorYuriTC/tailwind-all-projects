@@ -31,7 +31,7 @@ function ClothCard({ cloth }) {
   }
 
   return (
-    <div className="m-0 flex flex-col md:cloth-card md:flex md:flex-col">
+    <div className="m-0 flex flex-col md:cloth-card">
       <div className="group flex flex-col justify-end">
         <img
           src={ imageSrc }
