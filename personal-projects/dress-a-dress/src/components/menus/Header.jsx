@@ -32,8 +32,8 @@ function Header() {
   }
 
   return (
-    <div className="flex flex-col">
-      <header className="flex flex-row place-self-end">
+    <div className="flex flex-col items-center justify-center pr-8 pb-4 pt-10 gap-5">
+      <header className="flex flex-row place-self-center lg:place-self-end">
         <div className="flex flex-row gap-3">
           <Link
             to="/login"
@@ -93,8 +93,8 @@ function Header() {
           <input
             type="text"
             placeholder="Search products"
-            className="font-black text-center w-4 lg:w-40 xl:w-44 
-              2xl:w-52 p-1 focus:outline-none indent-4 bg-main-bg"
+            className="flex flex-row font-black text-center w-4 lg:w-40 xl:w-44 
+              2xl:w-52 p-1 focus:outline-none indent-4 bg-main-bg self-end justify-self-end"
             onKeyDown={ onEnterKeyDownSearchProducts }
           />
           <div className="border border-black"/>

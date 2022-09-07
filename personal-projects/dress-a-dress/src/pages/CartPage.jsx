@@ -34,17 +34,17 @@ function CartPage(props) {
   }, [])
 
   return (
-    <div className="flex flex-col bg-main-bg min-h-screen gap-10 pl-8 pr-8 pt-10">
+    <div className="flex flex-col bg-main-bg min-h-screen gap-10">
       <div>
         <Header />
       </div>
-      <div className="flex flex-col
+      <div className="flex flex-col items-center
         sm:pl-[3rem] sm:pr-[3rem]
         md:pl-[6rem] md:pr-[6rem]
         lg:pl-[12rem] lg:pr-[12rem]"
       >
         <h1 className="text-4xl text-center font-bold">Shopping bag</h1>
-        <div className="flex items-center justify-between">{ tipPhrase }</div>
+        <div className="flex items-center">{ tipPhrase }</div>
         <div className="grid gap-9">
           <span>{ renderCartClothes }</span>
         </div>

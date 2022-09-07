@@ -48,7 +48,7 @@ function WishlistPage(props) {
   }, [])
   
   return (
-    <div className="flex flex-col bg-main-bg min-h-screen gap-8 pl-8 pr-8 pt-10"
+    <div className="flex flex-col bg-main-bg min-h-screen gap-8"
     >
       <Header />
       <div className="flex flex-col lg:pl-6 lg:pr-6

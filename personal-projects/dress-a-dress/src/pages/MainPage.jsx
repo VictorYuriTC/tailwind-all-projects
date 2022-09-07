@@ -6,9 +6,9 @@ import AsideBar from '../components/menus/AsideBar';
 function MainPage(props) {
 
   return (
-    <div className="flex flex-col bg-main-bg min-h-screen pl-8 pr-8 pt-10">
+    <div className="flex flex-col bg-main-bg min-h-screen">
       <Header />
-      <div className="flex flex-row gap-0">
+      <div className="flex flex-row gap-4 pl-8 pr-8">
         <AsideBar />
         <ClothesList />
       </div>

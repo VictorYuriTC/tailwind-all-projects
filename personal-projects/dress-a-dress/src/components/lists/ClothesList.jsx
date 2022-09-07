@@ -112,7 +112,7 @@ function ClothesList() {
     : <h1 className="font-medium text-sm text-[#444444]">{ searchWarning }</h1>
 
   return (
-    <div className={`${ photoWidthDisplay } flex flex-col grow gap-8`}>
+    <div className={`${ photoWidthDisplay } flex flex-col grow gap-7`}>
       <div className="5xsm:hidden 4xsm:hidden 3xsm:hidden 2xsm:hidden
         flex flex-row justify-center items-center gap-5
         sm:gap-10
@@ -129,9 +129,9 @@ function ClothesList() {
           />
         <div className="border border-black mt-1"/>
         </div> */}
-        <h1 className="font-medium text-sm text-[#444444] text-center">
-          { amountOfClothesMessage }
-        </h1>
+        <din className="font-medium text-sm text-[#444444] text-center">
+          <span className="font-medium text-xs">{ amountOfClothesMessage }</span>
+        </din>
 
         <div>
           <button
@@ -139,7 +139,7 @@ function ClothesList() {
             className="font-medium text-sm"
             style={ { color: selectedPhoto === 'model' ? 'red' : '#444444' }}
           >
-            <span>
+            <span className="text-xs">
               Model
             </span>
           </button>
@@ -155,7 +155,7 @@ function ClothesList() {
             className="font-medium text-sm"
             style={ { color: selectedPhoto === 'product' ? 'red' : '#444444' }}
           >
-            Product
+            <span className="text-xs">Product</span>
           </button>
           <div
             className="opacity-0 mt-1 border border-red-500"
