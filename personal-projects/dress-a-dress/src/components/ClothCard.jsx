@@ -46,7 +46,7 @@ function ClothCard({ cloth }) {
           alt={ cloth.image[0].alt }
           onMouseEnter={ onMouseEnterChangeImageSrc }
           onMouseLeave={ onMouseLeaveChangeImageSrc }
-          className={`${ selectedPhotoSize } group-hover:cursor-pointer transition object-contain`}
+          className={`${ selectedPhotoSize } group-hover:cursor-pointer transition`}
         />
         <AddToFavoriteHeartSVG
           className="absolute self-end m-[-10px] transition duration-200 group-hover:cursor-pointer w-7 h-7 stroke-1"

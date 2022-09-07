@@ -99,12 +99,10 @@ function ClothesList() {
   useEffect(() => {
     const changePhotoSizeObjectState = () => {
       if (gridCols === 'md:grid-cols-4') {
-        setSelectedPhotoSize('object-none');
+        setSelectedPhotoSize('');
         return;
       }
-
       setSelectedPhotoSize('object-contain');
-      return;
     }
     changePhotoSizeObjectState();
   }, [selectedPhoto])
