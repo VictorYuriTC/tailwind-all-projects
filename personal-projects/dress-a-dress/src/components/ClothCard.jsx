@@ -31,7 +31,7 @@ function ClothCard({ cloth }) {
   }
 
   return (
-    <div className="p-0 m-0 md:cloth-card md:flex md:flex-col md:p-1">
+    <div className="m-0 flex flex-col md:cloth-card md:flex md:flex-col">
       <div className="group flex flex-col justify-end">
         <img
           src={ imageSrc }
@@ -46,13 +46,13 @@ function ClothCard({ cloth }) {
         />
       </div>
   
-      <div className="flex flex-col justify-center items-start">
-        <span className="grow text-start font-medium text-sm text-[#5f5f5f]">
+      <div className="flex flex-col justify-end pt-2 pb-4 gap-[0.4vh]">
+        <span className="basis-4 grow text-start block font-base text-xs text-[#5f5f5f]">
           { marketingMarkerText }
         </span>
-        <span className="text-start text-sm">{ title }</span>
-        <span className="text-start text-sm">{ price }</span>
-        <div className="flex flex-row gap-1">
+        <span className="text-sm">{ title }</span>
+        <span className="text-sm">{ price }</span>
+        <div className="flex flex-row gap-1 pt-1 pb-1">
           { swatches.map(swatch => (
             <SwatchCard
               swatch={ swatch }
@@ -60,7 +60,7 @@ function ClothCard({ cloth }) {
             />))
           }
         </div>
-        <span className="text-start text-xs">{ sellingAttribute }</span>
+        <span className="text-xs">{ sellingAttribute }</span>
       </div>
     </div>
   );

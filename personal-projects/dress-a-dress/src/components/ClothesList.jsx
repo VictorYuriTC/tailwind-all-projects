@@ -60,15 +60,14 @@ function ClothesList() {
   const onEnterKeyDownSetAmountOfItems = ({ key, target: { value }}) => {
     if (key !== 'Enter') return;
     if (value > 100) {
-      const fetchedClothes = fashionData
+      const maxFetchedClothes = fashionData
         .slice(200, 300)
         .map((cloth) => (
           <ClothCard
             key={ cloth.articleCode }
             cloth={ cloth }
           />))
-      setRenderClothes(fetchedClothes);
-      setAmountOfClothesMessage(`${fashionData.length} items`);
+      setRenderClothes(maxFetchedClothes);
       setSearchWarning('We could not bring you this amount of items, but we did found the following ones.');
       return;
     }
@@ -148,16 +147,15 @@ function ClothesList() {
             style={ { stroke: gridCols === 'md:grid-cols-3' ? 'red' : 'black' }}
           />
         </button>
-
-        <button onClick={ onClickSetGridFourGridCols }>
-          <SquaresSVG
-            className=""
-            style={ { stroke: gridCols === 'md:grid-cols-4' ? 'red' : 'black' }}
-          />
-        </button>
+          <button onClick={ onClickSetGridFourGridCols }>
+            <SquaresSVG
+              className=""
+              style={ { stroke: gridCols === 'md:grid-cols-4' ? 'red' : 'black' }}
+            />
+          </button>
       </div>
 
-      <div className={`grid xsm:grid-cols-2 sm:grid-cols-2 ${ gridCols }`}>
+      <div className={`grid grid-cols-2 xsm:grid-cols-3 gap-1 ${ gridCols }`}>
         { renderClothes }
       </div>
     </div>
