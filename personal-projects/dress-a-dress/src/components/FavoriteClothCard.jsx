@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
-import { BAG_SVG } from '../assets/images/svgs/miscellaneous/svgs';
+import React  from 'react'
 import { CART_CLOTHES, FAVORITE_CLOTHES } from '../constants/constants';
-import { getItemFromLocalStorage, removeItemFromLocalStorage, setItemInLocalStorage } from '../localStorage/localStorage';
+import { getItemFromLocalStorage, setItemInLocalStorage } from '../localStorage/localStorage';
 import BagSVG from './svgs/BagSVG';
 import TrashSVG from './svgs/RemoveFromFavoriteTrashSVG';
 import SwatchCard from './SwatchCard';
@@ -19,25 +18,23 @@ function FavoriteClothCard({ cloth }) {
   const onCLickAddToCart = () => {
     const cartClothes = getItemFromLocalStorage(CART_CLOTHES);
     const favoriteClothes = getItemFromLocalStorage(FAVORITE_CLOTHES);
-
     setItemInLocalStorage(CART_CLOTHES, [...cartClothes, articleCode]);
-
+  
     const favoriteClothesAfterDeletion = favoriteClothes
       .filter(favoriteCode => favoriteCode !== articleCode)
-    
     setItemInLocalStorage(FAVORITE_CLOTHES, favoriteClothesAfterDeletion);
   }
 
   return (
     <div className="cloth-card flex flex-col w-full h-full p-1">
-      <div className="group">
+      <div className="group flex flex-col justify-end">
         <img
           src={ cloth.image[0].src }
           alt={ cloth.image[0].alt }
           className="group-hover:cursor-pointer focus:opacity-20 transition h-fit"
         />
         <TrashSVG
-          className="absolute transition duration-200 group-hover:cursor-pointer -translate-y-7 translate-x-distant hover:opacity-60"
+          className="absolute self-end m-[-5px] transition duration-200 group-hover:cursor-pointer hover:opacity-60"
           articleCode={ cloth.articleCode }
         />
       </div>

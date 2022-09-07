@@ -19,11 +19,6 @@ export const setInitialLocalStorage = () => {
   const favoriteClothes = getItemFromLocalStorage(FAVORITE_CLOTHES)
   const cartClothes = getItemFromLocalStorage(CART_CLOTHES)
 
-  if(!favoriteClothes) {
-    setItemInLocalStorage(FAVORITE_CLOTHES, [])
-  }
-
-  if(!cartClothes) {
-    setItemInLocalStorage(CART_CLOTHES, [])
-  }
+  if(!favoriteClothes) setItemInLocalStorage(FAVORITE_CLOTHES, [])
+  if(!cartClothes) setItemInLocalStorage(CART_CLOTHES, [])
 }

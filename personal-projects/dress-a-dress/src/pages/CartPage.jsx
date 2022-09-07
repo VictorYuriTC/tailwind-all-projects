@@ -20,7 +20,7 @@ function CartPage(props) {
       if (cartClothes.length === 0) {
         setTipPhrase(
           <>
-            <h1 className="text-center text-2xl mt-12 bg-white p-5">
+            <h1 className="text-center text-2xl mt-12 p-5">
               YOUR SHOPPING BAG IS EMPTY!
             </h1>
           </>

@@ -49,7 +49,6 @@ function CartClothCard({ cloth, size, color, className }) {
     setItemInLocalStorage(CART_CLOTHES, cartClothesAfterDeletion)
   }
 
-
   return (
     <div className="flex flex-row mt-10 bg-main-bg ml-36">
       <img
