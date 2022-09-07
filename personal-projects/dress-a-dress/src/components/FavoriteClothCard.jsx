@@ -33,10 +33,12 @@ function FavoriteClothCard({ cloth }) {
           alt={ cloth.image[0].alt }
           className="group-hover:cursor-pointer focus:opacity-20 transition h-fit"
         />
-        <TrashSVG
-          className="absolute self-end m-[-5px] transition duration-200 group-hover:cursor-pointer hover:opacity-60"
-          articleCode={ cloth.articleCode }
-        />
+        <div className="absolute self-end transition duration-200 group-hover:cursor-pointer hover:opacity-60 bg-[#faf9f8] rounded-full p-1 m-1">
+          <TrashSVG
+            className=""
+            articleCode={ cloth.articleCode }
+          />
+        </div>
       </div>
 
       <div className="flex flex-col w-full h-full">

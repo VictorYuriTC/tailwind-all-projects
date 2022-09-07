@@ -61,12 +61,14 @@ function CartClothCard({ cloth, size, color, className }) {
       </div>
 
       <div className="flex flex-col p-1 lg:p-5">
-        <div className="flex md:flex-row gap-10 sm:gap-20 justify-between">
+        <div className="flex md:flex-row gap-10 sm:gap-20 justify-between items-center">
           <h1>{ title }</h1>
-          <TrashSVG
-            onClick={ onClickRemoveFromShoppingBag }
-            className="hover:opacity-60 hover:cursor-pointer"
-          />
+          <div className="group self-end transition duration-200 group-hover:cursor-pointer hover:opacity-60 rounded-full p-1 m-1">
+            <TrashSVG
+              className="group-hover:cursor-pointer"
+              articleCode={ cloth.articleCode }
+            />
+        </div>
         </div>
 
         <h3>{ price }</h3>

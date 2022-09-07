@@ -30,7 +30,6 @@ function AddToFavoriteHeartSVG({ className, articleCode }) {
       setFillColor('white')
       return;
     }
-
     setItemInLocalStorage(FAVORITE_CLOTHES, [...favoriteClothes, articleCode])
     setFillColor('red')
   }
