@@ -52,10 +52,6 @@ function ClothesList() {
     setSearchWarning('');
   }, [searchedProductInput])
 
-  const renderWarning = searchWarning === ''
-    ? <></>
-    : <h1 className="font-medium text-sm text-[#444444]">{ searchWarning }</h1>
-
   const onClickSetGridThreeGridCols = () => setGridCols('md:grid-cols-3');
   const onClickSetGridFourGridCols = () => setGridCols('md:grid-cols-4');
   const onClickSetModelPhotos = () => setSelectedPhoto('model');
@@ -96,25 +92,28 @@ function ClothesList() {
     if (renderClothes.length === 1) setAmountOfClothesMessage('1 item');
   }, [renderClothes])
 
+  const renderWarning = searchWarning === ''
+    ? <></>
+    : <h1 className="font-medium text-sm text-[#444444]">{ searchWarning }</h1>
+
   return (
-    <div className="flex ml-0 mr-0 flex-col w-full md:ml-4 md:mr-4">
+    <div className="flex ml-0 mr-0 flex-col">
       <div className="5xsm:hidden 4xsm:hidden 3xsm:hidden 2xsm:hidden
         flex flex-row justify-center items-center gap-5 mb-7
         sm:gap-10
         md:justify-around md:w-full
-        lg:justify-end"
+        xl:justify-end"
       >
         { renderWarning }
-        <div className="flex flex-col">
+        {/* <div className="flex flex-col">
           <input
             type="number"
             placeholder="Set amount of items"
             onKeyDown={ onEnterKeyDownSetAmountOfItems }
-            className="font-black focus:outline-none bg-main-bg w-44 ml-0 md:ml-2"
+            className="font-black focus:outline-none bg-main-bg w-44 md:ml-2"
           />
         <div className="border border-black mt-1"/>
-        </div>
-
+        </div> */}
         <h1 className="font-medium text-sm text-[#444444] text-center">
           { amountOfClothesMessage }
         </h1>
@@ -163,7 +162,7 @@ function ClothesList() {
           </button>
       </div>
 
-      <div className={`grid m-2 5xsm:grid-cols-1 4xsm:grid-cols-1 3xsm:grid-cols-2 2xsm:grid-cols-2 xsm:grid-cols-3 sm:grid-cols-3 gap-1 ${ gridCols }`}>
+      <div className={`grid 5xsm:grid-cols-1 4xsm:grid-cols-1 3xsm:grid-cols-2 2xsm:grid-cols-2 xsm:grid-cols-3 sm:grid-cols-3 gap-1 ${ gridCols }`}>
         { renderClothes }
       </div>
     </div>
