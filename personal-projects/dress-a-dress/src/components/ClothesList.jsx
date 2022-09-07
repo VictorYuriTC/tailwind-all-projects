@@ -52,6 +52,10 @@ function ClothesList() {
     setSearchWarning('');
   }, [searchedProductInput])
 
+  const renderWarning = searchWarning === ''
+    ? <></>
+    : <h1 className="font-medium text-sm text-[#444444]">{ searchWarning }</h1>
+
   const onClickSetGridThreeGridCols = () => setGridCols('md:grid-cols-3');
   const onClickSetGridFourGridCols = () => setGridCols('md:grid-cols-4');
   const onClickSetModelPhotos = () => setSelectedPhoto('model');
@@ -93,16 +97,15 @@ function ClothesList() {
   }, [renderClothes])
 
   return (
-    <div className="flex ml-1 mr-1 flex-col w-full md:ml-4 md:mr-4">
-      <div className="hidden sm:flex sm:flex-row sm:justify-end sm:items-center sm:gap-10 sm:mb-7 md:w-full">
-        <h1 className="font-medium text-sm text-[#444444]">{ searchWarning }</h1>
-  
+    <div className="flex ml-0 mr-0 flex-col w-full md:ml-4 md:mr-4">
+      <div className="hidden sm:flex sm:flex-row sm:justify-center sm:items-center sm:gap-10 sm:mb-7 md:justify-around md:w-full lg:justify-end">
+        { renderWarning }
         <div className="flex flex-col">
           <input
             type="number"
             placeholder="Set amount of items"
             onKeyDown={ onEnterKeyDownSetAmountOfItems }
-            className="font-black focus:outline-none bg-main-bg w-44 ml-2"
+            className="font-black focus:outline-none bg-main-bg w-44 ml-0 md:ml-2"
           />
         <div className="border border-black mt-1"/>
         </div>
