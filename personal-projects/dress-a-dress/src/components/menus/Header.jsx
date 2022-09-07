@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { CART_CLOTHES } from '../../constants/constants';
-import { getItemFromLocalStorage } from '../../localStorage/localStorage';
+import { getItemFromLocalStorage } from '../../local_storage/localStorage';
 import BagSVG from '../svgs/BagSVG';
 import HeartSVG from '../svgs/HeartSVG';
 import UserSVG from '../svgs/UserSVG';
@@ -32,15 +32,15 @@ function Header() {
   }
 
   return (
-    <div className="flex flex-col pb-5">
-      <header className="flex flex-row justify-center p-3 lg:justify-end">
+    <div className="flex flex-col">
+      <header className="flex flex-row place-self-end">
         <div className="flex flex-row gap-3">
           <Link
             to="/login"
             className="5xsm:hidden 4xsm:hidden flex flex-row items-center gap-1"
           >
-            <UserSVG />
-            <span>
+            <UserSVG className="stroke-1"/>
+            <span className="text-sm font-light">
               Sign in
             </span>
           </Link>
@@ -50,8 +50,8 @@ function Header() {
             className="5xsm:hidden 4xsm:hidden 3xsm:hidden 2xsm:hidden flex flex-row
               items-center gap-1"
             >
-            <HeartSVG className=""/>
-            <span>
+            <HeartSVG className="stroke-1"/>
+            <span className="text-sm font-light">
               Favorites
             </span>
           </Link>
@@ -61,9 +61,9 @@ function Header() {
             to="/cart"
             className="5xsm:hidden flex flex-row items-center gap-1"
           >
-            <BagSVG className="stroke-black"/>
-            <span>
-              Shopping bag <span className="font-semibold">({ amountOfCartItems })</span>
+            <BagSVG className="stroke-black stroke-1"/>
+            <span className="text-sm font-light">
+              Shopping bag <span className="font-medium">({ amountOfCartItems })</span>
             </span>
           </Link>
         </div>

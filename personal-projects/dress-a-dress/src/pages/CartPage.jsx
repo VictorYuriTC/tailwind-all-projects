@@ -3,7 +3,7 @@ import CartClothCard from '../components/cards/CartClothCard';
 import Header from '../components/menus/Header';
 import { CART_CLOTHES } from '../constants/constants';
 import ClothesContext from '../context/ClothesContext';
-import { getItemFromLocalStorage } from '../localStorage/localStorage';
+import { getItemFromLocalStorage } from '../local_storage/localStorage';
 import fashionData from '../services/fashionData';
 
 function CartPage(props) {
@@ -34,16 +34,20 @@ function CartPage(props) {
   }, [])
 
   return (
-    <div className="flex flex-col bg-main-bg min-h-screen gap-10
-      sm:pl-[3rem] sm:pr-[3rem]
-      md:pl-[6rem] md:pr-[6rem]
-      lg:pl-[12rem] lg:pr-[12rem]"
-    >
-      <Header />
-      <h1 className="text-4xl text-center font-bold">Shopping bag</h1>
-      <div className="flex items-center justify-center">{ tipPhrase }</div>
-      <div className="grid gap-9">
-        { renderCartClothes }
+    <div className="flex flex-col bg-main-bg min-h-screen gap-10">
+      <div>
+        <Header />
+      </div>
+      <div className="flex flex-col
+        sm:pl-[3rem] sm:pr-[3rem]
+        md:pl-[6rem] md:pr-[6rem]
+        lg:pl-[12rem] lg:pr-[12rem]"
+      >
+        <h1 className="text-4xl text-center font-bold">Shopping bag</h1>
+        <div className="flex items-center justify-between">{ tipPhrase }</div>
+        <div className="grid gap-9">
+          <span>{ renderCartClothes }</span>
+        </div>
       </div>
     </div>
   );

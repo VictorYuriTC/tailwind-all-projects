@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import AddToFavoriteHeartSVG from '../svgs/AddToFavoriteHeartSVG';
 import TrashSVG from '../svgs/TrashSVG';
 import CartPieceOptionCard from './CartPieceOptionCard';
-import { getItemFromLocalStorage, setItemInLocalStorage } from '../../localStorage/localStorage';
+import { getItemFromLocalStorage, setItemInLocalStorage } from '../../local_storage/localStorage';
 import { CART_CLOTHES } from '../../constants/constants';
 
 function CartClothCard({ cloth, size, color, className }) {

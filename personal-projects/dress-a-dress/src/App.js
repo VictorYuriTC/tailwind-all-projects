@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { setInitialLocalStorage } from "./localStorage/localStorage";
+import { setInitialLocalStorage } from "./local_storage/localStorage";
 import MainPage from "./pages/MainPage";
 import WishlistPage from "./pages/WishlistPage";
 import { Routes, Route } from 'react-router-dom'

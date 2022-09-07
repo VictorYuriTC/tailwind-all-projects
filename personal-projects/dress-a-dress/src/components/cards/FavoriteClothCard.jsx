@@ -1,6 +1,6 @@
 import React  from 'react'
 import { CART_CLOTHES, FAVORITE_CLOTHES } from '../../constants/constants';
-import { getItemFromLocalStorage, setItemInLocalStorage } from '../../localStorage/localStorage';
+import { getItemFromLocalStorage, setItemInLocalStorage } from '../../local_storage/localStorage';
 import BagSVG from '../svgs/BagSVG';
 import TrashSVG from '../svgs/RemoveFromFavoriteTrashSVG';
 import SwatchCard from './SwatchCard';
