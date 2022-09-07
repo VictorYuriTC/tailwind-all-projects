@@ -13,7 +13,11 @@ function ClothesList() {
   const contextValue = useContext(ClothesContext);
   const {
     search: { searchedProductInput },
-    photo: { selectedPhoto, setSelectedPhoto }
+    photo: { selectedPhoto, setSelectedPhoto },
+    photoSize: {
+      selectedPhotoSize, setSelectedPhotoSize,
+      photoWidthDisplay, setPhotoWidthDisplay,
+    },
   } = contextValue;
 
   useEffect(() => {
@@ -90,14 +94,27 @@ function ClothesList() {
         setAmountOfClothesMessage('No items found');
       }
     if (renderClothes.length === 1) setAmountOfClothesMessage('1 item');
-  }, [renderClothes])
+  }, [renderClothes]);
+
+  useEffect(() => {
+    const changePhotoSizeObjectState = () => {
+      if (gridCols === 'md:grid-cols-4') {
+        setSelectedPhotoSize('object-none');
+        return;
+      }
+
+      setSelectedPhotoSize('object-contain');
+      return;
+    }
+    changePhotoSizeObjectState();
+  }, [selectedPhoto])
 
   const renderWarning = searchWarning === ''
     ? <></>
     : <h1 className="font-medium text-sm text-[#444444]">{ searchWarning }</h1>
 
   return (
-    <div className="flex flex-col">
+    <div className={`${ photoWidthDisplay } flex flex-col grow`}>
       <div className="5xsm:hidden 4xsm:hidden 3xsm:hidden 2xsm:hidden
         flex flex-row justify-center items-center gap-5 mb-7
         sm:gap-10
@@ -162,7 +179,7 @@ function ClothesList() {
           </button>
       </div>
 
-      <div className={`grid 5xsm:grid-cols-1 4xsm:grid-cols-1 3xsm:grid-cols-2 2xsm:grid-cols-2 xsm:grid-cols-3 sm:grid-cols-3 gap-1 ${ gridCols }`}>
+      <div className={`grid 5xsm:grid-cols-1 4xsm:grid-cols-1 3xsm:grid-cols-2 2xsm:grid-cols-2 xsm:grid-cols-3 sm:grid-cols-2 gap-1 ${ gridCols }`}>
         { renderClothes }
       </div>
     </div>

@@ -6,7 +6,10 @@ import SwatchCard from './SwatchCard';
 function ClothCard({ cloth }) {
   const [imageSrc, setImageSrc] = useState(cloth.image[0].src)
   const contextValue = useContext(ClothesContext);
-  const { photo: { selectedPhoto } } = contextValue;
+  const {
+    photo: { selectedPhoto },
+    photoSize: { selectedPhotoSize }
+  } = contextValue;
 
   useEffect(() => {
     if (selectedPhoto === 'model') setImageSrc(cloth.image[0].src)
@@ -43,7 +46,7 @@ function ClothCard({ cloth }) {
           alt={ cloth.image[0].alt }
           onMouseEnter={ onMouseEnterChangeImageSrc }
           onMouseLeave={ onMouseLeaveChangeImageSrc }
-          className="group-hover:cursor-pointer transition object-scale-down"
+          className={`${ selectedPhotoSize } group-hover:cursor-pointer transition object-contain`}
         />
         <AddToFavoriteHeartSVG
           className="absolute self-end m-[-10px] transition duration-200 group-hover:cursor-pointer w-7 h-7 stroke-1"
