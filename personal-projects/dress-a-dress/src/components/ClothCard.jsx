@@ -36,14 +36,14 @@ function ClothCard({ cloth }) {
   }
 
   return (
-    <div className="m-0 flex flex-col md:cloth-card">
+    <div className="flex flex-col md:cloth-card">
       <div className="group flex flex-col justify-end">
         <img
           src={ imageSrc }
           alt={ cloth.image[0].alt }
           onMouseEnter={ onMouseEnterChangeImageSrc }
           onMouseLeave={ onMouseLeaveChangeImageSrc }
-          className="group-hover:cursor-pointer focus:opacity-20 transition sm:w-full"
+          className="group-hover:cursor-pointer transition object-scale-down"
         />
         <AddToFavoriteHeartSVG
           className="absolute self-end m-[-10px] transition duration-200 group-hover:cursor-pointer w-7 h-7 stroke-1"
@@ -57,19 +57,21 @@ function ClothCard({ cloth }) {
         </span>
         <span className="font-mediumbold text-xs">{ title }</span>
         <span className="font-mediumbold text-xs">{ price }</span>
-        <div className="flex flex-row basis-[1rem] grow items-center justify-start gap-1 font-mediumbold text-sm">
-          <span className="flex flex-row items-center justify-center gap-1">
+        <div className="flex flex-row basis-[1rem] grow items-center justify-start gap-2
+          font-mediumbold text-sm">
+          <div className="flex gap-1">
             { swatches.map((swatch) => (
-                <SwatchCard
-                  swatch={ swatch }
-                  key={ `${cloth.articleCode}-${swatch.colorCode}` }
-                />)
-              )
+              <SwatchCard
+                swatch={ swatch }
+                key={ `${cloth.articleCode}-${swatch.colorCode}` }
+              />))
             }
-          </span>
-          <span className="flex flex-row justify-center items-center text-2xs basis-[1rem] max-h-[1rem]">
-            { swatchesTotal - swatches.length > 0 && `+${ swatchesTotal - swatches.length }` }
-          </span>
+          </div>
+          <div className="flex flex-row justify-center items-center text-2xs basis-[1rem] max-h-[1rem] font-medium">
+            <span className="flex">
+              { swatchesTotal - swatches.length > 0 && `+${ swatchesTotal - swatches.length }` }
+            </span>
+          </div>
         </div>
         <span className="text-2xs">{ sellingAttribute }</span>
       </div>

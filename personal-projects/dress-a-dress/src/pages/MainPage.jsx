@@ -8,7 +8,7 @@ function MainPage(props) {
   return (
     <div className="bg-main-bg min-h-screen">
       <Header />
-      <div className="flex flex-row md:flex-row gap-3 pl-8 pr-8">
+      <div className="flex flex-row justify-between md:flex-row gap-4 pl-8 pr-8">
         <AsideBar />
         <ClothesList />
       </div>

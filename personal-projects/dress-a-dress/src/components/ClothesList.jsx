@@ -57,7 +57,7 @@ function ClothesList() {
   const onClickSetModelPhotos = () => setSelectedPhoto('model');
   const onClickSetProductPhotos = () => setSelectedPhoto('product');
 
-  const onEnterKeyDownSetAmountOfItems = ({ key, target: { value }}) => {
+/*   const onEnterKeyDownSetAmountOfItems = ({ key, target: { value }}) => {
     if (key !== 'Enter') return;
     if (value > 100) {
       const maxFetchedClothes = fashionData
@@ -81,7 +81,7 @@ function ClothesList() {
         />))
     setRenderClothes(clothes)
     setSearchWarning('');
-  }
+  } */
 
   useEffect(() => {
     if (renderClothes.length > 0) setAmountOfClothesMessage(`${renderClothes.length} items`);
@@ -97,7 +97,7 @@ function ClothesList() {
     : <h1 className="font-medium text-sm text-[#444444]">{ searchWarning }</h1>
 
   return (
-    <div className="flex ml-0 mr-0 flex-col">
+    <div className="flex flex-col">
       <div className="5xsm:hidden 4xsm:hidden 3xsm:hidden 2xsm:hidden
         flex flex-row justify-center items-center gap-5 mb-7
         sm:gap-10
