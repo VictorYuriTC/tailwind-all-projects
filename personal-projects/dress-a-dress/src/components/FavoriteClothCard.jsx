@@ -26,7 +26,7 @@ function FavoriteClothCard({ cloth }) {
   }
 
   return (
-    <div className="cloth-card flex flex-col w-full h-full p-1">
+    <div className="cloth-card flex flex-col w-full h-full">
       <div className="group flex flex-col justify-end">
         <img
           src={ cloth.image[0].src }
@@ -40,7 +40,7 @@ function FavoriteClothCard({ cloth }) {
       </div>
 
       <div className="flex flex-col w-full h-full">
-        <h1 className="w-full grow block text-sm font-medium text-[#5f5f5f]">
+        <h1 className="w-full basis-[1rem] block text-sm font-medium text-[#5f5f5f]">
           { marketingMarkerText }
         </h1>
         <h1 className="text-sm">{ title }</h1>
