@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import Header from '../components/Header';
+import Header from '../components/menus/Header';
 import { FAVORITE_CLOTHES } from '../constants/constants';
 import { getItemFromLocalStorage } from '../localStorage/localStorage';
 import fashionData from '../services/fashionData';
-import FavoriteClothCard from '../components/FavoriteClothCard';
-import { useNavigate } from 'react-router-dom';
+import FavoriteClothCard from '../components/cards/FavoriteClothCard';
+import { useNavigate } from 'react-router-dom';;
 
 function WishlistPage(props) {
   const [renderFavorites, setRenderFavorites] = useState();

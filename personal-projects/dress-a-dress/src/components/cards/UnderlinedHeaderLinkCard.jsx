@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-function UnderlinedHeaderLink({ classNameDiv, className, text, to}) {
+function UnderlinedHeaderLinkCard({ classNameDiv, className, text, to}) {
   return (
     <div className={`${classNameDiv} group text-center flex flex-col`}>
       <Link
@@ -16,4 +16,4 @@ function UnderlinedHeaderLink({ classNameDiv, className, text, to}) {
   );
 }
 
-export default UnderlinedHeaderLink;
+export default UnderlinedHeaderLinkCard;

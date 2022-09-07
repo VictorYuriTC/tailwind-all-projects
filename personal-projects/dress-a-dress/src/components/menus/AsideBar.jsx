@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-import fashionData from '../services/fashionData';
+import fashionData from '../../services/fashionData';
 
 function AsideBar() {
   const [categories, setCategories] = useState([]);

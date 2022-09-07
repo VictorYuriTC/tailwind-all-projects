@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from '../components/Header';
-import ClothesList from '../components/ClothesList';
-import AsideBar from '../components/AsideBar';
+import Header from '../components/menus/Header';
+import ClothesList from '../components/lists/ClothesList';
+import AsideBar from '../components/menus/AsideBar';
 
 function MainPage(props) {
 

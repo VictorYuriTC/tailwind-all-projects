@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react'
-import ClothCard from './ClothCard';
-import fashionData from '../services/fashionData';
-import BlockSVG from './svgs/BlockSVG';
-import SquaresSVG from './svgs/SquaresSVG';
-import ClothesContext from '../context/ClothesContext';
+import ClothCard from '../cards/ClothCard';
+import fashionData from '../../services/fashionData';
+import BlockSVG from '../svgs/BlockSVG';
+import SquaresSVG from '../svgs/SquaresSVG';
+import ClothesContext from '../../context/ClothesContext';
 
 function ClothesList() {
   const [renderClothes, setRenderClothes] = useState([]);

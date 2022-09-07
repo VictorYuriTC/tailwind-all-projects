@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
-import ClothesContext from '../context/ClothesContext';
-import AddToFavoriteHeartSVG from './svgs/AddToFavoriteHeartSVG';
+import ClothesContext from '../../context/ClothesContext';
+import AddToFavoriteHeartSVG from '../svgs/AddToFavoriteHeartSVG';
 import SwatchCard from './SwatchCard';
 
 function ClothCard({ cloth }) {
