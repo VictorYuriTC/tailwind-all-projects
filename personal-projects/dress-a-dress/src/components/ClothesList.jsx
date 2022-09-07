@@ -102,7 +102,7 @@ function ClothesList() {
             type="number"
             placeholder="Set amount of items"
             onKeyDown={ onEnterKeyDownSetAmountOfItems }
-            className="font-black font-base focus:outline-none bg-main-bg w-44 ml-2"
+            className="font-black focus:outline-none bg-main-bg w-44 ml-2"
           />
         <div className="border border-black mt-1"/>
         </div>
@@ -155,7 +155,7 @@ function ClothesList() {
           </button>
       </div>
 
-      <div className={`grid grid-cols-2 xsm:grid-cols-3 gap-1 ${ gridCols }`}>
+      <div className={`grid grid-cols-2 xsm:grid-cols-3 sm:grid-cols-3 gap-1 ${ gridCols }`}>
         { renderClothes }
       </div>
     </div>

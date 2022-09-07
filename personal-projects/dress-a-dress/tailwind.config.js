@@ -5,14 +5,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        '2xs': '.65rem',
+      },
       translate: {
         'distant': '13rem'
       },
       transitionDuration: {
         '10000': '10000ms'
-      },
-      fontFamily: {
-        'Poppins': 'Poppins'
       },
       colors: {
         'main-bg': '#f8f8f8',

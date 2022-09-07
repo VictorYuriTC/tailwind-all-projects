@@ -41,18 +41,18 @@ function ClothCard({ cloth }) {
           className="group-hover:cursor-pointer focus:opacity-20 transition sm:w-full"
         />
         <AddToFavoriteHeartSVG
-          className="absolute self-end m-[-5px] transition duration-200 group-hover:cursor-pointer"
+          className="absolute self-end m-[-10px] transition duration-200 group-hover:cursor-pointer w-7 h-7 stroke-1"
           articleCode={ cloth.articleCode }
         />
       </div>
   
       <div className="flex flex-col justify-end pt-2 pb-4 gap-[0.4vh]">
-        <span className="basis-4 grow text-start block font-base text-xs text-[#5f5f5f]">
+        <span className="font-mediumbold basis-4 grow text-start block font-base text-sm text-[#5f5f5f]">
           { marketingMarkerText }
         </span>
-        <span className="text-sm">{ title }</span>
-        <span className="text-sm">{ price }</span>
-        <div className="flex flex-row gap-1 pt-1 pb-1">
+        <span className="font-mediumbold text-sm">{ title }</span>
+        <span className="font-mediumbold text-sm">{ price }</span>
+        <div className="font-mediumbold text-sm flex flex-row gap-1 pt-1 pb-1">
           { swatches.map(swatch => (
             <SwatchCard
               swatch={ swatch }
@@ -60,7 +60,7 @@ function ClothCard({ cloth }) {
             />))
           }
         </div>
-        <span className="text-xs">{ sellingAttribute }</span>
+        <span className="text-sm">{ sellingAttribute }</span>
       </div>
     </div>
   );

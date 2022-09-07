@@ -16,7 +16,7 @@ function AsideBar() {
     const categoriesAvailable = sortedNormalizedCategories
       .map(mappedCategory => (
         <Link
-          className="hover:text-red-600 hover:underline text-xs font-base"
+          className="hover:text-red-600 text-truncate hover:underline text-xs md:text-2xs"
           key={mappedCategory}
           to={`/category/${mappedCategory
           .replaceAll(' ', '-')
