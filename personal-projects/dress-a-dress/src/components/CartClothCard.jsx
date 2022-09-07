@@ -51,51 +51,51 @@ function CartClothCard({ cloth, size, color, className }) {
 
   return (
     <div className="flex flex-col items-center
-      md:flex-row md:items-center mt-10 bg-main-bg p-2 xsm:ml-6 sm:ml-6 md:ml-12 lg:ml-24 xl:ml-36">
+      md:flex-row md:items-center pt-10 bg-main-bg xsm:pl-6 sm:pl-6 md:pl-12 lg:pl-24 xl:pl-36 gap-6">
       <div className="flex flex-col">
         <img
           src={cloth.image[0].dataAltImage}
           alt={cloth.image[0].alt}
-          className={`${className} w-32 h-48 p-1 lg:p-0`}
+          className={`${className} w-32 h-48`}
         />
       </div>
 
-      <div className="flex flex-col p-1 lg:p-5">
-        <div className="flex md:flex-row gap-10 sm:gap-20 justify-between items-center">
-          <h1>{ title }</h1>
-          <div className="group self-end transition duration-200 group-hover:cursor-pointer hover:opacity-60 rounded-full p-1 m-1">
+      <div className="flex flex-col w-1/3 gap-4">
+        <div className="flex md:flex-row gap-10 sm:gap-20 justify-between items-start">
+          <div>
+            <h1>{ title }</h1>
+            <h3>{ price }</h3>
+          </div>
+          <div className="group transition duration-200 group-hover:cursor-pointer hover:opacity-60 rounded-full">
             <TrashSVG
               className="group-hover:cursor-pointer"
               articleCode={ cloth.articleCode }
             />
+          </div>
         </div>
-        </div>
 
-        <h3>{ price }</h3>
-
-
-        <div className="flex flex-col md:flex-row gap-3 sm:gap-5 md:gap-10 lg:gap-20 pt-2 font-light">
-          <div className="flex flex-row">
+        <div className="flex flex-col gap-3 font-light sm:gap-5 md:justify-between md:flex-row md:gap-10 lg:gap-20">
+          <div className="flex flex-row gap-1">
             <h3>Art. no.</h3>
             <h3>{ articleCode }</h3>
           </div>
-          <div className="flex flex-row">
-            <h3>Size: </h3>
-            <h3>{ size = 0 }</h3>
+          <div className="flex flex-row gap-1">
+            <h3>Size:</h3>
+            <h3>{size = 0}</h3>
           </div>
         </div>
 
-        <div className="flex flex-col pb-2 gap-3 font-light sm:gap-5 md:flex-row md:gap-10 lg:gap-20">
-          <div className="flex flex-row">
+        <div className="flex flex-col gap-3 font-light sm:gap-5 md:justify-between md:flex-row md:gap-10 lg:gap-20">
+          <div className="flex flex-row gap-1">
             <h3>Color:</h3>
             <h3>{ color = 'randomColor' }</h3>
           </div>
-          <div className="flex flex-row">
-            <h3>Total: </h3>
+          <div className="flex flex-row gap-1">
+            <h3>Total:</h3>
             <h3>{ total }</h3>
           </div>
         </div>
-      <div className="flex flex-row gap-3">
+        <div className="flex flex-col md:flex-row gap-3">
           <div className="border border-black w-fit pl-5 pr-5 pt-3 pb-3 bg-white">
             <AddToFavoriteHeartSVG
               articleCode={ articleCode }
@@ -109,14 +109,14 @@ function CartClothCard({ cloth, size, color, className }) {
             onChange={({ target: { value }}) => setSelectAmountOfPieces(value)}
             className="w-20 bg-white border accent-red-500 focus:outline-none p-1"
             >
-              <CartPieceOption
-                value="1"
-                className="accent-white"
-              />
-              <CartPieceOption
-                value="2"
-                className="accent-white"
-              />
+            <CartPieceOption
+              value="1"
+              className="accent-white"
+            />
+            <CartPieceOption
+              value="2"
+              className="accent-white"
+            />
           </select>
         </div>
       </div>
