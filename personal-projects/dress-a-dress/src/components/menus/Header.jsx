@@ -32,7 +32,7 @@ function Header() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center pr-8 pb-4 pt-10 gap-5">
+    <div className="flex flex-col pr-8 pb-4 pt-10 gap-1">
       <header className="flex flex-row place-self-center lg:place-self-end">
         <div className="flex flex-row gap-3">
           <Link
@@ -77,28 +77,31 @@ function Header() {
         </Link>
       </div>
 
-      <header className="hidden lg:flex lg:flex-row items-center lg:justify-center lg:gap-5 lg:pb-5 lg:pt-5">
-        <UnderlinedHeaderLinkCard text="Women" to="/women" classNameDiv=""/>
-        <UnderlinedHeaderLinkCard text="Divided" to="/divided" classNameDiv=""/>
-        <UnderlinedHeaderLinkCard text="Men" to="/men" classNameDiv=""/>
-        <UnderlinedHeaderLinkCard text="Baby" to="/baby" classNameDiv=""/>
-        <UnderlinedHeaderLinkCard text="Kids" to="/kids" classNameDiv=""/>
-        <UnderlinedHeaderLinkCard text="H&M HOME" to="/" classNameDiv=""/>
-        <UnderlinedHeaderLinkCard text="Sport" to="/sport" classNameDiv=""/>
-        <UnderlinedHeaderLinkCard text="Sale" to="/sale" classNameDiv=""/>
-        <UnderlinedHeaderLinkCard text="Sustainability" to="/sustainability" 
-            classNameDiv=""/>
-        <div className="self-end">
-          <MagnifyingGlassSVG className="absolute"/>
-          <input
-            type="text"
-            placeholder="Search products"
-            className="flex flex-row font-black text-center w-4 lg:w-40 xl:w-44 
-              2xl:w-52 p-1 focus:outline-none indent-4 bg-main-bg self-end justify-self-end"
-            onKeyDown={ onEnterKeyDownSearchProducts }
-          />
-          <div className="border border-black"/>
+      <header className="hidden lg:flex lg:flex-row lg:items-start lg:justify-center lg:gap-5 lg:pb-5 lg:pt-5">
+        <div className="flex flex-row gap-5 justify-end">
+          <UnderlinedHeaderLinkCard text="Women" to="/women" classNameDiv=""/>
+          <UnderlinedHeaderLinkCard text="Divided" to="/divided" classNameDiv=""/>
+          <UnderlinedHeaderLinkCard text="Men" to="/men" classNameDiv=""/>
+          <UnderlinedHeaderLinkCard text="Baby" to="/baby" classNameDiv=""/>
+          <UnderlinedHeaderLinkCard text="Kids" to="/kids" classNameDiv=""/>
+          <UnderlinedHeaderLinkCard text="H&M HOME" to="/" classNameDiv=""/>
+          <UnderlinedHeaderLinkCard text="Sport" to="/sport" classNameDiv=""/>
+          <UnderlinedHeaderLinkCard text="Sale" to="/sale" classNameDiv=""/>
+          <UnderlinedHeaderLinkCard text="Sustainability" to="/sustainability" 
+              classNameDiv=""/>
         </div>
+      </header>
+
+      <header className="flex flex-col self-end translate-y-[-5rem]">
+        <MagnifyingGlassSVG className="absolute"/>
+        <input
+          type="text"
+          placeholder="Search products"
+          className="flex flex-row font-black text-center w-4 lg:w-40 xl:w-44 
+            2xl:w-52 p-1 focus:outline-none indent-4 bg-main-bg self-end justify-self-end"
+          onKeyDown={ onEnterKeyDownSearchProducts }
+        />
+        <div className="border border-black"/>
       </header>
     </div>
   );

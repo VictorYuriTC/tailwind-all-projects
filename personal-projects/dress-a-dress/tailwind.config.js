@@ -15,7 +15,7 @@ module.exports = {
         '10000': '10000ms'
       },
       colors: {
-        'main-bg': '#f8f8f8',
+        'main-bg': '#fcfaf8',
         'opaque-gray': '#444444'
       },
       screens: {
