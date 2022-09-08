@@ -102,7 +102,7 @@ function ClothesList() {
         setSelectedPhotoSize('');
         return;
       }
-      setSelectedPhotoSize('object-contain');
+      setSelectedPhotoSize('');
     }
     changePhotoSizeObjectState();
   }, [selectedPhoto])

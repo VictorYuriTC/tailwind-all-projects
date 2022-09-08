@@ -39,22 +39,24 @@ function ClothCard({ cloth }) {
   }
 
   return (
-    <div className="flex flex-col md:cloth-card">
+    <div className="flex flex-col">
       <div className="group flex flex-col justify-end">
-        <img
-          src={ imageSrc }
-          alt={ cloth.image[0].alt }
-          onMouseEnter={ onMouseEnterChangeImageSrc }
-          onMouseLeave={ onMouseLeaveChangeImageSrc }
-          className={`${ selectedPhotoSize } group-hover:cursor-pointer transition`}
-        />
+        <div className="flex flex-row relative pb-[150%]">
+          <img
+            src={ imageSrc }
+            alt={ cloth.image[0].alt }
+            onMouseEnter={ onMouseEnterChangeImageSrc }
+            onMouseLeave={ onMouseLeaveChangeImageSrc }
+            className={`absolute object-cover group-hover:cursor-pointer transition w-full`}
+          />
+        </div>
         <AddToFavoriteHeartSVG
-          className="absolute self-end m-[-10px] transition duration-200 group-hover:cursor-pointer w-7 h-7 stroke-1"
+          className="absolute self-end m-[-0.25rem] transition duration-200 group-hover:cursor-pointer w-7 h-7 stroke-1"
           articleCode={ cloth.articleCode }
         />
       </div>
   
-      <div className="flex flex-col justify-end pt-2 pb-4 gap-[0.4vh]">
+      <div className="flex flex-col justify-end gap-[0.4vh]">
         <span className="font-mediumbold basis-4 text-start block font-base text-2xs text-[#5f5f5f]">
           { marketingMarkerText }
         </span>
