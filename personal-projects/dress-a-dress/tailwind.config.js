@@ -19,21 +19,11 @@ module.exports = {
         'opaque-gray': '#444444'
       },
       screens: {
-        '5xsm': [
-          { 'max': '200px'},
-        ],
-        '4xsm': [
-          { 'min': '200px', 'max': '270px' },
-        ],
-        '3xsm': [
-          { 'min': '270px', 'max': '360px' },
-        ],
-        '2xsm': [
-          { 'min': '360px', 'max': '480px' }
-        ],
-        'xsm': [
-          { 'min': '480px', 'max': '640px' }
-        ]
+        '5xsm': '130px',
+        '4xsm': '200px',
+        '3xsm': '270px',
+        '2xsm': '360px', 
+        'xsm': '480px'
       }
     },
   },

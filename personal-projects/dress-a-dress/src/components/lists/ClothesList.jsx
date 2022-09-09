@@ -113,11 +113,9 @@ function ClothesList() {
 
   return (
     <div className={`${ photoWidthDisplay } flex flex-col grow gap-7`}>
-      <div className="5xsm:hidden 4xsm:hidden 3xsm:hidden 2xsm:hidden
-        flex flex-row justify-center items-center gap-5
-        sm:gap-10
-        md:justify-around md:w-full
-        xl:justify-end"
+      <div className="hidden
+        xsm:flex xsm:flex-row xsm:justify-end xsm:items-center xsm:gap-5
+        sm:gap-10 md:w-full"
       >
         { renderWarning }
         {/* <div className="flex flex-col">
@@ -129,9 +127,9 @@ function ClothesList() {
           />
         <div className="border border-black mt-1"/>
         </div> */}
-        <din className="font-medium text-sm text-[#444444] text-center">
+        <div className="font-medium text-sm text-[#444444] text-center">
           <span className="font-medium text-xs">{ amountOfClothesMessage }</span>
-        </din>
+        </div>
 
         <div>
           <button

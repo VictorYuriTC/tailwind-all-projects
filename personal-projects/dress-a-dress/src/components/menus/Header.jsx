@@ -32,41 +32,37 @@ function Header() {
   }
 
   return (
-    <div className="flex flex-col pr-8 pb-4 pt-10 gap-1">
-      <header className="flex flex-row place-self-center lg:place-self-end">
-        <div className="flex flex-row gap-3">
+    <div className="flex flex-col pr-8 pb-4 pt-5 lg:pt-10 gap-8">
+      <header className="flex flex-row place-self-end gap-2">
           <Link
             to="/login"
-            className="5xsm:hidden 4xsm:hidden flex flex-row items-center gap-1"
+            className="flex flex-row items-center gap-1"
           >
             <UserSVG className="stroke-1"/>
-            <span className="text-sm font-light">
+            <span className="hidden text-sm font-light lg:inline">
               Sign in
             </span>
           </Link>
 
           <Link
             to="/wishlist"
-            className="5xsm:hidden 4xsm:hidden 3xsm:hidden 2xsm:hidden flex flex-row
-              items-center gap-1"
+            className="flex flex-row items-center gap-1"
             >
             <HeartSVG className="stroke-1"/>
-            <span className="text-sm font-light">
+            <span className="hidden text-sm font-light lg:inline">
               Favorites
             </span>
           </Link>
 
-
           <Link
             to="/cart"
-            className="5xsm:hidden flex flex-row items-center gap-1"
+            className="flex flex-row items-center gap-1"
           >
             <BagSVG className="stroke-black stroke-1"/>
-            <span className="text-sm font-light">
+            <span className="hidden text-sm font-light lg:inline">
               Shopping bag <span className="font-medium">({ amountOfCartItems })</span>
             </span>
           </Link>
-        </div>
       </header>
 
       <div className="flex flex-row items-center justify-center">
@@ -77,7 +73,7 @@ function Header() {
         </Link>
       </div>
 
-      <header className="hidden lg:flex lg:flex-row lg:items-start lg:justify-center lg:gap-5 lg:pb-5 lg:pt-5">
+      <header className="hidden lg:flex lg:flex-row lg:items-start lg:justify-center lg:gap-5">
         <div className="flex flex-row gap-5 justify-end">
           <UnderlinedHeaderLinkCard text="Women" to="/women" classNameDiv=""/>
           <UnderlinedHeaderLinkCard text="Divided" to="/divided" classNameDiv=""/>
@@ -92,7 +88,7 @@ function Header() {
         </div>
       </header>
 
-      <header className="flex flex-col self-end translate-y-[-5rem]">
+      <header className="hidden lg:flex lg:flex-col lg:self-end lg:translate-y-[-4em]">
         <MagnifyingGlassSVG className="absolute"/>
         <input
           type="text"

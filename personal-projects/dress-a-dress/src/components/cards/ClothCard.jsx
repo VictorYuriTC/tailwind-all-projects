@@ -25,10 +25,6 @@ function ClothCard({ cloth }) {
     swatchesTotal
   } = cloth;
 
-  useEffect(() => {
-    console.log(cloth)
-  }, [])
-
   const onMouseEnterChangeImageSrc = () => {
     if (selectedPhoto === 'model') setImageSrc(cloth.image[0].dataAltImage)
     if (selectedPhoto === 'product') setImageSrc(cloth.image[0].src)
@@ -65,10 +61,10 @@ function ClothCard({ cloth }) {
         <div className="flex flex-row basis-[1rem] grow items-center justify-start gap-2
           font-mediumbold text-sm">
           <div className="flex gap-1">
-            { swatches.map((swatch) => (
+            { swatches.map((swatch, index) => (
               <SwatchCard
                 swatch={ swatch }
-                key={ `${cloth.articleCode}-${swatch.colorCode}` }
+                key={ `${ index }${ cloth.articleCode }-${ swatch.colorCode }` }
               />))
             }
           </div>
