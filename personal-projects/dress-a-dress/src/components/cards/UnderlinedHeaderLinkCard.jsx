@@ -5,7 +5,7 @@ function UnderlinedHeaderLinkCard({ classNameDiv, className, text, to}) {
   return (
     <div className={`${classNameDiv} group flex flex-col`}>
       <Link
-        className={`${className} font-medium text-end hover:scale-105 transition duration-400`}
+        className={`${className} font-[400] text-end hover:scale-105 transition duration-400`}
         to={`${to}`}
       >
         { text }

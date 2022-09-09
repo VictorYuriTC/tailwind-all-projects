@@ -4,6 +4,7 @@ import fashionData from '../../services/fashionData';
 import BlockSVG from '../svgs/BlockSVG';
 import SquaresSVG from '../svgs/SquaresSVG';
 import ClothesContext from '../../context/ClothesContext';
+import InfoSVG from '../svgs/InfoSVG';
 
 function ClothesList() {
   const [renderClothes, setRenderClothes] = useState([]);
@@ -19,6 +20,8 @@ function ClothesList() {
       photoWidthDisplay, setPhotoWidthDisplay,
     },
   } = contextValue;
+
+  const [advertisementMsg, setAdvertisementMsg] = useState(`Extra 20% off Women's Sale sweaters`);
 
   useEffect(() => {
     const fetchedClothes = fashionData.slice(0, 20);
@@ -113,6 +116,18 @@ function ClothesList() {
 
   return (
     <div className={`${ photoWidthDisplay } flex flex-col grow gap-7`}>
+      <div className="flex flex-row justify-center advertisement bg-[#e89494] p-5">
+        <div className="justify-self-end">
+          <h1 className="text-white text-center text-3xl font-semibold">
+            { advertisementMsg }
+          </h1>
+        </div>
+        <button className="relative translate-x-[19rem] justify-self-end">
+          <span className="justify-self-end">
+            <InfoSVG className="stroke-1 stroke-white fill-[#e89494] w-[2rem] h-[2rem]"/> 
+          </span>
+        </button>
+      </div>
       <div className="hidden
         xsm:flex xsm:flex-row xsm:justify-end xsm:items-center xsm:gap-5
         sm:gap-10 md:w-full"

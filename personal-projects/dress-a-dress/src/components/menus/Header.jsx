@@ -7,7 +7,7 @@ import UserSVG from '../svgs/UserSVG';
 import UnderlinedHeaderLinkCard from '../cards/UnderlinedHeaderLinkCard';
 import MagnifyingGlassSVG from '../svgs/MagnifyingClassSVG';
 import ClothesContext from '../../context/ClothesContext';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import HM_PNG from '../../assets/images/photos/hm.png'
 
 function Header() {
@@ -17,6 +17,7 @@ function Header() {
     cart: { amountOfCartItems, setAmountOfCarItems }
   } = contextValue;
   const navigate = useNavigate();
+  const { pathname } = useLocation();
 
   useEffect(() => {
     if (getItemFromLocalStorage(CART_CLOTHES)) {
@@ -32,15 +33,19 @@ function Header() {
     navigate('/')
   }
 
+  useEffect(() => {
+    console.log(pathname)
+  }, [])
+
   return (
-    <div className="flex flex-col pl-7 pr-7 pb-4 pt-5 lg:pt-8">
+    <div className="flex flex-row md:flex-col pl-7 pr-7 pb-4 pt-5 lg:pt-9">
       <header className="flex flex-row place-self-end gap-2">
           <Link
             to="/login"
             className="flex flex-row items-center gap-1"
           >
             <UserSVG className="stroke-1"/>
-            <span className="hidden text-sm font-light lg:inline">
+            <span className="hidden text-sm lg:inline">
               Sign in
             </span>
           </Link>
@@ -50,7 +55,7 @@ function Header() {
             className="flex flex-row items-center gap-1"
             >
             <HeartSVG className="stroke-1"/>
-            <span className="hidden text-sm font-light lg:inline">
+            <span className="hidden text-sm lg:inline">
               Favorites
             </span>
           </Link>
@@ -60,16 +65,16 @@ function Header() {
             className="flex flex-row items-center gap-1"
           >
             <BagSVG className="stroke-black stroke-1"/>
-            <span className="hidden text-sm font-light lg:inline">
+            <span className="hidden text-sm lg:inline">
               Shopping bag <span className="font-medium">({ amountOfCartItems })</span>
             </span>
           </Link>
       </header>
 
-      <header className="flex flex-row items-center justify-center pb-[1.75rem]">
+      <header className="lg:flex lg:flex-row lg:items-center lg:justify-center lg:pb-[2rem] lg:translate-y-[-2px]">
         <Link
           to="/"
-          className="hover:scale-[1.1] transition duration-500 relative pb-[2.5rem] pr-[4.25rem]">
+          className="hover:scale-[1.1] transition duration-500 relative pb-[2.2rem] pr-[4.3rem]">
               <img
                 src={ HM_PNG }
                 alt="H&M official logo"
@@ -95,7 +100,7 @@ function Header() {
 
       <header className="hidden lg:flex lg:flex-col justify-center 
         lg:self-end lg:translate-y-[-2em] pl-2
-        lg:w-32 xl:w-40">
+        lg:w-32 xl:w-40 pb-1">
         <div className="flex flex-row items-center border-b border-black pb-2 gap-2">
           <MagnifyingGlassSVG className="absolute stroke-1"/>
           <input
@@ -108,6 +113,24 @@ function Header() {
             onKeyDown={ onEnterKeyDownSearchProducts }
           />
         </div>
+      </header>
+
+      <header className="pb-7">
+        <h1 className="text-2xs font-base text-center">
+          <Link to="/" className="hover:text-red-600">
+            <span>HM.com</span> 
+          </Link>
+          <span>
+          <Link to={`${pathname}`} className="hover:text-red-600">
+            <span>
+            {`${
+              pathname.slice(0, 2).toUpperCase()}${
+              pathname.slice(2, pathname.length)}`
+            }
+            </span>
+          </Link>
+          </span>
+        </h1>
       </header>
     </div>
   );
