@@ -8,6 +8,7 @@ import UnderlinedHeaderLinkCard from '../cards/UnderlinedHeaderLinkCard';
 import MagnifyingGlassSVG from '../svgs/MagnifyingClassSVG';
 import ClothesContext from '../../context/ClothesContext';
 import { Link, useNavigate } from 'react-router-dom';
+import HM_PNG from '../../assets/images/photos/hm.png'
 
 function Header() {
   const contextValue = useContext(ClothesContext);
@@ -32,7 +33,7 @@ function Header() {
   }
 
   return (
-    <div className="flex flex-col pr-8 pb-4 pt-5 lg:pt-10 gap-8">
+    <div className="flex flex-col pl-7 pr-7 pb-4 pt-5 lg:pt-8">
       <header className="flex flex-row place-self-end gap-2">
           <Link
             to="/login"
@@ -65,16 +66,20 @@ function Header() {
           </Link>
       </header>
 
-      <div className="flex flex-row items-center justify-center">
+      <header className="flex flex-row items-center justify-center pb-[1.75rem]">
         <Link
           to="/"
-          className="hover:scale-[1.1] transition duration-500 text-3xl font-black text-[#d93333]">
-          H&M
+          className="hover:scale-[1.1] transition duration-500 relative pb-[2.5rem] pr-[4.25rem]">
+              <img
+                src={ HM_PNG }
+                alt="H&M official logo"
+                className="absolute object-cover"
+              />
         </Link>
-      </div>
+      </header>
 
       <header className="hidden lg:flex lg:flex-row lg:items-start lg:justify-center lg:gap-5">
-        <div className="flex flex-row gap-5 justify-end">
+        <div className="flex flex-row gap-[1.5rem] justify-end">
           <UnderlinedHeaderLinkCard text="Women" to="/women" classNameDiv=""/>
           <UnderlinedHeaderLinkCard text="Divided" to="/divided" classNameDiv=""/>
           <UnderlinedHeaderLinkCard text="Men" to="/men" classNameDiv=""/>
@@ -88,16 +93,21 @@ function Header() {
         </div>
       </header>
 
-      <header className="hidden lg:flex lg:flex-col lg:self-end lg:translate-y-[-4em]">
-        <MagnifyingGlassSVG className="absolute"/>
-        <input
-          type="text"
-          placeholder="Search products"
-          className="flex flex-row font-black text-center w-4 lg:w-40 xl:w-44 
-            2xl:w-52 p-1 focus:outline-none indent-4 bg-main-bg self-end justify-self-end"
-          onKeyDown={ onEnterKeyDownSearchProducts }
-        />
-        <div className="border border-black"/>
+      <header className="hidden lg:flex lg:flex-col justify-center 
+        lg:self-end lg:translate-y-[-2em] pl-2
+        lg:w-32 xl:w-40">
+        <div className="flex flex-row items-center border-b border-black pb-2 gap-2">
+          <MagnifyingGlassSVG className="absolute stroke-1"/>
+          <input
+            type="text"
+            placeholder="Search products"
+            className="flex flex-row
+              focus:outline-none indent-8
+              text-center placeholder-black text-sm placeholder:text-start placeholder:text-xs
+              bg-main-bg self-end justify-self-end"
+            onKeyDown={ onEnterKeyDownSearchProducts }
+          />
+        </div>
       </header>
     </div>
   );

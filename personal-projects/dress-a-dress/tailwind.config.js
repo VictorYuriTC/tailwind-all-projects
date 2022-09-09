@@ -5,8 +5,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'sans': ["HM Sans Semi Bold", 'HMSansHebrew-SemiBold', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", 'Osaka', 'メイリオ', 'Meiryo', "ＭＳ Ｐゴシック", "MS PGothic", 'sans-serif']
+      },
       fontSize: {
-        '2xs': '.65rem',
+        '2xs': '0.65rem',
       },
       translate: {
         'distant': '13rem'

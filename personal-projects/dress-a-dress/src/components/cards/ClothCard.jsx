@@ -43,7 +43,7 @@ function ClothCard({ cloth }) {
             alt={ cloth.image[0].alt }
             onMouseEnter={ onMouseEnterChangeImageSrc }
             onMouseLeave={ onMouseLeaveChangeImageSrc }
-            className={`absolute object-cover group-hover:cursor-pointer transition w-full`}
+            className={`absolute object-cover group-hover:cursor-pointer transition w-full h-full`}
           />
         </div>
         <AddToFavoriteHeartSVG
