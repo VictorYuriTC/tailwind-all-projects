@@ -190,7 +190,7 @@ function ClothesList() {
           </button>
       </div>
 
-      <div className={`grid 5xsm:grid-cols-1 4xsm:grid-cols-1 3xsm:grid-cols-2 2xsm:grid-cols-2 xsm:grid-cols-3 sm:grid-cols-2 gap-1 ${ gridCols }`}>
+      <div className={`grid grid-cols-2 gap-1 ${ gridCols }`}>
         { renderClothes }
       </div>
     </div>
