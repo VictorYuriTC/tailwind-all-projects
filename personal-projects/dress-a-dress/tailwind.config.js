@@ -5,21 +5,16 @@ module.exports = {
   ],
   theme: {
     extend: {
-/*       fontFamily: {
-        'sans': ['HM Sans Semi Bold', 'HMSansHebrew-SemiBold', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'Osaka', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', 'MS PGothic', 'sans-serif']
-      }, */
-      fontSize: {
-        '2xs': '0.65rem',
-      },
-      translate: {
-        'distant': '13rem'
-      },
-      transitionDuration: {
-        '10000': '10000ms'
-      },
       colors: {
         'main-bg': '#fcfaf8',
         'opaque-gray': '#444444'
+      },
+      fontSize: {
+        '2xs': '0.65rem',
+      },
+      padding: {
+        '1/3': '33.33333%',
+        '2/3': '66.66667%',
       },
       screens: {
         '5xsm': '130px',
@@ -27,8 +22,14 @@ module.exports = {
         '3xsm': '270px',
         '2xsm': '360px', 
         'xsm': '480px'
-      }
+      },
+      transitionDuration: {
+        '10000': '10000ms'
+      },
+      translate: {
+        'distant': '13rem'
+      },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/aspect-ratio')],
 }

@@ -37,13 +37,13 @@ function ClothCard({ cloth }) {
   return (
     <div className="flex flex-col">
       <div className="group flex flex-col justify-end">
-        <div className="flex flex-row relative pb-[150%]">
+        <div className="flex flex-row aspect-w-6 aspect-h-9">
           <img
             src={ imageSrc }
             alt={ cloth.image[0].alt }
             onMouseEnter={ onMouseEnterChangeImageSrc }
             onMouseLeave={ onMouseLeaveChangeImageSrc }
-            className={`absolute object-cover group-hover:cursor-pointer transition w-full h-full`}
+            className={`group-hover:cursor-pointer transition`}
           />
         </div>
         <AddToFavoriteHeartSVG
