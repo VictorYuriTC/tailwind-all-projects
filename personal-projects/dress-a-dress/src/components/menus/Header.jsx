@@ -9,15 +9,18 @@ import MagnifyingGlassSVG from '../svgs/MagnifyingClassSVG';
 import ClothesContext from '../../context/ClothesContext';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import HM_PNG from '../../assets/images/photos/hm.png'
+import ExclamationSVG from '../svgs/ExclamationSVG';
 
 function Header() {
   const contextValue = useContext(ClothesContext);
   const {
-    search: { setSearchedProductInput },
+    search: { searchedProductInput, setSearchedProductInput },
     cart: { amountOfCartItems, setAmountOfCarItems }
   } = contextValue;
   const navigate = useNavigate();
   const { pathname } = useLocation();
+  const [warningMessage, setWarningMessage] = useState('');
+  const [searchInputWarningVisibility, setSearchInputWarningVisibility] = useState('hidden');
 
   useEffect(() => {
     if (getItemFromLocalStorage(CART_CLOTHES)) {
@@ -27,8 +30,16 @@ function Header() {
 
   const onEnterKeyDownSearchProducts = ({ key, target: { value }}) => {
     const pressedKey = key;
+    setWarningMessage('');
+  
     if (pressedKey !== 'Enter') return;
-
+    if (value.length < 3) {
+      setSearchInputWarningVisibility('visible')
+      setWarningMessage(`Please lenghten this text to 3 characters or more (you are currently using ${ value.length } character).`)
+      setTimeout(() => {
+        setSearchInputWarningVisibility('hidden');
+      }, 3000)
+    }
     setSearchedProductInput({ pressedKey, value: value.toLowerCase() });
     navigate('/')
   }
@@ -101,7 +112,7 @@ function Header() {
 
       <header className="hidden lg:flex lg:flex-col justify-center 
         lg:self-end lg:translate-y-[-2em] pl-2
-        lg:w-32 xl:w-40 pb-1">
+        lg:w-32 xl:w-56 pb-1">
         <div className="flex flex-row items-center border-b border-black pb-2 gap-2">
           <MagnifyingGlassSVG className="absolute stroke-1"/>
           <input
@@ -116,7 +127,7 @@ function Header() {
         </div>
       </header>
 
-      <header className="block pb-7">
+      <header className="relative pb-7">
         <h1 className="text-2xs font-base text-center">
           <Link to="/" className="hover:text-red-600">
             <span>HM.com</span> 
@@ -132,6 +143,17 @@ function Header() {
           </Link>
           </span>
         </h1>
+        <div
+          className="flex flex-row items-center gap-2 bg-white border p-2 rounded absolute
+          top-0 right-0 translate-y-[-1rem] shadow-lg transition duration-1000"
+          style={{ visibility: searchInputWarningVisibility }}>
+          <div>
+            <ExclamationSVG className="fill-orange-400 w-6 h-6"/>
+          </div>
+          <div>
+            <span className="text-sm">{ warningMessage }</span>
+          </div>
+        </div>
       </header>
     </div>
   );
