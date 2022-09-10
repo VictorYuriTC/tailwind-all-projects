@@ -38,8 +38,8 @@ function Header() {
   }, [])
 
   return (
-    <div className="flex flex-row md:flex-col pl-7 pr-7 pb-4 pt-5 lg:pt-9">
-      <header className="flex flex-row place-self-end gap-2">
+    <div className="flex flex-col justify-end pl-7 pr-7 pb-4 pt-5 lg:pt-9">
+      <header className="flex flex-row self-end gap-5 lg:gap-2">
           <Link
             to="/login"
             className="flex flex-row items-center gap-1"
@@ -71,10 +71,11 @@ function Header() {
           </Link>
       </header>
 
-      <header className="lg:flex lg:flex-row lg:items-center lg:justify-center lg:pb-[2rem] lg:translate-y-[-2px]">
+      <header className="relative flex flex-row items-center justify-center
+        pb-[2rem] translate-y-[-7px]">
         <Link
           to="/"
-          className="hover:scale-[1.1] transition duration-500 relative pb-[2.2rem] pr-[4.3rem]">
+          className="hover:scale-[1.1] transition duration-500 relative pb-[1.9rem] pr-[4.3rem]">
               <img
                 src={ HM_PNG }
                 alt="H&M official logo"
@@ -107,15 +108,15 @@ function Header() {
             type="text"
             placeholder="Search products"
             className="flex flex-row
-              focus:outline-none indent-8
+              focus:outline-none lg:indent-6 xl:indent-8
               text-center placeholder-black text-sm placeholder:text-start placeholder:text-xs
-              bg-main-bg self-end justify-self-end"
+              bg-main-bg max-w-full"
             onKeyDown={ onEnterKeyDownSearchProducts }
           />
         </div>
       </header>
 
-      <header className="pb-7">
+      <header className="block pb-7">
         <h1 className="text-2xs font-base text-center">
           <Link to="/" className="hover:text-red-600">
             <span>HM.com</span> 

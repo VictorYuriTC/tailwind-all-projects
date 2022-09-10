@@ -47,7 +47,7 @@ function ClothCard({ cloth }) {
           />
         </div>
         <AddToFavoriteHeartSVG
-          className="absolute self-end m-[-0.25rem] transition duration-200 group-hover:cursor-pointer w-7 h-7 stroke-1"
+          className="absolute self-end m-[0.25rem] transition duration-200 group-hover:cursor-pointer w-7 h-7 stroke-1"
           articleCode={ cloth.articleCode }
         />
       </div>

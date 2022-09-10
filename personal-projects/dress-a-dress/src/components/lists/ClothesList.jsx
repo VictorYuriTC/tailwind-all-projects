@@ -64,7 +64,7 @@ function ClothesList() {
   const onClickSetModelPhotos = () => setSelectedPhoto('model');
   const onClickSetProductPhotos = () => setSelectedPhoto('product');
 
-/*   const onEnterKeyDownSetAmountOfItems = ({ key, target: { value }}) => {
+  const onEnterKeyDownSetAmountOfItems = ({ key, target: { value }}) => {
     if (key !== 'Enter') return;
     if (value > 100) {
       const maxFetchedClothes = fashionData
@@ -88,7 +88,7 @@ function ClothesList() {
         />))
     setRenderClothes(clothes)
     setSearchWarning('');
-  } */
+  }
 
   useEffect(() => {
     if (renderClothes.length > 0) setAmountOfClothesMessage(`${renderClothes.length} items`);
@@ -115,25 +115,31 @@ function ClothesList() {
     : <h1 className="font-medium text-sm text-[#444444]">{ searchWarning }</h1>
 
   return (
-    <div className={`${ photoWidthDisplay } flex flex-col grow gap-7`}>
-      <div className="flex flex-row justify-center advertisement bg-[#e89494] p-5">
+    <div className={`${ photoWidthDisplay } relative flex flex-col grow gap-7`}>
+      <div className="advertisement flex flex-col items-center justify-center bg-[#e89494] p-5">
         <div className="justify-self-end">
           <h1 className="text-white text-center text-3xl font-semibold">
             { advertisementMsg }
           </h1>
         </div>
-        <button className="relative translate-x-[19rem] justify-self-end">
-          <span className="justify-self-end">
+        <button className="absolute flex items-center self-end">
+          <span className="self-end">
             <InfoSVG className="stroke-1 stroke-white fill-[#e89494] w-[2rem] h-[2rem]"/> 
           </span>
         </button>
       </div>
+      
       <div className="hidden
         xsm:flex xsm:flex-row xsm:justify-end xsm:items-center xsm:gap-5
         sm:gap-10 md:w-full"
       >
-        { renderWarning }
-        {/* <div className="flex flex-col">
+      {/*   <div>
+          <span>
+            { renderWarning }
+          </span>
+        </div>
+
+        <div className="flex flex-col">
           <input
             type="number"
             placeholder="Set amount of items"
@@ -142,6 +148,7 @@ function ClothesList() {
           />
         <div className="border border-black mt-1"/>
         </div> */}
+
         <div className="font-medium text-sm text-[#444444] text-center">
           <span className="font-medium text-xs">{ amountOfClothesMessage }</span>
         </div>

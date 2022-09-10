@@ -38,7 +38,7 @@ function CartClothCard({ cloth, size, color, className }) {
   }, [])
 
   useEffect(() => {
-    setTotal(`${clothCurrencySymbol} ${Number(selectAmountOfPieces) * clothNumericalPrice}`)
+    setTotal(`${clothCurrencySymbol}${Number(selectAmountOfPieces) * clothNumericalPrice}`)
   }, [selectAmountOfPieces])
 
   const onClickRemoveFromShoppingBag = () => {
@@ -51,16 +51,16 @@ function CartClothCard({ cloth, size, color, className }) {
 
   return (
     <div className="flex flex-col items-center
-      md:flex-row md:items-center pt-10 bg-main-bg gap-6">
-      <div className="flex flex-col">
+      md:flex-row bg-main-bg gap-6">
+      <div className="flex flex-col relative pr-[50%] pb-[66%]">
         <img
           src={cloth.image[0].dataAltImage}
           alt={cloth.image[0].alt}
-          className={`${className} w-32 h-48`}
+          className={`${className} absolute object-cover w-full h-full`}
         />
       </div>
 
-      <div className="flex flex-col gap-4 md:1/3 lg:w-1/2">
+      <div className="flex flex-col gap-4">
         <div className="flex md:flex-row gap-10 sm:gap-20 justify-between items-start">
           <div>
             <h1>{ title }</h1>
@@ -91,7 +91,7 @@ function CartClothCard({ cloth, size, color, className }) {
             <h3>Color:</h3>
             <h3>{ color = 'randomColor' }</h3>
           </div>
-          <div className="flex flex-row gap-1">
+          <div className="flex flex-row items-center gap-1">
             <h3>Total:</h3>
             <h3>{ total }</h3>
           </div>
