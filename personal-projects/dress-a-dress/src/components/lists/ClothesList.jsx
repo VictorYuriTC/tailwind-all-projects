@@ -5,6 +5,7 @@ import BlockSVG from '../svgs/BlockSVG';
 import SquaresSVG from '../svgs/SquaresSVG';
 import ClothesContext from '../../context/ClothesContext';
 import InfoSVG from '../svgs/InfoSVG';
+import { BLACK_HEXCOLOR, MODEL, OPAQUE_GRAY_HEXCOLOR, PRODUCT, RED_HEXCOLOR } from '../../constants/constants';
 
 function ClothesList() {
   const [renderClothes, setRenderClothes] = useState([]);
@@ -101,13 +102,8 @@ function ClothesList() {
 
   useEffect(() => {
     const changePhotoSizeObjectState = () => {
-      if (gridCols === 'md:grid-cols-4') {
-        setSelectedPhotoSize('');
-        return;
-      }
-      setSelectedPhotoSize('');
+      
     }
-    changePhotoSizeObjectState();
   }, [selectedPhoto])
 
   const renderWarning = searchWarning === ''
@@ -149,7 +145,7 @@ function ClothesList() {
         <div className="border border-black mt-1"/>
         </div> */}
 
-        <div className="font-medium text-sm text-[#444444] text-center">
+        <div className="font-medium text-sm text-opaque-gray text-center">
           <span className="font-medium text-xs">{ amountOfClothesMessage }</span>
         </div>
 
@@ -157,7 +153,7 @@ function ClothesList() {
           <button
             onClick={ onClickSetModelPhotos }
             className="font-medium text-sm"
-            style={ { color: selectedPhoto === 'model' ? 'red' : '#444444' }}
+            style={ { color: selectedPhoto === MODEL ? RED_HEXCOLOR : OPAQUE_GRAY_HEXCOLOR }}
           >
             <span className="text-xs">
               Model
@@ -165,7 +161,7 @@ function ClothesList() {
           </button>
           <div
             className="opacity-0 mt-1 border border-red-500"
-            style={ { opacity: selectedPhoto === 'model' ? '1' : '0' }}
+            style={ { opacity: selectedPhoto === MODEL ? '1' : '0' }}
           />
         </div>
 
@@ -173,26 +169,26 @@ function ClothesList() {
           <button
             onClick={ onClickSetProductPhotos }
             className="font-medium text-sm"
-            style={ { color: selectedPhoto === 'product' ? 'red' : '#444444' }}
+            style={ { color: selectedPhoto === PRODUCT ? RED_HEXCOLOR : OPAQUE_GRAY_HEXCOLOR }}
           >
             <span className="text-xs">Product</span>
           </button>
           <div
             className="opacity-0 mt-1 border border-red-500"
-             style={ { opacity: selectedPhoto === 'product' ? '1' : '0' }}
+             style={ { opacity: selectedPhoto === PRODUCT ? '1' : '0' }}
           />
         </div>
 
         <button onClick={ onClickSetGridThreeGridCols }>
           <BlockSVG
             className=""
-            style={ { stroke: gridCols === 'md:grid-cols-3' ? 'red' : 'black' }}
+            style={ { stroke: gridCols === 'md:grid-cols-3' ? RED_HEXCOLOR : BLACK_HEXCOLOR }}
           />
         </button>
           <button onClick={ onClickSetGridFourGridCols }>
             <SquaresSVG
               className=""
-              style={ { stroke: gridCols === 'md:grid-cols-4' ? 'red' : 'black' }}
+              style={ { stroke: gridCols === 'md:grid-cols-4' ? RED_HEXCOLOR : BLACK_HEXCOLOR }}
             />
           </button>
       </div>

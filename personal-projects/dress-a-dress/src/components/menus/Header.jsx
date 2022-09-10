@@ -30,56 +30,58 @@ function Header() {
 
   const onEnterKeyDownSearchProducts = ({ key, target: { value }}) => {
     const pressedKey = key;
-    setWarningMessage('');
-  
     if (pressedKey !== 'Enter') return;
-    if (value.length < 3) {
+
+    const AMOUNT_OF_CHARACTERS = value.length
+    const CHARACTER = 'character'
+    const CHARACTERS = 'characters'
+    const renderCharacterWord = AMOUNT_OF_CHARACTERS > 1 ? CHARACTERS : CHARACTER
+
+    const renderWarning = () => {
       setSearchInputWarningVisibility('visible')
-      setWarningMessage(`Please lenghten this text to 3 characters or more (you are currently using ${ value.length } character).`)
+      setWarningMessage(`Please lenghten this text to 3 characters or more (you are currently using ${ AMOUNT_OF_CHARACTERS } ${ renderCharacterWord }).`)
       setTimeout(() => {
         setSearchInputWarningVisibility('hidden');
-      }, 3000)
+      }, 5000)
     }
+    
+    if (AMOUNT_OF_CHARACTERS < 3) renderWarning()
     setSearchedProductInput({ pressedKey, value: value.toLowerCase() });
     navigate('/')
   }
 
-  useEffect(() => {
-    console.log(pathname)
-  }, [])
-
   return (
     <div className="flex flex-col justify-end pl-7 pr-7 pb-4 pt-5 lg:pt-9">
       <header className="flex flex-row self-end gap-5 lg:gap-2">
-          <Link
-            to="/login"
-            className="flex flex-row items-center gap-1"
+        <Link
+          to="/login"
+          className="flex flex-row items-center gap-1"
+        >
+          <UserSVG className="stroke-1"/>
+          <span className="hidden text-sm lg:inline">
+            Sign in
+          </span>
+        </Link>
+
+        <Link
+          to="/wishlist"
+          className="flex flex-row items-center gap-1"
           >
-            <UserSVG className="stroke-1"/>
-            <span className="hidden text-sm lg:inline">
-              Sign in
-            </span>
-          </Link>
+          <HeartSVG className="stroke-1"/>
+          <span className="hidden text-sm lg:inline">
+            Favorites
+          </span>
+        </Link>
 
-          <Link
-            to="/wishlist"
-            className="flex flex-row items-center gap-1"
-            >
-            <HeartSVG className="stroke-1"/>
-            <span className="hidden text-sm lg:inline">
-              Favorites
-            </span>
-          </Link>
-
-          <Link
+        <Link
             to="/cart"
             className="flex flex-row items-center gap-1"
-          >
-            <BagSVG className="stroke-black stroke-1"/>
-            <span className="hidden text-sm lg:inline">
+        >
+          <BagSVG className="stroke-black stroke-1"/>
+          <span className="hidden text-sm lg:inline">
               Shopping bag <span className="font-medium">({ amountOfCartItems })</span>
-            </span>
-          </Link>
+          </span>
+        </Link>
       </header>
 
       <header className="relative flex flex-row items-center justify-center
@@ -145,7 +147,7 @@ function Header() {
         </h1>
         <div
           className="flex flex-row items-center gap-2 bg-white border p-2 rounded absolute
-          top-0 right-0 translate-y-[-1rem] shadow-lg transition duration-1000"
+          top-0 right-0 translate-y-[-1rem] shadow-xl transition duration-1000"
           style={{ visibility: searchInputWarningVisibility }}>
           <div>
             <ExclamationSVG className="fill-orange-400 w-6 h-6"/>
