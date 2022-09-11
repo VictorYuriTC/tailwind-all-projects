@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import Header from '../components/Header';
+import Header from '../components/menus/Header';
 import { FAVORITE_CLOTHES } from '../constants/constants';
-import { getItemFromLocalStorage } from '../localStorage/localStorage';
+import { getItemFromLocalStorage } from '../local_storage/localStorage';
 import fashionData from '../services/fashionData';
-import FavoriteClothCard from '../components/FavoriteClothCard';
-import { useNavigate } from 'react-router-dom';
+import FavoriteClothCard from '../components/cards/FavoriteClothCard';
+import { useNavigate } from 'react-router-dom';;
 
 function WishlistPage(props) {
   const [renderFavorites, setRenderFavorites] = useState();
@@ -48,14 +48,18 @@ function WishlistPage(props) {
   }, [])
   
   return (
-    <div className="bg-main-bg min-h-screen">
+    <div className="flex flex-col bg-main-bg min-h-screen gap-8"
+    >
       <Header />
-      <h1 className="text-4xl text-center font-bold">Favorites</h1>
-      <div className="text-center mt-12">{ tipPhrase }</div>
-
-      <h4 className="text-[#6b6b6b] text-end md:mr-6">{ amountOfFavoriteItems }</h4>
-      <div className="grid grid-cols-4 w-fit h-fit">
-        { renderFavorites }
+      <div className="flex flex-col lg:pl-6 lg:pr-6
+        xl:pl-[4.5rem] xl:pr-[4.5rem] gap-8">
+        <h1 className="text-4xl text-center font-bold">Favorites</h1>
+        <h3 className="text-center">{ tipPhrase }</h3>
+        <h3 className="text-[#6b6b6b] text-end text-sm">{ amountOfFavoriteItems }</h3>
+        <div className="grid grid-cols-4 gap-1 gap-y-[4rem]"
+        >
+          { renderFavorites }
+        </div>
       </div>
     </div>
   );

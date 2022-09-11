@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react'
-import CartClothCard from '../components/CartClothCard';
-import Header from '../components/Header';
+import React, { useCallback, useContext, useEffect, useRef, useState } from 'react'
+import CartClothCard from '../components/cards/CartClothCard';
+import Header from '../components/menus/Header';
 import { CART_CLOTHES } from '../constants/constants';
-import { getItemFromLocalStorage } from '../localStorage/localStorage';
+import ClothesContext from '../context/ClothesContext';
+import { getItemFromLocalStorage } from '../local_storage/localStorage';
 import fashionData from '../services/fashionData';
 
 function CartPage(props) {
+  const contextValue = useContext(ClothesContext);
+  const { cart: { amountOfCartItems, setAmountOfCartItems }} = contextValue;
   const [renderCartClothes, setRenderCartClothes] = useState([]);
   const [tipPhrase, setTipPhrase] = useState('');
 
@@ -31,12 +34,20 @@ function CartPage(props) {
   }, [])
 
   return (
-    <div className="bg-main-bg min-h-screen">
-      <Header />
-      <h1 className="text-4xl text-center mt-10 font-bold">Shopping bag</h1>
-      <div className="flex items-center justify-center">{ tipPhrase }</div>
-      <div className="grid p-3 gap-9">
-        { renderCartClothes }
+    <div className="flex flex-col bg-main-bg min-h-screen">
+      <div>
+        <Header />
+      </div>
+      <div className="flex flex-col items-center gap-5
+        sm:pl-[3rem] sm:pr-[3rem]
+        md:pl-[6rem] md:pr-[6rem]
+        lg:pl-[12rem] lg:pr-[12rem]"
+      >
+        <h1 className="text-4xl text-center font-bold">Shopping bag</h1>
+        <div className="flex items-center">{ tipPhrase }</div>
+        <div className="grid gap-10 self-start">
+          { renderCartClothes }
+        </div>
       </div>
     </div>
   );

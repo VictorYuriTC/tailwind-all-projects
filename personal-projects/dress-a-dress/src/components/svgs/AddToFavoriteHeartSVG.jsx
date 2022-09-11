@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { FAVORITE_CLOTHES } from '../../constants/constants';
-import { getItemFromLocalStorage, setItemInLocalStorage } from '../../localStorage/localStorage';
+import { getItemFromLocalStorage, setItemInLocalStorage } from '../../local_storage/localStorage';
 
 function AddToFavoriteHeartSVG({ className, articleCode }) {
   const [fillColor, setFillColor] = useState('white')
+  const [opacity, setOpacity] = useState(1)
 
   useEffect(() => {
     const setInitialFillColor = () => {
@@ -13,6 +14,10 @@ function AddToFavoriteHeartSVG({ className, articleCode }) {
     }
 
     setInitialFillColor();
+  }, [])
+
+  useEffect(() => {
+    ;
   }, [])
 
   const onClickSetFavoriteItem = () => {
@@ -25,23 +30,25 @@ function AddToFavoriteHeartSVG({ className, articleCode }) {
       setFillColor('white')
       return;
     }
-
     setItemInLocalStorage(FAVORITE_CLOTHES, [...favoriteClothes, articleCode])
     setFillColor('red')
   }
 
-  const onMouseEnterChangeFillColor = () => setFillColor('#ffa0af')
+  const onMouseEnterChangeFillColor = () => {
+    setFillColor('red');
+    setOpacity(0.5);
+  }
   
-
   const onMouseLeaveChangeFillColor = () => {
     const favoriteClothes = getItemFromLocalStorage(FAVORITE_CLOTHES);
+    setOpacity(1);
 
     if (favoriteClothes.includes(articleCode)) {
-      setFillColor('red')
+      setFillColor('red');
       return;
     }
 
-    setFillColor('white')
+    setFillColor('white');
   }
 
   return  (
@@ -55,7 +62,7 @@ function AddToFavoriteHeartSVG({ className, articleCode }) {
         onClick={ onClickSetFavoriteItem }
         onMouseEnter={ onMouseEnterChangeFillColor }
         onMouseLeave={ onMouseLeaveChangeFillColor }
-        style={ { fill: `${fillColor}`, }}
+        style={ { fill: `${ fillColor }`, opacity }}
         >
       <path
         strokeLinecap="round"

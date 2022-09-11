@@ -1,2 +1,8 @@
 export const FAVORITE_CLOTHES = 'favoriteClothes'
 export const CART_CLOTHES = 'cartClothes'
+export const MODEL = 'model'
+export const PRODUCT = 'product'
+export const OPAQUE_GRAY_HEXCOLOR = '#444444'
+export const RED_HEXCOLOR = '#FF0000'
+export const BLACK_HEXCOLOR = '#000000'
+export const WHITE_HEXCOLOR = '#FFFFFF'

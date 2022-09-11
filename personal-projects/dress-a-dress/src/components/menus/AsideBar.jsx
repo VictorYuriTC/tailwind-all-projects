@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-import fashionData from '../services/fashionData';
+import fashionData from '../../services/fashionData';
 
 function AsideBar() {
   const [categories, setCategories] = useState([]);
@@ -28,7 +28,7 @@ function AsideBar() {
     setCategories(categoriesAvailable)
   }, [])
   return (
-    <div className="hidden ml-2 gap-1 md:flex md:flex-col md:ml-4 md:gap-2">
+    <div className="hidden gap-2 md:flex md:flex-col">
       { categories }
     </div>
   );

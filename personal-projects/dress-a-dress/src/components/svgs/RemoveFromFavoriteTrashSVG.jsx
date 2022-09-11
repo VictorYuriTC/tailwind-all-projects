@@ -1,6 +1,6 @@
 import React from 'react'
 import { FAVORITE_CLOTHES } from '../../constants/constants';
-import { getItemFromLocalStorage, setItemInLocalStorage } from '../../localStorage/localStorage';
+import { getItemFromLocalStorage, setItemInLocalStorage } from '../../local_storage/localStorage';
 
 function TrashSVG({ className, articleCode }) {
   const onClickRemoveFavoriteItem = () => {

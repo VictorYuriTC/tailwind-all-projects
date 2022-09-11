@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-function UnderlinedHeaderLink({ classNameDiv, className, text, to}) {
+function UnderlinedHeaderLinkCard({ classNameDiv, className, text, to}) {
   return (
-    <div className={`${classNameDiv} group text-center flex flex-col`}>
+    <div className={`${classNameDiv} group flex flex-col`}>
       <Link
-        className={`${className} text-center hover:scale-105 transition duration-400`}
+        className={`${className} font-[400] text-end hover:scale-105 transition duration-400`}
         to={`${to}`}
       >
         { text }
@@ -16,4 +16,4 @@ function UnderlinedHeaderLink({ classNameDiv, className, text, to}) {
   );
 }
 
-export default UnderlinedHeaderLink;
+export default UnderlinedHeaderLinkCard;

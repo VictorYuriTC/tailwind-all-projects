@@ -1,14 +1,14 @@
 import React from 'react'
-import Header from '../components/Header';
-import ClothesList from '../components/ClothesList';
-import AsideBar from '../components/AsideBar';
+import Header from '../components/menus/Header';
+import ClothesList from '../components/lists/ClothesList';
+import AsideBar from '../components/menus/AsideBar';
 
 function MainPage(props) {
 
   return (
-    <div className="bg-main-bg min-h-screen">
+    <div className="flex flex-col bg-main-bg min-h-screen">
       <Header />
-      <div className="flex flex-row md:flex-row">
+      <div className="flex flex-row gap-4 pl-7 pr-7">
         <AsideBar />
         <ClothesList />
       </div>

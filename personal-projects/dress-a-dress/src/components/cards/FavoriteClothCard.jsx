@@ -1,8 +1,8 @@
 import React  from 'react'
-import { CART_CLOTHES, FAVORITE_CLOTHES } from '../constants/constants';
-import { getItemFromLocalStorage, setItemInLocalStorage } from '../localStorage/localStorage';
-import BagSVG from './svgs/BagSVG';
-import TrashSVG from './svgs/RemoveFromFavoriteTrashSVG';
+import { CART_CLOTHES, FAVORITE_CLOTHES } from '../../constants/constants';
+import { getItemFromLocalStorage, setItemInLocalStorage } from '../../local_storage/localStorage';
+import BagSVG from '../svgs/BagSVG';
+import TrashSVG from '../svgs/RemoveFromFavoriteTrashSVG';
 import SwatchCard from './SwatchCard';
 
 function FavoriteClothCard({ cloth }) {
@@ -26,21 +26,23 @@ function FavoriteClothCard({ cloth }) {
   }
 
   return (
-    <div className="cloth-card flex flex-col w-full h-full p-1">
+    <div className="cloth-card flex flex-col w-full h-full">
       <div className="group flex flex-col justify-end">
         <img
           src={ cloth.image[0].src }
           alt={ cloth.image[0].alt }
           className="group-hover:cursor-pointer focus:opacity-20 transition h-fit"
         />
-        <TrashSVG
-          className="absolute self-end m-[-5px] transition duration-200 group-hover:cursor-pointer hover:opacity-60"
-          articleCode={ cloth.articleCode }
-        />
+        <div className="absolute self-end transition duration-200 group-hover:cursor-pointer hover:opacity-60 bg-[#faf9f8] rounded-full p-1 m-1">
+          <TrashSVG
+            className=""
+            articleCode={ cloth.articleCode }
+          />
+        </div>
       </div>
 
       <div className="flex flex-col w-full h-full">
-        <h1 className="w-full grow block text-sm font-medium text-[#5f5f5f]">
+        <h1 className="w-full basis-[1rem] block text-sm font-medium text-[#5f5f5f]">
           { marketingMarkerText }
         </h1>
         <h1 className="text-sm">{ title }</h1>

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import AddToFavoriteHeartSVG from './svgs/AddToFavoriteHeartSVG';
-import TrashSVG from './svgs/TrashSVG';
-import CartPieceOption from './CartPieceOption';
-import { getItemFromLocalStorage, setItemInLocalStorage } from '../localStorage/localStorage';
-import { CART_CLOTHES } from '../constants/constants';
+import AddToFavoriteHeartSVG from '../svgs/AddToFavoriteHeartSVG';
+import TrashSVG from '../svgs/TrashSVG';
+import CartPieceOptionCard from './CartPieceOptionCard';
+import { getItemFromLocalStorage, setItemInLocalStorage } from '../../local_storage/localStorage';
+import { CART_CLOTHES } from '../../constants/constants';
 
 function CartClothCard({ cloth, size, color, className }) {
   const {
@@ -38,7 +38,7 @@ function CartClothCard({ cloth, size, color, className }) {
   }, [])
 
   useEffect(() => {
-    setTotal(`${clothCurrencySymbol} ${Number(selectAmountOfPieces) * clothNumericalPrice}`)
+    setTotal(`${clothCurrencySymbol}${Number(selectAmountOfPieces) * clothNumericalPrice}`)
   }, [selectAmountOfPieces])
 
   const onClickRemoveFromShoppingBag = () => {
@@ -50,39 +50,53 @@ function CartClothCard({ cloth, size, color, className }) {
   }
 
   return (
-    <div className="flex flex-row mt-10 bg-main-bg ml-36">
-      <img
-        src={cloth.image[0].dataAltImage}
-        alt={cloth.image[0].alt}
-        className={`${className} w-32 h-48`}
-      />
+    <div className="flex flex-col items-center
+      md:flex-row bg-main-bg gap-6">
+      <div className="flex flex-col relative pr-[50%] pb-[66%]">
+        <img
+          src={cloth.image[0].dataAltImage}
+          alt={cloth.image[0].alt}
+          className={`${className} absolute object-cover w-full h-full`}
+        />
+      </div>
 
-      <div className="flex flex-col p-5">
-        <div className="flex flex-row gap-20 justify-between">
-          <h1>{ title }</h1>
-          <TrashSVG
-            onClick={ onClickRemoveFromShoppingBag }
-            className="hover:opacity-60 hover:cursor-pointer"
-          />
+      <div className="flex flex-col gap-4">
+        <div className="flex md:flex-row gap-10 sm:gap-20 justify-between items-start">
+          <div>
+            <h1>{ title }</h1>
+            <h3>{ price }</h3>
+          </div>
+          <div className="group transition duration-200 group-hover:cursor-pointer hover:opacity-60 rounded-full">
+            <TrashSVG
+              className="group-hover:cursor-pointer"
+              articleCode={ cloth.articleCode }
+              onClick={ onClickRemoveFromShoppingBag }
+            />
+          </div>
         </div>
 
-        <h3>{ price }</h3>
-
-        <div className="flex flex-row gap-20 pt-2 font-light">
-          <h3>Art. no.</h3>
-          <h3>{ articleCode }</h3>
-          <h3>Size: </h3>
-          <h3>{ size = 0 }</h3>
+        <div className="flex flex-col gap-3 font-light sm:gap-5 md:justify-between md:flex-row md:gap-10 lg:gap-20">
+          <div className="flex flex-row gap-1">
+            <h3>Art. no.</h3>
+            <h3>{ articleCode }</h3>
+          </div>
+          <div className="flex flex-row gap-1">
+            <h3>Size:</h3>
+            <h3>{size = 0}</h3>
+          </div>
         </div>
 
-        <div className="flex flex-row gap-20 pb-2 font-light">
-          <h3>Color:</h3>
-          <h3>{ color = 'randomColor' }</h3>
-          <h3>Total: </h3>
-          <h3>{ total }</h3>
+        <div className="flex flex-col gap-3 font-light sm:gap-5 md:justify-between md:flex-row md:gap-10 lg:gap-20">
+          <div className="flex flex-row gap-1">
+            <h3>Color:</h3>
+            <h3>{ color = 'randomColor' }</h3>
+          </div>
+          <div className="flex flex-row items-center gap-1">
+            <h3>Total:</h3>
+            <h3>{ total }</h3>
+          </div>
         </div>
-
-        <div className="flex flex-row gap-3">
+        <div className="flex flex-col md:flex-row gap-3">
           <div className="border border-black w-fit pl-5 pr-5 pt-3 pb-3 bg-white">
             <AddToFavoriteHeartSVG
               articleCode={ articleCode }
@@ -96,11 +110,11 @@ function CartClothCard({ cloth, size, color, className }) {
             onChange={({ target: { value }}) => setSelectAmountOfPieces(value)}
             className="w-20 bg-white border accent-red-500 focus:outline-none p-1"
             >
-            <CartPieceOption
+            <CartPieceOptionCard
               value="1"
               className="accent-white"
             />
-            <CartPieceOption
+            <CartPieceOptionCard
               value="2"
               className="accent-white"
             />
