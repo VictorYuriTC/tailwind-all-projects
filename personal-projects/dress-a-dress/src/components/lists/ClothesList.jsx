@@ -35,13 +35,8 @@ function ClothesList() {
   }, []);
 
   useEffect(() => {
-    if (searchedProductInput.value === ''
-      && searchedProductInput.pressedKey === 'Enter') {
-      setSearchWarning('You must provide at least one character to search a product by its name.');
-      return;
-    }
-
     if (searchedProductInput.pressedKey !== 'Enter') return;
+
 
     const fetchedClothes = fashionData
       .filter(cloth => cloth.title.toLowerCase().includes(searchedProductInput.value))
@@ -93,18 +88,8 @@ function ClothesList() {
 
   useEffect(() => {
     if (renderClothes.length > 0) setAmountOfClothesMessage(`${renderClothes.length} items`);
-    if (renderClothes.length < 1
-      || (searchedProductInput.value === '' && searchedProductInput.pressedKey === 'Enter')) {
-        setAmountOfClothesMessage('No items found');
-      }
     if (renderClothes.length === 1) setAmountOfClothesMessage('1 item');
   }, [renderClothes]);
-
-  useEffect(() => {
-    const changePhotoSizeObjectState = () => {
-      
-    }
-  }, [selectedPhoto])
 
   const renderWarning = searchWarning === ''
     ? <></>

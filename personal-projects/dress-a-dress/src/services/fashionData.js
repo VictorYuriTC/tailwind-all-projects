@@ -1,5 +1,1921 @@
 const fashionData = [
     {
+      "articleCode": "1075636001",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1075636001'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTA3NTYzNl9ncm91cF8wMDFfZW5fdXM7MTA3NTYzNjAwMV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1075636001');",
+      "link": "/en_us/productpage.1075636001.html",
+      "title": "Teddy Bear Jacket",
+      "category": "kids_girls_outerwear_jackets",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/3d/b1/3db1be643e811180421ff042a1c80391541c9bf7.jpg],origin[dam],category[kids_girls_outerwear_jackets],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/00/30/00307e3a295159cceae912b0b63e21dfc4095cd5.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "Teddy Bear Jacket",
+          "dataAltText": "Teddy Bear Jacket Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1075636001|Teddy Bear Jacket|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "Conscious choice  ",
+      "marketingMarkerType": "marker-environment",
+      "marketingMarkerCss": "",
+      "price": "$ 29.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "2",
+      "swatches": [
+        {
+          "colorCode": "#393C57",
+          "articleLink": "/en_us/productpage.1075636001.html",
+          "colorName": "Blue/checked"
+        },
+        {
+          "colorCode": "#CD3765",
+          "articleLink": "/en_us/productpage.1075636004.html",
+          "colorName": "Dark pink"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1068868001",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1068868001'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTA2ODg2OF9ncm91cF8wMDFfZW5fdXM7MTA2ODg2ODAwMV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1068868001');",
+      "link": "/en_us/productpage.1068868001.html",
+      "title": "2-pack Flared Jeggings",
+      "category": "kids_girls_clothing",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/5d/8c/5d8cb1d5773a63289d5441545d83a6b6f3718d63.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/fe/0d/fe0d93009a63a5556d7e261aa1e7a6b62b681a20.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "2-pack Flared Jeggings",
+          "dataAltText": "2-pack Flared Jeggings Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1068868001|2-pack Flared Jeggings|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "",
+      "marketingMarkerType": "",
+      "marketingMarkerCss": "",
+      "price": "$ 29.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "2",
+      "swatches": [
+        {
+          "colorCode": "#4D5067",
+          "articleLink": "/en_us/productpage.1068868001.html",
+          "colorName": "Denim blue/black"
+        },
+        {
+          "colorCode": "#6E6E6E",
+          "articleLink": "/en_us/productpage.1068868002.html",
+          "colorName": "Dark grey/Black"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "0929076061",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','0929076061'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MDkyOTA3Nl9ncm91cF8wNjFfZW5fdXM7MDkyOTA3NjA2MV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','0929076061');",
+      "link": "/en_us/productpage.0929076061.html",
+      "title": "Cotton Jersey Dress",
+      "category": "kids_girls_clothing_dresses_longsleeve",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/84/36/843624f881fd2597ce3f3564f575a15d8a02ddd6.jpg],origin[dam],category[kids_girls_clothing_dresses_longsleeve],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/84/36/843624f881fd2597ce3f3564f575a15d8a02ddd6.jpg],origin[dam],category[kids_girls_clothing_dresses_longsleeve],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "alt": "Cotton Jersey Dress",
+          "dataAltText": "Cotton Jersey Dress Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": true,
+      "favouritesTracking": "Favourites|0929076061|Cotton Jersey Dress|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "",
+      "marketingMarkerType": "",
+      "marketingMarkerCss": "",
+      "price": "$ 8.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "13",
+      "swatches": [
+        {
+          "colorCode": "#B6AEA8",
+          "articleLink": "/en_us/productpage.0929076061.html",
+          "colorName": "Beige/leopard print"
+        },
+        {
+          "colorCode": "#AEA9C3",
+          "articleLink": "/en_us/productpage.0929076018.html",
+          "colorName": "Light purple/unicorns"
+        },
+        {
+          "colorCode": "#AEC1AC",
+          "articleLink": "/en_us/productpage.0929076022.html",
+          "colorName": "Light green/forest animals"
+        },
+        {
+          "colorCode": "#272628",
+          "articleLink": "/en_us/productpage.0929076023.html",
+          "colorName": "Dark gray/unicorns"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1051740003",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1051740003'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTA1MTc0MF9ncm91cF8wMDNfZW5fdXM7MTA1MTc0MDAwM19lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1051740003');",
+      "link": "/en_us/productpage.1051740003.html",
+      "title": "2-piece Cotton Set",
+      "category": "kids_girls_clothing",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/4b/ec/4bec4ef585883bfcacf22552a69cc8a873376fca.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/5d/61/5d61fb2f0f0eeed251a06f8d9c7d75c15c83741c.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "2-piece Cotton Set",
+          "dataAltText": "2-piece Cotton Set Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1051740003|2-piece Cotton Set|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "",
+      "marketingMarkerType": "",
+      "marketingMarkerCss": "",
+      "price": "$ 29.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "1",
+      "swatches": [
+        {
+          "colorCode": "#BF9592",
+          "articleLink": "/en_us/productpage.1051740003.html",
+          "colorName": "Light pink/natural white"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1013100004",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1013100004'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTAxMzEwMF9ncm91cF8wMDRfZW5fdXM7MTAxMzEwMDAwNF9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1013100004');",
+      "link": "/en_us/productpage.1013100004.html",
+      "title": "Chelsea Boots",
+      "category": "kids_girls_shoes_boots",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/e9/99/e999fa2bb253d4138d03a6d34d3dd538271d13c1.jpg],origin[dam],category[kids_girls_shoes_boots],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/e9/99/e999fa2bb253d4138d03a6d34d3dd538271d13c1.jpg],origin[dam],category[kids_girls_shoes_boots],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "alt": "Chelsea Boots",
+          "dataAltText": "Chelsea Boots Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1013100004|Chelsea Boots|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "",
+      "marketingMarkerType": "",
+      "marketingMarkerCss": "",
+      "price": "$ 34.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "2",
+      "swatches": [
+        {
+          "colorCode": "#C1A59D",
+          "articleLink": "/en_us/productpage.1013100004.html",
+          "colorName": "Light pink"
+        },
+        {
+          "colorCode": "#272628",
+          "articleLink": "/en_us/productpage.1013100001.html",
+          "colorName": "Black"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1060635001",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1060635001'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTA2MDYzNV9ncm91cF8wMDFfZW5fdXM7MTA2MDYzNTAwMV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1060635001');",
+      "link": "/en_us/productpage.1060635001.html",
+      "title": "Fleece Jacket",
+      "category": "kids_girls_outerwear_jackets",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/c7/78/c7787f8d3a138320a7dc57cb8d2fc2de869683c0.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/f1/3f/f13fa8f6c01d7c90a09350ee8b1bb714f8fffe58.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "Fleece Jacket",
+          "dataAltText": "Fleece Jacket Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1060635001|Fleece Jacket|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "Conscious choice  ",
+      "marketingMarkerType": "marker-environment",
+      "marketingMarkerCss": "",
+      "price": "$ 14.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "2",
+      "swatches": [
+        {
+          "colorCode": "#2D323F",
+          "articleLink": "/en_us/productpage.1060635001.html",
+          "colorName": "Navy blue/patterned"
+        },
+        {
+          "colorCode": "#B9B8D5",
+          "articleLink": "/en_us/productpage.1060635002.html",
+          "colorName": "Light purple/striped"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1117385009",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1117385009'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTExNzM4NV9ncm91cF8wMDlfZW5fdXM7MTExNzM4NTAwOV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1117385009');",
+      "link": "/en_us/productpage.1117385009.html",
+      "title": "Sweater",
+      "category": "kids_girls_clothing_jumperssweatshirts_jumpers",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/99/6e/996e65d118e3ba25ad3c63e4a1368b1a3100eaea.jpg],origin[dam],category[kids_girls_clothing_jumperssweatshirts_jumpers],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/99/6e/996e65d118e3ba25ad3c63e4a1368b1a3100eaea.jpg],origin[dam],category[kids_girls_clothing_jumperssweatshirts_jumpers],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "alt": "Sweater",
+          "dataAltText": "Sweater Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1117385009|Sweater|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "Conscious choice  ",
+      "marketingMarkerType": "marker-environment",
+      "marketingMarkerCss": "",
+      "price": "$ 24.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "4",
+      "swatches": [
+        {
+          "colorCode": "#BF9592",
+          "articleLink": "/en_us/productpage.1117385009.html",
+          "colorName": "Light pink/argyle-patterned"
+        },
+        {
+          "colorCode": "#A18AAF",
+          "articleLink": "/en_us/productpage.1117385003.html",
+          "colorName": "Light purple/plaid"
+        },
+        {
+          "colorCode": "#EC8852",
+          "articleLink": "/en_us/productpage.1117385004.html",
+          "colorName": "Pink/orange"
+        },
+        {
+          "colorCode": "#BFAED2",
+          "articleLink": "/en_us/productpage.1117385008.html",
+          "colorName": "Light purple/ombre"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1085338001",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1085338001'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTA4NTMzOF9ncm91cF8wMDFfZW5fdXM7MTA4NTMzODAwMV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1085338001');",
+      "link": "/en_us/productpage.1085338001.html",
+      "title": "Witch Costume Set",
+      "category": "kids_accessories_hairaccessories",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/c0/9e/c09e51f25003f6051459e63fccfde25e7097818d.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/c0/9e/c09e51f25003f6051459e63fccfde25e7097818d.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "alt": "Witch Costume Set",
+          "dataAltText": "Witch Costume Set Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1085338001|Witch Costume Set|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "",
+      "marketingMarkerType": "",
+      "marketingMarkerCss": "",
+      "price": "$ 12.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "2",
+      "swatches": [
+        {
+          "colorCode": "#8376AF",
+          "articleLink": "/en_us/productpage.1085338001.html",
+          "colorName": "Purple"
+        },
+        {
+          "colorCode": "#272628",
+          "articleLink": "/en_us/productpage.1085338002.html",
+          "colorName": "Black/skull"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "0619764068",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','0619764068'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MDYxOTc2NF9ncm91cF8wNjhfZW5fdXM7MDYxOTc2NDA2OF9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','0619764068');",
+      "link": "/en_us/productpage.0619764068.html",
+      "title": "7-pack Socks",
+      "category": "kids_girls_clothing_sockstights_socks",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/43/3d/433d57678dd82ce11a1aea980906d4a517217a61.jpg],origin[dam],category[kids_girls_clothing_sockstights_socks],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/43/3d/433d57678dd82ce11a1aea980906d4a517217a61.jpg],origin[dam],category[kids_girls_clothing_sockstights_socks],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "alt": "7-pack Socks",
+          "dataAltText": "7-pack Socks Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|0619764068|7-pack Socks|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "",
+      "marketingMarkerType": "",
+      "marketingMarkerCss": "",
+      "price": "$ 12.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "6",
+      "swatches": [
+        {
+          "colorCode": "#DFD7CA",
+          "articleLink": "/en_us/productpage.0619764068.html",
+          "colorName": "Beige melange/days of the week"
+        },
+        {
+          "colorCode": "#C6A098",
+          "articleLink": "/en_us/productpage.0619764064.html",
+          "colorName": "Powder pink/unicorns"
+        },
+        {
+          "colorCode": "#BF9592",
+          "articleLink": "/en_us/productpage.0619764067.html",
+          "colorName": "Light pink/dark gray"
+        },
+        {
+          "colorCode": "#B83B31",
+          "articleLink": "/en_us/productpage.0619764069.html",
+          "colorName": "Orange/forest animals"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1079738001",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1079738001'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTA3OTczOF9ncm91cF8wMDFfZW5fdXM7MTA3OTczODAwMV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1079738001');",
+      "link": "/en_us/productpage.1079738001.html",
+      "title": "Ribbed Wool Sweater Vest",
+      "category": "kids_girls_clothing",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/33/92/33925f560248d38558aa339dee869af7a12a13d3.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/26/ac/26ac12ac6767fcf28d8040806a82adce60884458.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "Ribbed Wool Sweater Vest",
+          "dataAltText": "Ribbed Wool Sweater Vest Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1079738001|Ribbed Wool Sweater Vest|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "",
+      "marketingMarkerType": "",
+      "marketingMarkerCss": "",
+      "price": "$ 39.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "1",
+      "swatches": [
+        {
+          "colorCode": "#DFD8C9",
+          "articleLink": "/en_us/productpage.1079738001.html",
+          "colorName": "Natural white"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1114239001",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1114239001'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTExNDIzOV9ncm91cF8wMDFfZW5fdXM7MTExNDIzOTAwMV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1114239001');",
+      "link": "/en_us/productpage.1114239001.html",
+      "title": "Double-weave Cotton Skirt",
+      "category": "kids_girls_clothing_skirts",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/81/7a/817ab2cd19f0c6ec7aa1ac75dfe3dd5c9417d1c2.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/c8/01/c801fc82c61217838d5ba87bce382ddffec9aac7.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "Double-weave Cotton Skirt",
+          "dataAltText": "Double-weave Cotton Skirt Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1114239001|Double-weave Cotton Skirt|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "Conscious choice  ",
+      "marketingMarkerType": "marker-environment",
+      "marketingMarkerCss": "",
+      "price": "$ 24.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "1",
+      "swatches": [
+        {
+          "colorCode": "#493338",
+          "articleLink": "/en_us/productpage.1114239001.html",
+          "colorName": "Dark red"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1085212001",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1085212001'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTA4NTIxMl9ncm91cF8wMDFfZW5fdXM7MTA4NTIxMjAwMV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1085212001');",
+      "link": "/en_us/productpage.1085212001.html",
+      "title": "Comfort Stretch Wide Fit Jeans",
+      "category": "kids_girls_clothing",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/8a/3b/8a3b4de9ff1b30bbd6bae7d217e90b0c94d82c4f.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/97/b4/97b47e061d6abc71395c9666e5a54955022b07d1.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "Comfort Stretch Wide Fit Jeans",
+          "dataAltText": "Comfort Stretch Wide Fit Jeans Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1085212001|Comfort Stretch Wide Fit Jeans|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "Conscious choice  ",
+      "marketingMarkerType": "marker-environment",
+      "marketingMarkerCss": "",
+      "price": "$ 9.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "1",
+      "swatches": [
+        {
+          "colorCode": "#79829D",
+          "articleLink": "/en_us/productpage.1085212001.html",
+          "colorName": "Denim blue/floral"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1070293004",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1070293004'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTA3MDI5M19ncm91cF8wMDRfZW5fdXM7MTA3MDI5MzAwNF9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1070293004');",
+      "link": "/en_us/productpage.1070293004.html",
+      "title": "Rib-knit Hat",
+      "category": "kids_accessories_hats",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/a8/93/a893eabc62829e64dfc1ea25f026a5d9975033e7.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/a8/93/a893eabc62829e64dfc1ea25f026a5d9975033e7.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "alt": "Rib-knit Hat",
+          "dataAltText": "Rib-knit Hat Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1070293004|Rib-knit Hat|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "",
+      "marketingMarkerType": "",
+      "marketingMarkerCss": "",
+      "price": "$ 8.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "4",
+      "swatches": [
+        {
+          "colorCode": "#6E5740",
+          "articleLink": "/en_us/productpage.1070293004.html",
+          "colorName": "Brown"
+        },
+        {
+          "colorCode": "#2D323F",
+          "articleLink": "/en_us/productpage.1070293002.html",
+          "colorName": "Navy blue"
+        },
+        {
+          "colorCode": "#588863",
+          "articleLink": "/en_us/productpage.1070293005.html",
+          "colorName": "Green"
+        },
+        {
+          "colorCode": "#C94E3D",
+          "articleLink": "/en_us/productpage.1070293007.html",
+          "colorName": "Orange"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1068920003",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1068920003'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTA2ODkyMF9ncm91cF8wMDNfZW5fdXM7MTA2ODkyMDAwM19lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1068920003');",
+      "link": "/en_us/productpage.1068920003.html",
+      "title": "2-piece Sweatshirt Set",
+      "category": "kids_girls_clothing_jumperssweatshirts",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/3e/c7/3ec75823dc71073def6ff971f87a95eca3f3671d.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/a2/fc/a2fc7953a3f1a8a59e4cef45058464657cec69d5.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "2-piece Sweatshirt Set",
+          "dataAltText": "2-piece Sweatshirt Set Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1068920003|2-piece Sweatshirt Set|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "",
+      "marketingMarkerType": "",
+      "marketingMarkerCss": "",
+      "price": "$ 32.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "3",
+      "swatches": [
+        {
+          "colorCode": "#B09D86",
+          "articleLink": "/en_us/productpage.1068920003.html",
+          "colorName": "Beige/heart"
+        },
+        {
+          "colorCode": "#383A3D",
+          "articleLink": "/en_us/productpage.1068920001.html",
+          "colorName": "Black/unicorns"
+        },
+        {
+          "colorCode": "#A18AAF",
+          "articleLink": "/en_us/productpage.1068920002.html",
+          "colorName": "Purple/frog"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1089982001",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1089982001'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTA4OTk4Ml9ncm91cF8wMDFfZW5fdXM7MTA4OTk4MjAwMV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1089982001');",
+      "link": "/en_us/productpage.1089982001.html",
+      "title": "Turtleneck Merino Wool Sweater",
+      "category": "kids_girls_clothing",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/8e/ff/8eff8287894338afdae942ec6d00be564b21c387.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/a1/3f/a13f71391bf6ca7013f7c27444eb4e7ac03a0c2f.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "Turtleneck Merino Wool Sweater",
+          "dataAltText": "Turtleneck Merino Wool Sweater Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1089982001|Turtleneck Merino Wool Sweater|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "",
+      "marketingMarkerType": "",
+      "marketingMarkerCss": "",
+      "price": "$ 34.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "1",
+      "swatches": [
+        {
+          "colorCode": "#9F978F",
+          "articleLink": "/en_us/productpage.1089982001.html",
+          "colorName": "Beige melange"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1117112001",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1117112001'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTExNzExMl9ncm91cF8wMDFfZW5fdXM7MTExNzExMjAwMV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1117112001');",
+      "link": "/en_us/productpage.1117112001.html",
+      "title": "Costume",
+      "category": "kids_boys_costumesfancydresses",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/d9/cf/d9cfd4e863bbd287096da8e34716e5acc3ada453.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/b1/f4/b1f4bf9d7d51fd0c27ea9a143908df0200bd8417.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "Costume",
+          "dataAltText": "Costume Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1117112001|Costume|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "",
+      "marketingMarkerType": "",
+      "marketingMarkerCss": "",
+      "price": "$ 27.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "1",
+      "swatches": [
+        {
+          "colorCode": "#272628",
+          "articleLink": "/en_us/productpage.1117112001.html",
+          "colorName": "Black/Spider-Man"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1037832009",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1037832009'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTAzNzgzMl9ncm91cF8wMDlfZW5fdXM7MTAzNzgzMjAwOV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1037832009');",
+      "link": "/en_us/productpage.1037832009.html",
+      "title": "Hooded Jacket",
+      "category": "kids_girls_clothing_jumperssweatshirts_hoodies",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/87/81/878173fcc30ee957dbd0b924ecc3afa5347e553f.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/ab/c1/abc18df99f3655db9dcaaf996ffe7722efea93a6.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "Hooded Jacket",
+          "dataAltText": "Hooded Jacket Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1037832009|Hooded Jacket|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "Conscious choice  ",
+      "marketingMarkerType": "marker-environment",
+      "marketingMarkerCss": "",
+      "price": "$ 19.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "4",
+      "swatches": [
+        {
+          "colorCode": "#65656C",
+          "articleLink": "/en_us/productpage.1037832009.html",
+          "colorName": "Gray/color-block"
+        },
+        {
+          "colorCode": "#8F9489",
+          "articleLink": "/en_us/productpage.1037832008.html",
+          "colorName": "Khaki green/butterflies"
+        },
+        {
+          "colorCode": "#9E7F6A",
+          "articleLink": "/en_us/productpage.1037832010.html",
+          "colorName": "Beige-pink/hearts"
+        },
+        {
+          "colorCode": "#C5B9AB",
+          "articleLink": "/en_us/productpage.1037832015.html",
+          "colorName": "Light beige/color-block"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "0890175019",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','0890175019'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MDg5MDE3NV9ncm91cF8wMTlfZW5fdXM7MDg5MDE3NTAxOV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','0890175019');",
+      "link": "/en_us/productpage.0890175019.html",
+      "title": "5-pack Jersey Tops",
+      "category": "kids_girls_clothing_topstshirts_tshirts",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/c7/63/c7636221769c25baaaaf05217e6dcef5420a45b8.jpg],origin[dam],category[kids_girls_clothing_topstshirts_tshirts],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/c6/7a/c67abddd83948945c3dda4571d2075d2efd354a9.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "5-pack Jersey Tops",
+          "dataAltText": "5-pack Jersey Tops Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|0890175019|5-pack Jersey Tops|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "",
+      "marketingMarkerType": "",
+      "marketingMarkerCss": "",
+      "price": "$ 34.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "5",
+      "swatches": [
+        {
+          "colorCode": "#A18AAF",
+          "articleLink": "/en_us/productpage.0890175019.html",
+          "colorName": "Purple/flowers"
+        },
+        {
+          "colorCode": "#BFAED2",
+          "articleLink": "/en_us/productpage.0890175008.html",
+          "colorName": "Light purple/tie-dye"
+        },
+        {
+          "colorCode": "#A4AEA7",
+          "articleLink": "/en_us/productpage.0890175016.html",
+          "colorName": "Light green/butterflies"
+        },
+        {
+          "colorCode": "#D280A0",
+          "articleLink": "/en_us/productpage.0890175017.html",
+          "colorName": "Dark blue/pink"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1093068001",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1093068001'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTA5MzA2OF9ncm91cF8wMDFfZW5fdXM7MTA5MzA2ODAwMV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1093068001');",
+      "link": "/en_us/productpage.1093068001.html",
+      "title": "5-pack rib-knit socks",
+      "category": "kids_girls_clothing_sockstights_socks",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/ba/13/ba13a6b64ea08a83c734c0d3150adf8e545b71e1.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/ba/13/ba13a6b64ea08a83c734c0d3150adf8e545b71e1.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "alt": "5-pack rib-knit socks",
+          "dataAltText": "5-pack rib-knit socks Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1093068001|5-pack rib-knit socks|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "",
+      "marketingMarkerType": "",
+      "marketingMarkerCss": "",
+      "price": "$ 14.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "1",
+      "swatches": [
+        {
+          "colorCode": "#D0B680",
+          "articleLink": "/en_us/productpage.1093068001.html",
+          "colorName": "Dark red/Dusty pink"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1032020009",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1032020009'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTAzMjAyMF9ncm91cF8wMDlfZW5fdXM7MTAzMjAyMDAwOV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1032020009');",
+      "link": "/en_us/productpage.1032020009.html",
+      "title": "Joggers",
+      "category": "kids_girls_clothing_trousersjeans_joggerssweatpants",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/26/2b/262bf77e949c46ff6f48730b71de5c8cc4939848.jpg],origin[dam],category[kids_girls_clothing_trousersjeans_joggerssweatpants],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/e3/7e/e37ee7dd8f5ef6fe714a75b56a4ece46d6aa34d7.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "Joggers",
+          "dataAltText": "Joggers Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1032020009|Joggers|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "",
+      "marketingMarkerType": "",
+      "marketingMarkerCss": "",
+      "price": "$ 17.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "5",
+      "swatches": [
+        {
+          "colorCode": "#9E7F6A",
+          "articleLink": "/en_us/productpage.1032020009.html",
+          "colorName": "Beige/hearts"
+        },
+        {
+          "colorCode": "#3A3339",
+          "articleLink": "/en_us/productpage.1032020002.html",
+          "colorName": "Dark gray/rainbow"
+        },
+        {
+          "colorCode": "#8F9489",
+          "articleLink": "/en_us/productpage.1032020006.html",
+          "colorName": "Khaki green/butterflies"
+        },
+        {
+          "colorCode": "#65656C",
+          "articleLink": "/en_us/productpage.1032020007.html",
+          "colorName": "Mauve/color-block"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1030829002",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1030829002'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTAzMDgyOV9ncm91cF8wMDJfZW5fdXM7MTAzMDgyOTAwMl9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1030829002');",
+      "link": "/en_us/productpage.1030829002.html",
+      "title": "Dotted Tulle Dress",
+      "category": "kids_girls_clothing_dresses_shortsleeve",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/d1/bc/d1bc1c127f96a14d6938af3879d92a033b015efc.jpg],origin[dam],category[kids_girls_partyoccasion],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/f6/30/f6302f041a863f9480e98583b1152c3b8fe83283.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "Dotted Tulle Dress",
+          "dataAltText": "Dotted Tulle Dress Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1030829002|Dotted Tulle Dress|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "Conscious choice  ",
+      "marketingMarkerType": "marker-environment",
+      "marketingMarkerCss": "",
+      "price": "$ 19.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "1",
+      "swatches": [
+        {
+          "colorCode": "#383A3D",
+          "articleLink": "/en_us/productpage.1030829002.html",
+          "colorName": "Black/dotted"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1070293005",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1070293005'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTA3MDI5M19ncm91cF8wMDVfZW5fdXM7MTA3MDI5MzAwNV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1070293005');",
+      "link": "/en_us/productpage.1070293005.html",
+      "title": "Rib-knit Hat",
+      "category": "kids_accessories_hats",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/5f/cc/5fccc4f460f5d71abda07e3a17fa766f773d2e18.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/5f/cc/5fccc4f460f5d71abda07e3a17fa766f773d2e18.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "alt": "Rib-knit Hat",
+          "dataAltText": "Rib-knit Hat Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1070293005|Rib-knit Hat|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "",
+      "marketingMarkerType": "",
+      "marketingMarkerCss": "",
+      "price": "$ 8.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "4",
+      "swatches": [
+        {
+          "colorCode": "#588863",
+          "articleLink": "/en_us/productpage.1070293005.html",
+          "colorName": "Green"
+        },
+        {
+          "colorCode": "#2D323F",
+          "articleLink": "/en_us/productpage.1070293002.html",
+          "colorName": "Navy blue"
+        },
+        {
+          "colorCode": "#6E5740",
+          "articleLink": "/en_us/productpage.1070293004.html",
+          "colorName": "Brown"
+        },
+        {
+          "colorCode": "#C94E3D",
+          "articleLink": "/en_us/productpage.1070293007.html",
+          "colorName": "Orange"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1032020008",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1032020008'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTAzMjAyMF9ncm91cF8wMDhfZW5fdXM7MTAzMjAyMDAwOF9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1032020008');",
+      "link": "/en_us/productpage.1032020008.html",
+      "title": "Joggers",
+      "category": "kids_girls_clothing_trousersjeans_joggerssweatpants",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/7e/da/7edac228519ec9a5975c0b3f4e1726be32449fa8.jpg],origin[dam],category[kids_clothing_trousersjeans_joggerssweatpants],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/24/8b/248bf6da8f09657b67539d9c684bcae21725d5b9.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "Joggers",
+          "dataAltText": "Joggers Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1032020008|Joggers|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "",
+      "marketingMarkerType": "",
+      "marketingMarkerCss": "",
+      "price": "$ 17.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "5",
+      "swatches": [
+        {
+          "colorCode": "#C5B9AB",
+          "articleLink": "/en_us/productpage.1032020008.html",
+          "colorName": "Light beige/color-block"
+        },
+        {
+          "colorCode": "#3A3339",
+          "articleLink": "/en_us/productpage.1032020002.html",
+          "colorName": "Dark gray/rainbow"
+        },
+        {
+          "colorCode": "#8F9489",
+          "articleLink": "/en_us/productpage.1032020006.html",
+          "colorName": "Khaki green/butterflies"
+        },
+        {
+          "colorCode": "#65656C",
+          "articleLink": "/en_us/productpage.1032020007.html",
+          "colorName": "Mauve/color-block"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1066624001",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1066624001'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTA2NjYyNF9ncm91cF8wMDFfZW5fdXM7MTA2NjYyNDAwMV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1066624001');",
+      "link": "/en_us/productpage.1066624001.html",
+      "title": "Cotton Twill Parka",
+      "category": "kids_girls_clothing",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/ae/1c/ae1cbb9c9bdd2f5d0c96060341c3b31d73cbc4c4.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/70/78/7078c73b55da41107f83ebfec730597405869caf.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "Cotton Twill Parka",
+          "dataAltText": "Cotton Twill Parka Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1066624001|Cotton Twill Parka|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "Conscious choice  ",
+      "marketingMarkerType": "marker-environment",
+      "marketingMarkerCss": "",
+      "price": "$ 34.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "1",
+      "swatches": [
+        {
+          "colorCode": "#B6786E",
+          "articleLink": "/en_us/productpage.1066624001.html",
+          "colorName": "Old rose"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1095672002",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1095672002'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTA5NTY3Ml9ncm91cF8wMDJfZW5fdXM7MTA5NTY3MjAwMl9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1095672002');",
+      "link": "/en_us/productpage.1095672002.html",
+      "title": "Comfort Stretch Overalls",
+      "category": "kids_girls_clothing",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/3a/0b/3a0b62d8808001f9fc530b839e3965bf560d7c41.jpg],origin[dam],category[kids_girls_clothing],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/9f/11/9f11849ca9415c0b7dea89e65379d2c917d4852d.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "Comfort Stretch Overalls",
+          "dataAltText": "Comfort Stretch Overalls Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1095672002|Comfort Stretch Overalls|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "Conscious choice  ",
+      "marketingMarkerType": "marker-environment",
+      "marketingMarkerCss": "",
+      "price": "$ 34.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "2",
+      "swatches": [
+        {
+          "colorCode": "#4C5164",
+          "articleLink": "/en_us/productpage.1095672002.html",
+          "colorName": "Denim blue"
+        },
+        {
+          "colorCode": "#8898AC",
+          "articleLink": "/en_us/productpage.1095672001.html",
+          "colorName": "Light denim blue"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "0979065029",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','0979065029'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MDk3OTA2NV9ncm91cF8wMjlfZW5fdXM7MDk3OTA2NTAyOV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','0979065029');",
+      "link": "/en_us/productpage.0979065029.html",
+      "title": "Sweatshirt",
+      "category": "kids_girls_clothing_jumperssweatshirts_sweatshirts",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/5e/58/5e58346970822a1855dfe08a89ae24c87cc869d4.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/1f/95/1f957670d012df48b67ed8d4d6510039c709f392.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "Sweatshirt",
+          "dataAltText": "Sweatshirt Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|0979065029|Sweatshirt|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "",
+      "marketingMarkerType": "",
+      "marketingMarkerCss": "",
+      "price": "$ 14.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "3",
+      "swatches": [
+        {
+          "colorCode": "#B12F39",
+          "articleLink": "/en_us/productpage.0979065029.html",
+          "colorName": "Red"
+        },
+        {
+          "colorCode": "#29282D",
+          "articleLink": "/en_us/productpage.0979065023.html",
+          "colorName": "Black/hearts"
+        },
+        {
+          "colorCode": "#435A66",
+          "articleLink": "/en_us/productpage.0979065024.html",
+          "colorName": "Teal"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "0984452028",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','0984452028'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MDk4NDQ1Ml9ncm91cF8wMjhfZW5fdXM7MDk4NDQ1MjAyOF9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','0984452028');",
+      "link": "/en_us/productpage.0984452028.html",
+      "title": "Ruffle-trimmed Ribbed Top",
+      "category": "kids_girls_clothing_topstshirts_tshirts",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/7a/f7/7af753a00f6aba78c90f3724e74150a57eba4178.jpg],origin[dam],category[kids_girls_clothing_topstshirts_tshirts],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/1b/0f/1b0f37aec5846fd2fe876fddeead3e973248e08b.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "Ruffle-trimmed Ribbed Top",
+          "dataAltText": "Ruffle-trimmed Ribbed Top Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|0984452028|Ruffle-trimmed Ribbed Top|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "Conscious choice  ",
+      "marketingMarkerType": "marker-environment",
+      "marketingMarkerCss": "",
+      "price": "$ 9.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "5",
+      "swatches": [
+        {
+          "colorCode": "#69AB8A",
+          "articleLink": "/en_us/productpage.0984452028.html",
+          "colorName": "Green"
+        },
+        {
+          "colorCode": "#9E7F6A",
+          "articleLink": "/en_us/productpage.0984452025.html",
+          "colorName": "Beige-pink"
+        },
+        {
+          "colorCode": "#EEEDE4",
+          "articleLink": "/en_us/productpage.0984452026.html",
+          "colorName": "Natural white"
+        },
+        {
+          "colorCode": "#FAB9C2",
+          "articleLink": "/en_us/productpage.0984452027.html",
+          "colorName": "Light pink"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1117385004",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1117385004'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTExNzM4NV9ncm91cF8wMDRfZW5fdXM7MTExNzM4NTAwNF9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1117385004');",
+      "link": "/en_us/productpage.1117385004.html",
+      "title": "Sweater",
+      "category": "kids_girls_clothing_jumperssweatshirts_jumpers",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/0b/4b/0b4b841e82b7341bd8124382d62427acb0796daf.jpg],origin[dam],category[kids_girls_clothing_jumperssweatshirts_jumpers],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/83/59/83597c52e51e84702d63c304113f9bdef86fdd33.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "Sweater",
+          "dataAltText": "Sweater Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1117385004|Sweater|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "Conscious choice  ",
+      "marketingMarkerType": "marker-environment",
+      "marketingMarkerCss": "",
+      "price": "$ 24.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "4",
+      "swatches": [
+        {
+          "colorCode": "#EC8852",
+          "articleLink": "/en_us/productpage.1117385004.html",
+          "colorName": "Pink/orange"
+        },
+        {
+          "colorCode": "#A18AAF",
+          "articleLink": "/en_us/productpage.1117385003.html",
+          "colorName": "Light purple/plaid"
+        },
+        {
+          "colorCode": "#BFAED2",
+          "articleLink": "/en_us/productpage.1117385008.html",
+          "colorName": "Light purple/ombre"
+        },
+        {
+          "colorCode": "#BF9592",
+          "articleLink": "/en_us/productpage.1117385009.html",
+          "colorName": "Light pink/argyle-patterned"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "0995838004",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','0995838004'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MDk5NTgzOF9ncm91cF8wMDRfZW5fdXM7MDk5NTgzODAwNF9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','0995838004');",
+      "link": "/en_us/productpage.0995838004.html",
+      "title": "Bat Costume",
+      "category": "kids_girls_clothing",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/d5/bb/d5bbae5523c7884fdd592742f634ca524deaa434.jpg],origin[dam],category[kids_girls_clothing],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/d5/bb/d5bbae5523c7884fdd592742f634ca524deaa434.jpg],origin[dam],category[kids_girls_clothing],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "alt": "Bat Costume",
+          "dataAltText": "Bat Costume Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|0995838004|Bat Costume|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "",
+      "marketingMarkerType": "",
+      "marketingMarkerCss": "",
+      "price": "$ 17.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "2",
+      "swatches": [
+        {
+          "colorCode": "#272628",
+          "articleLink": "/en_us/productpage.0995838004.html",
+          "colorName": "Black/bat"
+        },
+        {
+          "colorCode": "#272628",
+          "articleLink": "/en_us/productpage.0995838001.html",
+          "colorName": "Night black/bat"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "0619764067",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','0619764067'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MDYxOTc2NF9ncm91cF8wNjdfZW5fdXM7MDYxOTc2NDA2N19lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','0619764067');",
+      "link": "/en_us/productpage.0619764067.html",
+      "title": "7-pack Socks",
+      "category": "kids_girls_clothing_sockstights_socks",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/23/8e/238eb92336390a32f9ec988e12d565657794b55a.jpg],origin[dam],category[kids_girls_clothing_sockstights_socks],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/23/8e/238eb92336390a32f9ec988e12d565657794b55a.jpg],origin[dam],category[kids_girls_clothing_sockstights_socks],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "alt": "7-pack Socks",
+          "dataAltText": "7-pack Socks Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|0619764067|7-pack Socks|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "",
+      "marketingMarkerType": "",
+      "marketingMarkerCss": "",
+      "price": "$ 12.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "6",
+      "swatches": [
+        {
+          "colorCode": "#BF9592",
+          "articleLink": "/en_us/productpage.0619764067.html",
+          "colorName": "Light pink/dark gray"
+        },
+        {
+          "colorCode": "#C6A098",
+          "articleLink": "/en_us/productpage.0619764064.html",
+          "colorName": "Powder pink/unicorns"
+        },
+        {
+          "colorCode": "#DFD7CA",
+          "articleLink": "/en_us/productpage.0619764068.html",
+          "colorName": "Beige melange/days of the week"
+        },
+        {
+          "colorCode": "#B83B31",
+          "articleLink": "/en_us/productpage.0619764069.html",
+          "colorName": "Orange/forest animals"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1102048001",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1102048001'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTEwMjA0OF9ncm91cF8wMDFfZW5fdXM7MTEwMjA0ODAwMV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1102048001');",
+      "link": "/en_us/productpage.1102048001.html",
+      "title": "2-piece Printed Sweatshirt Set",
+      "category": "kids_girls_clothing_trousersjeans_joggerssweatpants",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/37/f7/37f7d997cf5baedf3b668b5c315de39987b8da2b.jpg],origin[dam],category[kids_girls_clothing_trousersjeans_joggerssweatpants],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/61/e6/61e6a97d2e1104439f3439499f4b380a2bafc3a1.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "2-piece Printed Sweatshirt Set",
+          "dataAltText": "2-piece Printed Sweatshirt Set Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1102048001|2-piece Printed Sweatshirt Set|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "",
+      "marketingMarkerType": "",
+      "marketingMarkerCss": "",
+      "price": "$ 34.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "1",
+      "swatches": [
+        {
+          "colorCode": "#BFAED2",
+          "articleLink": "/en_us/productpage.1102048001.html",
+          "colorName": "Light purple/Disney princesses"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "0395730053",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','0395730053'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MDM5NTczMF9ncm91cF8wNTNfZW5fdXM7MDM5NTczMDA1M19lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','0395730053');",
+      "link": "/en_us/productpage.0395730053.html",
+      "title": "2-pack Turtleneck Tops",
+      "category": "kids_girls_clothing_topstshirts_tshirts",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/ac/7a/ac7ac3584f8e64af7f4d262677c1929118fd70c2.jpg],origin[dam],category[kids_girls_clothing_topstshirts_tshirts],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/58/84/5884367e3ac3f941d1be8ee9eff6ad3de08e2a82.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "2-pack Turtleneck Tops",
+          "dataAltText": "2-pack Turtleneck Tops Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|0395730053|2-pack Turtleneck Tops|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "",
+      "marketingMarkerType": "",
+      "marketingMarkerCss": "",
+      "price": "$ 17.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "1",
+      "swatches": [
+        {
+          "colorCode": "#6D5689",
+          "articleLink": "/en_us/productpage.0395730053.html",
+          "colorName": "Purple/dotted"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1067043001",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1067043001'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTA2NzA0M19ncm91cF8wMDFfZW5fdXM7MTA2NzA0MzAwMV9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1067043001');",
+      "link": "/en_us/productpage.1067043001.html",
+      "title": "2-piece Set",
+      "category": "kids_girls_clothing",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/1c/1b/1c1b9ad4421bf38503c7ba9ad2c9e46d2650fb7c.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/1f/e6/1fe6ac0bad877c718673dd23d2d40dfb6753d2db.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "2-piece Set",
+          "dataAltText": "2-piece Set Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1067043001|2-piece Set|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "",
+      "marketingMarkerType": "",
+      "marketingMarkerCss": "",
+      "price": "$ 29.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "1",
+      "swatches": [
+        {
+          "colorCode": "#6D5689",
+          "articleLink": "/en_us/productpage.1067043001.html",
+          "colorName": "Dark purple/purple"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1020979007",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1020979007'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTAyMDk3OV9ncm91cF8wMDdfZW5fdXM7MTAyMDk3OTAwN19lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1020979007');",
+      "link": "/en_us/productpage.1020979007.html",
+      "title": "Double-weave Cotton Dress",
+      "category": "kids_girls_clothing_dresses_longsleeve",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/db/e9/dbe9de195e564d14ffbc52be7b27167fb4ad2b2e.jpg],origin[dam],category[kids_girls_clothing_dresses_longsleeve],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/51/f6/51f6b43677e52d89046c31b9f400965eb2304734.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "Double-weave Cotton Dress",
+          "dataAltText": "Double-weave Cotton Dress Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1020979007|Double-weave Cotton Dress|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "Conscious choice  ",
+      "marketingMarkerType": "marker-environment",
+      "marketingMarkerCss": "",
+      "price": "$ 24.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "2",
+      "swatches": [
+        {
+          "colorCode": "#330F1A",
+          "articleLink": "/en_us/productpage.1020979007.html",
+          "colorName": "Light purple/floral"
+        },
+        {
+          "colorCode": "#CF8998",
+          "articleLink": "/en_us/productpage.1020979005.html",
+          "colorName": "Light pink/checked"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1087921002",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1087921002'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTA4NzkyMV9ncm91cF8wMDJfZW5fdXM7MTA4NzkyMTAwMl9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1087921002');",
+      "link": "/en_us/productpage.1087921002.html",
+      "title": "2-pack Ribbed Tops",
+      "category": "kids_girls_clothing",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/c9/e0/c9e0c03feac3cbcfc2ae001db492534546a1da98.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/c6/12/c6126e698991cac271af6b394ba5ee79b4db1943.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "2-pack Ribbed Tops",
+          "dataAltText": "2-pack Ribbed Tops Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1087921002|2-pack Ribbed Tops|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "Conscious choice  ",
+      "marketingMarkerType": "marker-environment",
+      "marketingMarkerCss": "",
+      "price": "$ 17.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "2",
+      "swatches": [
+        {
+          "colorCode": "#FAB9C2",
+          "articleLink": "/en_us/productpage.1087921002.html",
+          "colorName": "Light pink/Green"
+        },
+        {
+          "colorCode": "#A18AAF",
+          "articleLink": "/en_us/productpage.1087921001.html",
+          "colorName": "Purple/red"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
+      "articleCode": "1032020007",
+      "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1032020007'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTAzMjAyMF9ncm91cF8wMDdfZW5fdXM7MTAzMjAyMDAwN19lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTsyOTs','1032020007');",
+      "link": "/en_us/productpage.1032020007.html",
+      "title": "Joggers",
+      "category": "kids_girls_clothing_trousersjeans_joggerssweatpants",
+      "image": [
+        {
+          "src": "//lp2.hm.com/hmgoepprod?set=source[/25/7c/257cfebf93b0ce68b5d73b02fb69a94da7286066.jpg],origin[dam],category[kids_clothing_trousersjeans_joggerssweatpants],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+          "dataAltImage": "//lp2.hm.com/hmgoepprod?set=source[/f4/23/f423bd64261923fa0a83988a5a642da4877aae22.jpg],origin[dam],category[],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/style]",
+          "alt": "Joggers",
+          "dataAltText": "Joggers Model"
+        }
+      ],
+      "legalText": "",
+      "promotionalMarkerText": "",
+      "showPromotionalClubMarker": false,
+      "showPriceMarker": false,
+      "favouritesTracking": "Favourites|1032020007|Joggers|KIDS_GIRLS : NEWARRIVALS_NEWARRIVALS_VIEW_ALL",
+      "favouritesSavedText": "SAVED AS FAVORITE",
+      "favouritesNotSavedText": "SAVE AS FAVORITE",
+      "marketingMarkerText": "",
+      "marketingMarkerType": "",
+      "marketingMarkerCss": "",
+      "price": "$ 17.99",
+      "redPrice": "",
+      "yellowPrice": "",
+      "bluePrice": "",
+      "clubPriceText": "",
+      "sellingAttribute": "New Arrival",
+      "swatchesTotal": "5",
+      "swatches": [
+        {
+          "colorCode": "#65656C",
+          "articleLink": "/en_us/productpage.1032020007.html",
+          "colorName": "Mauve/color-block"
+        },
+        {
+          "colorCode": "#3A3339",
+          "articleLink": "/en_us/productpage.1032020002.html",
+          "colorName": "Dark gray/rainbow"
+        },
+        {
+          "colorCode": "#8F9489",
+          "articleLink": "/en_us/productpage.1032020006.html",
+          "colorName": "Khaki green/butterflies"
+        },
+        {
+          "colorCode": "#C5B9AB",
+          "articleLink": "/en_us/productpage.1032020008.html",
+          "colorName": "Light beige/color-block"
+        }
+      ],
+      "preAccessStartDate": "",
+      "preAccessEndDate": "",
+      "preAccessGroups": [],
+      "outOfStockText": "",
+      "comingSoon": "",
+      "brandName": "H&M",
+      "damStyleWith": ""
+    },
+    {
       "articleCode": "1073710002",
       "onClick": "setOsaParameters(utag_data.category_id,'SMALL','1073710002'); setNotificationTicket('Oy9wbHAvcHJvZHVjdC1saXN0LXdpdGgtY291bnQvcHJvZHVjdC1saXN0OyM7cHJvZHVjdF9rZXk7MTA3MzcxMF9ncm91cF8wMDJfZW5fdXM7MTA3MzcxMDAwMl9lbl91cztPQkpFQ1RJVkUkO05PTkU6Tk9ORTs1Nzs','1073710002');",
       "link": "/en_us/productpage.1073710002.html",
