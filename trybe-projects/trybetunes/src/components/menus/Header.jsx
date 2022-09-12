@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Header(props) {
   return (
-    <section className="flex flex-row items-center justify-center">
+    <section className="bg-white flex flex-row items-center justify-center mb-10">
       <Link
         to="/search"
         className="flex flex-row items-center hover:scale-105 hover:cursor-pointer 

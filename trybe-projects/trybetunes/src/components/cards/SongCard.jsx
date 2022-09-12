@@ -1,26 +1,36 @@
 import React from 'react'
 import ReactAudioPlayer from 'react-audio-player';
 import Header from '../menus/Header';
+import PlaySVG from '../svgs/PlaySVG';
 
 function SongCard({ song, index }) {
   const {
+    currency,
     previewUrl,
+    trackPrice,
     trackName,
   } = song
   return (
     <>
-      <div className="flex items-center border-b">
-        <span className="basis-8 font-black">
-          { index }
-        </span>
+      <div className="group opacity-80 font-semibold flex flex-row items-center gap-5 justify-between w-full
+        hover:bg-[#444444] hover:opacity-100 p-8 rounded">
+        <div className="hover:cursor-pointer">
+          <span className="group-hover:hidden basis-4 font-black left-0 text-center">
+            { index }
+          </span>
+          <PlaySVG className="hidden group-hover:inline-block fill-white"/>
+        </div>
         <h1 className="">
           { trackName }
         </h1>
         <ReactAudioPlayer
           src={ previewUrl }
           controls
-          className=""
+          className="hidden"
         />
+        <h1 className="">
+          ${ trackPrice } { currency }
+        </h1>
       </div>
     </>
   );

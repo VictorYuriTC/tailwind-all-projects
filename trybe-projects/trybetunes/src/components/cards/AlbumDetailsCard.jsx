@@ -18,13 +18,14 @@ function AlbumDetailsCard({}) {
   }, [])
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-his-purple">
       <Header />
 
      { album.length > 0
      &&
      <>
-        <div className="bg-gradient-to-b from-his-purple to-black flex flex-col items-center">
+        <div className="bg-gradient-to-b from-his-purple to-black flex flex-col items-center 
+          gap-10">
           <div className="relative pb-[25%] pr-[25%] shrink-0">
             <img src={ album[0].artworkUrl100 } alt={ album.collectionName } className="absolute 
               w-full h-full"/>
@@ -33,7 +34,7 @@ function AlbumDetailsCard({}) {
 
         </div>
 
-        <div className="flex flex-col items-center justify-center bg-black text-white">
+        <div className="bg-black text-white flex flex-col items-center justify-center px-10">
           { album.map((song, index) => index === 0
             ? <></>
             : <SongCard key={ song.trackId } song={ song } index={ index }/>)

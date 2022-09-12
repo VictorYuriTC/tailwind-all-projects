@@ -18,12 +18,15 @@ function SearchPage(props) {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-black">
       <Header />
 
-     <div className="flex">
-       <aside className='bg-his-purple'>
-        <label htmlFor="" className="flex flex-row justify-center gap-2">
+     <div className="flex bg-black">
+      <aside className='bg-his-purple'>
+        <label
+          htmlFor=""
+          className="flex flex-row justify-center gap-2"
+        >
           <span className="text-white font-semibold">
             Artist
           </span>
