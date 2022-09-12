@@ -8,6 +8,8 @@ import SongsContext from '../context/SongsContext';
 import { getAlbumsFromAPI } from '../services/iTunesAPI';
 
 function SearchPage(props) {
+  const contextValue = useContext(SongsContext);
+  const { listened: { recentlyListenedSongs }} = contextValue;
   const [searchedArtist, setSearchedArtist] = useState('');
   const [renderAlbums, setRenderAlbums] = useState([]);
   const onEnterKeyDownSearchArtist = async ({ key, target: { value }}) => {
@@ -42,17 +44,33 @@ function SearchPage(props) {
             />
           </label>
 
-          <div className="flex items-center">
+          <div className="flex flex-col items-start">
             <h1 className="text-lg font-bold text-white">
               Recently searched
             </h1>
-
           </div>
-          <div className="flex items-center">
-            <h1 className="text-lg font-bold text-white">
-              Recently listened
-            </h1>
+          <div className="flex flex-col items-start">
+            <div>
+              <h1 className="text-lg font-bold text-white">
+                Recently listened
+              </h1>
+            </div>
 
+            <div className="flex flex-col items-start gap-3">
+              { recentlyListenedSongs.map(({ trackName, trackId, artistName }) => (
+                <div className="flex flex-col items-start">
+                  <span
+                    key={ trackId }
+                    className="text-white"
+                  >
+                    { trackName }
+                  </span>
+                  <span className="text-white">
+                    by <span className="font-semibold">{ artistName }</span>
+                  </span>
+                </div>
+              )) }
+            </div>
           </div>
         </aside>
       

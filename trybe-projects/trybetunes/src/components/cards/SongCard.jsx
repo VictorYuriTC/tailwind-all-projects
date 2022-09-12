@@ -10,6 +10,7 @@ function SongCard({ song, index }) {
   } = contextValue
 
   const {
+    artistName,
     currency,
     trackPrice,
     trackName,
@@ -20,7 +21,7 @@ function SongCard({ song, index }) {
   const onClickSetRecentlyListenedSongs = () => {
     const listenedSongsAfterDeletion = recentlyListenedSongs
       .filter(listenedSong => listenedSong.trackId !== song.trackId)
-    setRecentlyListenedSongs([...listenedSongsAfterDeletion, { trackId, trackName }])
+    setRecentlyListenedSongs([{ trackId, trackName, artistName }, ...listenedSongsAfterDeletion])
   }
 
   const handleOnClickPlay = () => {
