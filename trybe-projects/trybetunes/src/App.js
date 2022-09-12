@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import LoginPage from './pages/Login';
 import NotFoundPage from './pages/NotFoundPage';
 import SearchPage from './pages/SearchPage';
+import AlbumDetailsCard from './components/cards/AlbumDetailsCard';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={ <LoginPage /> } />
         <Route path="*" element={ <NotFoundPage /> } />
         <Route path="/search" element={ <SearchPage /> } />
+        <Route path="/album/:collectionId" element={ <AlbumDetailsCard /> } />
       </Routes>
     </div>
   );

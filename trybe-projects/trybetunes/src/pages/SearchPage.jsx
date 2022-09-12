@@ -20,10 +20,12 @@ function SearchPage(props) {
   return (
     <div className="min-h-screen">
       <Header />
-      <div className='bg-his-purple'>
+
+     <div className="flex">
+       <aside className='bg-his-purple'>
         <label htmlFor="" className="flex flex-row justify-center gap-2">
           <span className="text-white font-semibold">
-            Artist name
+            Artist
           </span>
           <input
             type="text"
@@ -31,10 +33,12 @@ function SearchPage(props) {
             onChange={ ({ target: { value }}) => setSearchedArtist(value) }
             onKeyDown={ onEnterKeyDownSearchArtist }/>
         </label>
+      </aside>
+      
+      <div className="bg-black grid grid-cols-5 px-20 gap-x-10 gap-y-5">
+        { renderAlbums.map(album => <AlbumCard key={ album.collectionId} album={ album }/>) }
       </div>
-      <div className="grid grid-cols-3">
-        { renderAlbums.map(album => <AlbumCard album={ album }/>) }
-      </div>
+     </div>
     </div>
   );
 }
