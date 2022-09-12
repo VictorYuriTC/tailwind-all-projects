@@ -4,15 +4,29 @@ import PlaySVG from '../svgs/PlaySVG';
 
 function SongCard({ song, index }) {
   const contextValue = useContext(SongsContext)
-  const { playingSong: { setCurrentSong }} = contextValue
+  const {
+    playingSong: { setCurrentSong },
+    listened: { recentlyListenedSongs, setRecentlyListenedSongs }
+  } = contextValue
 
   const {
     currency,
     trackPrice,
     trackName,
+    trackId
   } = song
 
   const onClickChangeCurrentSong = () => setCurrentSong(song)
+  const onClickSetRecentlyListenedSongs = () => {
+    const listenedSongsAfterDeletion = recentlyListenedSongs
+      .filter(listenedSong => listenedSong.trackId !== song.trackId)
+    setRecentlyListenedSongs([...listenedSongsAfterDeletion, { trackId, trackName }])
+  }
+
+  const handleOnClickPlay = () => {
+    onClickChangeCurrentSong();
+    onClickSetRecentlyListenedSongs();
+  }
 
   return (
     <>
@@ -24,7 +38,7 @@ function SongCard({ song, index }) {
           </span>
           <PlaySVG 
             className="hidden group-hover:inline-block fill-white"
-            onClick={ onClickChangeCurrentSong }
+            onClick={ handleOnClickPlay }
           />
         </div>
         <h1 className="">

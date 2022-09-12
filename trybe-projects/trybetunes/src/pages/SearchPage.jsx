@@ -25,7 +25,7 @@ function SearchPage(props) {
       <Header />
 
       <div className="flex bg-black px-1">
-        <aside className="w-2/5 left-0">
+        <aside className="flex flex-col gap-5 w-2/5 left-0">
           <label
             htmlFor=""
             className="flex flex-row items-center justify-center gap-2 w-fit"
@@ -41,6 +41,19 @@ function SearchPage(props) {
               className="rounded-full p-3 indent-7 w-fit focus:outline-none"
             />
           </label>
+
+          <div className="flex items-center">
+            <h1 className="text-lg font-bold text-white">
+              Recently searched
+            </h1>
+
+          </div>
+          <div className="flex items-center">
+            <h1 className="text-lg font-bold text-white">
+              Recently listened
+            </h1>
+
+          </div>
         </aside>
       
         <div className="bg-black grid grid-cols-1 px-5">
