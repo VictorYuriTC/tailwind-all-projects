@@ -9,11 +9,11 @@ function SongCard({ song, index }) {
   } = song
   return (
     <>
-      <div className="flex items-center">
-        <span className="basis-8">
+      <div className="flex items-center border-b">
+        <span className="basis-8 font-black">
           { index }
         </span>
-        <h1>
+        <h1 className="">
           { trackName }
         </h1>
         <ReactAudioPlayer

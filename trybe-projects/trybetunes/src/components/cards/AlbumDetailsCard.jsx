@@ -17,31 +17,29 @@ function AlbumDetailsCard({}) {
     getAlbumData();
   }, [])
 
-  const {
-    artistName,
-    artworkUrl100,
-    collectionCensonredName,
-    collectionName,
-    collectionPrice,
-    collectionType,
-    contentAdvisoryRating,
-    copyright,
-    country,
-    currency,
-    primaryGenreName,
-    releaseDate,
-    trackCount
-  } = album;
-
   return (
-    <div className="">
+    <div className="min-h-screen">
       <Header />
-      <div className="bg-his-purple text-white">
-        { album.length > 0 && album.map((song, index) => index === 0
-          ? <></>
-          : <SongCard key={ song.trackId } song={ song } index={ index }/>)
-        }
-      </div>
+
+     { album.length > 0
+     &&
+     <>
+        <div className="bg-gradient-to-b from-his-purple to-black flex flex-col items-center">
+          <div className="relative pb-[25%] pr-[25%] shrink-0">
+            <img src={ album[0].artworkUrl100 } alt={ album.collectionName } className="absolute 
+              w-full h-full"/>
+          </div>
+          <span>{ album.artistName }</span>
+
+        </div>
+
+        <div className="flex flex-col items-center justify-center bg-black text-white">
+          { album.map((song, index) => index === 0
+            ? <></>
+            : <SongCard key={ song.trackId } song={ song } index={ index }/>)
+          }
+        </div>
+     </>}
     </div>
   );
 }
