@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import AlbumCard from '../components/cards/AlbumCard';
 import Header from '../components/menus/Header';
 import { ENTER } from '../constants/strings';
+import SongsContext from '../context/SongsContext';
 import { getAlbumsFromAPI } from '../services/iTunesAPI';
 
 function SearchPage(props) {

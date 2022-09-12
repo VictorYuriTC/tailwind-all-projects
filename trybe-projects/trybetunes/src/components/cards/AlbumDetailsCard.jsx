@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import { getCollectionDataFromAPI } from '../../services/iTunesAPI';
 import Header from '../menus/Header';
+import SongOptionsBar from '../menus/SongOptionsBar';
 import SongCard from './SongCard';
 
-function AlbumDetailsCard({}) {
+function AlbumDetailsCard() {
   const [album, setAlbum] = useState({});
   const { collectionId } = useParams();
   useEffect(() => {
@@ -21,6 +22,7 @@ function AlbumDetailsCard({}) {
     <div className="min-h-screen bg-his-purple">
       <Header />
 
+      <SongOptionsBar />
      { album.length > 0
      &&
      <>
@@ -40,7 +42,8 @@ function AlbumDetailsCard({}) {
             : <SongCard key={ song.trackId } song={ song } index={ index }/>)
           }
         </div>
-     </>}
+     </>
+     }
     </div>
   );
 }
