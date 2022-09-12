@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import { getAlbumsFromAPI, getCollectionDataFromAPI } from '../../services/iTunesAPI';
+import { getCollectionDataFromAPI } from '../../services/iTunesAPI';
+import Header from '../menus/Header';
+import SongCard from './SongCard';
 
 function AlbumDetailsCard({}) {
   const [album, setAlbum] = useState({});
@@ -14,8 +16,6 @@ function AlbumDetailsCard({}) {
     }
     getAlbumData();
   }, [])
-
-
 
   const {
     artistName,
@@ -35,7 +35,13 @@ function AlbumDetailsCard({}) {
 
   return (
     <div className="">
-      <h1>{ }</h1>
+      <Header />
+      <div className="bg-his-purple text-white">
+        { album.length > 0 && album.map((song, index) => index === 0
+          ? <></>
+          : <SongCard key={ song.trackId } song={ song } index={ index }/>)
+        }
+      </div>
     </div>
   );
 }

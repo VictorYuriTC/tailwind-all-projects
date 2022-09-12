@@ -15,7 +15,8 @@ export const getCollectionDataFromAPI = async (collectionId) => {
   try {
     const response = await fetch(`https://itunes.apple.com/lookup?id=${collectionId}&entity=song`)
     const data = await response.json();
-    return data;
+    const { results } = data;
+    return results;
   } catch (error) {
     return error;
   }
