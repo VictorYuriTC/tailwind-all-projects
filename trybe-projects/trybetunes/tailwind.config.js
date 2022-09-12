@@ -3,9 +3,14 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      padding: {
+        '2/3': '66.66667%',
+      },
       colors: {
         'his-purple': '#400090',
-        'her-green': '#003399'
+        'her-green': '#33af9f',
+        'dark-gray': '#2f2f2f',
+        'light-gray': '#444444'
       }
     },
   },

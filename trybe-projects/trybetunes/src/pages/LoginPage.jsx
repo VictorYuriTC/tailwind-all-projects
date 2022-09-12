@@ -5,9 +5,9 @@ import Header from '../components/menus/Header';
 function LoginPage(props) {
   const navigate = useNavigate();
   return (
-    <div className="bg-his-purple min-h-screen">
+    <div className="bg-his-purple h-screen">
       <Header />
-      <div className="relative flex flex-col gap-2 justify-center items-center ">
+      <div className="flex flex-col gap-2 justify-center items-center bg-his-purple">
 
         <section className="flex flex-col justify-center place-self-center items-center gap-6">
          <div className="flex flex-col gap-2">
@@ -19,7 +19,7 @@ function LoginPage(props) {
               E-mail
             </span>
             <input
-              type="em-ail"
+              type="text"
               className="rounded-lg w-full"
             />
           </label>

@@ -1,7 +1,5 @@
-import React, { useContext, useEffect } from 'react'
-import ReactAudioPlayer from 'react-audio-player';
+import React, { useContext } from 'react'
 import SongsContext from '../../context/SongsContext';
-import Header from '../menus/Header';
 import PlaySVG from '../svgs/PlaySVG';
 
 function SongCard({ song, index }) {
@@ -10,7 +8,6 @@ function SongCard({ song, index }) {
 
   const {
     currency,
-    previewUrl,
     trackPrice,
     trackName,
   } = song
@@ -20,7 +17,7 @@ function SongCard({ song, index }) {
   return (
     <>
       <div className="group opacity-80 font-semibold flex flex-row items-center gap-5 
-        justify-between w-full hover:bg-[#444444] hover:opacity-100 p-8 rounded">
+        justify-between w-full hover:bg-light-gray hover:opacity-100 p-8 rounded">
         <div className="hover:cursor-pointer">
           <span className="group-hover:hidden basis-4 font-black left-0 text-center">
             { index }

@@ -6,19 +6,33 @@ function AlbumCard({ album }) {
   return (
     <Link
       to={`/album/${ collectionId }`}
-      className="flex flex-col text-white">
-      <div className="aspect-h-1 aspect-w-1">
+      className="grid grid-cols-4 items-center text-white gap-4 border-b hover:bg-light-gray">
+      <div className="shrink-0">
         <img
           src={album.artworkUrl100}
           alt={ album.collectionCensoredName }
-          className="shrink-0 w-full"
+          className="shrink-0 object-scale-down w-full h-full"
         />
       </div>
       <div className="flex flex-col">
-        <h1 className="font-semibold">{ album.collectionCensoredName }</h1>
-        <h1 className="basis">{ album.artistName }</h1>
-        <h1 className="basis">Released in { album.releaseDate.slice(0, 4) }</h1>
+        <h1 className="font-semibold">Album</h1>
+        <h1 className="hover:underline">{ album.collectionCensoredName }</h1>
+        <h1 className="basis">by { album.artistName }</h1>
+        <h1 className="basis">{ album.primaryGenreName  }</h1>
       </div>
+      <div className="flex flex-col">
+        <h1 className="font-semibold">Content</h1>
+        <h1 className="hover:underline">${ album.collectionPrice } { album.currency}</h1>
+        <h1 className="basis">{ album.collectionType}</h1>
+        <h1 className="basis">{ album.trackCount} tracks</h1>
+      </div>
+      <div className="flex flex-col">
+        <h1 className="font-semibold">Release</h1>
+        <h1 className="basis">{ album.country }</h1>
+        <h1 className="hover:underline">{ album.releaseDate.slice(0, 4)}</h1>
+        <h1 className="basis">{ album.copyright }</h1>
+      </div>
+
     </Link>
   );
 }

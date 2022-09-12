@@ -24,26 +24,26 @@ function SearchPage(props) {
     <div className="min-h-screen bg-black flex flex-col">
       <Header />
 
-      <div className="flex bg-black px-4">
-        <aside className="w-1/3">
+      <div className="flex bg-black px-1">
+        <aside className="w-2/5 left-0">
           <label
             htmlFor=""
-            className="flex flex-row items-center justify-center gap-2"
+            className="flex flex-row items-center justify-center gap-2 w-fit"
           >
             <MagnifyingGlassSVG
-              className="absolute fill-white left-6"/>
+              className="absolute fill-white left-4"/>
             <input
               type="text"
               value={ searchedArtist }
-              placeholder="Search by album name"
+              placeholder="Search by artist name"
               onChange={ ({ target: { value }}) => setSearchedArtist(value) }
               onKeyDown={ onEnterKeyDownSearchArtist }
-              className="rounded-full p-3 indent-6 w-full focus:outline-none"
+              className="rounded-full p-3 indent-7 w-fit focus:outline-none"
             />
           </label>
         </aside>
       
-        <div className="bg-black grid grid-cols-4 px-20 gap-x-10 gap-y-5">
+        <div className="bg-black grid grid-cols-1 px-5">
           { renderAlbums.map(album => <AlbumCard key={ album.collectionId} album={ album }/>) }
         </div>
      </div>
