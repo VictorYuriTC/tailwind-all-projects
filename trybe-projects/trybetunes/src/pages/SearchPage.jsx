@@ -9,7 +9,10 @@ import { getAlbumsFromAPI } from '../services/iTunesAPI';
 
 function SearchPage(props) {
   const contextValue = useContext(SongsContext);
-  const { listened: { recentlyListenedSongs }} = contextValue;
+  const {
+    listened: { recentlyListenedSongs },
+    searched: { recentlySearchedArtists }
+  } = contextValue;
   const [searchedArtist, setSearchedArtist] = useState('');
   const [renderAlbums, setRenderAlbums] = useState([]);
   const onEnterKeyDownSearchArtist = async ({ key, target: { value }}) => {
@@ -45,9 +48,18 @@ function SearchPage(props) {
           </label>
 
           <div className="flex flex-col items-start">
-            <h1 className="text-lg font-bold text-white">
+            <h1 className="text-lg font-black text-white">
               Recently searched
             </h1>
+            <div className="flex flex-col items-start gap">
+              { recentlySearchedArtists.map(({ artistName }) => (
+                <div className="flex flex-col items-start">
+                  <span className="text-white">
+                    <span className="">{ artistName }</span>
+                  </span>
+                </div>
+              )) }
+            </div>
           </div>
           <div className="flex flex-col items-start">
             <div>
@@ -56,7 +68,7 @@ function SearchPage(props) {
               </h1>
             </div>
 
-            <div className="flex flex-col items-start gap-3">
+            <div className="flex flex-col items-start gap-2">
               { recentlyListenedSongs.map(({ trackName, trackId, artistName }) => (
                 <div className="flex flex-col items-start">
                   <span
@@ -66,7 +78,7 @@ function SearchPage(props) {
                     { trackName }
                   </span>
                   <span className="text-white">
-                    by <span className="font-semibold">{ artistName }</span>
+                    by <span className="">{ artistName }</span>
                   </span>
                 </div>
               )) }

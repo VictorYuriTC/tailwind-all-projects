@@ -1,14 +1,27 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
+import SongsContext from '../../context/SongsContext';
 
 function AlbumCard({ album }) {
-  const { collectionId } = album;
+  const { collectionId, artistName, artistId } = album;
   const AMOUNT_OF_TRACKS = Number(album.trackCount);
+  const contextValue = useContext(SongsContext);
+  const { searched: { recentlySearchedArtists, setRecentlySearchedArtists }} = contextValue;
+
+  const onClickSetRecentlyListenedSongs = () => {
+    const listenedSongsAfterDeletion = recentlySearchedArtists
+      .filter(listenedSong => listenedSong.artistId !== album.artistId)
+      setRecentlySearchedArtists([{ artistName, artistId }, ...listenedSongsAfterDeletion])
+  }
+
+  const handleOnLinkClick = () => onClickSetRecentlyListenedSongs()
 
   return (
     <Link
       to={`/album/${ collectionId }`}
-      className="grid grid-cols-4 items-center text-white gap-4 border-b hover:bg-light-gray">
+      className="grid grid-cols-4 items-center text-white gap-4 border-b hover:bg-light-gray"
+      onClick={ handleOnLinkClick }
+    >
       <div className="shrink-0">
         <img
           src={album.artworkUrl100}

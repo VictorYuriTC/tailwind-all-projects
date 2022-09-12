@@ -3,7 +3,7 @@ import SongsContext from './SongsContext';
 
 function SongsContextProvider({ children }) {
   const [currentSong, setCurrentSong] = useState('');
-  const [recentlySearchedSongs, setRecentlySearchedSongs] = useState([]);
+  const [recentlySearchedArtists, setRecentlySearchedArtists] = useState([]);
   const [recentlyListenedSongs, setRecentlyListenedSongs] = useState([]);
 
   const contextValue = {
@@ -16,8 +16,8 @@ function SongsContextProvider({ children }) {
       setRecentlyListenedSongs
     },
     searched: {
-      recentlySearchedSongs,
-      setRecentlySearchedSongs
+      recentlySearchedArtists,
+      setRecentlySearchedArtists
     }
   }
 
