@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react'
 import AlbumCard from '../components/cards/AlbumCard';
 import Header from '../components/menus/Header';
+import SongOptionsBar from '../components/menus/SongOptionsBar';
+import MagnifyingGlassSVG from '../components/svgs/MagnifyingGlassSVG';
 import { ENTER } from '../constants/strings';
 import SongsContext from '../context/SongsContext';
 import { getAlbumsFromAPI } from '../services/iTunesAPI';
@@ -19,29 +21,31 @@ function SearchPage(props) {
   }
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black flex flex-col">
       <Header />
 
-     <div className="flex bg-black">
-      <aside className='bg-his-purple'>
-        <label
-          htmlFor=""
-          className="flex flex-row justify-center gap-2"
-        >
-          <span className="text-white font-semibold">
-            Artist
-          </span>
-          <input
-            type="text"
-            value={ searchedArtist }
-            onChange={ ({ target: { value }}) => setSearchedArtist(value) }
-            onKeyDown={ onEnterKeyDownSearchArtist }/>
-        </label>
-      </aside>
+      <div className="flex bg-black px-4">
+        <aside className="w-1/3">
+          <label
+            htmlFor=""
+            className="flex flex-row items-center justify-center gap-2"
+          >
+            <MagnifyingGlassSVG
+              className="absolute fill-white left-6"/>
+            <input
+              type="text"
+              value={ searchedArtist }
+              placeholder="Search by album name"
+              onChange={ ({ target: { value }}) => setSearchedArtist(value) }
+              onKeyDown={ onEnterKeyDownSearchArtist }
+              className="rounded-full p-3 indent-6 w-full focus:outline-none"
+            />
+          </label>
+        </aside>
       
-      <div className="bg-black grid grid-cols-5 px-20 gap-x-10 gap-y-5">
-        { renderAlbums.map(album => <AlbumCard key={ album.collectionId} album={ album }/>) }
-      </div>
+        <div className="bg-black grid grid-cols-4 px-20 gap-x-10 gap-y-5">
+          { renderAlbums.map(album => <AlbumCard key={ album.collectionId} album={ album }/>) }
+        </div>
      </div>
     </div>
   );

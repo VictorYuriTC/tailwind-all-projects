@@ -19,8 +19,8 @@ function SongCard({ song, index }) {
 
   return (
     <>
-      <div className="group opacity-80 font-semibold flex flex-row items-center gap-5 justify-between w-full
-        hover:bg-[#444444] hover:opacity-100 p-8 rounded">
+      <div className="group opacity-80 font-semibold flex flex-row items-center gap-5 
+        justify-between w-full hover:bg-[#444444] hover:opacity-100 p-8 rounded">
         <div className="hover:cursor-pointer">
           <span className="group-hover:hidden basis-4 font-black left-0 text-center">
             { index }

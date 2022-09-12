@@ -7,33 +7,35 @@ function SongOptionsBar() {
   const { playingSong: { currentSong, setCurrentSong }} = contextValue;
   useEffect(() => {
     return () => {
-      setCurrentSong('')
+      setCurrentSong({ 
+        artistName: 'Artist',
+        trackName: 'Track',
+        previewUrl: '',
+      })
     }
   }, [])
 
   return (
-    <footer className="bg-his-purple flex flex-row w-full h-20
+    <footer className="bg-black flex flex-row w-full h-20
       fixed inset-x-0 bottom-0
       justify-around items-center
-    text-white font-bold text-2xl"
+    text-white"
     >
-      <div className="flex flex-col">
-        <span>
+      <div className="flex flex-col items-start">
+        <span className="font-medium text-lg">
           { currentSong.trackName }
         </span>
-        <span>
+        <span className="font-medium text-sm">
           { currentSong.artistName }
         </span>
       </div>
       <span>
-        { currentSong
-        && <ReactAudioPlayer
-            src={ currentSong.previewUrl }
-            controls
-            className=""
-            autoPlay
-          /> 
-        }
+        <ReactAudioPlayer
+          src={ currentSong.previewUrl }
+          controls
+          className=""
+          autoPlay
+        /> 
       </span>
     </footer>
   );
