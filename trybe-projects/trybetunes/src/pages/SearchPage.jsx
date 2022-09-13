@@ -32,7 +32,7 @@ function SearchPage(props) {
         <div className="bg-black grid grid-cols-1 px-5 w-full">
           {
             renderAlbums.length > 0
-            &&  renderAlbums.map(album => <AlbumCard key={ album.collectionId} album={ album }/>) 
+            &&  renderAlbums.map(album => <AlbumCard key={ album.collectionId } album={ album }/>) 
           }
         </div>
       </div>

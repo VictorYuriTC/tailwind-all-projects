@@ -10,14 +10,7 @@ function SongCard({ song, index }) {
     listened: { recentlyListenedSongs, setRecentlyListenedSongs },
     favorites: { favoriteSongs, setFavoriteSongs }
   } = contextValue
-
-  const [starColor, setStarColor] = useState('');
-
-  useEffect(() => {
-    if (favoriteSongs.includes(trackId)) setStarColor('fill-yellow-600 stroke-yellow-600')
-    if (!favoriteSongs.includes(trackId)) setStarColor('')
-  }, [favoriteSongs])
-
+  
   const {
     artistName,
     currency,
@@ -27,6 +20,14 @@ function SongCard({ song, index }) {
     artworkUrl60,
     collectionId
   } = song
+
+  const [starColor, setStarColor] = useState('');
+  const isFavoriteSong = favoriteSongs.some(favoriteSong => favoriteSong.trackId === trackId);
+
+  useEffect(() => {
+    if (isFavoriteSong) setStarColor('fill-yellow-600 stroke-yellow-600')
+    if (!isFavoriteSong) setStarColor('')
+  }, [favoriteSongs])
 
   const onClickChangeCurrentSong = () => setCurrentSong(song)
   const onClickSetRecentlyListenedSongs = () => {
@@ -42,14 +43,14 @@ function SongCard({ song, index }) {
   }
 
   const handleOnClickFavorite = () => {
-    if (favoriteSongs.includes(trackId)) {
+    if (isFavoriteSong) {
       const favoriteSongsAfterDeletion = favoriteSongs
-        .filter(favoriteSong => favoriteSong !== trackId)
+        .filter(favoriteSong => favoriteSong.trackId !== trackId)
       setFavoriteSongs(favoriteSongsAfterDeletion);
       return;
     }
 
-    setFavoriteSongs([...favoriteSongs, trackId])
+    setFavoriteSongs([...favoriteSongs, { trackId, collectionId }])
   }
 
   return (
