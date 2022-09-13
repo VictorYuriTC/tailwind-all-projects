@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
+import { EXPLICIT, NOT_EXPLICIT, NO_PARENTAL_ADVISORY } from '../../constants/strings';
 import SongsContext from '../../context/SongsContext';
 
 function AlbumCard({ album }) {
@@ -20,7 +21,8 @@ function AlbumCard({ album }) {
   return (
     <Link
       to={`/album/${ collectionId }`}
-      className="grid grid-cols-4 items-center text-white gap-4 border-b hover:bg-light-gray"
+      className="opacity-90 grid grid-cols-4 items-center text-white gap-4 border-b 
+        hover:bg-light-gray hover:opacity-100 transition duration-400"
       onClick={ handleOnLinkClick }
     >
       <div className="shrink-0">
@@ -52,7 +54,11 @@ function AlbumCard({ album }) {
         <h1 className="font-semibold">Release</h1>
         <h1 className="basis">{ album.country }</h1>
         <h1 className="">{ album.releaseDate.slice(0, 4)}</h1>
-        <h1 className="">{ album.collectionExplicitness === 'notExplicit' ? 'No parental advisory' : 'Explicit' }</h1>
+        <h1 className="">{
+          album.collectionExplicitness === NOT_EXPLICIT
+            ? NO_PARENTAL_ADVISORY 
+            : EXPLICIT 
+        }</h1>
       </div>
 
     </Link>

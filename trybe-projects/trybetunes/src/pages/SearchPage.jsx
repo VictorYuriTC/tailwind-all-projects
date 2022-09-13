@@ -2,9 +2,6 @@ import React, { useContext, useEffect, useState } from 'react'
 import AlbumCard from '../components/cards/AlbumCard';
 import Header from '../components/menus/Header';
 import SearchAsideBar from '../components/menus/SearchAsideBar';
-import SongOptionsBar from '../components/menus/SongOptionsBar';
-import MagnifyingGlassSVG from '../components/svgs/MagnifyingGlassSVG';
-import { ENTER } from '../constants/strings';
 import SongsContext from '../context/SongsContext';
 import { getAlbumsFromAPI } from '../services/iTunesAPI';
 
@@ -12,19 +9,18 @@ function SearchPage(props) {
   const contextValue = useContext(SongsContext);
   const { searched: { searchedArtist }} = contextValue;
   const [renderAlbums, setRenderAlbums] = useState([]);
-
   
   useEffect(() => {
     const getAlbums = async () => {
       if (searchedArtist.length < 1) return;
 
       const foundAlbums = await getAlbumsFromAPI(searchedArtist);
-      console.log(foundAlbums);
-      setRenderAlbums(foundAlbums);
+      const maxFoundAlbums = foundAlbums
+        .splice(0, 20);
+      setRenderAlbums(maxFoundAlbums);
     }
     getAlbums();
   }, [searchedArtist])
-
 
   return (
     <div className="min-h-screen bg-black flex flex-col">
