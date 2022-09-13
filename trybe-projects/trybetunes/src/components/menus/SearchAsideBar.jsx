@@ -86,7 +86,7 @@ function SearchAsideBar(props) {
             artworkUrl60,
             collectionId
           }) => (
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-3 gap-6 w-full">
               <div className="flex flex-row">
                 <Link
                   key={ trackId }
@@ -99,7 +99,7 @@ function SearchAsideBar(props) {
                     className="absolute object-cover w-full h-full"/>
                 </Link>
               </div>
-              <div className="flex flex-col col-span-2">
+              <div className="grid col-span-2">
                 <span
                   key={ trackId }
                   className="text-white opacity-50 hover:opacity-100 transition duration-300 hover:cursor-pointer"
