@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import { EXPLICIT, NOT_EXPLICIT, NO_PARENTAL_ADVISORY } from '../../constants/strings';
 import SongsContext from '../../context/SongsContext';
@@ -22,6 +22,10 @@ function AlbumCard({ album }) {
   }
 
   const handleOnLinkClick = () => onClickSetRecentlyListenedSongs()
+
+  useEffect(() => {
+    console.log(album)
+  }, [])
 
   return (
     <Link
@@ -62,7 +66,7 @@ function AlbumCard({ album }) {
         <h1 className="">{
           album.collectionExplicitness === NOT_EXPLICIT
             ? NO_PARENTAL_ADVISORY 
-            : EXPLICIT 
+            : 'Explicit' 
         }</h1>
       </div>
 

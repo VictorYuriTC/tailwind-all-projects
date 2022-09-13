@@ -29,11 +29,14 @@ function AlbumDetailsCard() {
           <div className="relative pb-[20%] pr-[20%] shrink-0">
             { album.length > 0
               && <img src={ album[0].artworkUrl100 } alt={ album.collectionName } className="object-cover absolute 
-              w-full h-full"/>
+              w-full h-full" key={ album.collectionId }/>
             }
           </div>
-          <span>{ album.length > 0
-          && album.artistName }</span>
+          <span key={ `name-${ album.collectionId }` } >
+            { album.length > 0
+            && album.artistName
+            }
+          </span>
 
         </div>
 

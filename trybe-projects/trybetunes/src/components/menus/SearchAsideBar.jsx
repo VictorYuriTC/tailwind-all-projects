@@ -43,16 +43,26 @@ function SearchAsideBar(props) {
           Recently searched
         </h1>
         <div className="flex flex-col items-start gap-1">
-          { recentlySearchedArtists.map(({ artistName, primaryGenreName }) => (
+          { recentlySearchedArtists.map(({ artistName, primaryGenreName, trackId }) => (
             <div className="flex items-start">
               <span className="">
-                <span className="text-white opacity-50 hover:opacity-100 transition duration-300 hover:font-medium hover:cursor-pointer">
+                <span
+                  key={ `searched-${ trackId }` }
+                  className="text-white opacity-50 hover:opacity-100 transition duration-300 hover:font-medium hover:cursor-pointer"
+                >
                   { primaryGenreName }
                 </span>
-                <span className="text-white opacity-50">
+                <span
+                  key={ trackId }
+                  className="text-white opacity-50"
+                >
                   {' '}-{' '}
                 </span>
-                <span className="text-white opacity-50 hover:opacity-100 transition duration-300 hover:font-medium hover:cursor-pointer">
+                <span
+                  onClick={() => setSearchedArtist(artistName)}
+                  key={ trackId }
+                  className="text-white opacity-50 hover:opacity-100 transition duration-300 hover:font-medium hover:cursor-pointer"
+                >
                   { artistName }
                 </span>
               </span>
@@ -78,8 +88,15 @@ function SearchAsideBar(props) {
           }) => (
             <div className="grid grid-cols-3 gap-6">
               <div className="flex flex-row">
-                <Link to={`/album/${ collectionId }`} className="relative pb-16 pr-16">
-                  <img src={ artworkUrl60 } alt="" className="absolute object-cover w-full h-full"/>
+                <Link
+                  key={ trackId }
+                  to={`/album/${ collectionId }`}
+                  className="relative pb-16 pr-16">
+                  <img
+                    key={ trackId }
+                    src={ artworkUrl60 }
+                    alt=""
+                    className="absolute object-cover w-full h-full"/>
                 </Link>
               </div>
               <div className="flex flex-col col-span-2">
@@ -89,8 +106,18 @@ function SearchAsideBar(props) {
                 >
                   { trackName }
                 </span>
-                <span className="text-white">
-                  <span className="opacity-50">by</span> <span className="opacity-50 hover:opacity-100 transition duration-300 hover:cursor-pointer">{ artistName }</span>
+                <span>
+                  <span
+                    key={ trackId }
+                    className="text-white opacity-50">by{' '}
+                  </span>
+                  <span
+                    key={ trackId }
+                    onClick={() => setSearchedArtist(artistName)}
+                    className="text-white 
+                    opacity-50 hover:opacity-100 transition duration-300 hover:cursor-pointer">
+                    { artistName }
+                  </span>
                 </span>
               </div>
             </div>))
