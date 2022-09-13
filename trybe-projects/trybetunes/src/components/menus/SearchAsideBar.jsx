@@ -67,7 +67,11 @@ function SearchAsideBar(props) {
                   key={ trackId }
                   className="text-white opacity-50 hover:opacity-100 transition duration-300 hover:font-medium hover:cursor-pointer"
                 >
-                  { artistName }
+                  { 
+                    artistName.length > 25
+                    ? `${ artistName.slice(0, -(artistName.length - 30)) }...`
+                    : artistName
+                  }
                 </span>
               </span>
             </div>))
@@ -87,7 +91,7 @@ function SearchAsideBar(props) {
             trackName,
             trackId,
             artistName,
-            artworkUrl60,
+            artworkUrl100,
             collectionId
           }) => (
             <div className="grid grid-cols-3 gap-6 w-full">
@@ -98,9 +102,9 @@ function SearchAsideBar(props) {
                   className="relative pb-16 pr-16">
                   <img
                     key={ trackId }
-                    src={ artworkUrl60 }
+                    src={ artworkUrl100 }
                     alt=""
-                    className="absolute object-cover w-full h-full"/>
+                    className="absolute object-scale-down w-full h-full"/>
                 </Link>
               </div>
               <div className="grid col-span-2">
@@ -120,7 +124,10 @@ function SearchAsideBar(props) {
                     onClick={() => setSearchedArtist(removeAccents(artistName))}
                     className="text-white 
                     opacity-50 hover:opacity-100 transition duration-300 hover:cursor-pointer">
-                    { artistName }
+                    { artistName.length > 25
+                      ? `${ artistName.slice(0, -(artistName.length - 25)) }...`
+                      : artistName 
+                    }
                   </span>
                 </span>
               </div>
