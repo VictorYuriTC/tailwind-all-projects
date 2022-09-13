@@ -11,6 +11,7 @@ function AlbumCard({ album }) {
   const onClickSetRecentlyListenedSongs = () => {
     const listenedSongsAfterDeletion = recentlySearchedArtists
       .filter(listenedSong => listenedSong.artistId !== album.artistId)
+      .splice(0, 4)
       setRecentlySearchedArtists([{ artistName, artistId }, ...listenedSongsAfterDeletion])
   }
 
@@ -38,18 +39,20 @@ function AlbumCard({ album }) {
       <div className="flex flex-col">
         <h1 className="font-semibold">Content</h1>
         <h1 className="basis">{ album.collectionType}</h1>
-        <h1 className="basis">{
-          AMOUNT_OF_TRACKS > 1
-            ? `${ AMOUNT_OF_TRACKS } tracks`
-            : `${ AMOUNT_OF_TRACKS } track`
-        }</h1>
+        <h1 className="basis">
+          {
+            AMOUNT_OF_TRACKS > 1
+              ? `${ AMOUNT_OF_TRACKS } tracks`
+              : `${ AMOUNT_OF_TRACKS } track`
+          }
+        </h1>
         <h1 className="">${ album.collectionPrice } { album.currency}</h1>
       </div>
       <div className="flex flex-col">
         <h1 className="font-semibold">Release</h1>
         <h1 className="basis">{ album.country }</h1>
         <h1 className="">{ album.releaseDate.slice(0, 4)}</h1>
-        <h1 className="basis">{ album.copyright }</h1>
+        <h1 className="">{ album.collectionExplicitness === 'notExplicit' ? 'No parental advisory' : 'Explicit' }</h1>
       </div>
 
     </Link>
