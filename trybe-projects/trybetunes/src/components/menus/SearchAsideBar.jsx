@@ -20,16 +20,14 @@ function SearchAsideBar(props) {
   }
   
   return (
-    <aside className="flex flex-col gap-5 left-0">
-      <SearchAsideBarLinks />
-
+    <aside className="flex flex-col gap-5 left-0 p-2 border-[#ffffff] border-r-2 border-opacity-50">
       <div>
         <label
           htmlFor=""
           className="flex flex-row items-center justify-center gap-2 w-fit"
         >
           <MagnifyingGlassSVG
-            className="absolute fill-white left-6"/>
+            className="absolute fill-white left-8"/>
             <input
               type="text"
               value={ searchedArtist }
@@ -41,6 +39,8 @@ function SearchAsideBar(props) {
         </label>
       </div>
 
+      <SearchAsideBarLinks />
+
       <div className="flex flex-col items-start">
         <h1 className="text-lg font-medium text-white">
           Recently searched
@@ -48,7 +48,7 @@ function SearchAsideBar(props) {
         <div className="flex flex-col items-start gap">
           { recentlySearchedArtists.map(({ artistName }) => (
             <div className="flex flex-col items-start">
-              <span className="text-white opacity-50 hover:opacity-100 transition duration-500 hover:font-medium hover:cursor-pointer">
+              <span className="text-white opacity-50 hover:opacity-100 transition duration-300 hover:font-medium hover:cursor-pointer">
                 { artistName }
               </span>
             </div>))
@@ -68,12 +68,12 @@ function SearchAsideBar(props) {
             <div className="flex flex-col items-start">
               <span
                 key={ trackId }
-                className="text-white opacity-50 hover:opacity-100 transition duration-500 hover:cursor-pointer"
+                className="text-white opacity-50 hover:opacity-100 transition duration-300 hover:cursor-pointer"
               >
                 { trackName }
               </span>
               <span className="text-white">
-                <span className="opacity-50">by</span> <span className="opacity-50 hover:opacity-100 transition duration-500 hover:cursor-pointer">{ artistName }</span>
+                <span className="opacity-50">by</span> <span className="opacity-50 hover:opacity-100 transition duration-300 hover:cursor-pointer">{ artistName }</span>
               </span>
             </div>))
           }

@@ -32,8 +32,10 @@ function SongCard({ song, index }) {
 
   return (
     <>
-      <div className="group opacity-80 font-semibold flex flex-row items-center gap-5 
-        justify-between w-full hover:bg-light-gray hover:opacity-100 p-8 rounded">
+      <div
+        onDoubleClick={ handleOnClickPlay }
+        className="group opacity-80 font-semibold flex flex-row items-center gap-5 
+        justify-between w-full hover:bg-light-gray hover:opacity-100 p-8 rounded select-none transition duration-200">
         <div className="hover:cursor-pointer">
           <span className="group-hover:hidden basis-4 font-black left-0 text-center">
             { index }
@@ -43,7 +45,7 @@ function SongCard({ song, index }) {
             onClick={ handleOnClickPlay }
           />
         </div>
-        <h1 className="">
+        <h1 className="pointer-events-none">
           { trackName }
         </h1>
         <h1 className="">
