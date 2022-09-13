@@ -6,6 +6,7 @@ function SongsContextProvider({ children }) {
   const [recentlySearchedArtists, setRecentlySearchedArtists] = useState([]);
   const [recentlyListenedSongs, setRecentlyListenedSongs] = useState([]);
   const [searchedArtist, setSearchedArtist] = useState('');
+  const [favoriteSongs, setFavoriteSongs] = useState([]);
 
   const contextValue = {
     playingSong: {
@@ -14,14 +15,18 @@ function SongsContextProvider({ children }) {
     },
     listened: {
       recentlyListenedSongs,
-      setRecentlyListenedSongs
+      setRecentlyListenedSongs,
     },
     searched: {
       searchedArtist,
       setSearchedArtist,
       recentlySearchedArtists,
-      setRecentlySearchedArtists
+      setRecentlySearchedArtists,
     },
+    favorites: {
+      favoriteSongs,
+      setFavoriteSongs,
+    }
   }
 
   return (

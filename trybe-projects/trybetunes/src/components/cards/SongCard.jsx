@@ -1,13 +1,22 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import SongsContext from '../../context/SongsContext';
 import PlaySVG from '../svgs/PlaySVG';
+import StarSVG from '../svgs/StarSVG';
 
 function SongCard({ song, index }) {
   const contextValue = useContext(SongsContext)
   const {
     playingSong: { setCurrentSong },
-    listened: { recentlyListenedSongs, setRecentlyListenedSongs }
+    listened: { recentlyListenedSongs, setRecentlyListenedSongs },
+    favorites: { favoriteSongs, setFavoriteSongs }
   } = contextValue
+
+  const [starColor, setStarColor] = useState('');
+
+  useEffect(() => {
+    if (favoriteSongs.includes(trackId)) setStarColor('fill-yellow-600 stroke-yellow-600')
+    if (!favoriteSongs.includes(trackId)) setStarColor('')
+  }, [favoriteSongs])
 
   const {
     artistName,
@@ -32,24 +41,39 @@ function SongCard({ song, index }) {
     onClickSetRecentlyListenedSongs();
   }
 
+  const handleOnClickFavorite = () => {
+    if (favoriteSongs.includes(trackId)) {
+      const favoriteSongsAfterDeletion = favoriteSongs
+        .filter(favoriteSong => favoriteSong !== trackId)
+      setFavoriteSongs(favoriteSongsAfterDeletion);
+      return;
+    }
+
+    setFavoriteSongs([...favoriteSongs, trackId])
+  }
+
   return (
     <>
       <div
         onDoubleClick={ handleOnClickPlay }
         className="group opacity-80 font-semibold flex flex-row items-center gap-5 
         justify-between w-full hover:bg-light-gray hover:opacity-100 p-8 rounded select-none transition duration-200">
-        <div className="hover:cursor-pointer">
-          <span className="group-hover:hidden basis-4 font-black left-0 text-center">
+        <div className="flex items-center hover:cursor-pointer">
+          <span className="group-hover:hidden font-black left-0 text-center text-lg">
             { index }
           </span>
           <PlaySVG 
-            className="hidden group-hover:inline-block fill-white"
             onClick={ handleOnClickPlay }
+            className="hidden absolute group-hover:inline-block fill-white"
+          />
+          <StarSVG
+            onClick={ handleOnClickFavorite }
+            className={`${ starColor } absolute ml-8`}
           />
         </div>
-        <h1 className="pointer-events-none">
-          { trackName }
-        </h1>
+          <h1 className="pointer-events-none">
+            { trackName }
+          </h1>
         <h1 className="">
           ${ trackPrice } { currency }
         </h1>
