@@ -26,16 +26,16 @@ function SearchPage(props) {
     <div className="min-h-screen bg-black flex flex-col">
       <Header />
 
-      <div className="flex bg-black px-1">
+      <div className="flex bg-black pl-4 pr-4">
         <SearchAsideBar />
       
-        <div className="bg-black grid grid-cols-1 px-5">
+        <div className="bg-black grid grid-cols-1 px-5 w-full">
           {
             renderAlbums.length > 0
             &&  renderAlbums.map(album => <AlbumCard key={ album.collectionId} album={ album }/>) 
           }
         </div>
-     </div>
+      </div>
     </div>
   );
 }
