@@ -2,11 +2,8 @@ import React, { useContext } from 'react'
 import MagnifyingGlassSVG from '../svgs/MagnifyingGlassSVG';
 import SongsContext from '../../context/SongsContext';
 import { ENTER } from '../../constants/strings';
-import { Link } from 'react-router-dom';
-import HomeSVG from '../svgs/HomeSVG';
-import UserSVG from '../svgs/UserSVG';
-import StarSVG from '../svgs/StarSVG';
 import SearchAsideBarLinks from './SearchAsideBarLinks';
+import { Link } from 'react-router-dom';
 
 function SearchAsideBar(props) {
   const contextValue = useContext(SongsContext);
@@ -42,14 +39,22 @@ function SearchAsideBar(props) {
       <SearchAsideBarLinks />
 
       <div className="flex flex-col items-start">
-        <h1 className="text-lg font-medium text-white">
+        <h1 className="text-lg font-medium text-white pb-6">
           Recently searched
         </h1>
-        <div className="flex flex-col items-start gap">
-          { recentlySearchedArtists.map(({ artistName }) => (
-            <div className="flex flex-col items-start">
-              <span className="text-white opacity-50 hover:opacity-100 transition duration-300 hover:font-medium hover:cursor-pointer">
-                { artistName }
+        <div className="flex flex-col items-start gap-1">
+          { recentlySearchedArtists.map(({ artistName, primaryGenreName }) => (
+            <div className="flex items-start">
+              <span className="">
+                <span className="text-white opacity-50 hover:opacity-100 transition duration-300 hover:font-medium hover:cursor-pointer">
+                  { primaryGenreName }
+                </span>
+                <span className="text-white opacity-50">
+                  {' '}-{' '}
+                </span>
+                <span className="text-white opacity-50 hover:opacity-100 transition duration-300 hover:font-medium hover:cursor-pointer">
+                  { artistName }
+                </span>
               </span>
             </div>))
           }
@@ -58,23 +63,36 @@ function SearchAsideBar(props) {
 
       <div className="flex flex-col items-start">
         <div>
-          <h1 className="text-lg font-medium text-white">
+          <h1 className="text-lg font-medium text-white pb-6">
             Recently listened
           </h1>
         </div>
 
-        <div className="flex flex-col items-start gap-2">
-          { recentlyListenedSongs.map(({ trackName, trackId, artistName }) => (
-            <div className="flex flex-col items-start">
-              <span
-                key={ trackId }
-                className="text-white opacity-50 hover:opacity-100 transition duration-300 hover:cursor-pointer"
-              >
-                { trackName }
-              </span>
-              <span className="text-white">
-                <span className="opacity-50">by</span> <span className="opacity-50 hover:opacity-100 transition duration-300 hover:cursor-pointer">{ artistName }</span>
-              </span>
+        <div className="flex flex-col items-start gap-1">
+          { recentlyListenedSongs.map(({
+            trackName,
+            trackId,
+            artistName,
+            artworkUrl60,
+            collectionId
+          }) => (
+            <div className="grid grid-cols-3 gap-6">
+              <div className="flex flex-row">
+                <Link to={`/album/${ collectionId }`} className="relative pb-16 pr-16">
+                  <img src={ artworkUrl60 } alt="" className="absolute object-cover w-full h-full"/>
+                </Link>
+              </div>
+              <div className="flex flex-col col-span-2">
+                <span
+                  key={ trackId }
+                  className="text-white opacity-50 hover:opacity-100 transition duration-300 hover:cursor-pointer"
+                >
+                  { trackName }
+                </span>
+                <span className="text-white">
+                  <span className="opacity-50">by</span> <span className="opacity-50 hover:opacity-100 transition duration-300 hover:cursor-pointer">{ artistName }</span>
+                </span>
+              </div>
             </div>))
           }
         </div>

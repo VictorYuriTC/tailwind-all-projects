@@ -14,7 +14,9 @@ function SongCard({ song, index }) {
     currency,
     trackPrice,
     trackName,
-    trackId
+    trackId,
+    artworkUrl60,
+    collectionId
   } = song
 
   const onClickChangeCurrentSong = () => setCurrentSong(song)
@@ -22,7 +24,7 @@ function SongCard({ song, index }) {
     const listenedSongsAfterDeletion = recentlyListenedSongs
       .filter(listenedSong => listenedSong.trackId !== song.trackId)
       .splice(0, 4)
-    setRecentlyListenedSongs([{ trackId, trackName, artistName }, ...listenedSongsAfterDeletion])
+    setRecentlyListenedSongs([{ trackId, trackName, artistName, artworkUrl60, collectionId }, ...listenedSongsAfterDeletion])
   }
 
   const handleOnClickPlay = () => {

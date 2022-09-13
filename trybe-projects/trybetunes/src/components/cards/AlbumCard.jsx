@@ -4,7 +4,12 @@ import { EXPLICIT, NOT_EXPLICIT, NO_PARENTAL_ADVISORY } from '../../constants/st
 import SongsContext from '../../context/SongsContext';
 
 function AlbumCard({ album }) {
-  const { collectionId, artistName, artistId } = album;
+  const {
+    collectionId,
+    artistName,
+    artistId,
+    primaryGenreName
+  } = album;
   const AMOUNT_OF_TRACKS = Number(album.trackCount);
   const contextValue = useContext(SongsContext);
   const { searched: { recentlySearchedArtists, setRecentlySearchedArtists }} = contextValue;
@@ -13,7 +18,7 @@ function AlbumCard({ album }) {
     const listenedSongsAfterDeletion = recentlySearchedArtists
       .filter(listenedSong => listenedSong.artistId !== album.artistId)
       .splice(0, 4)
-      setRecentlySearchedArtists([{ artistName, artistId }, ...listenedSongsAfterDeletion])
+      setRecentlySearchedArtists([{ artistName, artistId, primaryGenreName }, ...listenedSongsAfterDeletion])
   }
 
   const handleOnLinkClick = () => onClickSetRecentlyListenedSongs()
