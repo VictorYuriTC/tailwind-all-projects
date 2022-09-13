@@ -1,20 +1,24 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import MagnifyingGlassSVG from '../svgs/MagnifyingGlassSVG';
 import SongsContext from '../../context/SongsContext';
 import { ENTER } from '../../constants/strings';
 import SearchAsideBarLinks from './SearchAsideBarLinks';
 import { Link } from 'react-router-dom';
+import { removeAccents } from '../../constants/functions';
 
 function SearchAsideBar(props) {
   const contextValue = useContext(SongsContext);
   const {
     listened: { recentlyListenedSongs },
-    searched: { recentlySearchedArtists, searchedArtist, setSearchedArtist }
+    searched: { recentlySearchedArtists, setSearchedArtist }
   } = contextValue;
 
-  const onEnterKeyDownSearchArtist = async ({ key, target: { value }}) => {
-    if (key === ENTER) setSearchedArtist(value)
+  const [searchedArtistInput, setSearchedArtistInput] = useState('');
+
+  const onEnterKeyDownSearchArtist = async ({ key }) => {
+    if (key === ENTER) setSearchedArtist(searchedArtistInput)
   }
+
   
   return (
     <aside className="flex flex-col gap-5 left-0 p-2 border-[#ffffff] border-r-2 border-opacity-50">
@@ -27,9 +31,9 @@ function SearchAsideBar(props) {
             className="absolute fill-white left-8"/>
             <input
               type="text"
-              value={ searchedArtist }
+              value={ searchedArtistInput }
               placeholder="Search by artist name"
-              onChange={ ({ target: { value }}) => setSearchedArtist(value) }
+              onChange={ ({ target: { value }}) => setSearchedArtistInput(value) }
               onKeyDown={ onEnterKeyDownSearchArtist }
               className="rounded-full p-3 indent-7 w-fit focus:outline-none"
             />
@@ -59,7 +63,7 @@ function SearchAsideBar(props) {
                   {' '}-{' '}
                 </span>
                 <span
-                  onClick={() => setSearchedArtist(artistName)}
+                  onClick={() => setSearchedArtist(removeAccents(artistName))}
                   key={ trackId }
                   className="text-white opacity-50 hover:opacity-100 transition duration-300 hover:font-medium hover:cursor-pointer"
                 >
@@ -113,7 +117,7 @@ function SearchAsideBar(props) {
                   </span>
                   <span
                     key={ trackId }
-                    onClick={() => setSearchedArtist(artistName)}
+                    onClick={() => setSearchedArtist(removeAccents(artistName))}
                     className="text-white 
                     opacity-50 hover:opacity-100 transition duration-300 hover:cursor-pointer">
                     { artistName }

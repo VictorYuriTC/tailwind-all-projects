@@ -30,8 +30,8 @@ function AlbumCard({ album }) {
   return (
     <Link
       to={`/album/${ collectionId }`}
-      className="opacity-90 grid grid-cols-4 items-center text-white gap-4 border-b 
-        hover:bg-light-gray hover:opacity-100 transition duration-300"
+      className="opacity-90 grid grid-cols-4 items-center text-white gap-4 border-b border-white
+        border-opacity-50 hover:bg-light-gray hover:opacity-100 transition duration-300"
       onClick={ handleOnLinkClick }
     >
       <div className="shrink-0">
