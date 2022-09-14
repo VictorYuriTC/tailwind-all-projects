@@ -10,6 +10,10 @@ function SongCard({ song, index }) {
     listened: { recentlyListenedSongs, setRecentlyListenedSongs },
     favorites: { favoriteSongs, setFavoriteSongs }
   } = contextValue
+
+  const [favoriteModalText, setFavoriteModalText] = useState('');
+  const [favoriteModalTextDisplay, setFavoriteModalTextDisplay] = useState('hidden');
+  const [favoriteModalTextOpacity, setFavoriteModalTextOpacity] = useState('0');
   
   const {
     artistName,
@@ -28,6 +32,23 @@ function SongCard({ song, index }) {
     if (isFavoriteSong) setStarColor('fill-yellow-600 stroke-yellow-600')
     if (!isFavoriteSong) setStarColor('')
   }, [favoriteSongs])
+
+  useEffect(() => {
+    const changeFavoriteModalText = () => {
+      if (favoriteModalTextOpacity === '') return;
+
+      setFavoriteModalTextDisplay('visible')
+      if (isFavoriteSong) setFavoriteModalText('Added to favorites')
+      if (!isFavoriteSong) setFavoriteModalText('Removed from favorites')
+    }
+    setTimeout(() => setFavoriteModalTextDisplay('hidden'), 3000)
+
+    changeFavoriteModalText()
+  }, [isFavoriteSong])
+
+  useEffect(() => {
+    isFavoriteSong ? setFavoriteModalTextOpacity('1.00') : setFavoriteModalTextOpacity('0.5')
+  }, [favoriteModalText])
 
   const onClickChangeCurrentSong = () => setCurrentSong(song)
   const onClickSetRecentlyListenedSongs = () => {
@@ -71,6 +92,17 @@ function SongCard({ song, index }) {
             onClick={ handleOnClickFavorite }
             className={`${ starColor } absolute ml-8`}
           />
+          <span
+            className="text-white absolute ml-20
+            border-white border px-2 rounded"
+            style={
+              { visibility: favoriteModalTextDisplay,
+                opacity: favoriteModalTextOpacity 
+              }
+}
+            >
+            { favoriteModalText }
+          </span>
         </div>
           <h1 className="pointer-events-none">
             { trackName }
