@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import HomeSVG from '../svgs/HomeSVG';
 import UserSVG from '../svgs/UserSVG';
 import StarSVG from '../svgs/StarSVG';
+import LogoutSVG from '../svgs/LogoutSVG';
 
 function SearchAsideBarLinks(props) {
   return (
@@ -18,6 +19,7 @@ function SearchAsideBarLinks(props) {
         Home
       </span>
     </Link>
+
     <Link
       to="/profile"
       className="flex items-center gap-2 group"
@@ -29,6 +31,7 @@ function SearchAsideBarLinks(props) {
         Profile
       </span>
     </Link>
+
     <Link
       to="/favorites"
       className="flex items-center gap-2 group"
@@ -39,6 +42,18 @@ function SearchAsideBarLinks(props) {
         group-hover:opacity-100 transition duration-500">
         Favorites
       </span>
+    </Link>
+
+    <Link
+      to="/"
+      className="flex items-center gap-2 group"
+    >
+      <LogoutSVG className="w-7 h-7 stroke-white stroke-2 opacity-50
+        group-hover:opacity-100 group-hover:fill-[#aa1010] transition duration-500"/>
+      <span className="text-white font-semibold opacity-50
+        group-hover:opacity-100 transition duration-500">
+          Logout
+        </span>
     </Link>
   </div>
   );

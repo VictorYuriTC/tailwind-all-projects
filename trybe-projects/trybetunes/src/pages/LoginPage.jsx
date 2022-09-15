@@ -11,48 +11,60 @@ function LoginPage(props) {
   const [isLoginButtonDisabled, setIsLoginButtonDisabled] = useState(true);
   const [usernameInput, setUsernameInput] = useState('');
   const [passwordInput, setPasswordInput] = useState('');
+
+  
+  const [usernameAmountOfCharNeeded, setUsernameAmountOfCharNeeded] = useState(3);
+  const [passwordAmoutOfChardNeeded, setPasswordAmoutOfChardNeeded] = useState(6);
   const [loginButtonStyle, setLoginButtonStyle] = useState(
     { 
       boxShadow: '',
       opacity: 1,
       translate: '0',
     })
+    
+    const MIN_USERNAME_CHARACTERS = 3;
+    const MIN_PASSWORD_CHARACTERS = 6;
+    const USERNAME_LENGTH = usernameInput.length;
+    const PASSWORD_LENGTH = passwordInput.length;
 
-  const navigate = useNavigate();
+    const navigate = useNavigate();
+    
+  useEffect(() => {
+    setUsernameAmountOfCharNeeded(MIN_USERNAME_CHARACTERS - USERNAME_LENGTH)
+    setPasswordAmoutOfChardNeeded(MIN_PASSWORD_CHARACTERS - PASSWORD_LENGTH)
+  }, [usernameInput, passwordInput])
 
   useEffect(() => {
-    const usernameLength = usernameInput.length;
-    const passwordLength = passwordInput.length;
+    const enableLoginButton = () => {
 
-    const hasUsernameMinChar = usernameLength >= 3 ? true : false
-    const hasPasswordMinChar = passwordLength >= 6 ? true : false
+      const hasUsernameMinChar = USERNAME_LENGTH >= MIN_USERNAME_CHARACTERS ? true : false
+      const hasPasswordMinChar = PASSWORD_LENGTH >= MIN_PASSWORD_CHARACTERS ? true : false
 
-    if (hasUsernameMinChar && hasPasswordMinChar) { 
-      setIsLoginButtonDisabled(false)
-      return;
+      if (hasUsernameMinChar && hasPasswordMinChar) { 
+        setIsLoginButtonDisabled(false)
+        return;
+      }
+
+      setIsLoginButtonDisabled(true)
     }
 
-    setIsLoginButtonDisabled(true)
+    enableLoginButton()
   }, [usernameInput, passwordInput])
 
   const onEnterKeyDownNavigateToSearchPage = ({ key }) => {
     if (key !== ENTER) return;
 
-    if (!isLoginButtonDisabled) navigate('/search')
-    
-
     if (isLoginButtonDisabled) {
       alert('Only usernames with 3 or more characters and passwords with 6 or more characters are valid.')
     }
+
+    if (!isLoginButtonDisabled) navigate('/search') 
   }
 
-  const handleUsernameInputChange = ({ target: { value }}) => {
-    setUsernameInput(value)
-  }
+  const handleUsernameInputChange = ({ target: { value }}) => setUsernameInput(value)
 
-  const handlePasswordInputChange = ({ key, target: { value }}) => {
-    setPasswordInput(value)
-  }
+  const handlePasswordInputChange = ({ target: { value }}) => setPasswordInput(value)
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-[#efefef]">
       <div className="absolute top-0 w-full mb-20">
@@ -60,7 +72,7 @@ function LoginPage(props) {
       </div>
 
       <div className="relative flex flex-col items-center justify-center
-        rounded-2xl py-6 mt-12 bg-white shadow-lg shadow-gray-600">
+        rounded-2xl py-4 mt-14 bg-white shadow-lg shadow-gray-600">
         <div className="mb-3">
           <span className="text-3xl text-black">
             Login
@@ -70,7 +82,7 @@ function LoginPage(props) {
           <p className="text-black max-w-sm font-sans font-light mb-7">Login to your account to listen the newest songs in the Trybe industry.
           </p>
         </div>
-        <div className="flex flex-col mb-4 md:mb-10 space-y-2">
+        <div className="flex flex-col mb-2 md:mb-5 space-y-2">
           <label htmlFor="" className="flex flex-row">
             <input
               value={ usernameInput }
@@ -91,21 +103,41 @@ function LoginPage(props) {
           </label>
         </div>
 
-        <div className="flex flex-col items-center justify-between space-x-0 space-y-6 
-          md:flex-row md:space-y-0 md:space-x-12 mb-6 md:mb-12"
+        <div className="flex flex-col mb-2 md:mb-5">
+          { usernameAmountOfCharNeeded > 0 &&
+            <span className="text-sm">
+              Username requires at least { usernameAmountOfCharNeeded } more random { usernameAmountOfCharNeeded === 1 ? 'character' : 'characters' }
+            </span>
+          }
+          {
+            passwordAmoutOfChardNeeded > 0 &&
+            <span className="text-sm">
+              Password requires at least { passwordAmoutOfChardNeeded } more random {
+                passwordAmoutOfChardNeeded === 1 ? 'character' : 'characters'
+              }
+            </span>
+          }
+        </div>
+
+        <div className="flex items-center justify-between space-x-12 
+           md:space-y-0 md:space-x-12 mb-6 md:mb-12"
         >
-          <button className="font-extralight text-black border-b py-2">Forgot password</button>
+          <button className="font-extralight text-black border-b py-2">
+            <span>
+              Forgot password
+            </span>
+          </button>
 
           <button
             onClick={ () => navigate('/search') }
             disabled={ isLoginButtonDisabled }
-            className="text-white w-full md:w-auto flex justify-center items-center space-x-1 font-sans font-semibold rounded-md shadow-lg px-3 py-2 border transition duration-200 bg-his-purple"
+            className="text-white w-full md:w-auto flex justify-center items-center space-x-2 font-sans font-semibold rounded-md shadow-lg px-3 py-2 border transition duration-200 bg-his-purple"
             style={ loginButtonStyle }
           >
             <span>
               Login
             </span>
-            <ArrowSVG />
+            <ArrowSVG className="w-7"/>
           </button>
         </div>
 
