@@ -80,7 +80,7 @@ function SongCard({ song, index }) {
         onDoubleClick={ handleOnClickPlay }
         className="group opacity-80 font-semibold flex flex-row items-center gap-5 
         justify-between w-full hover:bg-light-gray hover:opacity-100 p-8 rounded select-none transition duration-200">
-        <div className="flex items-center hover:cursor-pointer">
+        <div className="flex items-center hover:cursor-pointer basis-4">
           <span className="group-hover:hidden font-black left-0 text-center text-lg">
             { index }
           </span>
@@ -98,8 +98,7 @@ function SongCard({ song, index }) {
             style={
               { visibility: favoriteModalTextDisplay,
                 opacity: favoriteModalTextOpacity 
-              }
-}
+              }}
             >
             { favoriteModalText }
           </span>

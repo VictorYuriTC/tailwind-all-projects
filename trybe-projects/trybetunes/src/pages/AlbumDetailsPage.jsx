@@ -19,14 +19,14 @@ function AlbumDetailsPage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gradient-to-b bg-black">
-      <div>
+    <div className="flex flex-col min-h-screen bg-gradient-to-b bg-black">
+      <div className="bg-black">
         <Header />
       </div>
      {
      <>
         <div className="flex-col items-center 
-          gap-10 bg-black flex">
+          gap-10 bg-black flex pt-20">
           <div className="relative pb-[15%] pr-[15%] shrink-0">
             { album.length > 0
               && <img src={ album[0].artworkUrl100 } alt={ album.collectionName } className="object-cover absolute 
@@ -51,7 +51,7 @@ function AlbumDetailsPage() {
      </>
      }
 
-     <div>
+     <div className="bg-black">
       <SongOptionsBar />
      </div>
     </div>

@@ -67,14 +67,14 @@ function LoginPage(props) {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-[#efefef]">
-      <div className="absolute top-0 w-full mb-20">
+      <div className="absolute top-0 w-full mb-12">
         <Header className=""/>
       </div>
 
       <div className="relative flex flex-col items-center justify-center
-        rounded-2xl py-4 mt-14 bg-white shadow-lg shadow-gray-600">
+        rounded-2xl py-4 mt-20 bg-white shadow-lg shadow-gray-600">
         <div className="mb-3">
-          <span className="text-3xl text-black">
+          <span className="text-3xl text-black font-medium">
             Login
           </span>
         </div>
@@ -82,7 +82,7 @@ function LoginPage(props) {
           <p className="text-black max-w-sm font-sans font-light mb-7">Login to your account to listen the newest songs in the Trybe industry.
           </p>
         </div>
-        <div className="flex flex-col mb-2 md:mb-5 space-y-2">
+        <div className="flex flex-col mb-3 md:mb-5 space-y-2">
           <label htmlFor="" className="flex flex-row">
             <input
               value={ usernameInput }
@@ -105,13 +105,13 @@ function LoginPage(props) {
 
         <div className="flex flex-col mb-2 md:mb-5">
           { usernameAmountOfCharNeeded > 0 &&
-            <span className="text-sm">
+            <span className="text-xs md:text-sm">
               Username requires at least { usernameAmountOfCharNeeded } more random { usernameAmountOfCharNeeded === 1 ? 'character' : 'characters' }
             </span>
           }
           {
             passwordAmoutOfChardNeeded > 0 &&
-            <span className="text-sm">
+            <span className="text-xs md:text-sm">
               Password requires at least { passwordAmoutOfChardNeeded } more random {
                 passwordAmoutOfChardNeeded === 1 ? 'character' : 'characters'
               }
@@ -120,7 +120,7 @@ function LoginPage(props) {
         </div>
 
         <div className="flex items-center justify-between space-x-12 
-           md:space-y-0 md:space-x-12 mb-6 md:mb-12"
+           md:space-y-0 md:space-x-12 mb-6 md:mb-6"
         >
           <button className="font-extralight text-black border-b py-2">
             <span>
@@ -131,7 +131,7 @@ function LoginPage(props) {
           <button
             onClick={ () => navigate('/search') }
             disabled={ isLoginButtonDisabled }
-            className="text-white w-full md:w-auto flex justify-center items-center space-x-2 font-sans font-semibold rounded-md shadow-lg px-3 py-2 border transition duration-200 bg-his-purple"
+            className="text-white md:w-auto flex justify-center items-center space-x-2 font-sans font-semibold rounded-md shadow-lg px-3 py-2 border transition duration-200 bg-his-purple"
             style={ loginButtonStyle }
           >
             <span>
