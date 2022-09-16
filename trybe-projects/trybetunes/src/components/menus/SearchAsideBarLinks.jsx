@@ -66,12 +66,12 @@ function SearchAsideBarLinks(props) {
   }, [windowSize])
 
   return (
-    <div className="grid grid-cols-5 pb-3 justify-center items-start gap-1
+    <div className="grid grid-cols-5 place-items-center pb-3 justify-center items-start gap-1 w-full
       sm:flex sm:flex-col sm:gap-3">
       
         <label
           htmlFor=""
-          className="relative flex flex-row items-center justify-center gap-1 sm:gap-2"
+          className="flex flex-row items-center justify-center gap-1 sm:gap-2 sm:mb-4"
         >
           <MagnifyingGlassSVG
             className="shrink-0 stroke-2 opacity-50 stroke-white fill-black
@@ -86,15 +86,17 @@ function SearchAsideBarLinks(props) {
           >
             Search
           </span>
+         <div className="absolute left-0 translate-y-[2.5rem] z-10">
           <input
-            type="text"
-            value={ searchedArtistInput }
-            placeholder="Search by artist name"
-            onChange={ ({ target: { value }}) => setSearchedArtistInput(value) }
-            onKeyDown={ onEnterKeyDownSearchArtist }
-            className="rounded-full p-3 indent-7 w-fit focus:outline-none"
-            style={{ display: isSearchedArtistInputVisible ? '' : 'none' }}
-          />
+              type="text"
+              value={ searchedArtistInput }
+              placeholder="Search by artist name"
+              onChange={ ({ target: { value }}) => setSearchedArtistInput(value) }
+              onKeyDown={ onEnterKeyDownSearchArtist }
+              className="rounded-full p-3 indent-7 w-fit focus:outline-none"
+              style={{ display: isSearchedArtistInputVisible ? '' : 'none' }}
+            />
+         </div>
         </label>
       
       
