@@ -35,7 +35,7 @@ function SearchAsideBarLinks(props) {
     clearFavoriteSongs()
   }
 
-  const handleOnClickMagnifyingGlass = () => {
+  const handleOnClickOpenSearchInput = () => {
     if (windowSize >= 640) return;
     setIsSearchedArtistInputVisible(!isSearchedArtistInputVisible);
     setIsSearchMessageVisible(!isSearchMessageVisible);
@@ -66,21 +66,23 @@ function SearchAsideBarLinks(props) {
   }, [windowSize])
 
   return (
-    <div className="flex flex-col items-start gap-3 max-h-sm">
-      <div className="">
+    <div className="grid grid-cols-5 pb-3 justify-center items-start gap-1
+      sm:flex sm:flex-col sm:gap-3">
+      
         <label
           htmlFor=""
-          className="relative flex flex-row items-center justify-center gap-2 w-fit"
+          className="relative flex flex-row items-center justify-center gap-1 sm:gap-2"
         >
           <MagnifyingGlassSVG
-            className="stroke-2 opacity-50 stroke-white fill-black
-              sm:opacity-100 sm:fill-white sm:stroke-black sm:absolute sm:left-3" 
-            onClick={ handleOnClickMagnifyingGlass }
+            className="shrink-0 stroke-2 opacity-50 stroke-white fill-black
+              sm:opacity-100 sm:fill-white sm:stroke-black sm:absolute sm:left-3"
+              onClick={ handleOnClickOpenSearchInput }
           />
           <span
             className="block text-white font-semibold opacity-50
               group-hover:opacity-100 transition duration-500 sm:hidden"
             style={{ display: isSearchMessageVisible ? '' : 'none' }}
+            onClick={ handleOnClickOpenSearchInput }
           >
             Search
           </span>
@@ -94,12 +96,13 @@ function SearchAsideBarLinks(props) {
             style={{ display: isSearchedArtistInputVisible ? '' : 'none' }}
           />
         </label>
-      </div>
+      
+      
       <Link
         to="/search"
-        className="flex items-center gap-2 group"
+        className="flex items-center gap-1 sm:gap-2 group"
       >
-        <HomeSVG className="w-7 h-7 stroke-white stroke-2 opacity-50
+        <HomeSVG className="shrink-0 w-7 h-7 stroke-white stroke-2 opacity-50
           group-hover:opacity-100 transition duration-500"/>
         <span className="text-white font-semibold opacity-50
           group-hover:opacity-100 transition duration-500">
@@ -109,9 +112,9 @@ function SearchAsideBarLinks(props) {
 
       <Link
         to="/profile"
-        className="flex items-center gap-2 group"
+        className="flex items-center gap-1 sm:gap-2 group"
         >
-        <UserSVG className="w-7 h-7 stroke-white stroke-2 opacity-50
+        <UserSVG className="shrink-0 w-7 h-7 stroke-white stroke-2 opacity-50
           group-hover:opacity-100 transition duration-500"/>
         <span className="text-white font-semibold opacity-50
           group-hover:opacity-100 transition duration-500">
@@ -121,9 +124,9 @@ function SearchAsideBarLinks(props) {
 
       <Link
         to="/favorites"
-        className="flex items-center gap-2 group"
+        className="flex items-center gap-1 sm:gap-2 group"
         >
-        <StarSVG className="w-7 h-7 stroke-white stroke-2 opacity-50
+        <StarSVG className="shrink-0 w-7 h-7 stroke-white stroke-2 opacity-50
           group-hover:opacity-100 group-hover:fill-yellow-600 group-hover:stroke-yellow-600 transition duration-500"/>
         <span className="text-white font-semibold opacity-50
           group-hover:opacity-100 transition duration-500">
@@ -133,10 +136,10 @@ function SearchAsideBarLinks(props) {
 
       <Link
         to="/"
-        className="flex items-center gap-2 group"
+        className="flex items-center gap-1 sm:gap-2 group"
         onClick={ handleClickLogout }
       >
-        <LogoutSVG className="w-7 h-7 stroke-white stroke-2 opacity-50
+        <LogoutSVG className="shrink-0 w-7 h-7 stroke-white stroke-2 opacity-50
           group-hover:opacity-100 group-hover:fill-[#aa1010] transition duration-500"/>
         <span className="text-white font-semibold opacity-50
           group-hover:opacity-100 transition duration-500">

@@ -14,13 +14,13 @@ function SearchAsideBar(props) {
   } = contextValue;
   
   return (
-    <aside className="flex flex-col gap-5 px-3 sm:py-6 left-0 border-[#fafafa] border-r border-opacity-50 w-fit mt-5 sm:mt-0">
+    <aside className="flex flex-col gap-5 px-3 sm:py-6 left-0 border-[#fafafa] border-b sm:border-b-0 sm:border-r border-opacity-50 w-fit mt-5 sm:mt-0">
 
       <div className="">
         <SearchAsideBarLinks />
       </div>
 
-      <div className="flex flex-col items-start">
+      <div className="hidden sm:flex fsm:lex-col sm:items-start">
         <h1 className="text-lg font-medium text-white pb-6">
           Recently searched
         </h1>
@@ -57,7 +57,7 @@ function SearchAsideBar(props) {
         </div>
       </div>
 
-      <div className="flex flex-col items-start">
+      <div className="hidden sm:flex fsm:lex-col sm:items-start">
         <div>
           <h1 className="text-lg font-medium text-white pb-6">
             Recently listened
