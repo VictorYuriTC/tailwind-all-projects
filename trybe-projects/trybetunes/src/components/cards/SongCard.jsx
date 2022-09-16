@@ -35,7 +35,7 @@ function SongCard({ song, index }) {
 
   useEffect(() => {
     const changeFavoriteModalText = () => {
-      if (favoriteModalTextOpacity === '') return;
+      if (favoriteModalTextOpacity === '0') return;
 
       setFavoriteModalTextDisplay('visible')
       if (isFavoriteSong) setFavoriteModalText('Added to favorites')
@@ -47,7 +47,11 @@ function SongCard({ song, index }) {
   }, [isFavoriteSong])
 
   useEffect(() => {
-    isFavoriteSong ? setFavoriteModalTextOpacity('1.00') : setFavoriteModalTextOpacity('0.5')
+    const changeFavoriteModalTextOpacity = () => {
+      isFavoriteSong ? setFavoriteModalTextOpacity('1.00') : setFavoriteModalTextOpacity('0.5')
+    }
+    changeFavoriteModalTextOpacity();
+
   }, [favoriteModalText])
 
   const onClickChangeCurrentSong = () => setCurrentSong(song)
@@ -80,13 +84,13 @@ function SongCard({ song, index }) {
         onDoubleClick={ handleOnClickPlay }
         className="group opacity-80 font-semibold flex flex-row items-center gap-5 
         justify-between w-full hover:bg-light-gray hover:opacity-100 p-8 rounded select-none transition duration-200">
-        <div className="flex items-center hover:cursor-pointer basis-4">
-          <span className="group-hover:hidden font-black left-0 text-center text-lg">
+        <div className="flex items-center hover:cursor-pointer">
+          <span className="w-6 h-6 group-hover:hidden left-0 text-center text-lg">
             { index }
           </span>
           <PlaySVG 
             onClick={ handleOnClickPlay }
-            className="hidden absolute group-hover:inline-block fill-white"
+            className="w-6 h-6 hidden absolute font-black group-hover:inline-block fill-white"
           />
           <StarSVG
             onClick={ handleOnClickFavorite }

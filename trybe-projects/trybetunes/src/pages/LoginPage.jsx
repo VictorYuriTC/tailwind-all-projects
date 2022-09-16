@@ -97,7 +97,8 @@ function LoginPage(props) {
               value={ passwordInput }
               onChange={ handlePasswordInputChange }
               onKeyDown={ onEnterKeyDownNavigateToSearchPage }
-              type="password"
+              type="text"
+              style={{ WebkitTextSecurity: 'disc' }}
               placeholder="Password"
               className="w-fit p-3 border rounded-lg placeholder:text-black placeholder:font-thin focus:outline-her-green"/>
           </label>
