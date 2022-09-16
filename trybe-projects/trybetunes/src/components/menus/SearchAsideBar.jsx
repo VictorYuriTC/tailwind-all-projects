@@ -12,18 +12,13 @@ function SearchAsideBar(props) {
     listened: { recentlyListenedSongs },
     searched: { recentlySearchedArtists, setSearchedArtist }
   } = contextValue;
-
-  const [searchedArtistInput, setSearchedArtistInput] = useState('');
-
-  const onEnterKeyDownSearchArtist = async ({ key }) => {
-    if (key === ENTER) setSearchedArtist(searchedArtistInput)
-  }
-
   
   return (
-    <aside className="flex flex-col gap-5 left-0 p-2 border-[#fafafa] border-r border-opacity-50 w-fit mt-5 sm:mt-0">
+    <aside className="flex flex-col gap-5 px-3 sm:py-6 left-0 border-[#fafafa] border-r border-opacity-50 w-fit mt-5 sm:mt-0">
 
-      <SearchAsideBarLinks />
+      <div className="">
+        <SearchAsideBarLinks />
+      </div>
 
       <div className="flex flex-col items-start">
         <h1 className="text-lg font-medium text-white pb-6">
