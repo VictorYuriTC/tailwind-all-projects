@@ -74,8 +74,8 @@ function SearchAsideBarLinks(props) {
           className="flex flex-row items-center justify-center gap-1 sm:gap-2 sm:mb-4"
         >
           <MagnifyingGlassSVG
-            className="shrink-0 stroke-2 opacity-50 stroke-white fill-black
-              sm:opacity-100 sm:fill-white sm:stroke-black sm:absolute sm:left-3"
+            className="shrink-0 z-20 stroke-2 opacity-50 stroke-white fill-black
+              sm:opacity-100 sm:fill-white sm:stroke-black sm:absolute sm:left-6"
               onClick={ handleOnClickOpenSearchInput }
           />
           <span
@@ -86,17 +86,19 @@ function SearchAsideBarLinks(props) {
           >
             Search
           </span>
-         <div className="absolute left-0 translate-y-[2.5rem] z-10">
+        
           <input
               type="text"
               value={ searchedArtistInput }
               placeholder="Search by artist name"
               onChange={ ({ target: { value }}) => setSearchedArtistInput(value) }
               onKeyDown={ onEnterKeyDownSearchArtist }
-              className="rounded-full p-3 indent-7 w-fit focus:outline-none"
+              className="translate-y-[2.5rem] translate-x-[4.5rem] z-10 absolute
+                rounded-full p-3 indent-7 w-fit focus:outline-none
+                sm:translate-y-0 sm:translate-x-0 sm:z-0 sm:relative"
               style={{ display: isSearchedArtistInputVisible ? '' : 'none' }}
             />
-         </div>
+         
         </label>
       
       
