@@ -3,14 +3,17 @@ import SongsContext from '../../context/SongsContext';
 import PauseSVG from '../svgs/PauseSVG';
 import PlaySVG from '../svgs/PlaySVG';
 import StarSVG from '../svgs/StarSVG';
+import StopSVG from '../svgs/StopSVG';
 
 function SongCard({ song, index }) {
   const contextValue = useContext(SongsContext)
   const {
-    playingSong: { currentSong, setCurrentSong },
+    playingSong: { currentSong, setCurrentSong, },
     listened: { recentlyListenedSongs, setRecentlyListenedSongs },
     favorites: { favoriteSongs, setFavoriteSongs }
   } = contextValue
+
+  const [isStopped, setIsStopped] = useState(null);
 
   const [favoriteModalText, setFavoriteModalText] = useState('');
   const [favoriteModalTextDisplay, setFavoriteModalTextDisplay] = useState('hidden');
@@ -24,11 +27,12 @@ function SongCard({ song, index }) {
     trackId,
     artworkUrl100,
     collectionId,
-    previewURL
+    previewUrl
   } = song
 
   const [starColor, setStarColor] = useState('');
   const isFavoriteSong = favoriteSongs.some(favoriteSong => favoriteSong.trackId === trackId);
+  const isThisSongBeingPlayed = currentSong.trackId === trackId
 
   useEffect(() => {
     if (isFavoriteSong) setStarColor('fill-yellow-600 stroke-yellow-600')
@@ -58,7 +62,8 @@ function SongCard({ song, index }) {
 
   }, [favoriteModalText])
 
-  const onClickChangeCurrentSong = () => setCurrentSong(song)
+  const onClickChangeCurrentSong = () => setCurrentSong({ ...song })
+
   const onClickSetRecentlyListenedSongs = () => {
     const listenedSongsAfterDeletion = recentlyListenedSongs
       .filter(listenedSong => listenedSong.trackId !== song.trackId)
@@ -77,6 +82,24 @@ function SongCard({ song, index }) {
     onClickChangeCurrentSong();
     onClickSetRecentlyListenedSongs();
   }
+
+  const handleOnClickPause = () => {
+    if (isStopped === null) {
+      setIsStopped(false)
+      onClickChangeCurrentSong()
+      return;
+    }
+
+    if (isStopped) {
+      setIsStopped(false)
+      onClickChangeCurrentSong()
+      return;
+    }
+
+    setIsStopped(true);
+    setCurrentSong({ ...song, previewUrl: '' })
+  }
+  
 
   const handleOnClickFavorite = () => {
     if (isFavoriteSong) {
@@ -100,14 +123,16 @@ function SongCard({ song, index }) {
             { index }
           </span>
           <div className="absolute">
-            { currentSong.trackId === trackId
-              ?  <PauseSVG
-              onClick={ () => {} }
-              className="w-6 h-6 hidden font-black group-hover:inline-block fill-white"
-              />
-              : <PlaySVG
+            { previewUrl !== currentSong.previewUrl
+              ?  
+              <PlaySVG
               onClick={ handleOnClickPlay }
               className="w-6 h-6 hidden font-black group-hover:inline-block fill-white"
+              />
+       
+              : <StopSVG
+              onClick={ handleOnClickPause }
+              className="w-7 h-7 hidden font-black group-hover:inline-block fill-white stroke-2"
               />
             }
             

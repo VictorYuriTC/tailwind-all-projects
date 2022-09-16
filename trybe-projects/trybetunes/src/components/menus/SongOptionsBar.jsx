@@ -16,7 +16,7 @@ function SongOptionsBar() {
   }, [])
 
   return (
-    <footer className="bg-black flex flex-row w-full h-16
+    <footer className="bg-black flex flex-row w-full h-20
       fixed inset-x-0 bottom-0
       justify-around items-center
     text-white"

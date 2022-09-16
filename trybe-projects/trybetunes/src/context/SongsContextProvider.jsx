@@ -2,16 +2,16 @@ import React, { useState } from 'react'
 import SongsContext from './SongsContext';
 
 function SongsContextProvider({ children }) {
-  const [currentSong, setCurrentSong] = useState('');
   const [recentlySearchedArtists, setRecentlySearchedArtists] = useState([]);
   const [recentlyListenedSongs, setRecentlyListenedSongs] = useState([]);
   const [searchedArtist, setSearchedArtist] = useState('');
   const [favoriteSongs, setFavoriteSongs] = useState([]);
+  const [currentSong, setCurrentSong] = useState({});
 
   const contextValue = {
     playingSong: {
-      currentSong,
-      setCurrentSong,
+        currentSong,
+        setCurrentSong,
     },
     listened: {
       recentlyListenedSongs,
