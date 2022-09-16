@@ -1,12 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react'
 import SongsContext from '../../context/SongsContext';
+import PauseSVG from '../svgs/PauseSVG';
 import PlaySVG from '../svgs/PlaySVG';
 import StarSVG from '../svgs/StarSVG';
 
 function SongCard({ song, index }) {
   const contextValue = useContext(SongsContext)
   const {
-    playingSong: { setCurrentSong },
+    playingSong: { currentSong, setCurrentSong },
     listened: { recentlyListenedSongs, setRecentlyListenedSongs },
     favorites: { favoriteSongs, setFavoriteSongs }
   } = contextValue
@@ -22,7 +23,8 @@ function SongCard({ song, index }) {
     trackName,
     trackId,
     artworkUrl100,
-    collectionId
+    collectionId,
+    previewURL
   } = song
 
   const [starColor, setStarColor] = useState('');
@@ -40,8 +42,10 @@ function SongCard({ song, index }) {
       setFavoriteModalTextDisplay('visible')
       if (isFavoriteSong) setFavoriteModalText('Added to favorites')
       if (!isFavoriteSong) setFavoriteModalText('Removed from favorites')
+      
+      setTimeout(() => setFavoriteModalTextDisplay('hidden'), 3000)
     }
-    setTimeout(() => setFavoriteModalTextDisplay('hidden'), 3000)
+
 
     changeFavoriteModalText()
   }, [isFavoriteSong])
@@ -59,7 +63,14 @@ function SongCard({ song, index }) {
     const listenedSongsAfterDeletion = recentlyListenedSongs
       .filter(listenedSong => listenedSong.trackId !== song.trackId)
       .splice(0, 4)
-    setRecentlyListenedSongs([{ trackId, trackName, artistName, artworkUrl100, collectionId }, ...listenedSongsAfterDeletion])
+    setRecentlyListenedSongs([
+      { trackId,
+        trackName,
+        artistName,
+        artworkUrl100,
+        collectionId
+      },
+        ...listenedSongsAfterDeletion])
   }
 
   const handleOnClickPlay = () => {
@@ -88,10 +99,19 @@ function SongCard({ song, index }) {
           <span className="w-6 h-6 group-hover:hidden left-0 text-center text-lg">
             { index }
           </span>
-          <PlaySVG 
-            onClick={ handleOnClickPlay }
-            className="w-6 h-6 hidden absolute font-black group-hover:inline-block fill-white"
-          />
+          <div className="absolute">
+            { currentSong.trackId === trackId
+              ?  <PauseSVG
+              onClick={ () => {} }
+              className="w-6 h-6 hidden font-black group-hover:inline-block fill-white"
+              />
+              : <PlaySVG
+              onClick={ handleOnClickPlay }
+              className="w-6 h-6 hidden font-black group-hover:inline-block fill-white"
+              />
+            }
+            
+          </div>
           <StarSVG
             onClick={ handleOnClickFavorite }
             className={`${ starColor } absolute ml-8`}
