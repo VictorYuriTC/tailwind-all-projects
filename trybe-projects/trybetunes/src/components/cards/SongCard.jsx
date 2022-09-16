@@ -109,7 +109,9 @@ function SongCard({ song, index }) {
       return;
     }
 
-    setFavoriteSongs([...favoriteSongs, { trackId, collectionId }])
+    const todayDate = new Date().toLocaleDateString()
+
+    setFavoriteSongs([...favoriteSongs, { ...song, addedAsFavoriteDate: todayDate }])
   }
 
   return (
@@ -141,16 +143,30 @@ function SongCard({ song, index }) {
             onClick={ handleOnClickFavorite }
             className={`${ starColor } absolute ml-8`}
           />
-          <span
-            className="text-white absolute ml-20
-            border-white border px-2 rounded"
-            style={
-              { visibility: favoriteModalTextDisplay,
-                opacity: favoriteModalTextOpacity 
-              }}
-            >
-            { favoriteModalText }
-          </span>
+          <div className="text-white absolute ml-20">
+            
+            { isFavoriteSong
+              ? <span
+              className="border-white border px-2 py-1 rounded"
+              style={
+                { visibility: favoriteModalTextDisplay,
+                  opacity: favoriteModalTextOpacity 
+                }}
+              >
+              Added to favorites
+            </span>
+            
+              : <span
+              className="border-white border px-2 py-1 rounded"
+              style={
+                { visibility: favoriteModalTextDisplay,
+                  opacity: favoriteModalTextOpacity 
+                }}
+              >
+              Removed from favorites
+            </span> }
+
+          </div>
         </div>
           <h1 className="pointer-events-none">
             { trackName }
