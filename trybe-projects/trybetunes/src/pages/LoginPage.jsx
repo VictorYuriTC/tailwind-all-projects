@@ -67,19 +67,19 @@ function LoginPage(props) {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-white">
-      <div className="absolute top-0 w-full mb-12">
+      <div className="absolute top-0 w-full bg-gray-white">
         <Header className=""/>
       </div>
 
       <div className="relative flex flex-col items-center justify-center
-        rounded-2xl py-4 mt-20 bg-white shadow-lg shadow-gray-600">
+        rounded-2xl px-4 py-4 mt-12 bg-white shadow-lg shadow-gray-600 sm:px-0 md:py-6">
         <div className="mb-3">
           <span className="text-3xl text-black font-medium">
             Login
           </span>
         </div>
         <div>
-          <p className="text-black max-w-sm font-sans font-light mb-7">Login to your account to listen the newest songs in the Trybe industry.
+          <p className="text-black max-w-xs md:max-w-sm font-sans font-light mb-7">Login to your account to listen the newest songs in the Trybe industry.
           </p>
         </div>
         <div className="flex flex-col mb-3 md:mb-5 space-y-2">
@@ -104,7 +104,7 @@ function LoginPage(props) {
           </label>
         </div>
 
-        <div className="flex flex-col mb-2 md:mb-5">
+        <div className="flex flex-col max-w-xs md:max-w-sm mb-2 md:mb-5">
           { usernameAmountOfCharNeeded > 0 &&
             <span className="text-xs md:text-sm">
               Username requires at least { usernameAmountOfCharNeeded } more random { usernameAmountOfCharNeeded === 1 ? 'character' : 'characters' }
@@ -120,7 +120,7 @@ function LoginPage(props) {
           }
         </div>
 
-        <div className="flex items-center justify-between space-x-12 
+        <div className="flex items-center justify-between space-x-6 
            md:space-y-0 md:space-x-12 mb-6 md:mb-6"
         >
           <button className="font-extralight text-black border-b py-2">

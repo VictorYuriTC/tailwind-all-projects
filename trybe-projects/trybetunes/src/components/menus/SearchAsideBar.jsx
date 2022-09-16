@@ -21,24 +21,7 @@ function SearchAsideBar(props) {
 
   
   return (
-    <aside className="flex flex-col gap-5 left-0 p-5 border-[#fafafa] border-r border-opacity-50">
-      <div>
-        <label
-          htmlFor=""
-          className="relative flex flex-row items-center justify-center gap-2 w-fit"
-        >
-          <MagnifyingGlassSVG
-            className="absolute fill-white left-3"/>
-            <input
-              type="text"
-              value={ searchedArtistInput }
-              placeholder="Search by artist name"
-              onChange={ ({ target: { value }}) => setSearchedArtistInput(value) }
-              onKeyDown={ onEnterKeyDownSearchArtist }
-              className="rounded-full p-3 indent-7 w-fit focus:outline-none"
-            />
-        </label>
-      </div>
+    <aside className="flex flex-col gap-5 left-0 p-2 border-[#fafafa] border-r border-opacity-50 w-fit mt-5 sm:mt-0">
 
       <SearchAsideBarLinks />
 
