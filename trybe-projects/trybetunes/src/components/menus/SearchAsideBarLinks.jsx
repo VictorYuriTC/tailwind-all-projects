@@ -116,7 +116,6 @@ function SearchAsideBarLinks(props) {
           <span
             className="block text-white font-semibold opacity-50
               group-hover:opacity-100 transition duration-500 md:hidden"
-            style={{ display: isSearchMessageVisible ? '' : NONE }}
             onClick={ handleOnClickOpenSearchInput }
           >
             Search
@@ -128,9 +127,9 @@ function SearchAsideBarLinks(props) {
               placeholder="Search by artist name"
               onChange={ ({ target: { value }}) => setSearchedArtistInput(value) }
               onKeyDown={ onEnterKeyDownSearchArtist }
-              className="translate-y-[2.5rem] left-1 z-10 absolute
+              className="translate-x-[6rem] translate-y-[-0.5rem] sm:translate-x-0 sm:translate-y-[2.5rem] left-1 z-10 absolute
                 rounded-full p-3 indent-7 w-fit focus:outline-none
-                md:translate-y-0 md:translate-x-0 md:z-0 md:relative"
+                md:translate-y-0 md:z-0 md:relative"
               style={{ display: isSearchedArtistInputVisible ? '' : NONE }}
             />
          
