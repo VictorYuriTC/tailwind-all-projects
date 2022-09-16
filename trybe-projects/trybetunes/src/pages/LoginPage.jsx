@@ -66,7 +66,7 @@ function LoginPage(props) {
   const handlePasswordInputChange = ({ target: { value }}) => setPasswordInput(value)
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[#efefef]">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-white">
       <div className="absolute top-0 w-full mb-12">
         <Header className=""/>
       </div>

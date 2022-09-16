@@ -14,16 +14,16 @@ function FavoritesPage() {
   }, [])
 
   return (
-    <div className='flex flex-col min-h-screen bg-black'>
+    <div className='flex flex-col min-h-screen bg-gray-white'>
       <div>
         <Header />
       </div>
 
 
-      <div className="pt-20 bg-black">
+      <div className="pt-20">
         { 
-          <div className="grid grid-cols-2 lg:grid-cols-3 bg-black gap-10">
-            { favoriteSongs.reverse().map(favoriteSong => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 p-7">
+            { favoriteSongs.slice().reverse().map(favoriteSong => (
               <FavoriteSongCard favoriteSong={ favoriteSong }/>
             )) }
           </div>
