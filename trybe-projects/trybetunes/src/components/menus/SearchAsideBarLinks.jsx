@@ -36,7 +36,7 @@ function SearchAsideBarLinks(props) {
   }
 
   const handleOnClickOpenSearchInput = () => {
-    if (windowSize >= 640) return;
+    if (windowSize >= 768) return;
     setIsSearchedArtistInputVisible(!isSearchedArtistInputVisible);
     setIsSearchMessageVisible(!isSearchMessageVisible);
   }
@@ -54,33 +54,33 @@ function SearchAsideBarLinks(props) {
   }, [handleWindowResize])
 
   useEffect(() => {
-    if (windowSize < 640) {
+    if (windowSize < 768) {
       setIsSearchMessageVisible(true);
       setIsSearchedArtistInputVisible(false);
     }
     
-    if (windowSize >= 640) {
+    if (windowSize >= 768) {
       setIsSearchedArtistInputVisible(true)
       setIsSearchMessageVisible(false);
     }
   }, [windowSize])
 
   return (
-    <div className="grid grid-cols-5 place-items-center pb-3 justify-center items-start gap-1 w-full
-      sm:flex sm:flex-col sm:gap-3">
-      
+    <div className="place-self-center grid grid-cols-5 place-items-center pb-3 md:pb-3 
+      justify-center items-start gap-1 w-full
+      md:flex md:flex-col md:gap-3">
         <label
           htmlFor=""
-          className="flex flex-row items-center justify-center gap-1 sm:gap-2 sm:mb-4"
+          className="flex flex-row items-center justify-center gap-1 md:gap-2 md:mb-4"
         >
           <MagnifyingGlassSVG
             className="shrink-0 z-20 stroke-2 opacity-50 stroke-white fill-black
-              sm:opacity-100 sm:fill-white sm:stroke-black sm:absolute sm:left-6"
+              md::opacity-100 md:fill-white md:stroke-black md:absolute md:left-6"
               onClick={ handleOnClickOpenSearchInput }
           />
           <span
             className="block text-white font-semibold opacity-50
-              group-hover:opacity-100 transition duration-500 sm:hidden"
+              group-hover:opacity-100 transition duration-500 md:hidden"
             style={{ display: isSearchMessageVisible ? '' : 'none' }}
             onClick={ handleOnClickOpenSearchInput }
           >
@@ -93,9 +93,9 @@ function SearchAsideBarLinks(props) {
               placeholder="Search by artist name"
               onChange={ ({ target: { value }}) => setSearchedArtistInput(value) }
               onKeyDown={ onEnterKeyDownSearchArtist }
-              className="translate-y-[2.5rem] translate-x-[4.5rem] z-10 absolute
+              className="translate-y-[2.5rem] left-0 z-10 absolute
                 rounded-full p-3 indent-7 w-fit focus:outline-none
-                sm:translate-y-0 sm:translate-x-0 sm:z-0 sm:relative"
+                md:translate-y-0 md:translate-x-0 md:z-0 md:relative"
               style={{ display: isSearchedArtistInputVisible ? '' : 'none' }}
             />
          

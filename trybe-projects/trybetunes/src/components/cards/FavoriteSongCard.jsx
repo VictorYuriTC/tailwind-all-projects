@@ -51,7 +51,7 @@ function FavoriteSongCard({ favoriteSong }) {
           Costing ${ favoriteSong.trackPrice } { favoriteSong.currency }
         </span>
         <StarSVG
-          className="absolute top-0 right-0 m-2 w-7 h-7 fill-yellow-600 stroke-yellow-600 hover:cursor-pointer"
+          className="absolute top-0 right-0 m-2 w-7 h-7 fill-yellow-600 stroke-yellow-600 hover:cursor-pointer hover:opacity-50"
           onClick={ handleOnClickStar }
         />
       </div>

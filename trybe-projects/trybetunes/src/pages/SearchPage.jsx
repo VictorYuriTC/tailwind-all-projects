@@ -26,7 +26,7 @@ function SearchPage(props) {
     <div className="min-h-screen bg-black flex flex-col">
       <Header />
 
-      <div className="w-fit flex flex-col sm:flex-row bg-black pt-12">
+      <div className="w-fit flex flex-col md:flex-row bg-black pt-6 gap-4 md:gap-0 md:pt-12">
         <div className="">
           <SearchAsideBar />
         </div>
