@@ -1,11 +1,25 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import SongsContext from '../../context/SongsContext';
+import StarSVG from '../svgs/StarSVG';
 
 function FavoriteSongCard({ favoriteSong }) {
+  const contextValue = useContext(SongsContext);
+  const { favorites: { favoriteSongs, setFavoriteSongs }} = contextValue;
   const [cardStyle, setCardStyle] = useState('');
+
+  const removeFavoriteSong = () => {
+    const favoriteSongsAfterDeletion = favoriteSongs
+      .filter(song => song.trackId !== favoriteSong.trackId);
+    setFavoriteSongs(favoriteSongsAfterDeletion)
+  }
+
+  const handleOnClickStar = () => {
+    removeFavoriteSong();
+  }
 
   return (
     <div
-      className="flex flex-col items-center justify-between bg-gray-white rounded-lg  w-full justify-self-center p-8 shadow shadow-gray-600 lg:space-y-8"
+      className="relative flex flex-col items-center justify-between bg-gray-white rounded-lg justify-self-center px-6 py-[4.5rem] shadow shadow-gray-600 space-y-4 w-full h-full md:space-y-6 lg:space-y-8"
       style={ { animation: cardStyle } } 
       >
       <div>
@@ -16,14 +30,14 @@ function FavoriteSongCard({ favoriteSong }) {
         />
         </div>
       <div className="grid lg:flex lg:flex-col items-center">
-        <span className="font-semibold">
+        <span className="font-medium">
           { favoriteSong.trackName }
         </span>
         <span>
-          by <span className="font-semibold">{ favoriteSong.artistName }</span>
+          by <span className="font-medium">{ favoriteSong.artistName }</span>
         </span>
         <span>
-          from <span className="font-semibold">{ favoriteSong.collectionName }</span>
+          from <span className="font-medium">{ favoriteSong.collectionName }</span>
         </span>
       </div>
       <div className="grid lg:flex lg:flex-col items-center">
@@ -36,6 +50,10 @@ function FavoriteSongCard({ favoriteSong }) {
         <span className="font-light">
           Costing ${ favoriteSong.trackPrice } { favoriteSong.currency }
         </span>
+        <StarSVG
+          className="absolute top-0 right-0 m-2 w-7 h-7 fill-yellow-600 stroke-yellow-600 hover:cursor-pointer"
+          onClick={ handleOnClickStar }
+        />
       </div>
     </div>
   );

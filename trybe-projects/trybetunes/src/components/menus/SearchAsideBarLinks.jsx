@@ -1,11 +1,29 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
 import HomeSVG from '../svgs/HomeSVG';
 import UserSVG from '../svgs/UserSVG';
 import StarSVG from '../svgs/StarSVG';
 import LogoutSVG from '../svgs/LogoutSVG';
+import SongsContext from '../../context/SongsContext';
 
 function SearchAsideBarLinks(props) {
+  const contextValue = useContext(SongsContext);
+  const {
+    searched: { setRecentlySearchedArtists },
+    listened: { setRecentlyListenedSongs },
+    favorites: { setFavoriteSongs },
+  } = contextValue;
+  const clearRecentlySearchedArtists = () => setRecentlySearchedArtists([])
+  const clearRecentlyListenedSongs = () => setRecentlyListenedSongs([])
+  const clearFavoriteSongs = () => setFavoriteSongs([])
+
+
+  const handleOnClickLogout = () => {
+    clearRecentlySearchedArtists()
+    clearRecentlyListenedSongs()
+    clearFavoriteSongs()
+  }
+
   return (
     <div className="flex flex-col items-start gap-3">
     <Link
@@ -47,6 +65,7 @@ function SearchAsideBarLinks(props) {
     <Link
       to="/"
       className="flex items-center gap-2 group"
+      onClick={ handleOnClickLogout }
     >
       <LogoutSVG className="w-7 h-7 stroke-white stroke-2 opacity-50
         group-hover:opacity-100 group-hover:fill-[#aa1010] transition duration-500"/>

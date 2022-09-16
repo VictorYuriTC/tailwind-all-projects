@@ -1,13 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import FavoriteSongCard from '../components/cards/FavoriteSongCard';
 import Header from '../components/menus/Header';
 import SongsContext from '../context/SongsContext';
-import { getCollectionDataFromAPI } from '../services/iTunesAPI';
 
 function FavoritesPage() {
   const contextValue = useContext(SongsContext);
   const { favorites: { favoriteSongs }} = contextValue;
-  const [fav, setFav] = useState([]);
 
   useEffect(() => {
     console.log(favoriteSongs)
@@ -18,7 +16,6 @@ function FavoritesPage() {
       <div>
         <Header />
       </div>
-
 
       <div className="">
         { favoriteSongs.length > 0 
