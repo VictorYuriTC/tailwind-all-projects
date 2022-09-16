@@ -21,14 +21,14 @@ function SearchAsideBar(props) {
 
   
   return (
-    <aside className="flex flex-col gap-5 left-0 p-2 border-[#ffffff] border-r-2 border-opacity-50">
+    <aside className="flex flex-col gap-5 left-0 p-5 border-[#fafafa] border-r border-opacity-50">
       <div>
         <label
           htmlFor=""
-          className="flex flex-row items-center justify-center gap-2 w-fit"
+          className="relative flex flex-row items-center justify-center gap-2 w-fit"
         >
           <MagnifyingGlassSVG
-            className="absolute fill-white left-8"/>
+            className="absolute fill-white left-3"/>
             <input
               type="text"
               value={ searchedArtistInput }

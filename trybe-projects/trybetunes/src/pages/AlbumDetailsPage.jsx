@@ -23,6 +23,7 @@ function AlbumDetailsPage() {
       <div className="bg-black">
         <Header />
       </div>
+     <div>
      {
      <>
         <div className="flex-col items-center 
@@ -50,6 +51,7 @@ function AlbumDetailsPage() {
         </div>
      </>
      }
+     </div>
 
      <div className="bg-black">
       <SongOptionsBar />
