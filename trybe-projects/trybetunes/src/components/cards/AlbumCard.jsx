@@ -23,10 +23,6 @@ function AlbumCard({ album }) {
 
   const handleOnLinkClick = () => onClickSetRecentlyListenedSongs()
 
-  useEffect(() => {
-    console.log(album)
-  }, [])
-
   return (
     <Link
       to={`/album/${ collectionId }`}

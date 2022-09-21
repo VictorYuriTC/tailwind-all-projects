@@ -15,22 +15,25 @@ function ProfilePage() {
           <img
             src={ userImage }
             alt={`${ userName } profile image`}
-            className="w-full h-full object-cover absolute p-12"
+            className="w-full h-full object-cover absolute pt-12 pl-12 pr-12 pb-6"
           />
         </div>
 
         <div className="flex flex-col items-center justify-center pb-5">
           <h1 className="font-medium">{ userName }</h1>
           <h3 className="font-light">{ userEmail }</h3>
-          <h3 className="font-light">{ userDescription }</h3>
+        </div>
+
+        <div className="pb-5">
+          <p className="font-light">{ userDescription }</p>
         </div>
 
         <div>
           <Link
             to="/profile/edit"
-            className="flex font-medium pb-5"
+            className="flex font-medium pb-5 hover:opacity-50 transition duration-500"
             >
-            <UserSVG className=""/>
+            <UserSVG className="stroke-1"/>
             <span>
               Edit profile
             </span>
