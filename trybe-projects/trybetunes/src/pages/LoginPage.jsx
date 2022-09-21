@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/menus/Header';
 import ArrowSVG from '../components/svgs/ArrowSVG';
@@ -6,8 +6,12 @@ import UserSVG from '../components/svgs/UserSVG'
 import GOOGLE_PNG from '../assets/images/google.png'
 import FACEBOOK_PNG from '../assets/images/facebook.png'
 import { ENTER } from '../constants/strings';
+import SongsContext from '../context/SongsContext';
 
 function LoginPage(props) {
+  const contextValue = useContext(SongsContext);
+  const { user: { setUserName } } = contextValue;
+
   const [isLoginButtonDisabled, setIsLoginButtonDisabled] = useState(true);
   const [usernameInput, setUsernameInput] = useState('');
   const [passwordInput, setPasswordInput] = useState('');
@@ -51,14 +55,25 @@ function LoginPage(props) {
     enableLoginButton()
   }, [usernameInput, passwordInput])
 
-  const onEnterKeyDownNavigateToSearchPage = ({ key }) => {
-    if (key !== ENTER) return;
-
+  const navigateToSearchAndSaveUser = () => {
     if (isLoginButtonDisabled) {
       alert('Only usernames with 3 or more characters and passwords with 6 or more characters are valid.')
     }
 
-    if (!isLoginButtonDisabled) navigate('/search') 
+    if (!isLoginButtonDisabled) {
+      setUserName(usernameInput)
+      navigate('/search')
+    }
+  }
+
+  const handleOnClickLoginButton = () => {
+    navigateToSearchAndSaveUser()
+  }
+
+  const handleLoginInputsOnEnterKeyDown = ({ key }) => {
+    if (key !== ENTER) return;
+
+    navigateToSearchAndSaveUser()
   }
 
   const handleUsernameInputChange = ({ target: { value }}) => setUsernameInput(value)
@@ -87,7 +102,7 @@ function LoginPage(props) {
             <input
               value={ usernameInput }
               onChange={ handleUsernameInputChange }
-              onKeyDown={ onEnterKeyDownNavigateToSearchPage }
+              onKeyDown={ handleLoginInputsOnEnterKeyDown }
               type="text"
               placeholder="Username"
               className="w-fit p-3 border rounded-lg placeholder:text-black placeholder:font-thin focus:outline-her-green"/>
@@ -96,7 +111,7 @@ function LoginPage(props) {
             <input
               value={ passwordInput }
               onChange={ handlePasswordInputChange }
-              onKeyDown={ onEnterKeyDownNavigateToSearchPage }
+              onKeyDown={ handleLoginInputsOnEnterKeyDown }
               type="text"
               style={{ WebkitTextSecurity: 'disc' }}
               placeholder="Password"
@@ -130,7 +145,7 @@ function LoginPage(props) {
           </button>
 
           <button
-            onClick={ () => navigate('/search') }
+            onClick={ handleOnClickLoginButton }
             disabled={ isLoginButtonDisabled }
             className="text-white md:w-auto flex justify-center items-center space-x-2 font-sans font-semibold rounded-md shadow-lg px-3 py-2 border transition duration-200 bg-his-purple"
             style={ loginButtonStyle }

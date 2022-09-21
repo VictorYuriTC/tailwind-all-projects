@@ -5,6 +5,7 @@ import NotFoundPage from './pages/NotFoundPage';
 import SearchPage from './pages/SearchPage';
 import AlbumDetailsPage from './pages/AlbumDetailsPage';
 import FavoritesPage from './pages/FavoritesPage';
+import ProfilePage from './pages/ProfilePage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/search" element={ <SearchPage /> } />
         <Route path="/album/:collectionId" element={ <AlbumDetailsPage /> } />
         <Route path="/favorites" element={ <FavoritesPage /> } />
+        <Route path="/profile" element={ < ProfilePage/> } />
       </Routes>
     </div>
   );
