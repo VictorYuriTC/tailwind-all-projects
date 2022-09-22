@@ -15,28 +15,29 @@ function ProfilePage() {
         <Header />
       </div>
 
-      <div className="w-full flex flex-col md:flex-row bg-black pt-6 gap-4 md:gap-0 md:pt-12">
+      <div className="w-full flex flex-col md:flex-row bg-black pt-6 gap-4 md:gap-0
+        md:mt-12">
 
         <div className="">
           <SearchAsideBar />
         </div>
 
-        <div className='flex flex-col items-center w-full pt-5'>
-          <div className="bg-white flex flex-col w-1/4 items-center justify-center">
-            <div className="relative pb-[125%] pr-[100%] w-full">
+        <div className='flex flex-col items-center w-full'>
+          <div className="bg-white flex flex-col w-60 items-center justify-center rounded-lg p-6">
+            <div className="relative pb-60 pr-60 w-full shrink-0">
               <img
                 src={ userImage }
-                alt={`${ userName } profile image`}
-                className="w-full h-full object-cover absolute pt-12 pb-6 pl-6 pr-6"
+                alt={`${ userName } profile thumbnail`}
+                className="w-full h-full object-cover absolute p-8 rounded-full shrink-0"
               />
             </div>
 
-            <div className="flex flex-col items-center justify-center pb-5">
+            <div className="flex flex-col items-center justify-center pb-6">
               <h1 className="font-medium">{ userName }</h1>
               <h3 className="font-light">{ userEmail }</h3>
             </div>
 
-            <div className="pb-5">
+            <div className="pb-6">
               <p className="font-light">{ userDescription }</p>
             </div>
 
