@@ -18,7 +18,8 @@ function FavoritesPage() {
         <Header />
       </div>
 
-      <div className="w-fit flex flex-col items-center md:flex-row bg-black pt-6 gap-4 md:gap-0 md:pt-12">
+      <div className="flex flex-col md:items-center md:flex-row bg-black pt-6 gap-4 md:gap-0 md:pt-12">
+
         <div>
           <SearchAsideBar />
         </div>
@@ -30,18 +31,20 @@ function FavoritesPage() {
                 <FavoriteSongCard favoriteSong={ favoriteSong }/>
               )) }
             </div>
-            : <div className="flex flex-col justify-center items-center space-y-8">
-                <span className="text-3xl font-medium">
-                  No favorite songs
-                </span>
-               <div className="flex flex-col w-2/3 md:w-1/2 space-y-8">
-                <span className="font-light">
+            : <div className="flex flex-col justify-center items-center pt-12
+              md:pt-0 md:translate-y-20
+              xl:-translate-x-16 xl:translate-y-20 xl:items-end space-y-8">
+                <div className="flex flex-col w-2/3 md:w-1/2 space-y-8">
+                  <span className="text-3xl font-medium translate">
+                    No favorite songs
+                  </span>
+                  <span className="font-light">
                     If you want to save your favorite songs, simply click on the stars placed on each song and they will be shown here.
                   </span>
                   <span className="text-xl font-medium">
                     Try it!
                   </span>
-               </div>
+                </div>
               </div>
         }
       </div>

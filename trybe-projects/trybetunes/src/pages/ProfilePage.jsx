@@ -11,19 +11,22 @@ function ProfilePage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-black">
-      <div>
+      <div className=''>
         <Header />
       </div>
 
-      <div className="w-full flex flex-col md:flex-row bg-black pt-6 gap-4 md:gap-0
-        md:mt-12">
+      <div className="flex flex-col md:items-center md:justify-center md:flex-row bg-black gap-4 md:gap-0 pt-6">
 
         <div className="">
           <SearchAsideBar />
         </div>
 
-        <div className='flex flex-col items-center w-full'>
-          <div className="bg-white flex flex-col w-60 items-center justify-center rounded-lg p-6">
+        <div className="flex justify-center w-full pt-12
+          md:-translate-x-4 md:pt-0 md:translate-y-20
+          lg:-translate-x-20
+          lg:translate-y-30 xl:translate-y-40">
+          <div div className="bg-white flex flex-col
+            items-center justify-center rounded-lg p-6">
             <div className="relative pb-60 pr-60 w-full shrink-0">
               <img
                 src={ userImage }
@@ -54,6 +57,8 @@ function ProfilePage() {
             </div>
           </div>
         </div>
+
+  
 
       </div>
     </div>
