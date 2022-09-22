@@ -73,15 +73,15 @@ function EditProfile(props) {
         <Header />
       </div>
 
-      <div className="w-full flex flex-col items-center md:flex-row bg-black pt-6 gap-4 md:gap-0 md:pt-12">
+      <div className="w-full flex flex-col md:flex-row bg-black gap-4 pt-6 md:pt-12 md:gap-0">
         <div className="">
           <SearchAsideBar />
         </div>
 
 
-        <div className="flex items-center justify-center w-full p-5">
+        <div className="flex items-center justify-center w-full">
           <div className="relative flex flex-col justify-center items-center
-            space-y-4 bg-white p-12
+            space-y-4 bg-white p-12 rounded-lg
             translate-y-[2rem]
             md:translate-y-[5rem]"
           >      

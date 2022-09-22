@@ -18,7 +18,7 @@ function ProfilePage() {
         <Header />
       </div>
 
-      <div className="flex flex-col md:items-center md:justify-center md:flex-row bg-black gap-4 md:gap-0 pt-6 md:pt-12">
+      <div className="flex flex-col md:justify-center md:flex-row bg-black gap-4 md:gap-0 pt-6 md:pt-12">
 
         <div className="">
           <SearchAsideBar />

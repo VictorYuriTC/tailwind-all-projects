@@ -13,7 +13,7 @@ function SearchPage(props) {
   useEffect(() => {
     const getAlbums = async () => {
       if (searchedArtist.length < 1 || searchedArtist === '') {
-        const possibleFirstArtists = ['frank', 'sam', 'steve', 'john', 'maria', 'carlos', 'pedro', 'gabriela', 'paolo', 'taylor', 'taylor', 'young', 'old', 'new', 'five']
+        const possibleFirstArtists = ['frank', 'sam', 'steve', 'john', 'maria', 'carlos', 'pedro', 'gabriela', 'paolo', 'taylor', 'taylor', 'young', 'rebecca', 'old', 'new', 'five', 'manu']
         const randomPossibleArtistIndex = Math.floor(Math.random() * possibleFirstArtists.length) === 2 ? 1 : Math.floor(Math.random() * possibleFirstArtists.length);
         const selectedFirstAlbum = possibleFirstArtists[randomPossibleArtistIndex]
         console.log(selectedFirstAlbum)
