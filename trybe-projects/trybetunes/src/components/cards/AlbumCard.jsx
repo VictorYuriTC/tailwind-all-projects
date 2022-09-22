@@ -23,22 +23,21 @@ function AlbumCard({ album }) {
 
   const handleOnLinkClick = () => onClickSetRecentlyListenedSongs()
 
-  useEffect(() => {
-    console.log(album)
-  }, [])
-
   return (
     <Link
       to={`/album/${ collectionId }`}
-      className="opacity-90 grid grid-cols-4 items-center text-white gap-4 border-b border-white
-        border-opacity-50 hover:bg-light-gray hover:opacity-100 transition duration-300"
+      className="opacity-90 text-white gap-4 border-b border-white
+        border-opacity-50 hover:bg-light-gray hover:opacity-100 transition duration-300
+        grid grid-cols-2 py-6
+        md:grid-cols-3
+        lg:grid-cols-4 lg:py-8"
       onClick={ handleOnLinkClick }
     >
-      <div className="shrink-0">
+      <div className="relative shrink-0 pb-[20%] lg:pb-[50%]">
         <img
-          src={album.artworkUrl100}
+          src={ album.artworkUrl100 }
           alt={ album.collectionCensoredName }
-          className="shrink-0 object-scale-down w-full h-full"
+          className="absolute shrink-0 object-scale-down w-full h-full"
         />
       </div>
       <div className="flex flex-col">
@@ -46,8 +45,9 @@ function AlbumCard({ album }) {
         <h1 className="">{ album.collectionCensoredName }</h1>
         <h1 className="basis">by { album.artistName }</h1>
         <h1 className="basis">{ album.primaryGenreName  }</h1>
+        <h1 className="md:hidden">${ album.collectionPrice } { album.currency}</h1>
       </div>
-      <div className="flex flex-col">
+      <div className="hidden md:flex md:flex-col">
         <h1 className="font-semibold">Content</h1>
         <h1 className="basis">{ album.collectionType}</h1>
         <h1 className="basis">
@@ -59,7 +59,7 @@ function AlbumCard({ album }) {
         </h1>
         <h1 className="">${ album.collectionPrice } { album.currency}</h1>
       </div>
-      <div className="flex flex-col">
+      <div className="hidden lg:flex lg:flex-col">
         <h1 className="font-semibold">Release</h1>
         <h1 className="basis">{ album.country }</h1>
         <h1 className="">{ album.releaseDate.slice(0, 4)}</h1>

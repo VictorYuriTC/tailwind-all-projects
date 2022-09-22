@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom';
 
 function Header(props) {
   return (
-    <section className="bg-white flex flex-row items-center justify-center mb-5">
+    <section className="bg-her-green h-[3.25rem] fixed inset-x-0 top-0 z-10 flex flex-row items-center justify-center">
       <Link
         to="/search"
-        className="flex flex-row items-center hover:scale-105 hover:cursor-pointer 
-        transition duration-500 gap-2 pl-4 pb-2 pt-2">
+        className="fixed flex flex-row items-center justify-center hover:scale-105 
+          hover:cursor-pointer transition duration-500 gap-2 pb-2 pt-2">
         <span className="">
-          { <EarbudSVG className="fill-his-purple w-12 h-12"/> }
+          { <EarbudSVG className="fill-white w-10 h-10"/> }
         </span>
-        <h1 className="text-his-purple text-4xl font-bold">
+        <h1 className="text-white text-4xl font-medium">
           iTrybeTunes
         </h1>
       </Link>

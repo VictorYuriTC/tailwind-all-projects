@@ -1,6 +1,6 @@
 import React from 'react'
 
-function MagnifyingGlassSVG({ className, onClick }) {
+function StopSVG({ className, onClick }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -14,8 +14,9 @@ function MagnifyingGlassSVG({ className, onClick }) {
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
-        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+        d="M5.25 7.5A2.25 2.25 0 017.5 5.25h9a2.25 2.25 0 012.25 2.25v9a2.25 2.25 0 01-2.25 2.25h-9a2.25 2.25 0 01-2.25-2.25v-9z"
       />
-    </svg>);
+    </svg>
+  );
 }
-export default MagnifyingGlassSVG;
+export default StopSVG;

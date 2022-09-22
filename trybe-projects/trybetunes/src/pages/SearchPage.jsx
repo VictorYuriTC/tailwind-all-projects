@@ -12,7 +12,15 @@ function SearchPage(props) {
   
   useEffect(() => {
     const getAlbums = async () => {
-      if (searchedArtist.length < 1) return;
+      if (searchedArtist.length < 1 || searchedArtist === '') {
+        const possibleFirstArtists = ['frank', 'sam', 'steve', 'john', 'maria', 'carlos', 'pedro', 'gabriela', 'paolo', 'taylor', 'taylor', 'young', 'rebecca', 'old', 'new', 'five', 'manu']
+        const randomPossibleArtistIndex = Math.floor(Math.random() * possibleFirstArtists.length) === 2 ? 1 : Math.floor(Math.random() * possibleFirstArtists.length);
+        const selectedFirstAlbum = possibleFirstArtists[randomPossibleArtistIndex]
+        console.log(selectedFirstAlbum)
+        const foundFirstAlbum = await getAlbumsFromAPI(selectedFirstAlbum)
+        setRenderAlbums(foundFirstAlbum)
+        return
+      }
 
       const foundAlbums = await getAlbumsFromAPI(searchedArtist);
       const maxFoundAlbums = foundAlbums
@@ -24,10 +32,12 @@ function SearchPage(props) {
 
   return (
     <div className="min-h-screen bg-black flex flex-col">
-      <Header />
+      <div>
+        <Header />
+      </div>
 
-      <div className="flex bg-black pl-4 pr-4">
-        <div>
+      <div className="w-fit flex flex-col md:flex-row bg-black pt-6 gap-4 md:gap-0 md:pt-12">
+        <div className="">
           <SearchAsideBar />
         </div>
       

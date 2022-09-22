@@ -1,22 +1,55 @@
 import React, { useContext, useEffect } from 'react'
+import FavoriteSongCard from '../components/cards/FavoriteSongCard';
+import Header from '../components/menus/Header';
+import SearchAsideBar from '../components/menus/SearchAsideBar';
 import SongsContext from '../context/SongsContext';
-import { getCollectionDataFromAPI } from '../services/iTunesAPI';
 
 function FavoritesPage() {
   const contextValue = useContext(SongsContext);
   const { favorites: { favoriteSongs }} = contextValue;
 
   useEffect(() => {
-    const getFavoriteSongs = () => {
-      const favoriteSongsTrackIds = favoriteSongs
-        .map(({ trackId }) => trackId);
-    }
-    getFavoriteSongs()
+    console.log(favoriteSongs)
   }, [])
 
   return (
-    <div className=''>
+    <div className='flex flex-col min-h-screen bg-black'>
+      <div>
+        <Header />
+      </div>
 
+      <div className="flex flex-col md:items-center md:flex-row bg-black pt-6 gap-4 md:gap-0 md:pt-12">
+
+        <div>
+          <SearchAsideBar />
+        </div>
+
+        <div className="text-white">
+        { favoriteSongs.length > 0 
+            ? <div className="grid md:grid-cols-2 lg:grid-cols-3 p-7">
+              { favoriteSongs.slice().reverse().map(favoriteSong => (
+                <FavoriteSongCard favoriteSong={ favoriteSong }/>
+              )) }
+            </div>
+            : <div className="flex flex-col justify-center items-center pt-12
+              md:pt-0 md:translate-y-20
+              xl:-translate-x-16 xl:translate-y-20 xl:items-end space-y-8">
+                <div className="flex flex-col w-2/3 md:w-1/2 space-y-8">
+                  <span className="text-3xl font-medium translate">
+                    No favorite songs
+                  </span>
+                  <span className="font-light">
+                    If you want to save your favorite songs, simply click on the stars placed on each song and they will be shown here.
+                  </span>
+                  <span className="text-xl font-medium">
+                    Try it!
+                  </span>
+                </div>
+              </div>
+        }
+      </div>
+
+      </div>
     </div>
   );
 }

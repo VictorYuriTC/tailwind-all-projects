@@ -1,51 +1,197 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/menus/Header';
+import ArrowSVG from '../components/svgs/ArrowSVG';
+import UserSVG from '../components/svgs/UserSVG'
+import GOOGLE_PNG from '../assets/images/google.png'
+import FACEBOOK_PNG from '../assets/images/facebook.png'
+import { ENTER } from '../constants/strings';
+import SongsContext from '../context/SongsContext';
 
 function LoginPage(props) {
+  const contextValue = useContext(SongsContext);
+  const { user: { setUserName } } = contextValue;
+
+  const [isLoginButtonDisabled, setIsLoginButtonDisabled] = useState(true);
+  const [usernameInput, setUsernameInput] = useState('');
+  const [passwordInput, setPasswordInput] = useState('');
+
+  
+  const [usernameAmountOfCharNeeded, setUsernameAmountOfCharNeeded] = useState(3);
+  const [passwordAmoutOfChardNeeded, setPasswordAmoutOfChardNeeded] = useState(6);
+  const [loginButtonOpacity, setLoginButtonOpacity] = useState('0.5')
+    
+  const MIN_USERNAME_CHARACTERS = 3;
+  const MIN_PASSWORD_CHARACTERS = 6;
+  const USERNAME_LENGTH = usernameInput.length;
+  const PASSWORD_LENGTH = passwordInput.length;
+
   const navigate = useNavigate();
+    
+  useEffect(() => {
+    setUsernameAmountOfCharNeeded(MIN_USERNAME_CHARACTERS - USERNAME_LENGTH)
+    setPasswordAmoutOfChardNeeded(MIN_PASSWORD_CHARACTERS - PASSWORD_LENGTH)
+  }, [usernameInput, passwordInput])
+
+  useEffect(() => {
+    const enableLoginButton = () => {
+
+      const hasUsernameMinChar = USERNAME_LENGTH >= MIN_USERNAME_CHARACTERS ? true : false
+      const hasPasswordMinChar = PASSWORD_LENGTH >= MIN_PASSWORD_CHARACTERS ? true : false
+
+      if (hasUsernameMinChar && hasPasswordMinChar) { 
+        setIsLoginButtonDisabled(false)
+        return;
+      }
+
+      setIsLoginButtonDisabled(true)
+    }
+
+    enableLoginButton()
+  }, [usernameInput, passwordInput])
+
+  useEffect(() => {
+    const changeEditButtonOpacity = () => {
+      if (isLoginButtonDisabled) setLoginButtonOpacity('0.5')
+      if (!isLoginButtonDisabled) setLoginButtonOpacity('1')
+    }
+
+    changeEditButtonOpacity()
+  }, [isLoginButtonDisabled])
+
+  const navigateToSearchAndSaveUser = () => {
+    if (isLoginButtonDisabled) {
+      alert('Only usernames with 3 or more characters and passwords with 6 or more characters are valid.')
+    }
+
+    if (!isLoginButtonDisabled) {
+      setUserName(usernameInput)
+      navigate('/search')
+    }
+  }
+
+  const handleOnClickLoginButton = () => {
+    navigateToSearchAndSaveUser()
+  }
+
+  const handleLoginInputsOnEnterKeyDown = ({ key }) => {
+    if (key !== ENTER) return;
+
+    navigateToSearchAndSaveUser()
+  }
+
+  const handleUsernameInputChange = ({ target: { value }}) => setUsernameInput(value)
+
+  const handlePasswordInputChange = ({ target: { value }}) => setPasswordInput(value)
+
   return (
-    <div className="bg-his-purple h-screen">
-      <Header />
-      <div className="flex flex-col gap-2 justify-center items-center bg-his-purple">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-white">
+      <div className="absolute top-0 w-full bg-gray-white">
+        <Header className=""/>
+      </div>
 
-        <section className="flex flex-col justify-center place-self-center items-center gap-6">
-         <div className="flex flex-col gap-2">
-         <label
-            htmlFor=""
-            className="flex items-center"
-          >
-            <span className="text-white text-xl font-[500] w-full">
-              E-mail
-            </span>
-            <input
-              type="text"
-              className="rounded-lg w-full"
-            />
-          </label>
-
-          <label
-            htmlFor=""
-            className="flex items-center"
-          >
-            <span className="text-white text-xl font-[500] w-full">
-              Password
-            </span>
-            <input
-              type="password"
-              className="rounded-lg w-full"
-            />
-          </label>
-         </div>
-          <button
-            type="password"
-            className="bg-his-purple text-white font-[500] border-2 p-3 rounded-full
-              hover:translate-y-[-2px] hover:opacity-50 transition duration-500"
-            onClick={ () => { navigate('/search')} }
-          >
+      <div className="relative flex flex-col items-center justify-center
+        rounded-2xl px-4 py-4 mt-12 bg-white shadow-lg shadow-gray-600 sm:px-0 md:py-6">
+        <div className="mb-3">
+          <span className="text-3xl text-black font-medium">
             Login
+          </span>
+        </div>
+        <div>
+          <p className="text-black max-w-xs md:max-w-sm font-sans font-light mb-7">Login to your account to listen the newest songs in the Trybe industry.
+          </p>
+        </div>
+        <div className="flex flex-col mb-3 md:mb-5 space-y-2">
+          <label htmlFor="" className="flex flex-row">
+            <input
+              value={ usernameInput }
+              onChange={ handleUsernameInputChange }
+              onKeyDown={ handleLoginInputsOnEnterKeyDown }
+              type="text"
+              placeholder="Username"
+              className="w-fit p-3 border-2 border-gray-300 rounded-lg placeholder:text-black placeholder:font-thin focus:outline-her-green"/>
+          </label>
+          <label htmlFor="" className="flex flex-row">
+            <input
+              value={ passwordInput }
+              onChange={ handlePasswordInputChange }
+              onKeyDown={ handleLoginInputsOnEnterKeyDown }
+              type="text"
+              style={{ WebkitTextSecurity: 'disc' }}
+              placeholder="Password"
+              className="w-fit p-3 border-2 border-gray-300 rounded-lg placeholder:text-black placeholder:font-thin focus:outline-her-green"/>
+          </label>
+        </div>
+
+        <div className="flex flex-col max-w-xs md:max-w-sm mb-2 md:mb-5">
+          { usernameAmountOfCharNeeded > 0 &&
+            <span className="text-xs md:text-sm">
+              Username requires at least { usernameAmountOfCharNeeded } more random { usernameAmountOfCharNeeded === 1 ? 'character' : 'characters' }
+            </span>
+          }
+          {
+            passwordAmoutOfChardNeeded > 0 &&
+            <span className="text-xs md:text-sm">
+              Password requires at least { passwordAmoutOfChardNeeded } more random {
+                passwordAmoutOfChardNeeded === 1 ? 'character' : 'characters'
+              }
+            </span>
+          }
+        </div>
+
+        <div className="flex items-center justify-between space-x-6 
+           md:space-y-0 md:space-x-12 mb-6 md:mb-6"
+        >
+          <button className="font-extralight text-black border-b py-2">
+            <span>
+              Forgot password
+            </span>
           </button>
-        </section>
+
+          <button
+            onClick={ handleOnClickLoginButton }
+            disabled={ isLoginButtonDisabled }
+            className="text-white md:w-auto flex justify-center items-center space-x-2 font-sans font-semibold rounded-md shadow-lg px-3 py-2 border transition duration-200 bg-his-purple"
+            style={ { opacity: loginButtonOpacity } }
+          >
+            <span>
+              Login
+            </span>
+            <ArrowSVG className="w-7"/>
+          </button>
+        </div>
+
+        
+        <div>
+          <div className="border-b border-gray-300"></div>
+
+          <p className="py-6 text-sm font-extralight text-center text-gray-900">or login with</p>
+
+          <div className="flex flex-col space-x-0 space-y-5 md:flex-row md:space-y-0 md:space-x-5">
+            <button
+              onClick={() => navigate('/')}
+              className="flex items-center justify-center py-2 px-5 space-x-3 border border-gray-300 rounded shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:-translate-y-[1px] transition duration-200 md:w-1/2">
+              <img
+                src={ FACEBOOK_PNG }
+                alt="Logo"
+                className="w-8" />
+              <span className="font-thin">
+                Facebook
+              </span>
+            </button>
+            <button
+              onClick={() => navigate('/')}
+              className="flex items-center justify-center py-2 px-2 space-x-3 border border-gray-300 rounded shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:-translate-y-[1px] transition duration-200 md:w-1/2">
+              <img
+                src={ GOOGLE_PNG }
+                alt="Logo"
+                className="w-8" />
+              <span className="font-thin">
+                Google
+              </span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

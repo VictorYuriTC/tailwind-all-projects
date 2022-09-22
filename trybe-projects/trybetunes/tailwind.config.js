@@ -8,9 +8,10 @@ module.exports = {
       },
       colors: {
         'his-purple': '#400090',
-        'her-green': '#33af9f',
+        'her-green': '#158b7a',
         'dark-gray': '#2f2f2f',
-        'light-gray': '#444444'
+        'light-gray': '#444444',
+        'gray-white': '#efefef'
       }
     },
   },

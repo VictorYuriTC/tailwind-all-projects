@@ -12,37 +12,16 @@ function SearchAsideBar(props) {
     listened: { recentlyListenedSongs },
     searched: { recentlySearchedArtists, setSearchedArtist }
   } = contextValue;
-
-  const [searchedArtistInput, setSearchedArtistInput] = useState('');
-
-  const onEnterKeyDownSearchArtist = async ({ key }) => {
-    if (key === ENTER) setSearchedArtist(searchedArtistInput)
-  }
-
   
   return (
-    <aside className="flex flex-col gap-5 left-0 p-2 border-[#ffffff] border-r-2 border-opacity-50">
-      <div>
-        <label
-          htmlFor=""
-          className="flex flex-row items-center justify-center gap-2 w-fit"
-        >
-          <MagnifyingGlassSVG
-            className="absolute fill-white left-8"/>
-            <input
-              type="text"
-              value={ searchedArtistInput }
-              placeholder="Search by artist name"
-              onChange={ ({ target: { value }}) => setSearchedArtistInput(value) }
-              onKeyDown={ onEnterKeyDownSearchArtist }
-              className="rounded-full p-3 indent-7 w-fit focus:outline-none"
-            />
-        </label>
+    <aside className="flex flex-col gap-5 px-3 border-[#fafafa] border-b 
+    border-opacity-50 w-f pt-10 md:py-5 md:left-0 md:border-b-0 md:border-r md:mt-0">
+
+      <div className="">
+        <SearchAsideBarLinks />
       </div>
 
-      <SearchAsideBarLinks />
-
-      <div className="flex flex-col items-start">
+      <div className="hidden md:flex md:flex-col md:items-start">
         <h1 className="text-lg font-medium text-white pb-6">
           Recently searched
         </h1>
@@ -79,7 +58,7 @@ function SearchAsideBar(props) {
         </div>
       </div>
 
-      <div className="flex flex-col items-start">
+      <div className="hidden md:flex md:flex-col md:items-start">
         <div>
           <h1 className="text-lg font-medium text-white pb-6">
             Recently listened
