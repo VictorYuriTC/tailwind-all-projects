@@ -1,13 +1,16 @@
 import React, { useContext } from 'react'
 import SongsContext from '../context/SongsContext';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import UserSVG from '../components/svgs/UserSVG';
 import Header from '../components/menus/Header';
 import SearchAsideBar from '../components/menus/SearchAsideBar';
+import PurpleMainButton from '../components/buttons/PurpleMainButton';
 
 function ProfilePage() {
   const contextValue = useContext(SongsContext);
   const { user: { userName, userEmail, userDescription, userImage, }} = contextValue
+  
+  const navigate = useNavigate()
 
   return (
     <div className="flex flex-col min-h-screen bg-black">
@@ -22,9 +25,9 @@ function ProfilePage() {
         </div>
 
         <div className="flex justify-center w-full pt-12
-          md:-translate-x-4 md:pt-0 md:translate-y-20
-          lg:-translate-x-20
-          lg:translate-y-30 xl:translate-y-40">
+          md:-translate-x-4 md:pt-0 md:translate-y-10
+          lg:-translate-x-15
+          lg:translate-y-20 xl:translate-y-20">
           <div div className="bg-white flex flex-col
             items-center justify-center rounded-lg p-6">
             <div className="relative pb-60 pr-60 w-full shrink-0">
@@ -45,15 +48,10 @@ function ProfilePage() {
             </div>
 
             <div>
-              <Link
-                to="/profile/edit"
-                className="flex font-medium pb-5 hover:opacity-50 transition duration-500"
-                >
-                <UserSVG className="stroke-1"/>
-                <span>
-                  Edit profile
-                </span>
-              </Link>
+              <PurpleMainButton
+                onClick={ () => navigate('/profile/edit') }
+                spanText={"Edit profile"}
+              />
             </div>
           </div>
         </div>

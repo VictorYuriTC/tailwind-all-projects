@@ -1,7 +1,9 @@
 import React from 'react'
+import { useEffect } from 'react';
 import { useContext } from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import PurpleMainButton from '../components/buttons/PurpleMainButton';
 import Header from '../components/menus/Header';
 import SearchAsideBar from '../components/menus/SearchAsideBar';
 import SongsContext from '../context/SongsContext';
@@ -21,6 +23,8 @@ function EditProfile(props) {
   const [userEmailInput, setUserEmailInput] = useState('');
   const [userDescriptionInput, setUserDescriptionInput] = useState('');
   const [userImageInput, setUserImageInput] = useState('');
+  const [isEditButtonDisabled, setIsEditButtonDisabled] = useState(true);
+  const [editButtonOpacity, setEditButtonOpacity] = useState('0.5')
 
   const changeContextUserInfo = () => {
     setUserName(usernameInput)
@@ -34,67 +38,104 @@ function EditProfile(props) {
     navigate('/profile')
   }
 
+  useEffect(() => {
+    const isUsernameInputFilled = usernameInput.length > 0
+    const isUserEmailInputFilled = userEmailInput.length > 0
+    const isUserDescriptionInputFilled = userDescriptionInput.length > 0
+    const isUserImageInputFilled = userImageInput.length > 0
+
+    const enableEditButton = () => {
+      setIsEditButtonDisabled(true)
+
+      if (!isUsernameInputFilled) return
+      if (!isUserEmailInputFilled) return
+      if (!isUserDescriptionInputFilled) return
+      if (!isUserImageInputFilled) return
+
+      setIsEditButtonDisabled(false)
+    }
+
+    enableEditButton()
+  }, [usernameInput, userEmailInput, userDescriptionInput, userImageInput])
+
+  useEffect(() => {
+    const changeEditButtonOpacity = () => {
+      if (isEditButtonDisabled) setEditButtonOpacity('0.5')
+      if (!isEditButtonDisabled) setEditButtonOpacity('1')
+    }
+
+    changeEditButtonOpacity()
+  }, [isEditButtonDisabled])
+
   return (
     <div className="min-h-screen bg-black flex flex-col">
       <div>
         <Header />
       </div>
 
-      <div className="w-fit flex flex-col md:flex-row bg-black pt-6 gap-4 md:gap-0 md:pt-12">
+      <div className="w-full flex flex-col items-center md:flex-row bg-black pt-6 gap-4 md:gap-0 md:pt-12">
         <div className="">
           <SearchAsideBar />
         </div>
-      
-        <div className="bg-black grid grid-cols-1 px-5 w-full">
-          <label htmlFor="">
-            <span className="text-white">
-              New username: 
-            </span>
-            <input
-              value={ usernameInput }
-              onChange={ ({ target: { value }}) => setUsernameInput(value) }
-              type="text"
+
+
+        <div className="flex items-center justify-center w-full p-5">
+          <div className="relative flex flex-col justify-center items-center
+            space-y-4 bg-white p-12
+            translate-y-[2rem]
+            md:translate-y-[5rem]"
+          >      
+            <h1 className="">
+              Edit your profile
+            </h1>
+            <label htmlFor="" className="">
+              <input
+                value={ usernameInput }
+                onChange={ ({ target: { value }}) => setUsernameInput(value) }
+                type="text"
+                className="border border-gray-300 rounded p-3"
+                placeholder="New username"
+              />
+            </label>
+            <label htmlFor="" className="">
+              <input
+                value={ userEmailInput }
+                onChange={ ({ target: { value }}) => setUserEmailInput(value) }
+                type="text"
+                className="border border-gray-300 rounded p-3"
+                placeholder="New email"
+              />
+            </label>
+            <label htmlFor="" className="">
+              <input
+                value={ userDescriptionInput }
+                onChange={ ({ target: { value }}) => setUserDescriptionInput(value)} 
+                type="text"
+                className="border border-gray-300 rounded p-3"
+                placeholder="New profile description"
+              />
+            </label>
+            <label htmlFor="" className="">
+              <input
+                value={ userImageInput }
+                onChange={ ({ target: { value }}) => setUserImageInput(value) }
+                type="text"
+                className="border border-gray-300 rounded p-3"
+                placeholder="New profile image url"
+              />
+            </label>
+            <PurpleMainButton
+              onClick={ handleEditButtonClick }
+              style={{ opacity: editButtonOpacity }}
+              spanText={"Save changes"}
+              disabled={ isEditButtonDisabled }
             />
-          </label>
-          <label htmlFor="">
-            <span className="text-white">
-              New email:
-            </span>
-            <input
-              value={ userEmailInput }
-              onChange={ ({ target: { value }}) => setUserEmailInput(value) }
-              type="text"
-            />
-          </label>
-          <label htmlFor="">
-            <span className="text-white">
-              New description:
-            </span>
-            <input
-              value={ userDescriptionInput }
-              onChange={ ({ target: { value }}) => setUserDescriptionInput(value)} 
-              type="text"
-            />
-          </label>
-          <label htmlFor="">
-            <span className="text-white">
-              New profile image:
-            </span>
-            <input
-              value={ userImageInput }
-              onChange={ ({ target: { value }}) => setUserImageInput(value) }
-              type="text"
-            />
-          </label>
-          <button
-            onClick={ handleEditButtonClick }
-          >
-            <span className="text-white">
-              Save 
-            </span>
-          </button>
+          </div>
         </div>
+
+
       </div>
+      
     </div>
   );
 }

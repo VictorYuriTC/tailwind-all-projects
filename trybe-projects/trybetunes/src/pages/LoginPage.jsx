@@ -19,19 +19,14 @@ function LoginPage(props) {
   
   const [usernameAmountOfCharNeeded, setUsernameAmountOfCharNeeded] = useState(3);
   const [passwordAmoutOfChardNeeded, setPasswordAmoutOfChardNeeded] = useState(6);
-  const [loginButtonStyle, setLoginButtonStyle] = useState(
-    { 
-      boxShadow: '',
-      opacity: 1,
-      translate: '0',
-    })
+  const [loginButtonOpacity, setLoginButtonOpacity] = useState('0.5')
     
-    const MIN_USERNAME_CHARACTERS = 3;
-    const MIN_PASSWORD_CHARACTERS = 6;
-    const USERNAME_LENGTH = usernameInput.length;
-    const PASSWORD_LENGTH = passwordInput.length;
+  const MIN_USERNAME_CHARACTERS = 3;
+  const MIN_PASSWORD_CHARACTERS = 6;
+  const USERNAME_LENGTH = usernameInput.length;
+  const PASSWORD_LENGTH = passwordInput.length;
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
     
   useEffect(() => {
     setUsernameAmountOfCharNeeded(MIN_USERNAME_CHARACTERS - USERNAME_LENGTH)
@@ -54,6 +49,15 @@ function LoginPage(props) {
 
     enableLoginButton()
   }, [usernameInput, passwordInput])
+
+  useEffect(() => {
+    const changeEditButtonOpacity = () => {
+      if (isLoginButtonDisabled) setLoginButtonOpacity('0.5')
+      if (!isLoginButtonDisabled) setLoginButtonOpacity('1')
+    }
+
+    changeEditButtonOpacity()
+  }, [isLoginButtonDisabled])
 
   const navigateToSearchAndSaveUser = () => {
     if (isLoginButtonDisabled) {
@@ -105,7 +109,7 @@ function LoginPage(props) {
               onKeyDown={ handleLoginInputsOnEnterKeyDown }
               type="text"
               placeholder="Username"
-              className="w-fit p-3 border rounded-lg placeholder:text-black placeholder:font-thin focus:outline-her-green"/>
+              className="w-fit p-3 border-2 border-gray-300 rounded-lg placeholder:text-black placeholder:font-thin focus:outline-her-green"/>
           </label>
           <label htmlFor="" className="flex flex-row">
             <input
@@ -115,7 +119,7 @@ function LoginPage(props) {
               type="text"
               style={{ WebkitTextSecurity: 'disc' }}
               placeholder="Password"
-              className="w-fit p-3 border rounded-lg placeholder:text-black placeholder:font-thin focus:outline-her-green"/>
+              className="w-fit p-3 border-2 border-gray-300 rounded-lg placeholder:text-black placeholder:font-thin focus:outline-her-green"/>
           </label>
         </div>
 
@@ -148,7 +152,7 @@ function LoginPage(props) {
             onClick={ handleOnClickLoginButton }
             disabled={ isLoginButtonDisabled }
             className="text-white md:w-auto flex justify-center items-center space-x-2 font-sans font-semibold rounded-md shadow-lg px-3 py-2 border transition duration-200 bg-his-purple"
-            style={ loginButtonStyle }
+            style={ { opacity: loginButtonOpacity } }
           >
             <span>
               Login
