@@ -10,34 +10,50 @@ import MagnifyingGlassSVG from '../svgs/MagnifyingGlassSVG';
 import HamburguerSVG from '../svgs/HamburguerSVG';
 
 function SearchAsideBarLinks(props) {
-  const contextValue = useContext(SongsContext);
+  const contextValue = useContext(SongsContext)
   const {
     searched: { setRecentlySearchedArtists, setSearchedArtist },
     listened: { setRecentlyListenedSongs },
     favorites: { setFavoriteSongs },
-  } = contextValue;
+    user: {
+      setUserName,
+      setUserEmail,
+      setUserDescription,
+      setUserImage,
+    }
+  } = contextValue
 
-  const [searchedArtistInput, setSearchedArtistInput] = useState('');
-  const [isSearchedArtistInputVisible, setIsSearchedArtistInputVisible] = useState(true);
-  const [isSearchMessageVisible, setIsSearchMessageVisible] = useState(false);
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
-  const [isDisplayMenuLinkHidden, setIsDisplayMenuLinkHidden] = useState(true);
+  const [searchedArtistInput, setSearchedArtistInput] = useState('')
+  const [isSearchedArtistInputVisible, setIsSearchedArtistInputVisible] = useState(true)
+  const [isSearchMessageVisible, setIsSearchMessageVisible] = useState(false)
+  const [windowSize, setWindowSize] = useState(window.innerWidth)
+  const [isDisplayMenuLinkHidden, setIsDisplayMenuLinkHidden] = useState(true)
 
-  const SMALL_SCREEN = 640;
-  const MEDIUM_SCREEN = 768;
+  const SMALL_SCREEN = 640
+  const MEDIUM_SCREEN = 768
 
   const onEnterKeyDownSearchArtist = async ({ key }) => {
     if (key === ENTER) setSearchedArtist(searchedArtistInput)
   }
 
+
   const clearRecentlySearchedArtists = () => setRecentlySearchedArtists([])
   const clearRecentlyListenedSongs = () => setRecentlyListenedSongs([])
   const clearFavoriteSongs = () => setFavoriteSongs([])
+  const clearUserContextInfos = () => {
+    setUserName('')
+    setUserEmail('')
+    setUserDescription('')
+    setUserImage('')
+  }
+  const clearLastSearchedArtist = () => setSearchedArtist('')
 
   const handleClickLogout = () => {
-    clearRecentlySearchedArtists();
-    clearRecentlyListenedSongs();
-    clearFavoriteSongs();
+    clearRecentlySearchedArtists()
+    clearRecentlyListenedSongs()
+    clearFavoriteSongs()
+    clearUserContextInfos()
+    clearLastSearchedArtist()
   }
 
   const handleOnClickHamburguer = () => {
@@ -64,24 +80,24 @@ function SearchAsideBarLinks(props) {
 
   useEffect(() => {
     const onChangeWindowSizeSetSearchInputDisplay = () => {
-      if (windowSize < MEDIUM_SCREEN) setIsSearchedArtistInputVisible(false);
+      if (windowSize < MEDIUM_SCREEN) setIsSearchedArtistInputVisible(false)
       if (windowSize >= MEDIUM_SCREEN) setIsSearchedArtistInputVisible(true)
     }
-    onChangeWindowSizeSetSearchInputDisplay();
+    onChangeWindowSizeSetSearchInputDisplay()
   }, [windowSize])
 
   useEffect(() => {
     const onChangeWindowSizeSetSearchMessageDisplay = () => {
-      if (windowSize < MEDIUM_SCREEN) setIsSearchMessageVisible(true);
-      if (windowSize >= MEDIUM_SCREEN) setIsSearchMessageVisible(false);
+      if (windowSize < MEDIUM_SCREEN) setIsSearchMessageVisible(true)
+      if (windowSize >= MEDIUM_SCREEN) setIsSearchMessageVisible(false)
     }
-    onChangeWindowSizeSetSearchMessageDisplay();
+    onChangeWindowSizeSetSearchMessageDisplay()
   }, [windowSize])
 
   useEffect(() => {
     const onChangeWindowSizeSetMenuLinkDisplay = () => {
-      if (windowSize < SMALL_SCREEN) setIsDisplayMenuLinkHidden(true);
-      if (windowSize >= SMALL_SCREEN) setIsDisplayMenuLinkHidden(false);
+      if (windowSize < SMALL_SCREEN) setIsDisplayMenuLinkHidden(true)
+      if (windowSize >= SMALL_SCREEN) setIsDisplayMenuLinkHidden(false)
     }
     onChangeWindowSizeSetMenuLinkDisplay()
   }, [windowSize])

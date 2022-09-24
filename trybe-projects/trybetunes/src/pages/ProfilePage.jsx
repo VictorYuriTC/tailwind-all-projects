@@ -24,10 +24,7 @@ function ProfilePage() {
           <SearchAsideBar />
         </div>
 
-        <div className="flex justify-center w-full pt-12
-          md:-translate-x-4 md:pt-0 md:translate-y-10
-          lg:-translate-x-15
-          lg:translate-y-20 xl:translate-y-20">
+        <div className="flex justify-center w-full pt-8">
           <div div className="bg-white flex flex-col
             items-center justify-center rounded-lg p-6">
             <div className="relative pb-60 pr-60 w-full shrink-0">
@@ -38,12 +35,9 @@ function ProfilePage() {
               />
             </div>
 
-            <div className="flex flex-col items-center justify-center pb-6">
+            <div className="flex flex-col items-center justify-center pb-5">
               <h1 className="font-medium">{ userName }</h1>
               <h3 className="font-light">{ userEmail }</h3>
-            </div>
-
-            <div className="pb-6">
               <p className="font-light">{ userDescription }</p>
             </div>
 
