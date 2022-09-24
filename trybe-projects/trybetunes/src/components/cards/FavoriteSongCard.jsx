@@ -19,7 +19,7 @@ function FavoriteSongCard({ favoriteSong }) {
 
   return (
     <div
-      className="relative flex flex-col items-center justify-between bg-gray-white rounded-lg justify-self-center px-6 py-[4.5rem] shadow shadow-gray-600 space-y-4 w-full h-full md:space-y-6 lg:space-y-8"
+      className="relative flex flex-col items-center justify-between bg-gray-white rounded-lg justify-self-center px-6 py-[4.5rem] shadow shadow-gray-600 space-y-4 w-60 md:w-80 md:space-y-6 lg:space-y-8"
       style={ { animation: cardStyle } } 
       >
       <div>
