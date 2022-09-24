@@ -18,23 +18,22 @@ function FavoritesPage() {
         <Header />
       </div>
 
-      <div className="flex flex-col md:items-center md:flex-row bg-black pt-6 gap-4 md:gap-0 md:pt-12">
+      <div className="flex flex-col md:flex-row bg-black pt-6 gap-4 md:gap-0 md:pt-12">
 
         <div>
           <SearchAsideBar />
         </div>
 
-        <div className="text-white">
+        <div className="w-full">
         { favoriteSongs.length > 0 
-            ? <div className="grid md:grid-cols-2 lg:grid-cols-3 p-7">
+            ? <div className="grid p-8 gap-y-6 md:gap-y-4 md:gap-x-6 md:grid-cols-1 lg:grid-cols-2">
               { favoriteSongs.slice().reverse().map(favoriteSong => (
                 <FavoriteSongCard favoriteSong={ favoriteSong }/>
               )) }
             </div>
-            : <div className="flex flex-col justify-center items-center pt-12
-              md:pt-0 md:translate-y-20
-              xl:-translate-x-16 xl:translate-y-20 xl:items-end space-y-8">
-                <div className="flex flex-col w-2/3 md:w-1/2 space-y-8">
+            : <div className="flex flex-col justify-center items-center pt-20 md:pt-40
+             space-y-8">
+                <div className="flex flex-col w-80 sm:1/3 md:w-1/2 space-y-8 text-white">
                   <span className="text-3xl font-medium translate">
                     No favorite songs
                   </span>
