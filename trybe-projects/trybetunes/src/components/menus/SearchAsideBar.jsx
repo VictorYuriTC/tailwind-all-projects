@@ -41,8 +41,9 @@ function SearchAsideBar(props) {
                 >
                   {' '}-{' '}
                 </span>
-                <span
+                <Link
                   onClick={() => setSearchedArtist(removeAccents(artistName))}
+                  to="/search"
                   key={ trackId }
                   className="text-white opacity-50 hover:opacity-100 transition duration-300 hover:font-medium hover:cursor-pointer"
                 >
@@ -51,7 +52,7 @@ function SearchAsideBar(props) {
                     ? `${ artistName.slice(0, -(artistName.length - 30)) }...`
                     : artistName
                   }
-                </span>
+                </Link>
               </span>
             </div>))
           }
@@ -98,16 +99,17 @@ function SearchAsideBar(props) {
                     key={ trackId }
                     className="text-white opacity-50">by{' '}
                   </span>
-                  <span
+                  <Link
                     key={ trackId }
                     onClick={() => setSearchedArtist(removeAccents(artistName))}
+                    to="/search"
                     className="text-white 
                     opacity-50 hover:opacity-100 transition duration-300 hover:cursor-pointer">
                     { artistName.length > 25
                       ? `${ artistName.slice(0, -(artistName.length - 25)) }...`
                       : artistName 
                     }
-                  </span>
+                  </Link>
                 </span>
               </div>
             </div>))

@@ -1,16 +1,34 @@
 import React, { useContext, useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import SongsContext from '../../context/SongsContext';
 import StarSVG from '../svgs/StarSVG';
+import { Link } from 'react-router-dom';
 
 function FavoriteSongCard({ favoriteSong }) {
   const contextValue = useContext(SongsContext);
-  const { favorites: { favoriteSongs, setFavoriteSongs }} = contextValue;
+  const {
+    searched: {
+      setSearchedArtist
+    },
+    playingSong: {
+      setCurrentSong
+    },
+    favorites: {
+    favoriteSongs,
+    setFavoriteSongs
+  }} = contextValue;
   const [cardStyle, setCardStyle] = useState('');
+
+  const navigate = useNavigate()
 
   const removeFavoriteSong = () => {
     const favoriteSongsAfterDeletion = favoriteSongs
       .filter(song => song.trackId !== favoriteSong.trackId);
     setFavoriteSongs(favoriteSongsAfterDeletion)
+  }
+
+  const handleOnClickAlbumImage = () => {
+    navigate(`/album/${ favoriteSong.collectionId }`)
   }
 
   const handleOnClickStar = () => {
@@ -26,19 +44,27 @@ function FavoriteSongCard({ favoriteSong }) {
         <img
           src={ favoriteSong.artworkUrl100 }
           alt={ `${ favoriteSong.trackName } album cover`}
-          className="shadow-md shadow-gray-600"
+          className="shadow-md shadow-gray-600 hover:cursor-pointer"
+          onClick={ handleOnClickAlbumImage }
         />
         </div>
       <div className="grid lg:flex lg:flex-col items-center">
-        <span className="font-medium">
+        <Link
+          to={`/album/${ favoriteSong.collectionId }`}
+          onClick={ () => setCurrentSong({ ...favoriteSong })}
+          className="font-medium">
           { favoriteSong.trackName }
-        </span>
-        <span>
+        </Link>
+        <Link
+          to="/search"
+          onClick={ setSearchedArtist(favoriteSong.artistName)}
+        >
           by <span className="font-medium">{ favoriteSong.artistName }</span>
-        </span>
-        <span>
+        </Link>
+        <Link
+          to={`/album/${ favoriteSong.collectionId }`}>
           from <span className="font-medium">{ favoriteSong.collectionName }</span>
-        </span>
+        </Link>
       </div>
       <div className="grid lg:flex lg:flex-col items-center">
         <span className="font-light">

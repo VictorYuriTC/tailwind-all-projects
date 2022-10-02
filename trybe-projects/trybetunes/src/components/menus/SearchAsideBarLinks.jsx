@@ -1,5 +1,5 @@
 import React, { useCallback, useContext, useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import HomeSVG from '../svgs/HomeSVG';
 import UserSVG from '../svgs/UserSVG';
 import StarSVG from '../svgs/StarSVG';
@@ -32,8 +32,13 @@ function SearchAsideBarLinks(props) {
   const SMALL_SCREEN = 640
   const MEDIUM_SCREEN = 768
 
+  const navigate = useNavigate()
+
   const onEnterKeyDownSearchArtist = async ({ key }) => {
-    if (key === ENTER) setSearchedArtist(searchedArtistInput)
+    if (key === ENTER) {
+      setSearchedArtist(searchedArtistInput)
+      navigate('/search')
+    }
   }
 
 
