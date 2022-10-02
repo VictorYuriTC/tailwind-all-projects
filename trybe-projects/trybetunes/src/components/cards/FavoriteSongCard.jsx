@@ -56,8 +56,8 @@ function FavoriteSongCard({ favoriteSong }) {
           { favoriteSong.trackName }
         </Link>
         <Link
+          onClick={ () => setSearchedArtist(favoriteSong.artistName)}
           to="/search"
-          onClick={ setSearchedArtist(favoriteSong.artistName)}
         >
           by <span className="font-medium">{ favoriteSong.artistName }</span>
         </Link>

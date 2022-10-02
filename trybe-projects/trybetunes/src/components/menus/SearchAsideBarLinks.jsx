@@ -131,7 +131,7 @@ function SearchAsideBarLinks(props) {
         >
           <MagnifyingGlassSVG
             className="shrink-0 z-20 stroke-2 opacity-50 stroke-white fill-black
-              md:opacity-100 md:fill-white md:stroke-black md:absolute md:left-6"
+              md:opacity-100 md:fill-white md:stroke-black md:absolute md:z-[1] md:left-6"
             onClick={ handleOnClickOpenSearchInput }
           />
           <span
